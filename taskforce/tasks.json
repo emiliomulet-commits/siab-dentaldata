@@ -35,6 +35,7 @@
    "jornadas": 1,
    "depende_de": [],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T001/",
    "fuentes": [],
    "bloquea": [
     "T002",
@@ -54,6 +55,7 @@
     "T001"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T002/",
    "fuentes": [
     {
      "n": "F730",
@@ -79,6 +81,7 @@
     "T001"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T003/",
    "fuentes": [],
    "bloquea": [
     "T008",
@@ -102,6 +105,7 @@
     "T002"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T004/",
    "fuentes": [
     {
      "n": "F812",
@@ -131,6 +135,7 @@
     "T004"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T005/",
    "fuentes": [
     {
      "n": "F823",
@@ -154,6 +159,7 @@
     "T002"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T006/",
    "fuentes": [
     {
      "n": "F730",
@@ -175,6 +181,7 @@
     "T005"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T007/",
    "fuentes": [
     {
      "n": "F823",
@@ -198,6 +205,7 @@
     "T003"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T008/",
    "fuentes": [
     {
      "n": "F666",
@@ -226,6 +234,7 @@
     "T040"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T009/",
    "fuentes": [
     {
      "n": "F348",
@@ -255,6 +264,7 @@
     "T099"
    ],
    "hito": true,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T010/",
    "fuentes": [],
    "bloquea": []
   },
@@ -268,6 +278,7 @@
    "jornadas": 1,
    "depende_de": [],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T011/",
    "fuentes": [],
    "bloquea": [
     "T016"
@@ -285,6 +296,7 @@
     "T003"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T012/",
    "fuentes": [
     {
      "n": "F565",
@@ -316,6 +328,7 @@
     "T003"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T013/",
    "fuentes": [
     {
      "n": "F236",
@@ -345,6 +358,7 @@
     "T003"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T014/",
    "fuentes": [
     {
      "n": "F22",
@@ -374,6 +388,7 @@
     "T003"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T015/",
    "fuentes": [
     {
      "n": "F846",
@@ -398,6 +413,7 @@
     "T011"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T016/",
    "fuentes": [
     {
      "n": "F559",
@@ -421,6 +437,7 @@
     "T012"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T017/",
    "fuentes": [
     {
      "n": "F504",
@@ -449,6 +466,7 @@
     "T003"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T018/",
    "fuentes": [
     {
      "n": "F548",
@@ -478,6 +496,7 @@
     "T003"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T019/",
    "fuentes": [
     {
      "n": "F920",
@@ -503,6 +522,7 @@
     "T018"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T020/",
    "fuentes": [],
    "bloquea": []
   },
@@ -518,6 +538,7 @@
     "T014"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T021/",
    "fuentes": [
     {
      "n": "F87",
@@ -545,6 +566,7 @@
     "T001"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T022/",
    "fuentes": [],
    "bloquea": [
     "T023",
@@ -566,6 +588,7 @@
     "T022"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T023/",
    "fuentes": [
     {
      "n": "F351",
@@ -592,6 +615,7 @@
     "T022"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T024/",
    "fuentes": [
     {
      "n": "F75",
@@ -617,6 +641,7 @@
     "T013"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T025/",
    "fuentes": [
     {
      "n": "F236",
@@ -648,6 +673,7 @@
     "T023"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T026/",
    "fuentes": [
     {
      "n": "F505",
@@ -673,6 +699,7 @@
     "T024"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T027/",
    "fuentes": [
     {
      "n": "F225",
@@ -710,6 +737,7 @@
     "T024"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T028/",
    "fuentes": [
     {
      "n": "F164",
@@ -750,6 +778,7 @@
     "T025"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T029/",
    "fuentes": [
     {
      "n": "F54",
@@ -774,6 +803,7 @@
     "T028"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T030/",
    "fuentes": [
     {
      "n": "F521",
@@ -807,6 +837,7 @@
     "T021"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T031/",
    "fuentes": [
     {
      "n": "F344",
@@ -835,6 +866,7 @@
     "T021"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T032/",
    "fuentes": [],
    "bloquea": []
   },
@@ -850,6 +882,7 @@
     "T021"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T033/",
    "fuentes": [
     {
      "n": "F265",
@@ -875,6 +908,7 @@
     "T027"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T034/",
    "fuentes": [
     {
      "n": "F218",
@@ -902,6 +936,7 @@
     "T028"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T035/",
    "fuentes": [
     {
      "n": "F170",
@@ -924,6 +959,7 @@
     "T022"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T036/",
    "fuentes": [
     {
      "n": "F225",
@@ -945,6 +981,7 @@
     "T016"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T037/",
    "fuentes": [],
    "bloquea": []
   },
@@ -960,6 +997,7 @@
     "T029"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T038/",
    "fuentes": [],
    "bloquea": []
   },
@@ -976,6 +1014,7 @@
     "T028"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T039/",
    "fuentes": [
     {
      "n": "F203",
@@ -1004,6 +1043,7 @@
     "T030"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T040/",
    "fuentes": [
     {
      "n": "F173",
@@ -1033,6 +1073,7 @@
     "T012"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T041/",
    "fuentes": [
     {
      "n": "F565",
@@ -1059,6 +1100,7 @@
     "T012"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T042/",
    "fuentes": [
     {
      "n": "F564",
@@ -1089,6 +1131,7 @@
     "T042"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T043/",
    "fuentes": [
     {
      "n": "F543",
@@ -1126,6 +1169,7 @@
     "T043"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T044/",
    "fuentes": [
     {
      "n": "F479",
@@ -1155,6 +1199,7 @@
     "T043"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T045/",
    "fuentes": [
     {
      "n": "F569",
@@ -1177,6 +1222,7 @@
     "T043"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T046/",
    "fuentes": [
     {
      "n": "F511",
@@ -1204,6 +1250,7 @@
     "T043"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T047/",
    "fuentes": [
     {
      "n": "F511",
@@ -1228,6 +1275,7 @@
     "T043"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T048/",
    "fuentes": [
     {
      "n": "F502",
@@ -1249,6 +1297,7 @@
     "T046"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T049/",
    "fuentes": [
     {
      "n": "F484",
@@ -1272,6 +1321,7 @@
     "T056"
    ],
    "hito": true,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T050/",
    "fuentes": [
     {
      "n": "F559",
@@ -1299,6 +1349,7 @@
    "jornadas": 1,
    "depende_de": [],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T051/",
    "fuentes": [
     {
      "n": "F560",
@@ -1324,6 +1375,7 @@
     "T051"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T052/",
    "fuentes": [
     {
      "n": "F515",
@@ -1353,6 +1405,7 @@
     "T018"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T053/",
    "fuentes": [
     {
      "n": "F548",
@@ -1377,6 +1430,7 @@
     "T053"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T054/",
    "fuentes": [
     {
      "n": "F868",
@@ -1401,6 +1455,7 @@
     "T054"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T055/",
    "fuentes": [
     {
      "n": "F560",
@@ -1426,6 +1481,7 @@
     "T043"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T056/",
    "fuentes": [
     {
      "n": "F560",
@@ -1450,6 +1506,7 @@
     "T055"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T057/",
    "fuentes": [
     {
      "n": "F868",
@@ -1473,6 +1530,7 @@
     "T028"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T058/",
    "fuentes": [],
    "bloquea": []
   },
@@ -1488,6 +1546,7 @@
     "T051"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T059/",
    "fuentes": [
     {
      "n": "F641",
@@ -1519,6 +1578,7 @@
     "T053"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T060/",
    "fuentes": [
     {
      "n": "F278",
@@ -1540,6 +1600,7 @@
     "T015"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T061/",
    "fuentes": [
     {
      "n": "F846",
@@ -1573,6 +1634,7 @@
    "jornadas": 1,
    "depende_de": [],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T062/",
    "fuentes": [],
    "bloquea": [
     "T064"
@@ -1590,6 +1652,7 @@
     "T061"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T063/",
    "fuentes": [
     {
      "n": "F846",
@@ -1614,6 +1677,7 @@
     "T062"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T064/",
    "fuentes": [
     {
      "n": "F188",
@@ -1640,6 +1704,7 @@
    "jornadas": 2,
    "depende_de": [],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T065/",
    "fuentes": [
     {
      "n": "F852",
@@ -1669,6 +1734,7 @@
     "T063"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T066/",
    "fuentes": [
     {
      "n": "F164",
@@ -1696,6 +1762,7 @@
     "T065"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T067/",
    "fuentes": [
     {
      "n": "F126",
@@ -1727,6 +1794,7 @@
     "T067"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T068/",
    "fuentes": [
     {
      "n": "F201",
@@ -1758,6 +1826,7 @@
     "T061"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T069/",
    "fuentes": [
     {
      "n": "F952",
@@ -1779,6 +1848,7 @@
     "T067"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T070/",
    "fuentes": [
     {
      "n": "F945",
@@ -1800,6 +1870,7 @@
     "T004"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T071/",
    "fuentes": [
     {
      "n": "F823",
@@ -1824,6 +1895,7 @@
     "T071"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T072/",
    "fuentes": [
     {
      "n": "F397",
@@ -1849,6 +1921,7 @@
     "T028"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T073/",
    "fuentes": [
     {
      "n": "F200",
@@ -1877,6 +1950,7 @@
     "T067"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T074/",
    "fuentes": [
     {
      "n": "F854",
@@ -1902,6 +1976,7 @@
     "T027"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T075/",
    "fuentes": [
     {
      "n": "F823",
@@ -1923,6 +1998,7 @@
     "T072"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T076/",
    "fuentes": [
     {
      "n": "F758",
@@ -1946,6 +2022,7 @@
     "T074"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T077/",
    "fuentes": [
     {
      "n": "F854",
@@ -1968,6 +2045,7 @@
     "T066"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T078/",
    "fuentes": [],
    "bloquea": []
   },
@@ -1983,6 +2061,7 @@
     "T085"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T079/",
    "fuentes": [
     {
      "n": "F792",
@@ -2007,6 +2086,7 @@
     "T076"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T080/",
    "fuentes": [
     {
      "n": "F823",
@@ -2028,6 +2108,7 @@
     "T002"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T081/",
    "fuentes": [
     {
      "n": "F865",
@@ -2052,6 +2133,7 @@
     "T043"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T082/",
    "fuentes": [
     {
      "n": "F483",
@@ -2074,6 +2156,7 @@
    "jornadas": 2,
    "depende_de": [],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T083/",
    "fuentes": [
     {
      "n": "F792",
@@ -2097,6 +2180,7 @@
     "T043"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T084/",
    "fuentes": [
     {
      "n": "F518",
@@ -2127,6 +2211,7 @@
     "T084"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T085/",
    "fuentes": [
     {
      "n": "F518",
@@ -2152,6 +2237,7 @@
     "T046"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T086/",
    "fuentes": [
     {
      "n": "F483",
@@ -2173,6 +2259,7 @@
     "T066"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T087/",
    "fuentes": [
     {
      "n": "F335",
@@ -2194,6 +2281,7 @@
     "T084"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T088/",
    "fuentes": [
     {
      "n": "F518",
@@ -2217,6 +2305,7 @@
     "T085"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T089/",
    "fuentes": [
     {
      "n": "F792",
@@ -2239,6 +2328,7 @@
     "T040"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T090/",
    "fuentes": [
     {
      "n": "F479",
@@ -2258,6 +2348,7 @@
    "jornadas": 1,
    "depende_de": [],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T091/",
    "fuentes": [],
    "bloquea": []
   },
@@ -2274,6 +2365,7 @@
     "T022"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T092/",
    "fuentes": [
     {
      "n": "F731",
@@ -2300,6 +2392,7 @@
     "T017"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T093/",
    "fuentes": [],
    "bloquea": []
   },
@@ -2317,6 +2410,7 @@
     "T057"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T094/",
    "fuentes": [
     {
      "n": "F484",
@@ -2339,6 +2433,7 @@
     "T047"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T095/",
    "fuentes": [
     {
      "n": "F511",
@@ -2360,6 +2455,7 @@
     "T064"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T096/",
    "fuentes": [],
    "bloquea": []
   },
@@ -2375,6 +2471,7 @@
     "T039"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T097/",
    "fuentes": [
     {
      "n": "F203",
@@ -2401,6 +2498,7 @@
     "T050"
    ],
    "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T098/",
    "fuentes": [
     {
      "n": "F727",
@@ -2429,6 +2527,7 @@
     "T088"
    ],
    "hito": true,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T099/",
    "fuentes": [],
    "bloquea": [
     "T010",
@@ -2447,6 +2546,7 @@
     "T099"
    ],
    "hito": true,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T100/",
    "fuentes": [],
    "bloquea": []
   }

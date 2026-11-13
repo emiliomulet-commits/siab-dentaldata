@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T026 · PostgreSQL Flexible privado | Task Force DENTALDATA</title>
+<meta name="description" content="Desplegar la base de datos donde el conector guarda activos, políticas, contratos y transferencias.">
+<link rel="canonical" href="https://dentaldata.softwareinabox.eu/taskforce/T026/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Software in a Box"><meta property="og:title" content="T026 · PostgreSQL Flexible privado"><meta property="og:description" content="Desplegar la base de datos donde el conector guarda activos, políticas, contratos y transferencias."><meta property="og:url" content="https://dentaldata.softwareinabox.eu/taskforce/T026/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F4D55'/%3E%3Ccircle cx='32' cy='32' r='8' fill='none' stroke='%23C9A227' stroke-width='4'/%3E%3Cpath d='M14 14l12 12M50 14 38 26M14 50l12-12M50 50 38 38' stroke='%23C9A227' stroke-width='4'/%3E%3C/svg%3E"><link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css"><link rel="stylesheet" href="../tf.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "T026 · PostgreSQL Flexible privado", "inLanguage": "es", "description": "Desplegar la base de datos donde el conector guarda activos, políticas, contratos y transferencias.", "isPartOf": {"@type": "WebPage", "url": "https://dentaldata.softwareinabox.eu/taskforce/"}, "publisher": {"@type": "Organization", "name": "Software in a Box"}}</script>
+</head><body>
+<header><div class="wrap nav"><a class="brand" href="../"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0F4D55"/><circle cx="32" cy="32" r="8" fill="none" stroke="#C9A227" stroke-width="4"/><path d="M14 14l12 12M50 14 38 26M14 50l12-12M50 50 38 38" stroke="#C9A227" stroke-width="4"/></svg><span><b>Dental Data</b><small>Desarrolladores · Task Force</small></span></a>
+<nav class="menu"><a href="../#plan">Plan</a><a href="../#tareas">Tareas</a><a href="../#equipo">Equipo</a><a href="../T025/">← T025</a><a href="../T027/">T027 →</a><a class="btn btn-teal" href="../#unete">Únete</a></nav></div></header>
+<main>
+<section class="hero dh" style="padding:0"><div class="wrap">
+<nav class="crumb" aria-label="Ruta"><a href="../">Task Force</a><span>›</span><a href="../#tareas">Semana 2</a><span>›</span><span>T026</span></nav>
+<div style="margin-top:18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="idbig">T026</span><div class="eyebrow">Plataforma Azure</div></div>
+<h1>PostgreSQL Flexible privado</h1>
+<p>Desplegar la base de datos donde el conector guarda activos, políticas, contratos y transferencias.</p>
+<div class="meta"><span><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" />
+  <path d="M16 3l0 4" />
+  <path d="M8 3l0 4" />
+  <path d="M4 11l16 0" />
+  <path d="M8 15h2v2h-2l0 -2" />
+</svg>Semana 2 · 23–27 nov 2026</span><span><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>Ingeniero/a de plataforma Azure</span><span><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path d="M12 7v5l3 3" />
+</svg>1 jornada</span><span><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M5 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M5 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M15 12a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M7 8l0 8" />
+  <path d="M7 8a4 4 0 0 0 4 4h4" />
+</svg>1 dependencias · bloquea 3</span></div>
+</div></section>
+<section class="soft" style="padding:44px 0 70px"><div class="wrap dgrid">
+<div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M7 12a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+</svg></span>Objetivo</h2><p class="lead">Desplegar la base de datos donde el conector guarda activos, políticas, contratos y transferencias.</p><p style="margin-top:10px;color:var(--mute)"><b style="color:var(--dteal)">Hecho cuando:</b> Base del conector con punto de conexión privado, PITR y autenticación Entra.</p></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8" />
+  <path d="M14 19l2 2l4 -4" />
+  <path d="M9 8h4" />
+  <path d="M9 12h2" />
+</svg></span>Criterios de aceptación</h2><ul><li><svg style="stroke:#1B998B"
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+  <path d="M9 12l2 2l4 -4" />
+</svg><span>PostgreSQL Flexible con endpoint privado.</span></li><li><svg style="stroke:#1B998B"
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+  <path d="M9 12l2 2l4 -4" />
+</svg><span>Autenticación con Entra ID, sin contraseñas.</span></li><li><svg style="stroke:#1B998B"
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+  <path d="M9 12l2 2l4 -4" />
+</svg><span>Copias con restauración a un punto en el tiempo (PITR) y alta disponibilidad por zona.</span></li></ul></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" />
+  <path d="M12 16h.01" />
+</svg></span>Retos tecnológicos</h2><ul><li><svg style="stroke:#D98E04"
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" />
+  <path d="M12 16h.01" />
+</svg><span>Una base por clínica o esquemas por clínica en una base compartida: coste frente a aislamiento.</span></li></ul></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 8l-4 4l4 4" />
+  <path d="M17 8l4 4l-4 4" />
+  <path d="M14 4l-4 16" />
+</svg></span>Desarrollo</h2><ol class="steps"><li><span>Desplegar por IaC con red privada.</span></li><li><span>Crear roles de base de datos por conector.</span></li><li><span>Configurar retención de copias y alertas.</span></li></ol></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5" />
+  <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5" />
+  <path d="M3 21l2.5 -2.5" />
+  <path d="M18.5 5.5l2.5 -2.5" />
+  <path d="M10 11l-2 2" />
+  <path d="M13 14l-2 2" />
+</svg></span>Integraciones</h2><ul><li><svg style="stroke:#53338C"
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5" />
+  <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5" />
+  <path d="M3 21l2.5 -2.5" />
+  <path d="M18.5 5.5l2.5 -2.5" />
+  <path d="M10 11l-2 2" />
+  <path d="M13 14l-2 2" />
+</svg><span>Persistencia de EDC (T044) y registro de contratos (T090).</span></li></ul></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M20 8.04l-12.122 12.124a2.857 2.857 0 1 1 -4.041 -4.04l12.122 -12.124" />
+  <path d="M7 13h8" />
+  <path d="M19 15l1.5 1.6a2 2 0 1 1 -3 0l1.5 -1.6" />
+  <path d="M15 3l6 6" />
+</svg></span>Pruebas</h2><ul><li><svg style="stroke:#0B6FB8"
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M20 8.04l-12.122 12.124a2.857 2.857 0 1 1 -4.041 -4.04l12.122 -12.124" />
+  <path d="M7 13h8" />
+  <path d="M19 15l1.5 1.6a2 2 0 1 1 -3 0l1.5 -1.6" />
+  <path d="M15 3l6 6" />
+</svg><span>Conexión desde fuera de la VNet rechazada.</span></li><li><svg style="stroke:#0B6FB8"
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M20 8.04l-12.122 12.124a2.857 2.857 0 1 1 -4.041 -4.04l12.122 -12.124" />
+  <path d="M7 13h8" />
+  <path d="M19 15l1.5 1.6a2 2 0 1 1 -3 0l1.5 -1.6" />
+  <path d="M15 3l6 6" />
+</svg><span>Restauración PITR en T039.</span></li></ul></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M5 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M5 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M15 12a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M7 8l0 8" />
+  <path d="M7 8a4 4 0 0 0 4 4h4" />
+</svg></span>Dependencias</h2><div class="flowd"><div class="fcol"><a class="fbox" href="../T023/"><code>T023</code>Red hub-and-spoke base</a></div><div class="farr">→</div><div class="fbox me"><code>T026</code>PostgreSQL Flexible privado</div><div class="farr">→</div><div class="fcol"><a class="fbox" href="../T034/"><code>T034</code>Private Link en todos los servicios de datos</a><a class="fbox" href="../T039/"><code>T039</code>Copia y restauración probadas</a><a class="fbox" href="../T044/"><code>T044</code>Persistencia y máquinas de estado</a></div></div></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
+  <path d="M12 12l8 -4.5" />
+  <path d="M12 12l0 9" />
+  <path d="M12 12l-8 -4.5" />
+  <path d="M16 5.25l-8 4.5" />
+</svg></span>Entregables</h2><ul><li><svg style="stroke:#8A6D0B"
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
+  <path d="M12 12l8 -4.5" />
+  <path d="M12 12l0 9" />
+  <path d="M12 12l-8 -4.5" />
+  <path d="M16 5.25l-8 4.5" />
+</svg><span>Servidor PostgreSQL privado</span></li></ul></div>
+<div class="pn"><a href="../T025/"><small>← Anterior</small><b>T025 · AKS privado con Istio y mTLS</b></a><a class="nx" href="../T027/"><small>Siguiente →</small><b>T027 · Key Vault por inquilino</b></a></div>
+</div>
+<aside class="side">
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M12 4l-8 4l8 4l8 -4l-8 -4" />
+  <path d="M4 12l8 4l8 -4" />
+  <path d="M4 16l8 4l8 -4" />
+</svg></span>Stack</h2><div class="sg" style="--c:#0B6FB8"><b><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="14"
+  height="14"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M6 7.5l-4 9.5h4l6 -15l-6 5.5" />
+  <path d="M22 20l-7 -15l-3 7l4 5l-8 3l14 0" />
+</svg>Microsoft Azure</b><div><span>Azure Database for PostgreSQL Flexible</span><span>Private Endpoint</span><span>Entra ID auth</span></div></div><div class="sg" style="--c:#53338C"><b><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="14"
+  height="14"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5" />
+  <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5" />
+  <path d="M3 21l2.5 -2.5" />
+  <path d="M18.5 5.5l2.5 -2.5" />
+  <path d="M10 11l-2 2" />
+  <path d="M13 14l-2 2" />
+</svg>Eclipse Dataspace</b><div><span>EDC SQL stores</span></div></div></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M9 14l-4 -4l4 -4" />
+  <path d="M5 10h11a4 4 0 1 1 0 8h-1" />
+</svg></span>Depende de</h2><div class="dl"><a href="../T023/"><code>T023</code><span>Red hub-and-spoke base<small>S1 · Plataforma Azure</small></span></a></div></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M15 14l4 -4l-4 -4" />
+  <path d="M19 10h-11a4 4 0 1 0 0 8h1" />
+</svg></span>Bloquea</h2><div class="dl"><a href="../T034/"><code>T034</code><span>Private Link en todos los servicios de datos<small>S2 · Seguridad y red</small></span></a><a href="../T039/"><code>T039</code><span>Copia y restauración probadas<small>S4 · Seguridad y red</small></span></a><a href="../T044/"><code>T044</code><span>Persistencia y máquinas de estado<small>S2 · Conector Eclipse EDC</small></span></a></div></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg></span>Rol</h2><p style="font-size:15px"><b style="color:var(--navy)">Ingeniero/a de plataforma Azure</b><br><span style="color:var(--mute);font-size:14px">Zona de aterrizaje, IaC, AKS, red, seguridad y observabilidad.</span></p></div>
+<div class="blk"><h2><span class="bi"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M5 5a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M9 5a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M5 8h4" />
+  <path d="M9 16h4" />
+  <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041" />
+  <path d="M14 9l4 -1" />
+  <path d="M16 16l3.923 -.98" />
+</svg></span>Fuentes</h2><div class="srcl"><a href="https://eclipse-edc.github.io/documentation/for-contributors/postgres-persistence/" target="_blank" rel="noopener"><code>F505</code><span>Data Persistence with PostgreSQL</span></a></div></div>
+</aside>
+</div></section>
+</main>
+<footer><div class="wrap ft"><div><a href="../">← Las 100 tareas</a><a href="https://www.softwareinabox.eu/">Software in a Box</a><a href="/">Dental Data</a></div><div>Plan propuesto · noviembre de 2026</div></div></footer>
+</body></html>
