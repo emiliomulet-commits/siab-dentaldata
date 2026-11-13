@@ -7,6 +7,7 @@
 
 ## Documents
 - [Tandheelkundige gezondheidsdataruimtes in Europa · Vergelijkend onderzoek (PDF, NL)](https://dentaldata.softwareinabox.eu/docs/tandheelkundige-gezondheidsdataruimtes-europa-ehds.pdf): comparative study of Spain, Belgium, the Netherlands, Denmark and Germany, November 2026
+- [Dental health data spaces in Europe · Comparative study (PDF, EN)](https://dentaldata.softwareinabox.eu/docs/dental-health-data-spaces-europe-ehds.pdf): English version of the same study, November 2026
 - [Dental Data: Europe's Invisible Opportunity (PDF, EN)](https://dentaldata.softwareinabox.eu/docs/dental-data-es-nl-presentation-en.pdf): partnership presentation
 
 ## Related
