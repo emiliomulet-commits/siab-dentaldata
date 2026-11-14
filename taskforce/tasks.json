@@ -551,7 +551,9 @@
     "T024",
     "T031",
     "T032",
-    "T033"
+    "T033",
+    "T101",
+    "T102"
    ]
   },
   {
@@ -734,7 +736,8 @@
    "rol": "PL",
    "jornadas": 2,
    "depende_de": [
-    "T024"
+    "T024",
+    "T101"
    ],
    "hito": false,
    "url": "https://dentaldata.softwareinabox.eu/taskforce/T028/",
@@ -2548,6 +2551,52 @@
    "hito": true,
    "url": "https://dentaldata.softwareinabox.eu/taskforce/T100/",
    "fuentes": [],
+   "bloquea": []
+  },
+  {
+   "id": "T101",
+   "frente": "ARQ",
+   "semana": 1,
+   "titulo": "Verificar la región de Health Data Services",
+   "hecho_cuando": "Disponibilidad de FHIR, DICOM, desidentificación y eventos comprobada en la suscripción para West Europe, North Europe y Sweden Central, y región decidida en una ADR (D9).",
+   "rol": "PL",
+   "jornadas": 1,
+   "depende_de": [
+    "T021"
+   ],
+   "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T101/",
+   "fuentes": [
+    {
+     "n": "F204",
+     "titulo": "Azure Health Data Services regional availability of services and features",
+     "url": "https://learn.microsoft.com/en-us/azure/healthcare-apis/services-features-regional-availability"
+    }
+   ],
+   "bloquea": [
+    "T028"
+   ]
+  },
+  {
+   "id": "T102",
+   "frente": "GOV",
+   "semana": 1,
+   "titulo": "Presupuesto y alertas de coste",
+   "hecho_cuando": "Presupuesto de 300 €/mes en Cost Management con alertas al 50, 80 y 100 % a dirección y plataforma, etiquetas de coste por frente y clínica, y coste revisado en cada demo del viernes.",
+   "rol": "PL",
+   "jornadas": 1,
+   "depende_de": [
+    "T021"
+   ],
+   "hito": false,
+   "url": "https://dentaldata.softwareinabox.eu/taskforce/T102/",
+   "fuentes": [
+    {
+     "n": "F37",
+     "titulo": "Architectural Approaches for Cost Management and Allocation in a Multitenant Solution - Azure Architecture Center",
+     "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/cost-management-allocation"
+    }
+   ],
    "bloquea": []
   }
  ]

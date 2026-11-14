@@ -5,7 +5,7 @@
 ## Pages
 - [Nederland · Partnerprogramma](https://dentaldata.softwareinabox.eu/nl/): market (9,555 dentists, ~30% of practices closed to new patients, 500+ private-equity practices), solution, proposal, roadmap to March 2029 (Dutch)
 
-- [Task Force · Desarrolladores](https://dentaldata.softwareinabox.eu/taskforce/): 100-task, 4-week developer work plan (Spanish) to design, build, integrate, test and validate the dental data space on Microsoft Azure with Eclipse EDC, IDSA and Gaia-X; downloadable as [CSV](https://dentaldata.softwareinabox.eu/taskforce/tasks.csv) and [JSON](https://dentaldata.softwareinabox.eu/taskforce/tasks.json); each task has its own page at /taskforce/T001/ … /taskforce/T100/ with objectives, technical challenges, development steps, integrations, tests, dependencies and Azure/Eclipse/IDSA/Gaia-X stack
+- [Task Force · Desarrolladores](https://dentaldata.softwareinabox.eu/taskforce/): 102-task, 4-week developer work plan (Spanish) to design, build, integrate, test and validate the dental data space on Microsoft Azure with Eclipse EDC, IDSA and Gaia-X; downloadable as [CSV](https://dentaldata.softwareinabox.eu/taskforce/tasks.csv) and [JSON](https://dentaldata.softwareinabox.eu/taskforce/tasks.json); each task has its own page at /taskforce/T001/ … /taskforce/T102/ with objectives, technical challenges, development steps, integrations, tests, dependencies and Azure/Eclipse/IDSA/Gaia-X stack
 
 ## Documents
 - [Tandheelkundige gezondheidsdataruimtes in Europa · Vergelijkend onderzoek (PDF, NL)](https://dentaldata.softwareinabox.eu/docs/tandheelkundige-gezondheidsdataruimtes-europa-ehds.pdf): comparative study of Spain, Belgium, the Netherlands, Denmark and Germany, November 2026
