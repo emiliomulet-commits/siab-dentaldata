@@ -9,6 +9,7 @@
 - [België · Institutionele alliantie](https://dentaldata.softwareinabox.eu/nl-be/): Belgian market in Dutch (8,479 dentists, RIZIV/INAMI reimbursement €1.6bn in 2025, Health Data Agency), complement to RIZIV, institutional alliance, roadmap
 - [Belgique · Alliance institutionnelle](https://dentaldata.softwareinabox.eu/fr-be/): Belgian market in French (same content as the Dutch page)
 - [Deutschland · Partner für PVS und MVZ](https://dentaldata.softwareinabox.eu/de/): German market (43,663 dentists, ePA mandatory in dental practices since 1 Oct 2025, FDZ Gesundheit, GeDIG, iMVZ 30.4%), complement to ePA/FDZ for practice software vendors and MVZ (German)
+- [Danmark · Institutionel alliance](https://dentaldata.softwareinabox.eu/da/): Danish market (4,964 dentists, free care 0-21, SCOR register since 1972, adults ≈15% subsidy, Digital Sundhed Danmark), extending the SCOR logic to adults, institutional alliance (Danish)
 
 
 ## Documents
