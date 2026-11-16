@@ -1,0 +1,17 @@
+/* Dental Data · estilo de marca. Cargar después de https://www.softwareinabox.eu/assets/fonts.css */
+:root{
+  --dd-navy:#0B2545;   /* D, títulos, fondo principal oscuro */
+  --dd-navy-2:#14335C; /* degradados y bloques oscuros secundarios */
+  --dd-gold:#C9A227;   /* estrellas, "data" y acentos sobre fondo oscuro */
+  --dd-gold-l:#A8841A; /* "data" del logo grande sobre blanco */
+  --dd-gold-t:#8A6D0B; /* texto dorado pequeño sobre blanco (contraste AA) */
+  --dd-gold-soft:#EDBC6C; /* detalles sobre fondo oscuro (como las estrellas de Ullswater) */
+  --dd-ink:#1E2633; --dd-mute:#5B6573; --dd-paper:#F6F7FA;
+  --dd-font-brand:'Montserrat',system-ui,sans-serif;
+  --dd-font-text:'Hanken Grotesk',system-ui,sans-serif;
+}
+.dd-h1{font-family:var(--dd-font-brand);font-weight:600;font-size:clamp(36px,4.6vw,64px);line-height:1.08;letter-spacing:-.02em}
+.dd-h2{font-family:var(--dd-font-brand);font-weight:600;font-size:clamp(30px,3.4vw,48px);line-height:1.12;letter-spacing:-.015em}
+.dd-h3{font-family:var(--dd-font-brand);font-weight:600;font-size:20px;line-height:1.25}
+.dd-eyebrow{font-family:var(--dd-font-text);font-weight:700;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase}
+.dd-body{font-family:var(--dd-font-text);font-size:17px;line-height:1.55}
