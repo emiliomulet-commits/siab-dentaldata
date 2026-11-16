@@ -10,7 +10,10 @@ _build/mercados/<codigo>.py con:
   BLOQUES     {id_de_sección: html}  secciones que se sustituyen enteras (lo local)
   KB_JS       el array de respuestas preparadas del asistente en ese idioma
   JSONLD      datos estructurados (schema.org) de la página
-  REEMPLAZOS  lista de (texto_de_la_plantilla, texto_del_mercado) para lo común
+  REEMPLAZOS  lista de (texto_de_la_plantilla, texto_del_mercado) propios del mercado
+  IDIOMA_COMUN  (opcional) código de _build/idiomas/<código>.py con los textos comunes del idioma
+                (solución, tecnología, asistente, pie). {SIAB} se sustituye por SIAB, la ruta del
+                idioma en softwareinabox.eu (nl, nl-be, fr, fr-be, de…)
 
 Comprobaciones (el script falla si alguna no se cumple):
   - cada texto a reemplazar existe en la plantilla;
@@ -31,6 +34,28 @@ MARCAS_ES = [r"\bclínicas?\b", r"\bnuestr[oa]s?\b", r"\bpara\b", r"\bdatos\b", 
 def cargar(codigo):
     ruta = os.path.join(RAIZ, "_build", "mercados", codigo + ".py")
     spec = importlib.util.spec_from_file_location("m_" + codigo, ruta)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def comprobar_js(html, nombre):
+    """Comprueba con node la sintaxis de los <script> en línea (salvo JSON-LD), si node está instalado."""
+    import shutil, subprocess, tempfile
+    if not shutil.which("node"):
+        return
+    for i, js in enumerate(re.findall(r"<script(?![^>]*application/ld\+json)(?![^>]*\bsrc=)[^>]*>(.*?)</script>", html, flags=re.S)):
+        with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as f:
+            f.write(js)
+        r = subprocess.run(["node", "--check", f.name], capture_output=True, text=True)
+        os.unlink(f.name)
+        if r.returncode:
+            raise SystemExit(f"[error] JavaScript no válido en {nombre} (script {i}):\n" + r.stderr[-600:])
+
+
+def cargar_idioma(codigo):
+    ruta = os.path.join(RAIZ, "_build", "idiomas", codigo + ".py")
+    spec = importlib.util.spec_from_file_location("i_" + codigo.strip("_"), ruta)
     m = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
     return m
@@ -80,8 +105,24 @@ def generar(codigo):
     if getattr(m, "KB_JS", None):
         a, b = html.index("var KB=["), html.index("var byId={}")
         html = html[:a] + "var KB=" + m.KB_JS.strip() + ";\n" + html[b:]
+    reemplazos = list(m.REEMPLAZOS)
+    if getattr(m, "IDIOMA_COMUN", None):            # textos comunes del idioma, después de los del mercado
+        c = cargar_idioma(m.IDIOMA_COMUN)
+        base = cargar_idioma("_base").CLAVES
+        siab = getattr(m, "SIAB", m.IDIOMA_COMUN)
+        propios = {v for v, _ in m.REEMPLAZOS}
+        for clave, viejo in base.items():
+            if viejo in propios:                       # el mercado ya lo adapta
+                continue
+            if clave not in c.TEXTOS:
+                sys.exit(f"[error] falta la clave {clave} en _build/idiomas/{m.IDIOMA_COMUN}.py")
+            reemplazos.append((viejo, c.TEXTOS[clave].replace("{SIAB}", siab)))
+        permitido_extra = getattr(c, "PERMITIDO", [])
+        marcas_propias = getattr(c, "MARCAS_PROPIAS", [])     # palabras que también existen en ese idioma
+    else:
+        permitido_extra, marcas_propias = [], []
     faltan = []
-    for viejo, nuevo in m.REEMPLAZOS:
+    for viejo, nuevo in reemplazos:
         if viejo not in html:
             faltan.append(viejo[:90])
             continue
@@ -89,15 +130,18 @@ def generar(codigo):
     if faltan:
         raise SystemExit("[error] textos de la plantilla no encontrados:\n  - " + "\n  - ".join(faltan))
     restos = []
-    permitido = getattr(m, "PERMITIDO", [])
+    permitido = getattr(m, "PERMITIDO", []) + permitido_extra
     for fuente, texto in (("visible", texto_visible(html)), ("asistente", cadenas_js(html)), ("atributos", atributos(html))):
         for marca in MARCAS_ES:
+            if marca in marcas_propias:
+                continue
             for x in re.finditer(marca, texto, flags=re.I):
                 trozo = texto[max(0, x.start() - 50): x.end() + 50]
                 if not any(p in trozo for p in permitido):
                     restos.append(f"{fuente}: …{trozo.strip()}…")
     if restos:
         raise SystemExit(f"[error] quedan {len(restos)} textos en español en {m.SALIDA}:\n  - " + "\n  - ".join(sorted(set(restos))[:40]))
+    comprobar_js(html, m.SALIDA)
     salida = os.path.join(RAIZ, m.SALIDA)
     os.makedirs(os.path.dirname(salida), exist_ok=True)
     open(salida, "w", encoding="utf-8").write(html)
@@ -107,6 +151,6 @@ def generar(codigo):
 if __name__ == "__main__":
     codigos = sys.argv[1:] or ["todos"]
     if codigos == ["todos"]:
-        codigos = sorted(f[:-3] for f in os.listdir(os.path.join(RAIZ, "_build", "mercados")) if f.endswith(".py"))
+        codigos = sorted(f[:-3] for f in os.listdir(os.path.join(RAIZ, "_build", "mercados")) if f.endswith(".py") and not f.startswith("_"))
     for c in codigos:
         generar(c)

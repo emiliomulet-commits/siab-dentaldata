@@ -5,7 +5,9 @@ Página: https://dentaldata.softwareinabox.eu/en/. Está dirigida a partners de 
 ## Mercados
 - España (https://dentaldata.softwareinabox.eu/es/): buscamos una cadena dental o una aseguradora para un piloto de indicadores de calidad antes de marzo de 2027.
 - Países Bajos (https://dentaldata.softwareinabox.eu/nl/): buscamos un socio tecnológico neerlandés, preferiblemente partner de Microsoft Azure.
-- Bélgica, Alemania y Dinamarca: analizados en el estudio comparativo; sus páginas están en preparación. Bélgica y Dinamarca son mercados de alianza institucional; Alemania, de complemento (calidad del dato, cumplimiento y analítica federada para fabricantes de software).
+- Bélgica (https://dentaldata.softwareinabox.eu/nl-be/ y /fr-be/): alianza institucional con la Health Data Agency y las asociaciones profesionales.
+- Alemania (https://dentaldata.softwareinabox.eu/de/): complemento a la ePA (calidad del dato, cumplimiento y analítica federada para fabricantes de software y MVZ).
+- Dinamarca: analizada en el estudio; página en preparación (alianza institucional).
 - Francia, Italia y Portugal: en estudio.
 
 ## Matriz del estudio

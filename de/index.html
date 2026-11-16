@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental Data Deutschland · Föderierter zahnmedizinischer Datenraum für den EHDS | Software in a Box</title>
+<meta name="description" content="Dental Data ist ein föderierter zahnmedizinischer Datenraum auf Microsoft Azure: Datenqualität, Konnektoren für Praxissoftware und föderierte Analysen für MVZ, als Ergänzung zur ePA und zum FDZ Gesundheit.">
+<link rel="canonical" href="https://dentaldata.softwareinabox.eu/de/">
+<link rel="alternate" hreflang="es-ES" href="https://dentaldata.softwareinabox.eu/es/">
+<link rel="alternate" hreflang="nl-NL" href="https://dentaldata.softwareinabox.eu/nl/">
+<link rel="alternate" hreflang="nl-BE" href="https://dentaldata.softwareinabox.eu/nl-be/">
+<link rel="alternate" hreflang="fr-BE" href="https://dentaldata.softwareinabox.eu/fr-be/">
+<link rel="alternate" hreflang="de-DE" href="https://dentaldata.softwareinabox.eu/de/">
+<link rel="alternate" hreflang="en" href="https://dentaldata.softwareinabox.eu/en/">
+<link rel="alternate" hreflang="x-default" href="https://dentaldata.softwareinabox.eu/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Software in a Box"><meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Dental Data Deutschland · Ihr zahnmedizinischer Datenraum beginnt hier">
+<meta property="og:description" content="Die ePA steht. Dental Data liefert die fehlenden Bausteine: Datenqualität, Konnektoren für PVS-Hersteller und föderierte Analysen für MVZ.">
+<meta property="og:url" content="https://dentaldata.softwareinabox.eu/de/">
+<meta property="og:image" content="https://dentaldata.softwareinabox.eu/assets/brand/og-dentaldata.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","@id":"https://dentaldata.softwareinabox.eu/de/#webpage","url":"https://dentaldata.softwareinabox.eu/de/","name":"Dental Data Deutschland · Föderierter zahnmedizinischer Datenraum","inLanguage":"de-DE","isPartOf":{"@type":"WebSite","@id":"https://www.softwareinabox.eu/#website","name":"Software in a Box"},"publisher":{"@type":"Organization","@id":"https://www.softwareinabox.eu/#organization","name":"Software in a Box","url":"https://www.softwareinabox.eu/"},"areaServed":"DE"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Verlassen meine Daten die Praxis?","acceptedAnswer":{"@type":"Answer","text":"Nein. Die Akten bleiben in der Praxisverwaltungssoftware jeder Praxis, jedes MVZ oder jeder Kette. Ausgetauscht werden nur Einwilligungen, Metadaten und aggregierte Ergebnisse, nach Nutzungsverträgen, die die Maschine durchsetzt."}},
+{"@type":"Question","name":"Konkurriert Dental Data mit der ePA oder dem FDZ Gesundheit?","acceptedAnswer":{"@type":"Answer","text":"Nein. Dental Data ergänzt die fehlenden Bausteine: zertifizierbare Konnektoren für Praxissoftware, Prüfung von Format und Datenqualität vor dem Hochladen, föderierte Analysen für Ketten und MVZ sowie Kataloge mit standardisierten Metadaten."}},
+{"@type":"Question","name":"Was bedeutet der EHDS für die Zahnmedizin in Deutschland?","acceptedAnswer":{"@type":"Answer","text":"Die DACO des BfArM wird koordinierende Zugangsstelle für Gesundheitsdaten. Bis zum 26.03.2027 benennt jeder Mitgliedstaat seine Zugangsstellen; ab dem 26.03.2029 gelten die meisten Regeln zur Sekundärnutzung; ab 2031 kommen medizinische Bilder hinzu."}}
+]}]}
+</script>
+<style>
+:root{--navy:#0B2545;--gold:#C9A227;--gold-t:#8A6D0B;--teal:#8A6D0B;--dteal:#7A600A;--deep:#14335C;--bar:#050E1A;--cream:#F6F7FA;--ink:#1E2633;--mute:#5B6573;--line:#E3E6EC;--panel:#0A1C33}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;background:#fff}
+h1,h2,h3{font-family:'Montserrat',sans-serif;color:var(--navy);letter-spacing:-.015em}
+a{color:inherit}.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.sr{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* ===== Barra superior (estilo Ignite) ===== */
+.top{position:sticky;top:0;z-index:60;background:var(--bar);color:#fff}
+.top .wrap{display:flex;align-items:center;height:68px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;flex:none}
+.brand .logo{height:40px;width:auto;display:block}
+.brand .div{width:1.5px;height:28px;background:rgba(255,255,255,.8)}
+.brand .sub{font-weight:700;font-size:15px}
+.nav{display:flex;align-items:center;gap:6px;flex:1}
+.dd{position:relative}
+.dd>button,.nav>a{white-space:nowrap;background:none;border:0;color:#fff;font-size:15.5px;font-weight:500;padding:10px 10px;cursor:pointer;display:flex;align-items:center;gap:6px;text-decoration:none;border-radius:6px}
+.dd>button:hover,.nav>a:hover{background:rgba(255,255,255,.08)}
+.dd>button svg{width:12px;height:12px;transition:transform .2s}
+.dd>button[aria-expanded="true"] svg{transform:rotate(180deg)}
+.dd ul{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:250px;list-style:none;background:#fff;border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:8px}
+.dd ul.open{display:block}
+.dd li a{display:block;padding:10px 14px;border-radius:7px;color:var(--ink);text-decoration:none;font-size:15px}
+.dd li a:hover{background:#F7F2E3;color:var(--dteal)}
+.dd li a small{display:block;color:var(--mute);font-size:12.5px}
+.tbtn{display:inline-flex;align-items:center;gap:9px;height:48px;padding:0 20px;border-radius:6px;font-size:17px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.tbtn.white{background:#fff;color:#000;border:2px solid #fff}
+.tbtn.white:hover{background:#F7F2E3}
+.tbtn.outline{background:transparent;color:#fff;border:2px solid #fff}
+.tbtn.outline:hover{background:rgba(255,255,255,.1)}
+.tbtn svg{width:20px;height:20px}
+.right{display:flex;align-items:center;gap:16px;margin-left:auto;flex:none}
+.lang{position:relative}
+.lang>button{background:none;border:0;color:#9CC7FF;cursor:pointer;padding:8px;border-radius:6px;display:flex}
+.lang>button svg{width:24px;height:24px}
+.lang ul{right:0;left:auto;min-width:180px}
+.contact{color:#fff;text-decoration:none;font-weight:600;font-size:16px;display:flex;align-items:center;gap:10px}
+.contact .av{width:42px;height:42px;border-radius:50%;border:1.5px solid #fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat';font-weight:700;font-size:14px}
+.burger{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer}
+.burger svg{width:26px;height:26px}
+
+/* ===== Portada (hero con buscador) ===== */
+.hero{position:relative;overflow:hidden;color:#fff;text-align:center;
+ background:radial-gradient(700px 520px at 6% 40%,rgba(58,110,190,.38),transparent 65%),radial-gradient(900px 500px at 100% 0%,rgba(201,162,39,.10),transparent 60%),linear-gradient(170deg,#0B2545 0%,#0F2A4C 55%,#14335C 100%);
+ border-radius:22px 22px 0 0;margin-top:0}
+.hero .wrap{padding:82px 28px 78px;position:relative;z-index:1}
+.hero .pre{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{color:#fff;font-weight:600;font-size:clamp(36px,4.6vw,64px);line-height:1.08;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{max-width:760px;margin:18px auto 0;color:#D5DEE8;font-size:20px;line-height:1.5}
+.ask{max-width:1030px;margin:44px auto 0;display:flex;align-items:center;gap:16px;background:#fff;border-radius:46px;height:90px;padding:0 22px 0 30px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.ask svg.bk{width:22px;height:22px;flex:none;stroke:var(--dteal)}
+.ask input{flex:1;border:0;outline:0;font:inherit;font-size:20px;color:var(--ink);background:transparent;min-width:0}
+.ask input::placeholder{color:#6B7380}
+.ask button{flex:none;width:48px;height:48px;border-radius:50%;border:0;background:#E9EDF1;color:#5B6573;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.ask button:hover{background:var(--teal);color:#fff}
+.ask button svg{width:20px;height:20px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:1080px;margin:30px auto 0}
+.chip{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.32);color:#fff;border-radius:6px;padding:14px 24px;font-size:17px;cursor:pointer;transition:background .2s,border-color .2s}
+.chip:hover{background:rgba(255,255,255,.14);border-color:var(--gold)}
+.hero .trust{margin-top:34px;font-size:14px;color:#AFC0D2}
+.hero .trust b{color:#fff}
+
+/* ===== Bloque "Qué consigues" (estilo "What signing in unlocks") ===== */
+.dark{background:linear-gradient(180deg,#14335C 0%,#0B2545 22%,#0B2545 100%);color:#fff;padding:20px 0 90px}
+.unlock{display:grid;grid-template-columns:1fr 1fr;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,#0D2B4A,#0B2545)}
+.unlock .l{padding:70px 46px;display:flex;flex-direction:column;justify-content:center}
+.unlock .l h2{color:#fff;font-weight:600;font-size:clamp(30px,3.2vw,44px);line-height:1.12}
+.unlock .l p{color:#D5DEE8;font-size:19px;margin-top:18px;max-width:540px}
+.unlock .btns{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
+.unlock .btns .tbtn.outline{border-color:rgba(255,255,255,.35);border-width:1.5px}
+.unlock .r{padding:48px 46px;background:linear-gradient(160deg,rgba(201,162,39,.10),rgba(11,37,69,.2)),repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 44px),repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 44px)}
+.unlock .cap{font-size:13.5px;letter-spacing:.2em;text-transform:uppercase;color:#AFC0D2;font-weight:600}
+.unlock ol{list-style:none;margin-top:18px}
+.unlock li{display:grid;grid-template-columns:42px 1fr;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.unlock li .n{color:#EDBC6C;font-size:15px;padding-top:2px}
+.unlock li b{display:block;font-family:'Montserrat';font-weight:600;font-size:18px;color:#fff}
+.unlock li span{color:#C3CFDC;font-size:15.5px}
+
+/* ===== Tarjetas "Lo más consultado" (estilo "Trending sessions") ===== */
+.trend{margin-top:90px}
+.trend .th{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px;flex-wrap:wrap}
+.trend h2{color:#fff;font-weight:600;font-size:clamp(32px,3.6vw,52px)}
+.trend .th p{color:#C3CFDC;font-size:17px;margin-top:8px}
+.trend .all{color:#EDBC6C;font-weight:600;text-decoration:none;font-size:16px}
+.trend .all:hover{text-decoration:underline}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.tc{border:1px solid rgba(255,255,255,.16);border-radius:16px;background:rgba(255,255,255,.04);padding:16px 16px 22px;display:flex;flex-direction:column}
+.art{position:relative;height:238px;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.art .k{position:relative;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.art .k:before{content:'';display:block;width:24px;height:4px;border-radius:2px;background:currentColor;margin-bottom:12px}
+.art .t{position:relative;font-family:'Montserrat';font-weight:700;color:#fff;font-size:27px;margin-top:4px}
+.a1{background:linear-gradient(140deg,#0B2545,#123E66)}.a1 .k{color:#E8C55A}
+.a2{background:linear-gradient(140deg,#081A33,#14335C)}.a2 .k{color:#EDBC6C}
+.a3{background:linear-gradient(140deg,#1A1F3D,#0B2545)}.a3 .k{color:#F0A35E}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 6px 0}
+.tag{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);border-radius:6px;padding:7px 13px;font-size:14.5px;color:#E3EAF2}
+.tc h3{color:#fff;font-size:22px;line-height:1.3;font-weight:600;margin:18px 6px 0}
+.tc p{color:#C3CFDC;font-size:15.5px;margin:12px 6px 0}.tc .meta{margin-top:auto}.tc>p{margin-bottom:4px}
+.tc .go{display:block;margin:12px 6px 0;color:#EDBC6C;font-weight:700;text-decoration:none;background:none;border:0;cursor:pointer;font-size:15.5px;text-align:left;padding:0}
+.tc .go:hover{text-decoration:underline}
+.tc .meta{margin:auto 6px 0;padding-top:22px;border-top:0;display:flex;flex-direction:column;gap:10px;color:#C3CFDC;font-size:14.5px}
+.tc .meta .who{display:flex;align-items:center;gap:10px;color:#fff;font-weight:600}
+.tc .meta .who i{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px}
+.yt{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;margin-top:14px;display:none}
+.yt.on{display:block}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ===== Secciones de contenido ===== */
+section.s{padding:92px 0}
+.head{max-width:800px;margin-bottom:40px}
+.eyebrow{font-family:'Montserrat';font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-t);display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:'';width:28px;height:3px;background:var(--gold);border-radius:2px}
+.on-dark .eyebrow{color:var(--gold)}
+.head h2{font-size:clamp(28px,3.1vw,42px);line-height:1.12;margin-top:12px;font-weight:700}
+.head p{font-size:18px;color:var(--mute);margin-top:12px}
+.soft{background:var(--cream)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{border:1px solid var(--line);border-radius:16px;padding:24px;background:#fff;box-shadow:0 4px 18px rgba(11,37,69,.05)}
+.card h3{font-size:18px;margin:12px 0 6px}.card p{font-size:15.5px;color:var(--mute)}
+.num{font-family:'Montserrat';font-weight:800;color:var(--teal);font-size:13px;letter-spacing:.1em}
+.big{font-size:34px!important;margin-top:8px!important}
+.ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#F7F2E3}
+.ic svg{width:24px;height:24px;stroke:var(--dteal)}
+.pcap{font-size:14px;color:var(--mute);margin-top:16px}
+.on-dark{background:var(--navy);color:#fff}.on-dark h2{color:#fff}.on-dark .head p{color:#AAB7C8}
+.dgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:start}
+.dcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:24px}
+.dcard h3{color:#fff;font-size:19px;margin-bottom:10px}.dcard p,.dcard li{color:#C9D3E0;font-size:15.5px}.dcard ul{padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.tl{display:flex;flex-direction:column;gap:12px}.tl div{display:flex;gap:14px;align-items:baseline}.tl b{font-family:'Montserrat';color:var(--gold);min-width:104px;font-size:15px}.tl span{color:#C9D3E0;font-size:15px}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{background:#fff;border-radius:14px;padding:22px 18px;text-align:center;border:1px solid var(--line)}
+.step b{display:block;font-family:'Montserrat';color:var(--navy);margin:10px 0 6px;font-size:16px}.step span{font-size:14px;color:var(--mute)}
+.step .c{width:38px;height:38px;border-radius:50%;margin:0 auto;background:var(--navy);color:var(--gold);font-weight:800;font-family:'Montserrat';display:flex;align-items:center;justify-content:center}
+.who-grid .card h3{margin-top:0}
+.faq{max-width:900px}
+.faq details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq summary{cursor:pointer;list-style:none;font-family:'Montserrat';font-weight:600;font-size:18px;color:var(--navy);padding:16px 36px 16px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';position:absolute;right:6px;top:12px;font-size:26px;color:var(--teal);font-weight:400}
+.faq details[open] summary:after{content:'−'}
+.faq details p{color:var(--mute);font-size:16px;padding:0 36px 18px 0}
+.nl-band{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:26px;padding:24px 28px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.nl-band b{font-family:'Montserrat';color:var(--navy);font-size:18px}.nl-band p{color:var(--mute);font-size:15.5px}
+.nl-band a{color:var(--dteal);font-weight:700;text-decoration:none;white-space:nowrap}
+
+/* ===== Formulario ===== */
+.cta{background:linear-gradient(160deg,#14335C,#0B2545);color:#fff;text-align:center}
+.cta h2{color:#fff;font-size:clamp(28px,3.2vw,42px)}.cta>.wrap>p{color:#C9D3E0;font-size:18px;margin:12px auto 0;max-width:660px}
+.cform{max-width:640px;margin:30px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.cform input,.cform select,.cform textarea{width:100%;font:inherit;font-size:15px;padding:13px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.28);background:#fff;color:var(--ink)}
+.cform textarea,.cform .full{grid-column:1/-1}.cform textarea{min-height:100px;resize:vertical}
+.cform .ok{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:#DCE3EC}.cform .ok input{width:18px;height:18px;margin-top:2px;flex:none;accent-color:var(--gold)}.cform .ok a{color:var(--gold);font-weight:600}
+.cform button{grid-column:1/-1;justify-content:center;border:0;cursor:pointer;background:var(--gold);color:var(--navy);font-weight:700;height:52px;border-radius:8px;font-size:16px}
+.cform button:hover{background:#D8B43C}
+
+/* ===== Pie (estilo Microsoft) ===== */
+footer{background:#000;color:#fff;padding:60px 0 40px}
+.flogo{display:inline-block;margin:0 0 36px -14px}.flogo img{display:block;width:240px;height:auto}
+.fcols{display:grid;grid-template-columns:repeat(5,1fr);gap:28px}
+.fcols h4{font-family:'Montserrat';font-weight:600;font-size:17px;margin-bottom:16px}
+.fcols a{display:block;color:#D9DEE5;text-decoration:none;font-size:14px;margin-bottom:14px}
+.fcols a:hover{color:#fff;text-decoration:underline}
+.fbot{display:flex;flex-wrap:wrap;gap:22px;align-items:center;margin-top:34px;font-size:13.5px;color:#D9DEE5}
+.fbot a{color:#D9DEE5;text-decoration:none}.fbot a:hover{text-decoration:underline}
+.fbot .glob{display:flex;align-items:center;gap:8px}
+.fbot .copy{margin-left:auto}
+
+/* ===== Asistente flotante (estilo "Event assistant") ===== */
+.pill{position:fixed;right:34px;bottom:34px;z-index:70;display:flex;align-items:center;gap:16px;background:#071628;color:#fff;border:2px dashed rgba(255,255,255,.55);border-radius:16px;padding:14px 16px 14px 18px;cursor:pointer;box-shadow:0 14px 40px rgba(0,0,0,.35);font-size:18px;font-weight:600}
+.pill .lg{width:40px;height:40px;border-radius:10px;overflow:hidden;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.pill .lg img,.ph .lg img{width:100%;height:100%;display:block}
+.pill .pl{width:40px;height:40px;border-radius:8px;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:400}
+.pill:hover{border-color:var(--gold)}
+.pill[hidden]{display:none}
+.panel{position:fixed;right:28px;top:84px;bottom:22px;width:580px;max-width:calc(100vw - 32px);z-index:80;background:linear-gradient(180deg,#0E2340,#0A1C33);border-radius:20px;box-shadow:0 24px 70px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(255,255,255,.1);transform:translateX(110%);transition:transform .28s ease;visibility:hidden}
+.panel.open{transform:none;visibility:visible}
+.ph{display:flex;align-items:center;gap:14px;padding:18px 20px}
+.ph .lg{width:42px;height:42px;border-radius:10px;overflow:hidden;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:none}
+.ph .lg svg{width:24px;height:24px}
+.ph b{display:block;color:#fff;font-family:'Montserrat';font-size:19px;font-weight:600}
+.ph small{color:#C9D3E0;font-size:12.5px}.ph small a{color:#fff;font-weight:600}
+.ph .x{margin-left:auto;width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);background:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none}
+.ph .x svg{width:18px;height:18px}
+.msgs{flex:1;overflow-y:auto;padding:6px 20px 20px;display:flex;flex-direction:column;gap:18px}
+.bot{background:#fff;color:var(--ink);border-radius:12px;padding:18px 20px;max-width:94%;font-size:16px;line-height:1.55}
+.bot p+p{margin-top:12px}
+.bot a{color:#2F6FD1}
+.bot .ft{display:flex;justify-content:space-between;align-items:center;margin-top:14px;color:var(--mute);font-size:13.5px}
+.bot .ft span{display:flex;gap:6px}
+.bot .ft button{background:none;border:0;cursor:pointer;color:var(--mute);padding:4px;border-radius:6px}
+.bot .ft button:hover,.bot .ft button[aria-pressed="true"]{color:var(--dteal);background:#F7F2E3}
+.bot .ft svg{width:18px;height:18px}
+.bot .sug{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.bot .sug button{border:1px solid #C9D6E3;background:#F6F7FA;border-radius:999px;padding:7px 12px;font-size:13.5px;cursor:pointer;color:var(--navy)}
+.bot .sug button:hover{border-color:var(--teal)}
+.me{align-self:flex-end;background:#3A4A60;color:#fff;border-radius:12px;padding:12px 18px;font-size:16px;max-width:85%}
+.typing{display:flex;gap:5px;padding:16px 20px}
+.typing i{width:8px;height:8px;border-radius:50%;background:#9AA6B4;animation:b 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes b{0%,80%,100%{opacity:.3}40%{opacity:1}}
+.pin{margin:0 14px 14px;background:#fff;border-radius:12px;display:flex;align-items:center;gap:12px;padding:12px 14px 12px 18px;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#C9A227,#C9A227) 1}
+.pin input{flex:1;border:0;outline:0;font:inherit;font-size:17px;min-width:0}
+.pin button{background:none;border:0;cursor:pointer;color:#7C8796;padding:6px;display:flex}
+.pin button:hover{color:var(--dteal)}
+.pin svg{width:22px;height:22px}
+.pin .nw{color:#7C8796}
+
+@media(max-width:1380px) and (min-width:1101px){.top .wrap{gap:14px}.dd>button,.nav>a{padding:10px 7px;font-size:15px}.brand .div,.brand .sub{display:none}.right .contact span{display:none}}
+@media(max-width:1100px){.nav .dd,.nav>a{display:none}.burger{display:flex}.right .contact span{display:none}.cards{grid-template-columns:1fr 1fr}.fcols{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:860px){.unlock,.grid2,.dgrid{grid-template-columns:1fr}.grid4,.grid3{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.top .tbtn.white{display:none}.brand .div,.brand .sub{display:none}
+ .ask{height:72px}.ask input{font-size:16px}.chip{font-size:15px;padding:11px 16px}.unlock .l,.unlock .r{padding:40px 26px}section.s{padding:64px 0}
+ .panel{right:0;left:0;top:0;bottom:0;width:100%;max-width:100%;border-radius:0}.pill{right:14px;bottom:14px;font-size:0;gap:10px;padding:10px;border-style:solid}.pill .pl{width:32px;height:32px}.right .contact,.right .lang{display:none}.top .wrap{gap:12px}}
+@media(max-width:560px){.grid4,.grid3,.cform{grid-template-columns:1fr}.fcols{grid-template-columns:1fr 1fr}.top .tbtn.outline span{display:none}.tbtn{padding:0 12px}}
+.mnav{display:none;background:var(--bar);border-top:1px solid rgba(255,255,255,.1);padding:10px 28px 18px}
+.mnav.open{display:block}.mnav a{display:block;color:#fff;text-decoration:none;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+</style>
+</head>
+<body>
+
+<header class="top">
+ <div class="wrap">
+  <a class="brand" href="/de/" aria-label="Dental Data Deutschland, Startseite">
+   <img class="logo" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" width="220" height="40"><span class="div" aria-hidden="true"></span><span class="sub">auf Microsoft Azure</span>
+  </a>
+  <nav class="nav" aria-label="Hauptmenü">
+   <div class="dd"><button type="button" aria-expanded="false" aria-controls="m1">Lösung <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 4 4 4 4-4"/></svg></button>
+    <ul id="m1"><li><a href="#solucion">So funktioniert es<small>Die Daten verlassen die Praxis nie</small></a></li><li><a href="#casos">Anwendungsfälle<small>Qualität, KI auf Bildern, Evidenz</small></a></li><li><a href="#tecnologia">Technologie<small>Azure und offene europäische Standards</small></a></li></ul></div>
+   <div class="dd"><button type="button" aria-expanded="false" aria-controls="m2">Für wen <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 4 4 4 4-4"/></svg></button>
+    <ul id="m2"><li><a href="#para-quien">PVS-Hersteller</a></li><li><a href="#para-quien">MVZ und Ketten</a></li><li><a href="#para-quien">Azure-Integratoren</a></li><li><a href="#para-quien">Industrie und Forschung</a></li></ul></div>
+   <div class="dd"><button type="button" aria-expanded="false" aria-controls="m3">Ressourcen <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 4 4 4 4-4"/></svg></button>
+    <ul id="m3"><li><a href="#destacados">Studie, Präsentation und Videos</a></li><li><a href="#markt">Der deutsche Markt</a></li><li><a href="#preguntas">Häufige Fragen</a></li><li><a href="https://datos.softwareinabox.eu/de/">Unsere Datenräume</a></li></ul></div>
+  </nav>
+  <a class="tbtn white" href="#contacto">Gespräch vereinbaren</a>
+  <button class="tbtn outline" type="button" data-open-assistant><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/></svg><span>Fragen Sie</span></button>
+  <div class="right">
+   <div class="lang dd"><button type="button" aria-expanded="false" aria-controls="m4" aria-label="Land und Sprache"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg></button>
+    <ul id="m4"><li><a href="/es/" hreflang="es-ES" lang="es">Español · España</a></li><li><a href="/nl/" hreflang="nl-NL" lang="nl">Nederlands · Nederland</a></li><li><a href="/nl-be/" hreflang="nl-BE" lang="nl">Nederlands · België</a></li><li><a href="/fr-be/" hreflang="fr-BE" lang="fr">Français · Belgique</a></li><li><a href="/de/" hreflang="de-DE" lang="de" aria-current="page">Deutsch · Deutschland</a></li><li><a href="/en/" hreflang="en" lang="en">English · Europe</a></li></ul></div>
+   <a class="contact" href="#contacto"><span>Kontakt</span><i class="av" aria-hidden="true">DD</i></a>
+   <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+ </div>
+ <nav class="mnav" id="mnav" aria-label="Mobiles Menü"><a href="#solucion">Lösung</a><a href="#para-quien">Für wen</a><a href="#destacados">Ressourcen</a><a href="#preguntas">Häufige Fragen</a><a href="#contacto">Gespräch vereinbaren</a><a href="/">Andere Länder und Sprachen</a></nav>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+ <div class="wrap">
+  <div class="pre">Deutschland · Europäischer Gesundheitsdatenraum</div>
+  <h1 id="h1">Ihr zahnmedizinischer Datenraum <em>beginnt hier</em></h1>
+  <p class="lead">Fragen Sie, wie Sie Datenqualität sichern und Ergebnisse zwischen Praxen vergleichen, ohne dass eine einzige Akte die Praxis verlässt.</p>
+  <form class="ask" role="search" data-ask>
+   <svg class="bk" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/></svg>
+   <label class="sr" for="q">Stellen Sie Ihre Frage zu Dental Data</label>
+   <input id="q" type="text" autocomplete="off" placeholder="Stellen Sie Ihre Frage zu Dental Data…">
+   <button type="submit" aria-label="Frage senden"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  </form>
+  <div class="chips">
+   <button class="chip" type="button" data-q="datos">Verlassen meine Daten die Praxis?</button>
+   <button class="chip" type="button" data-q="epa">Konkurriert das mit der ePA?</button>
+   <button class="chip" type="button" data-q="ehds">Was bedeutet der EHDS für Praxen?</button>
+   <button class="chip" type="button" data-q="ia">Wie funktioniert KI auf Röntgenbildern?</button>
+   <button class="chip" type="button" data-q="pvs">Was haben PVS-Hersteller und MVZ davon?</button>
+  </div>
+  <p class="trust">Erfahrung aus <b>3 öffentlich geförderten Datenräumen</b> · Konnektor auf <b>Microsoft Azure</b> mit Daten in der EU</p>
+ </div>
+</section>
+
+<div class="dark">
+ <div class="wrap">
+  <div class="unlock">
+   <div class="l">
+    <h2>Die ePA steht. Wir liefern die fehlenden Bausteine.</h2>
+    <p>Wir suchen einen Hersteller von Praxissoftware oder einen auf Gesundheitstelematik spezialisierten Azure-Integrator, sowie MVZ und Ketten, die ihre Ergebnisse vergleichen wollen.</p>
+    <div class="btns"><a class="tbtn white" href="#contacto">Gespräch vereinbaren</a><button class="tbtn outline" type="button" data-open-assistant>Assistenten fragen</button></div>
+   </div>
+   <div class="r">
+    <div class="cap">Was Partner erhalten</div>
+    <ol>
+     <li><span class="n">01</span><div><b>Datenqualität vor dem Hochladen</b><span>Prüfung von Format und Inhalt, bevor Daten in ePA oder Katalog gelangen.</span></div></li>
+     <li><span class="n">02</span><div><b>Föderierte Analysen für MVZ</b><span>Ergebnisse zwischen Standorten vergleichen, ohne Akten zu migrieren.</span></div></li>
+     <li><span class="n">03</span><div><b>EHDS-bereite Konnektoren</b><span>Interoperabilität und Protokollierung für Praxissoftware, ohne Eigenentwicklung.</span></div></li>
+     <li><span class="n">04</span><div><b>Weniger Aufwand in der Praxis</b><span>Die Lösung muss Zeit sparen, nicht zusätzliche Bürokratie erzeugen.</span></div></li>
+    </ol>
+   </div>
+  </div>
+
+  <div class="trend" id="destacados">
+   <div class="th"><div><h2>Am häufigsten aufgerufen</h2><p>Die Studie, die Präsentation und die Videos, die Praxen und Partner am häufigsten herunterladen.</p></div><a class="all" href="#preguntas">Zu den häufigen Fragen →</a></div>
+   <div class="cards">
+    <article class="tc">
+     <div class="art a1"><svg viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke-width="4"><path d="M-10 40H230a60 60 0 0 1 60 60v150" stroke="#C9A227" opacity=".85"/><path d="M-10 58H222a46 46 0 0 1 46 46v150" stroke="#E8C55A" opacity=".55"/><path d="M-10 76H214a32 32 0 0 1 32 32v150" stroke="#EDBC6C" opacity=".5"/><path d="M420 190H330a50 50 0 0 0-50 50" stroke="#C9A227" opacity=".9"/><path d="M420 206H338a34 34 0 0 0-34 34" stroke="#EDBC6C" opacity=".6"/></svg><span class="k">Studie</span><span class="t">Dental Data 2026</span></div>
+     <div class="tags"><span class="tag">PDF · 45 p.</span><span class="tag">Englisch</span><span class="tag">Auch auf Niederländisch</span><span class="tag">Führungskräfte und Technik</span></div>
+     <h3>Zahnmedizinische Gesundheitsdatenräume in Europa</h3>
+     <p>Vergleichsstudie zu Spanien, Belgien, den Niederlanden, Dänemark und Deutschland: Gesundheitssystem, Markt, digitale Infrastruktur und Umsetzung des EHDS.</p>
+     <a class="go" href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener">Auf Englisch herunterladen →</a><a class="go" href="/docs/tandheelkundige-gezondheidsdataruimtes-europa-ehds.pdf" target="_blank" rel="noopener" lang="nl">Auf Niederländisch herunterladen →</a>
+     <div class="meta"><span>November 2026</span><span class="who"><i>SB</i>Software in a Box</span></div>
+    </article>
+    <article class="tc">
+     <div class="art a2"><svg viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke-width="4"><path d="M-10 30H120a40 40 0 0 1 40 40v200" stroke="#EDBC6C" opacity=".85"/><path d="M-10 48H108a30 30 0 0 1 30 30v200" stroke="#C9A227" opacity=".7"/><path d="M420 40H300a40 40 0 0 0-40 40v40a40 40 0 0 0 40 40h120" stroke="#EDBC6C" opacity=".55"/><path d="M420 60H310a24 24 0 0 0-24 24v32a24 24 0 0 0 24 24h110" stroke="#C9A227" opacity=".6"/><path d="M200 250V160" stroke="#EDBC6C" opacity=".5"/></svg><span class="k">Video</span><span class="t">Dental Data 2026</span></div>
+     <div class="tags"><span class="tag">11 Min. 35 Sek.</span><span class="tag">Englisch</span><span class="tag">KI-generierte Moderatoren</span></div>
+     <h3>Dental Data: Europas unsichtbare Chance</h3>
+     <p>Sarah (Madrid) und James (Amsterdam) gehen die Studie durch: das Problem, fünf Länder, der Vorschlag und die Roadmap.</p>
+     <button class="go" type="button" data-yt="wGCGvV_ksMY" aria-controls="yt1">Video hier ansehen →</button>
+     <div class="yt" id="yt1"></div>
+     <div class="meta"><span>November 2026 · Wird erst beim Klick von YouTube geladen</span><span class="who"><i>SB</i>Software in a Box</span></div>
+    </article>
+    <article class="tc">
+     <div class="art a3"><svg viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke-width="4"><path d="M-10 120H90a40 40 0 0 0 40-40V-10" stroke="#F0A35E" opacity=".85"/><path d="M-10 138H96a52 52 0 0 0 52-52V-10" stroke="#E8C55A" opacity=".55"/><path d="M420 120H300a60 60 0 0 0-60 60v70" stroke="#F0A35E" opacity=".8"/><path d="M420 140H308a46 46 0 0 0-46 46v64" stroke="#EDBC6C" opacity=".45"/><path d="M420 160H316a32 32 0 0 0-32 32v58" stroke="#C9A227" opacity=".6"/></svg><span class="k">Präsentation</span><span class="t">Dental Data 2026</span></div>
+     <div class="tags"><span class="tag">PDF · 32 Folien</span><span class="tag">Englisch</span><span class="tag">Spanien und Niederlande</span></div>
+     <h3>Ein zahnmedizinischer Datenraum, zwei Märkte</h3>
+     <p>Der Vorschlag von Dental Data für Spanien und die Niederlande im Europäischen Gesundheitsdatenraum, mit der Roadmap bis 2029.</p>
+     <a class="go" href="/docs/dental-data-es-nl-presentation-en.pdf" target="_blank" rel="noopener">Präsentation herunterladen →</a>
+     <div class="meta"><span>November 2026</span><span class="who"><i>SB</i>Software in a Box</span></div>
+    </article>
+   </div>
+  </div>
+ </div>
+</div>
+
+<section class="s soft" id="markt"><div class="wrap">
+ <div class="head"><div class="eyebrow">Der deutsche Markt</div><h2>Die Infrastruktur steht. Es fehlen die Bausteine dazwischen.</h2><p>Deutschland verfolgt einen institutionellen, integrierten Ansatz: Zahnmedizinische Daten laufen über die Telematikinfrastruktur, die KZBV-Abrechnung liefert detaillierte Statistiken, und die ePA hat mit dem eZahnbonusheft einen eigenen zahnmedizinischen Teil. Kein anderes Land ist dem Weg der Daten zur Zugangsstelle so nah.</p></div>
+ <div class="grid4">
+  <div class="card"><div class="num">ZAHNÄRZTE</div><h3 class="big">43.663</h3><p>aktiv im Jahr 2024 (von 103.998 registrierten), etwa 52 je 100.000 Einwohner.</p></div>
+  <div class="card"><div class="num">GESETZLICHE KRANKENVERSICHERUNG</div><h3 class="big">65 %</h3><p>der zahnmedizinischen Ausgaben trägt die GKV (2023); sie versichert rund 88 % der Bevölkerung.</p></div>
+  <div class="card"><div class="num">EPA IN DER ZAHNARZTPRAXIS</div><h3 class="big">01.10.2025</h3><p>seitdem verpflichtend. Im April 2026: fast 73 Mio. ePAs und mehr als 5,5 Mio. eZahnbonushefte.</p></div>
+  <div class="card"><div class="num">INVESTORENGETRAGENE MVZ</div><h3 class="big">30,4 %</h3><p>der zahnärztlichen MVZ im 3. Quartal 2023, mit steigender Tendenz.</p></div>
+ </div>
+ <div class="grid2" style="margin-top:22px">
+  <div class="card"><h3>FDZ Gesundheit, DACO und GeDIG</h3><p>Das Forschungsdatenzentrum Gesundheit des BfArM nimmt seit dem 09.10.2025 Anträge an; die DACO wird koordinierende Zugangsstelle für Gesundheitsdaten. Am 15.07.2026 hat die Bundesregierung den Entwurf des GeDIG beschlossen. Die Anbindung der ePA an das FDZ ist für Ende 2026 geplant.</p></div>
+  <div class="card"><h3>Weniger Bürokratie, mehr Qualitätsnachweis</h3><p>Die KZBV beklagt die Bürokratielast in den Praxen; jede Lösung muss Zeit sparen. iMVZ-Netzwerke stehen unter politischer Beobachtung und müssen Qualität belegen, und PVS-Hersteller müssen Anforderungen an Interoperabilität und Konformität erfüllen.</p></div>
+ </div>
+ <p class="pcap">Quelle: Software in a Box, <a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener" lang="en">Dental health data spaces in Europe · Vergleichsstudie</a> (November 2026), mit den dort zitierten Quellen (KZBV, BZÄK, Council of European Dentists, BfArM, Bundesministerium für Gesundheit).</p>
+</div></section>
+
+<section class="s on-dark" id="solucion"><div class="wrap">
+ <div class="head"><div class="eyebrow">Die Lösung</div><h2>Ein föderierter Datenraum: Die Daten verlassen die Praxis nie</h2><p>Praxen, Ketten und Versicherer behalten ihre Akten. Nur Einwilligungen, Metadaten und aggregierte Ergebnisse werden ausgetauscht. Der Datenraum wird zum natürlichen Ansprechpartner der Zugangsstellen für Gesundheitsdaten.</p></div>
+ <div class="dgrid" id="casos">
+  <div class="dcard"><h3>Anwendungsfälle mit wiederkehrenden Erlösen</h3><ul>
+   <li><b style="color:#fff">Qualitätsindikatoren</b> zwischen Praxen derselben Gruppe: der erste Anwendungsfall, ab sofort nutzbar.</li>
+   <li><b style="color:#fff">KI auf zahnmedizinischen Bildern</b>, ohne ein einziges Röntgenbild zu bewegen. Unser Modell für Approximalkaries und parodontalen Knochenabbau befindet sich in der klinischen Validierung.</li>
+   <li><b style="color:#fff">Evidenz für die Industrie</b> zu Implantaten und Materialien.</li>
+   <li><b style="color:#fff">Niemals für Werbung</b>: Der EHDS verbietet es.</li></ul></div>
+  <div class="dcard"><h3>Das Zeitfenster</h3><div class="tl">
+   <div><b>26/03/2027</b><span>Jeder Mitgliedstaat hat seine Zugangsstellen für Gesundheitsdaten benannt</span></div>
+   <div><b>26/03/2029</b><span>Die meisten Regeln zur Sekundärnutzung gelten</span></div>
+   <div><b>2031</b><span>Medizinische Bilder kommen hinzu: Röntgenbilder, Panoramaaufnahmen und DVT</span></div></div>
+   <p style="margin-top:16px">Wer 2029 einen funktionierenden zahnmedizinischen Datenraum hat, wird der natürliche Partner der Aufsichtsbehörden.</p></div>
+ </div>
+</div></section>
+
+<section class="s" id="tecnologia"><div class="wrap">
+ <div class="head"><div class="eyebrow">Technologie und Erfahrung</div><h2>Offene europäische Standards, bereits in drei realen Datenräumen erprobt</h2><p>Ein Konnektor auf Microsoft Azure, integriert in die Praxisverwaltungssoftware. Europäisches Format für die Patientenakte und gemeinsame Metadaten, angepasst an jeden Markt.</p></div>
+ <div class="grid4">
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Souveränität</h3><p>Die Praxis entscheidet, wer wofür und wie lange Zugriff erhält.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="m16 16 3-8 3 8c-.9.6-1.9 1-3 1s-2.1-.4-3-1zM2 16l3-8 3 8c-.9.6-1.9 1-3 1s-2.1-.4-3-1zM7 21h10M12 3v18"/></svg></div><h3>ODRL-Verträge</h3><p>Nutzungsbedingungen, die die Maschine durchsetzt. Kein Vertrag, kein Zugriff.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Gaia-X und IDSA</h3><p>Verifizierbare Nachweise, Dataspace Protocol, Eclipse EDC, FHIR, DICOM und HealthDCAT-AP.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div><h3>KI ohne Datenbewegung</h3><p>Föderiertes Lernen und Confidential Computing: Der Algorithmus geht zu den Daten.</p></div>
+ </div>
+ <div class="grid3" style="margin-top:22px">
+  <div class="card"><div class="num">GESUNDHEIT</div><h3>Global Data Care</h3><p>Föderierter Gesundheitsdatenraum auf Gaia-X und Pontus-X.</p></div>
+  <div class="card"><div class="num">BESCHAFFUNG</div><h3>PROCUREDATA</h3><p>Föderierter Datenraum für öffentliche Vergabe und Einkauf.</p></div>
+  <div class="card"><div class="num">KREISLAUFWIRTSCHAFT</div><h3>EcoDataNet</h3><p>Datenraum für Abfall und Kreislaufwirtschaft.</p></div>
+ </div>
+ <p class="pcap">Drei Demonstratoren, entworfen und umgesetzt zwischen 2024 und 2026 mit Förderung der SEDIA, des spanischen Staatssekretariats für Digitalisierung und Künstliche Intelligenz. <a href="https://datos.softwareinabox.eu/de/">Mehr über unsere Datenräume</a></p>
+</div></section>
+
+<section class="s soft" id="para-quien"><div class="wrap">
+ <div class="head"><div class="eyebrow">Für wen</div><h2>Keine Konkurrenz zur ePA, sondern die fehlenden Bausteine</h2><p>In Deutschland ersetzt Dental Data weder die ePA noch das FDZ Gesundheit. Wir liefern, was dazwischen fehlt, und arbeiten dafür mit Herstellern von Praxissoftware und Integratoren zusammen.</p></div>
+ <div class="grid4 who-grid">
+  <div class="card"><div class="num">PVS-HERSTELLER</div><h3>EHDS-bereit ohne Eigenentwicklung</h3><p>Ein zertifizierbarer Konnektor für Interoperabilität, Protokollierung und Datenqualität.</p></div>
+  <div class="card"><div class="num">MVZ UND KETTEN</div><h3>Ergebnisse vergleichen</h3><p>Föderierte Analysen zwischen Standorten, ohne Akten zu migrieren, um Versorgungsqualität zu belegen.</p></div>
+  <div class="card"><div class="num">AZURE-INTEGRATOREN</div><h3>Telematik und Cloud</h3><p>Partner mit Erfahrung in Gesundheitstelematik, die den Konnektor bereitstellen und betreiben.</p></div>
+  <div class="card"><div class="num">INDUSTRIE UND FORSCHUNG</div><h3>Evidenz aus der Versorgung</h3><p>Für Hersteller von Implantaten, Materialien und KI sowie für Forschung, über Kataloge mit standardisierten Metadaten.</p></div>
+ </div>
+ <div class="head" style="margin-top:56px;margin-bottom:22px"><h2 style="font-size:28px">Roadmap</h2></div>
+ <div class="flow">
+  <div class="step"><div class="c">1</div><b>2027 · Partner gewinnen</b><span>Vereinbarung mit einem PVS-Hersteller oder Integrator; erste Piloten in Spanien und den Niederlanden.</span></div>
+  <div class="step"><div class="c">2</div><b>2027–2028 · Erstes Projekt</b><span>Datenqualitätsprüfung und föderierte Analysen mit einem MVZ-Netzwerk oder einer Kette.</span></div>
+  <div class="step"><div class="c">3</div><b>März 2029 · Katalogisiert</b><span>Ein katalogisierter zahnmedizinischer Datenraum, bereit für Zugangsanträge nach dem EHDS.</span></div>
+ </div>
+ <div class="nl-band"><div><b>Auch in Spanien, den Niederlanden und Belgien</b><p>Wir bauen ein Produkt für ganz Europa und passen es an Sprache, Daten und Recht jedes Landes an.</p></div><a href="/en/" lang="en" hreflang="en">Europe →</a>&nbsp;&nbsp;<a href="/nl/" lang="nl" hreflang="nl-NL">Nederland →</a></div>
+</div></section>
+
+<section class="s" id="preguntas"><div class="wrap">
+ <div class="head"><div class="eyebrow">Häufige Fragen</div><h2>Was man uns am häufigsten fragt</h2><p>Keine passende Antwort gefunden? Fragen Sie den Assistenten oder schreiben Sie uns.</p></div>
+ <div class="faq" id="faqlist"></div>
+</div></section>
+
+<section class="s cta" id="contacto"><div class="wrap">
+ <h2>Möchten Sie mit uns sprechen?</h2>
+ <p>Erzählen Sie uns kurz, wer Sie sind. Wir schlagen Ihnen ein Gespräch vor, um zu sehen, wie Dental Data zu Ihrer Organisation passt.</p>
+ <form class="cform" action="https://formsubmit.co/partners@softwareinabox.eu" method="POST">
+  <input type="hidden" name="_subject" value="Dental Data · Deutschland [DE]">
+  <input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://www.softwareinabox.eu/gracias.html">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <label class="sr" for="f-n">Name</label><input id="f-n" name="Name" required placeholder="Vor- und Nachname" autocomplete="name">
+  <label class="sr" for="f-o">Organisation</label><input id="f-o" name="Organisation" placeholder="Organisation" autocomplete="organization">
+  <label class="sr" for="f-p">Profil</label><select id="f-p" class="full" name="Profil"><option value="">Profil Ihrer Organisation</option><option>Hersteller von Praxissoftware (PVS)</option><option>MVZ oder Praxiskette</option><option>Microsoft-Partner oder Integrator</option><option>Zahnarztpraxis</option><option>Krankenversicherung</option><option>Industrie, Forschung oder Verband</option><option>Sonstiges</option></select>
+  <label class="sr" for="f-e">E-Mail</label><input id="f-e" class="full" type="email" name="E-Mail" required placeholder="Geschäftliche E-Mail-Adresse" autocomplete="email">
+  <label class="sr" for="f-m">Nachricht</label><textarea id="f-m" name="Nachricht" placeholder="Worüber möchten Sie mit uns sprechen?"></textarea>
+  <label class="ok full"><input type="checkbox" name="Einwilligung" value="Akzeptiert die Datenschutzerklärung" required><span>Ich habe die <a href="https://www.softwareinabox.eu/de/privacidad.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und akzeptiere sie. Wir verwenden Ihre Daten nur, um Ihnen zu antworten.</span></label>
+  <button type="submit">Anfrage senden</button>
+ </form>
+ <p style="font-size:15px;margin-top:18px">Oder schreiben Sie an <a href="mailto:partners@softwareinabox.eu" style="color:#fff;font-weight:600">partners@softwareinabox.eu</a> · <a href="tel:+34601398868" style="color:#fff;font-weight:600">+34 601 398 868</a> · Madrid und Brüssel</p>
+</div></section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <a class="flogo" href="/de/" aria-label="Dental Data Deutschland, Startseite"><img src="/assets/brand/dentaldata-logo-vertical-white.svg" alt="Dental Data · Federated Dental Data Space" width="240" height="172"></a>
+  <div class="fcols">
+   <div><h4>Dental Data</h4><a href="#solucion">So funktioniert es</a><a href="#casos">Anwendungsfälle</a><a href="#tecnologia">Technologie</a><a href="#para-quien">Roadmap</a></div>
+   <div><h4>Länder</h4><a href="/nl/" lang="nl">Nederland</a><a href="/nl-be/" lang="nl">België</a><a href="/fr-be/" lang="fr">Belgique</a><a href="/">Alle Länder</a></div>
+   <div><h4>Ressourcen</h4><a href="/docs/dental-health-data-spaces-europe-ehds.pdf">Vergleichsstudie (EN)</a><a href="/docs/dental-data-es-nl-presentation-en.pdf">Präsentation (EN)</a><a href="#destacados">Videos</a><a href="#preguntas">Häufige Fragen</a></div>
+   <div><h4>Software in a Box</h4><a href="https://www.softwareinabox.eu/de/">Startseite</a><a href="https://datos.softwareinabox.eu/de/">Datenräume</a><a href="https://cognitiv.softwareinabox.eu/de/">COGNITIV</a><a href="https://argos.softwareinabox.eu/de/">ARGOS</a></div>
+   <div><h4>Kontakt</h4><a href="#contacto">Gespräch vereinbaren</a><a href="mailto:partners@softwareinabox.eu">partners@softwareinabox.eu</a><a href="tel:+34601398868">+34 601 398 868</a><a href="/en/" lang="en">Dental Data Europe</a></div>
+  </div>
+  <div class="fbot">
+   <span class="glob"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg>Deutsch (Deutschland)</span>
+   <a href="https://www.softwareinabox.eu/de/aviso-legal.html">Impressum</a><a href="https://www.softwareinabox.eu/de/privacidad.html">Datenschutz</a><a href="https://www.softwareinabox.eu/de/cookies.html">Cookies</a>
+   <span>Microsoft und Azure sind Marken der Microsoft Corporation.</span>
+   <span class="copy">© 2026 Software in a Box · Madrid · Brüssel</span>
+  </div>
+ </div>
+</footer>
+
+<!-- Asistente flotante -->
+<button class="pill" type="button" id="pill" data-open-assistant aria-label="Dental Data-Assistenten öffnen">
+ <span class="lg"><img src="/assets/brand/favicon.svg" alt="" width="40" height="40"></span>
+ Dental Data-Assistent <span class="pl" aria-hidden="true">+</span>
+</button>
+<aside class="panel" id="panel" role="dialog" aria-modal="false" aria-labelledby="ph-t" aria-hidden="true">
+ <div class="ph">
+  <span class="lg"><img src="/assets/brand/favicon.svg" alt="" width="40" height="40"></span>
+  <div><b id="ph-t">Dental Data-Assistent</b><small>Mit KI, auf Basis unserer Dokumentation · <a href="https://www.softwareinabox.eu/de/privacidad.html" target="_blank" rel="noopener">Datenschutz</a></small></div>
+  <button class="x" type="button" id="close" aria-label="Assistenten schließen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+ </div>
+ <div class="msgs" id="msgs" aria-live="polite"></div>
+ <form class="pin" id="pin">
+  <button type="button" class="nw" id="reset" aria-label="Neues Gespräch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></button>
+  <label class="sr" for="pq">Geben Sie Ihre Frage ein</label>
+  <input id="pq" type="text" autocomplete="off" placeholder="Geben Sie Ihre Frage ein…">
+  <button type="submit" aria-label="Senden"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 20 4l-4 16-4-6z"/><path d="m12 14 8-10"/></svg></button>
+ </form>
+</aside>
+
+<script>
+(function(){
+// ---------- Base de conocimiento (preguntas frecuentes + asistente) ----------
+var KB=[
+{id:'datos',q:'Verlassen meine Daten die Praxis?',k:['verlassen','verschoben','zentral','gespeichert','wo liegen','cloud','server','datenschutz','kopie','teilen'],
+ a:['Nein. Die Akten bleiben in der Praxisverwaltungssoftware (PVS) jeder Praxis, jedes MVZ oder jeder Kette. Dental Data ist ein <b>föderierter</b> Datenraum: Ausgetauscht werden nur Einwilligungen, Metadaten und aggregierte Ergebnisse.','Jeder Zugriff wird durch einen ODRL-Vertrag geregelt, den die Maschine durchsetzt: Die Praxis entscheidet, wer wofür und wie lange Zugriff erhält. Kein Vertrag, kein Zugriff.'],s:['ia','seguridad']},
+{id:'epa',q:'Konkurriert Dental Data mit der ePA oder dem FDZ?',k:['epa','patientenakte','fdz','bfarm','forschungsdatenzentrum','telematik','gematik','ezahnbonusheft','bonusheft','ebz','konkurr'],
+ a:['Nein. Die <b>ePA für alle</b> ist seit dem 01.10.2025 in allen Zahnarztpraxen verpflichtend; im April 2026 gab es fast 73 Millionen ePAs und mehr als 5,5 Millionen elektronische Zahnbonushefte. Das FDZ Gesundheit des BfArM nimmt seit dem 09.10.2025 Anträge an.','Dental Data ergänzt die fehlenden Bausteine: <b>zertifizierbare Konnektoren</b> für Praxissoftware, Prüfung von Format und Datenqualität vor dem Hochladen, <b>föderierte Analysen</b> für Ketten und MVZ sowie Kataloge mit standardisierten Metadaten.'],s:['pvs','ehds']},
+{id:'ehds',q:'Was bedeutet der EHDS für Zahnarztpraxen?',k:['ehds','gesundheitsdatenraum','zugangsstelle','daco','gdng','gedig','2027','2029','2031','gesetz','verordnung','artikel 50','kleinst'],
+ a:['Deutschland hat mit dem Gesundheitsdatennutzungsgesetz (GDNG) viel vorweggenommen. Die DACO des BfArM wird <b>koordinierende Zugangsstelle für Gesundheitsdaten</b>; am 15.07.2026 hat die Bundesregierung den Entwurf des GeDIG beschlossen, das den EHDS auf der bestehenden Infrastruktur umsetzt.','Wichtige Termine: bis zum <b>26.03.2027</b> sind die Zugangsstellen benannt, ab dem <b>26.03.2029</b> gelten die meisten Regeln zur Sekundärnutzung, ab <b>2031</b> kommen medizinische Bilder hinzu, darunter Röntgenbilder und DVT. Die Anbindung der ePA an das FDZ ist für Ende 2026 geplant.'],s:['epa','datos']},
+{id:'ia',q:'Wie funktioniert KI auf Röntgenbildern?',k:[' ki ','künstliche intelligenz','röntgen','bild','karies','parodont','algorithmus','modell','föderiert','dvt'],
+ a:['Mit föderiertem Lernen und Confidential Computing: <b>Der Algorithmus geht zu den Daten</b>, nicht umgekehrt. Kein Röntgenbild verlässt die Praxis.','Unser Modell für Approximalkaries und parodontalen Knochenabbau befindet sich in der klinischen Validierung. Es unterstützt die Zahnärztin oder den Zahnarzt und ersetzt nicht die Diagnose.'],s:['datos','tecnologia']},
+{id:'pvs',q:'Was haben PVS-Hersteller und MVZ davon?',k:['pvs','praxisverwaltung','software','hersteller','anbieter','mvz','imvz','kette','investor','partner','zusammenarbeit','integrator','bürokratie'],
+ a:['<b>PVS-Hersteller</b> erhalten einen Konnektor, der Interoperabilität, Protokollierung und Datenqualität für den EHDS abdeckt, ohne eigene Entwicklung. <b>MVZ und Ketten</b>, darunter die investorengetragenen iMVZ (30,4 % der zahnärztlichen MVZ im 3. Quartal 2023), können Ergebnisse zwischen Standorten vergleichen und ihre Versorgungsqualität belegen.','Wichtig für Praxen: Die Lösung muss Zeit sparen, nicht zusätzlichen Aufwand erzeugen. Wir suchen eine Vereinbarung mit einem PVS-Hersteller oder einem auf Telematik spezialisierten Azure-Integrator. Schreiben Sie uns über das <a href="#contacto" data-close>Kontaktformular</a> oder an <a href="mailto:partners@softwareinabox.eu">partners@softwareinabox.eu</a>.'],s:['epa','markt']},
+{id:'markt',q:'Wie sieht der deutsche Dentalmarkt aus?',k:['markt','deutschland','zahnärzte','anzahl','gkv','pkv','kzbv','bzäk','kammer','zahlen'],
+ a:['2024 gab es <b>43.663</b> aktive Zahnärztinnen und Zahnärzte, etwa 52 je 100.000 Einwohner. Die GKV versichert rund 88 % der Bevölkerung und trägt 65 % der zahnmedizinischen Ausgaben (2023).','Die Einzelpraxis überwiegt, doch die Konsolidierung über MVZ schreitet voran. Die KZBV legt mit den Kassen den Leistungskatalog fest; die BZÄK vereint die 17 Landeszahnärztekammern.'],s:['pvs','epa']},
+{id:'tecnologia',q:'Welche Technologie nutzen Sie? Welche Rolle hat Microsoft?',k:['technolog','microsoft','azure','konnektor','standard','gaia','idsa','eclipse','edc','fhir','dicom','integration'],
+ a:['Ein Konnektor auf <b>Microsoft Azure</b> mit Daten in der EU, integriert in die Praxisverwaltungssoftware.','An den Grenzen des Datenraums nutzen wir offene europäische Standards: Gaia-X, IDSA und das Dataspace Protocol, Eclipse EDC, FHIR, DICOM und HealthDCAT-AP. So kann sich jeder anschließen, auch ohne Microsoft.'],s:['pvs','datos']},
+{id:'seguridad',q:'Ist das DSGVO-konform und sicher?',k:['dsgvo','gdpr','datenschutz','sicherheit','sicher','einwilligung','rechtlich','vertraulich'],
+ a:['Identifizierbare Daten werden nie zentralisiert: Es werden nur aggregierte Ergebnisse übertragen, vertraglich geregelt. Für KI nutzen wir Confidential Computing.','Jedes Projekt wird mit der oder dem Datenschutzbeauftragten der Organisation und einer Datenschutz-Folgenabschätzung dokumentiert.'],s:['datos','ehds']},
+{id:'publicidad',q:'Werden die Daten für Werbung genutzt?',k:['werbung','marketing','verkaufen','verkauf','kommerziell'],
+ a:['Niemals. Der EHDS verbietet ausdrücklich die Nutzung von Gesundheitsdaten für Werbung.','Vorgesehen sind Versorgungsqualität, KI auf Bildern und Evidenz für die Industrie zu Implantaten und Materialien.'],s:['datos','ehds']},
+{id:'experiencia',q:'Wer sind Sie und welche Erfahrung haben Sie?',k:['wer','unternehmen','erfahrung','software in a box','referenz','projekte','global data care'],
+ a:['Software in a Box mit Sitz in Madrid und Brüssel. Zwischen 2024 und 2026 haben wir drei Demonstratoren für Datenräume entworfen und umgesetzt, gefördert vom spanischen Staatssekretariat für Digitalisierung und KI: <b>Global Data Care</b> (Gesundheit), <b>PROCUREDATA</b> (Beschaffung) und <b>EcoDataNet</b> (Kreislaufwirtschaft).','Mehr unter <a href="https://datos.softwareinabox.eu/de/">datos.softwareinabox.eu</a>.'],s:['tecnologia','pvs']},
+{id:'documentos',q:'Wo kann ich die Studie lesen?',k:['studie','dokument','pdf','download','bericht','präsentation','video','lesen'],
+ a:['Die Vergleichsstudie zu fünf Märkten mit einem Kapitel zu Deutschland gibt es auf <a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener" lang="en">Englisch</a> und <a href="/docs/tandheelkundige-gezondheidsdataruimtes-europa-ehds.pdf" target="_blank" rel="noopener" lang="nl">Niederländisch</a>, zusammen mit der Präsentation und dem vollständigen Video.'],s:['markt','pvs']}
+];
+var byId={};KB.forEach(function(e){byId[e.id]=e});
+
+// FAQ visible en la página
+var fl=document.getElementById('faqlist');
+KB.forEach(function(e){var d=document.createElement('details');d.innerHTML='<summary>'+e.q+'</summary><p>'+e.a.join(' ')+'</p>';fl.appendChild(d)});
+
+// ---------- Menús desplegables ----------
+document.querySelectorAll('.dd>button').forEach(function(b){
+ b.addEventListener('click',function(ev){ev.stopPropagation();var ul=document.getElementById(b.getAttribute('aria-controls'));var o=!ul.classList.contains('open');closeMenus();if(o){ul.classList.add('open');b.setAttribute('aria-expanded','true')}});
+});
+function closeMenus(){document.querySelectorAll('.dd ul.open').forEach(function(u){u.classList.remove('open')});document.querySelectorAll('.dd>button').forEach(function(b){b.setAttribute('aria-expanded','false')})}
+document.addEventListener('click',closeMenus);
+document.querySelectorAll('.dd ul a').forEach(function(a){a.addEventListener('click',closeMenus)});
+var bur=document.querySelector('.burger'),mn=document.getElementById('mnav');
+bur.addEventListener('click',function(){var o=mn.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');bur.setAttribute('aria-expanded','false')})});
+
+// ---------- Vídeo de YouTube bajo demanda ----------
+document.querySelectorAll('[data-yt]').forEach(function(b){b.addEventListener('click',function(){var box=document.getElementById(b.getAttribute('aria-controls'));if(!box.firstChild){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-yt')+'?autoplay=1&rel=0';f.title='Dental Data: Europas unsichtbare Chance';f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen');f.setAttribute('allowfullscreen','');box.appendChild(f)}box.classList.add('on');b.style.display='none'})});
+
+// ---------- Asistente ----------
+var panel=document.getElementById('panel'),pill=document.getElementById('pill'),msgs=document.getElementById('msgs'),pq=document.getElementById('pq'),started=false;
+function norm(t){return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[¿?¡!.,;:]/g,' ')}
+function openP(){panel.classList.add('open');panel.setAttribute('aria-hidden','false');pill.hidden=true;if(!started){welcome();started=true}setTimeout(function(){pq.focus()},300)}
+function closeP(){panel.classList.remove('open');panel.setAttribute('aria-hidden','true');pill.hidden=false}
+document.querySelectorAll('[data-open-assistant]').forEach(function(b){b.addEventListener('click',openP)});
+document.getElementById('close').addEventListener('click',closeP);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenus();if(panel.classList.contains('open'))closeP()}});
+document.getElementById('reset').addEventListener('click',function(){msgs.innerHTML='';hist=[];welcome()});
+function welcome(){bot(['Hallo! Ich bin der Assistent von Dental Data. Ich erkläre Ihnen, wie der föderierte zahnmedizinische Datenraum funktioniert, wie er ePA und FDZ Gesundheit ergänzt und was der Europäische Gesundheitsdatenraum für Zahnarztpraxen bedeutet.','Wählen Sie eine Frage oder schreiben Sie Ihre eigene. Bitte geben Sie keine personenbezogenen Daten oder Patientendaten ein: Wir speichern Fragen und Antworten anonym, um den Assistenten zu verbessern.'],['datos','epa','ehds','ia','pvs'],true)}
+function me(t){var d=document.createElement('div');d.className='me';d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
+function bot(paras,sug,noFb,rid){
+ var d=document.createElement('div');d.className='bot';
+ d.innerHTML=paras.map(function(p){return '<p>'+p+'</p>'}).join('');
+ if(sug&&sug.length){var s=document.createElement('div');s.className='sug';sug.forEach(function(id){var b=document.createElement('button');b.type='button';b.textContent=byId[id].q;b.addEventListener('click',function(){ask(byId[id].q,id)});s.appendChild(b)});d.appendChild(s)}
+ if(!noFb){var f=document.createElement('div');f.className='ft';f.innerHTML='<em style="font-style:normal">Vorbereitete Antwort</em><span><button type="button" aria-label="Hilfreiche Antwort" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 10v11H3V10zM7 10l4-8a3 3 0 0 1 3 3v4h6a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.6 21H7"/></svg></button><button type="button" aria-label="Nicht hilfreiche Antwort" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 14V3h4v11zM17 14l-4 8a3 3 0 0 1-3-3v-4H4a2 2 0 0 1-2-2.3l1.4-8A2 2 0 0 1 5.4 3H17"/></svg></button></span>';
+  votos(f,rid);d.appendChild(f)}
+ d.querySelectorAll('a[data-close]').forEach(function(a){a.addEventListener('click',function(){if(window.innerWidth<860)closeP()})});
+ msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
+function match(t){var n=' '+norm(t)+' ',best=null,score=0;KB.forEach(function(e){var sc=0;e.k.forEach(function(k){if(n.indexOf(k)>-1)sc+=k.length>4?2:1});if(sc>score){score=sc;best=e}});return score?best:null}
+// ---------- IA (Cloudflare Worker dentaldata-chat) ----------
+var API='https://dentaldata-chat.emilio-mulet-b52.workers.dev/chat',hist=[],busy=false;
+// ---------- Registro anónimo de preguntas y respuestas (sin IP ni datos personales) ----------
+var REG=API.replace(/\/chat$/,''),SID=(function(){try{var v=sessionStorage.getItem('dd_sid');if(!v){v=nid();sessionStorage.setItem('dd_sid',v)}return v}catch(_){return nid()}})();
+function nid(){try{return crypto.randomUUID()}catch(_){return 'r'+Date.now().toString(36)+Math.random().toString(36).slice(2,10)}}
+function enviar(ruta,o){try{fetch(REG+ruta,{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(o)}).catch(function(){})}catch(_){}}
+function reg(rid,tipo,pregunta,respuesta,clave){enviar('/registro',{rid:rid,sid:SID,idioma:'de',pais:'de',pagina:location.pathname,tipo:tipo,pregunta:pregunta,respuesta:respuesta,clave:clave||null})}
+function txt(a){return (Array.isArray(a)?a.join('\n\n'):String(a)).replace(/<[^>]+>/g,'')}
+function votos(f,rid){f.querySelectorAll('button').forEach(function(b,i){b.addEventListener('click',function(){f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');if(rid)enviar('/valoracion',{rid:rid,voto:i===0?1:-1})})})}
+var FUENTES={'01-que-es-dental-data.md':'Was Dental Data ist','03-solucion-casos-uso.md':'Lösung und Anwendungsfälle','05-tecnologia.md':'Technologie','08-empresa-recursos.md':'Software in a Box','10-estudio-comparativo-en.md':'Vergleichsstudie (PDF)','11-ehds-europa.md':'Der EHDS in Europa','pais/de.md':'Dental Data in Deutschland'};
+function esc(t){return t.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function md(t){var h=esc(t.trim());
+ h=h.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+|#[a-z-]+)\)/g,'<a href="$2">$1</a>')
+  .replace(/(^|[\s(])(https?:\/\/[^\s<)]+)/g,'$1<a href="$2" target="_blank" rel="noopener">$2</a>').replace(/(^|[\s(])(partners@softwareinabox\.eu)/g,'$1<a href="mailto:$2">$2</a>');
+ return h.split(/\n{2,}/).map(function(b){if(/^\s*[-•] /m.test(b))return '<ul style="padding-left:18px;margin:6px 0">'+b.split('\n').map(function(l){return l.replace(/^\s*[-•]\s*/,'')}).filter(Boolean).map(function(l){return '<li>'+l+'</li>'}).join('')+'</ul>';return '<p>'+b.replace(/\n/g,'<br>')+'</p>'}).join('')}
+function limpia(t){return t.replace(/\[(FUENTE|SEGUIR)[^\]]*\]?/gi,'').trimEnd()}
+function fb(rid){var f=document.createElement('div');f.className='ft';f.innerHTML='<em style="font-style:normal">KI-generierte Antwort</em><span><button type="button" aria-label="Hilfreiche Antwort" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 10v11H3V10zM7 10l4-8a3 3 0 0 1 3 3v4h6a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.6 21H7"/></svg></button><button type="button" aria-label="Nicht hilfreiche Antwort" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 14V3h4v11zM17 14l-4 8a3 3 0 0 1-3-3v-4H4a2 2 0 0 1-2-2.3l1.4-8A2 2 0 0 1 5.4 3H17"/></svg></button></span>';votos(f,rid);return f}
+function local(text,t){t.remove();var e=match(text),rid=nid();if(e){bot(e.a,e.s,false,rid);reg(rid,'preparada_por_palabras',text,txt(e.a),e.id)}else{var m=['Dafür habe ich noch keine vorbereitete Antwort. Sie können <a href="#contacto" data-close>uns schreiben</a>, und jemand aus dem Team antwortet Ihnen.'];bot(m,['datos','ehds','pvs','tecnologia'],false,rid);reg(rid,'sin_respuesta',text,txt(m))}}
+async function ia(text,t){
+ hist.push({role:'user',content:text});busy=true;
+ var d=null,cuerpo=null,bruto='',rid=nid();
+ try{
+  var r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:hist.slice(-12),idioma:'de',pais:'de',rid:rid,sid:SID,pagina:location.pathname})});
+  var ct=r.headers.get('Content-Type')||'';
+  if(!r.ok||ct.indexOf('event-stream')<0){var j={};try{j=await r.json()}catch(_){}hist.pop();busy=false;if(r.status===429&&j.error){t.remove();bot([esc(j.error)],['piloto']);return}local(text,t);return}
+  var rd=r.body.getReader(),dec=new TextDecoder(),buf='',err=null;
+  while(true){var x=await rd.read();if(x.done)break;buf+=dec.decode(x.value,{stream:true});var p;
+   while((p=buf.indexOf('\n\n'))>-1){var ln=buf.slice(0,p).trim();buf=buf.slice(p+2);if(ln.indexOf('data:')!==0)continue;var o;try{o=JSON.parse(ln.slice(5))}catch(_){continue}
+    if(o.t){if(!d){t.remove();d=document.createElement('div');d.className='bot';cuerpo=document.createElement('div');d.appendChild(cuerpo);msgs.appendChild(d)}bruto+=o.t;cuerpo.innerHTML=md(limpia(bruto));msgs.scrollTop=msgs.scrollHeight}
+    else if(o.error){err=o.error}}}
+  if(!d){hist.pop();busy=false;local(text,t);return}
+  hist.push({role:'assistant',content:limpia(bruto)});
+  var mf=[],rx=/\[FUENTE:\s*([^\]]+)\]/gi,mm;while((mm=rx.exec(bruto)))mf.push(mm[1]);var ms=bruto.match(/\[SEGUIR:\s*([^\]]+)\]/i);
+  if(mf.length){var fs=mf.join(',').split(/[,|]/).map(function(x){return x.trim()}).filter(function(x,i,a){return FUENTES[x]&&a.indexOf(x)===i});if(fs.length){var fu=document.createElement('p');fu.style.cssText='font-size:13px;color:#5B6573;margin-top:10px';fu.innerHTML='Quelle: '+fs.map(function(f){return f.indexOf('10-')===0?'<a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener">'+FUENTES[f]+'</a>':FUENTES[f]}).join(' · ');d.appendChild(fu)}}
+  if(ms){var sg=document.createElement('div');sg.className='sug';ms[1].split('|').map(function(x){return x.trim()}).filter(Boolean).slice(0,2).forEach(function(q){var b=document.createElement('button');b.type='button';b.textContent=q;b.addEventListener('click',function(){ask(q)});sg.appendChild(b)});d.appendChild(sg)}
+  if(err){var e2=document.createElement('p');e2.style.cssText='font-size:13px;color:#B3261E';e2.textContent=err;d.appendChild(e2)}
+  d.appendChild(fb(rid));msgs.scrollTop=msgs.scrollHeight;
+ }catch(e){hist.pop();if(!d)local(text,t)}
+ busy=false;
+}
+function ask(text,id){
+ if(!text.trim()||busy)return;if(!panel.classList.contains('open'))openP();me(text);
+ var t=document.createElement('div');t.className='bot typing';t.innerHTML='<i></i><i></i><i></i>';msgs.appendChild(t);msgs.scrollTop=msgs.scrollHeight;
+ if(id){setTimeout(function(){t.remove();var e=byId[id],rid=nid();bot(e.a,e.s,false,rid);reg(rid,'preparada',text,txt(e.a),id);hist.push({role:'user',content:text},{role:'assistant',content:e.a.join(' ').replace(/<[^>]+>/g,'')})},500);return}
+ ia(text,t);
+}
+document.querySelector('[data-ask]').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('q');ask(i.value);i.value=''});
+document.getElementById('pin').addEventListener('submit',function(e){e.preventDefault();ask(pq.value);pq.value=''});
+document.querySelectorAll('.chip[data-q]').forEach(function(c){c.addEventListener('click',function(){ask(c.textContent,c.getAttribute('data-q'))})});
+})();
+</script>
+</body>
+</html>

@@ -10,7 +10,7 @@ JSONLD = r'''
 {"@type":"WebPage","@id":"https://dentaldata.softwareinabox.eu/en/#webpage","url":"https://dentaldata.softwareinabox.eu/en/","name":"Dental Data · Federated dental data space for Europe","inLanguage":"en","isPartOf":{"@type":"WebSite","@id":"https://www.softwareinabox.eu/#website","name":"Software in a Box"},"publisher":{"@type":"Organization","@id":"https://www.softwareinabox.eu/#organization","name":"Software in a Box","url":"https://www.softwareinabox.eu/"},"areaServed":"Europe"},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Does my data leave the practice?","acceptedAnswer":{"@type":"Answer","text":"No. Records stay in each practice's, chain's or insurer's own software. Only consents, metadata and aggregated results move, under machine-enforced usage contracts."}},
-{"@type":"Question","name":"In which countries is Dental Data available?","acceptedAnswer":{"@type":"Answer","text":"We start in Spain and the Netherlands. Belgium, Germany and Denmark are covered by our comparative study and their pages are in preparation; France, Italy and Portugal are being studied."}},
+{"@type":"Question","name":"In which countries is Dental Data available?","acceptedAnswer":{"@type":"Answer","text":"We start in Spain and the Netherlands, with pages for Belgium (Dutch and French) and Germany. Denmark's page is in preparation; France, Italy and Portugal are being studied."}},
 {"@type":"Question","name":"How does the European Health Data Space (EHDS) affect dental care?","acceptedAnswer":{"@type":"Answer","text":"By 26 March 2027 every Member State will have designated its health data access bodies; from 26 March 2029 most secondary use rules apply; from 2031 medical images are added, including dental X-rays and cone-beam CT."}},
 {"@type":"Question","name":"How can a technology partner join?","acceptedAnswer":{"@type":"Answer","text":"Through the contact form on this page or partners@softwareinabox.eu. We are looking especially for Microsoft Azure partners and integrators."}}
 ]}]}
@@ -20,7 +20,7 @@ KB_JS = r'''[
 {id:'datos',q:'Does my data leave the practice?',k:['leave','move','moved','central','stored','where is','cloud','server','privacy','copy'],
  a:['No. Records stay in the practice management software of each practice, chain or insurer. Dental Data is a <b>federated</b> data space: only consents, metadata and aggregated results move.','Every access is governed by an ODRL contract that the machine enforces: the practice decides who gets access, for what and for how long. No contract, no access.'],s:['ia','seguridad']},
 {id:'paises',q:'In which countries is Dental Data available?',k:['country','countries','europe','spain','netherlands','belgium','germany','denmark','france','italy','portugal','market'],
- a:['We start in <b>Spain</b> (pilot with a dental chain or insurer) and the <b>Netherlands</b> (partner programme), building one product for both markets.','Belgium, Germany and Denmark are covered by our comparative study and their pages are in preparation. France, Italy and Portugal are being studied. Country pages: <a href="/es/" lang="es">Spain</a> · <a href="/nl/" lang="nl">Netherlands</a>.'],s:['partner','documentos']},
+ a:['We start in <b>Spain</b> (pilot with a dental chain or insurer) and the <b>Netherlands</b> (partner programme), building one product for both markets.','In <b>Belgium</b> we seek an institutional alliance and in <b>Germany</b> partners among practice software vendors and MVZ. Denmark\'s page is in preparation; France, Italy and Portugal are being studied. Country pages: <a href="/es/" lang="es">Spain</a> · <a href="/nl/" lang="nl">Netherlands</a> · <a href="/nl-be/" lang="nl">België</a> · <a href="/fr-be/" lang="fr">Belgique</a> · <a href="/de/" lang="de">Deutschland</a>.'],s:['partner','documentos']},
 {id:'ehds',q:'How does the EHDS affect dental care?',k:['ehds','health data space','regulation','law','2027','2029','2031','article 50','microenterprise','hdab','access body'],
  a:['Key dates: by <b>26 March 2027</b> every Member State will have designated its health data access bodies; from <b>26 March 2029</b> most secondary use rules apply; from <b>2031</b> medical images are added, including dental X-rays, panoramic radiographs and cone-beam CT.','Article 50 exempts microenterprises (most dental practices) from data holder obligations by default, so an aggregated channel is needed for dental data to reach the access bodies.'],s:['paises','datos']},
 {id:'ia',q:'How does AI on dental X-rays work?',k:[' ai ','artificial intelligence','x-ray','xray','image','caries','periodont','algorithm','model','federated','learning'],
@@ -46,8 +46,8 @@ BLOQUES = {
  <div class="grid3">
   <div class="card"><div class="num">SPAIN · PILOT</div><h3>Private and fragmented</h3><p>Patients pay 97% of dental spending; records sit in the software of thousands of private practices, chains and insurers. We are looking for a chain or insurer for a quality indicators pilot.</p><p style="margin-top:10px"><a href="/es/" lang="es" hreflang="es">Spanish page →</a></p></div>
   <div class="card"><div class="num">NETHERLANDS · PARTNERS</div><h3>Consolidation and shortage</h3><p>More than 500 practices owned by private equity and about 30% of practices not taking new patients. Chains need to compare practices without migrating records.</p><p style="margin-top:10px"><a href="/nl/" lang="nl" hreflang="nl">Dutch page →</a></p></div>
-  <div class="card"><div class="num">BELGIUM · IN PREPARATION</div><h3>Payer-driven data</h3><p>Compulsory insurance turns every reimbursable dental act into structured data, but the full record and non-reimbursed care are missing. A market for an institutional alliance.</p></div>
-  <div class="card"><div class="num">GERMANY · IN PREPARATION</div><h3>Institutional and integrated</h3><p>The electronic patient record has been mandatory in dental practices since 1 October 2025. The opportunity is data quality, compliance and federated analytics for software vendors.</p></div>
+  <div class="card"><div class="num">BELGIUM · ALLIANCE</div><h3>Payer-driven data</h3><p>Compulsory insurance turns every reimbursable dental act into structured data, but the full record and non-reimbursed care are missing. A market for an institutional alliance.</p><p style="margin-top:10px"><a href="/nl-be/" lang="nl" hreflang="nl-BE">Nederlands →</a>&nbsp;&nbsp;<a href="/fr-be/" lang="fr" hreflang="fr-BE">Français →</a></p></div>
+  <div class="card"><div class="num">GERMANY · SOFTWARE PARTNERS</div><h3>Institutional and integrated</h3><p>The electronic patient record has been mandatory in dental practices since 1 October 2025. The opportunity is data quality, compliance and federated analytics for software vendors.</p><p style="margin-top:10px"><a href="/de/" lang="de" hreflang="de-DE">Deutsch →</a></p></div>
   <div class="card"><div class="num">DENMARK · IN PREPARATION</div><h3>A public register for children</h3><p>Free care up to age 21 and a children's oral health register since 1972. Adults treated privately and in chains remain largely invisible.</p></div>
   <div class="card"><div class="num">FRANCE · ITALY · PORTUGAL</div><h3>Being studied</h3><p>We are extending our comparative study to these three markets before publishing their pages. If you work there, we would like to hear from you.</p></div>
  </div>
@@ -69,7 +69,7 @@ BLOQUES = {
   <div class="step"><div class="c">2</div><b>2027–2028 · Consolidate</b><span>Consolidate both pilots, open new markets and take part in public consultations.</span></div>
   <div class="step"><div class="c">3</div><b>March 2029 · Catalogued</b><span>A catalogued dental data space, ready for access requests under the EHDS.</span></div>
  </div>
- <div class="nl-band"><div><b>Country pages</b><p>Each market has its own page, in its own language, with its own figures, laws and offer.</p></div><a href="/es/" lang="es" hreflang="es">España →</a>&nbsp;&nbsp;<a href="/nl/" lang="nl" hreflang="nl">Nederland →</a></div>
+ <div class="nl-band"><div><b>Country pages</b><p>Each market has its own page, in its own language, with its own figures, laws and offer.</p></div><a href="/es/" lang="es" hreflang="es">España →</a>&nbsp;&nbsp;<a href="/nl/" lang="nl" hreflang="nl">Nederland →</a>&nbsp;&nbsp;<a href="/nl-be/" lang="nl" hreflang="nl-BE">België</a>&nbsp;·&nbsp;<a href="/fr-be/" lang="fr" hreflang="fr-BE">Belgique →</a>&nbsp;&nbsp;<a href="/de/" lang="de" hreflang="de-DE">Deutschland →</a></div>
 </div></section>
 ''',
 "contacto": r'''
@@ -125,9 +125,9 @@ REEMPLAZOS = [
 ('<a class="tbtn white" href="#contacto">Únete al piloto</a>\n  <button', '<a class="tbtn white" href="#contacto">Become a partner</a>\n  <button'),
 ('<span>Descubre</span>', '<span>Ask</span>'),
 ('aria-label="Idioma"', 'aria-label="Country and language"'),
-('<li><a href="/es/" hreflang="es" lang="es" aria-current="page">Español · España</a></li>', '<li><a href="/es/" hreflang="es" lang="es">Español · España</a></li>'),
+('<li><a href="/es/" hreflang="es-ES" lang="es" aria-current="page">Español · España</a></li>', '<li><a href="/es/" hreflang="es-ES" lang="es">Español · España</a></li>'),
 ('<li><a href="/en/" hreflang="en" lang="en">English · Europe</a></li>', '<li><a href="/en/" hreflang="en" lang="en" aria-current="page">English · Europe</a></li>'),
-('<a href="/nl/" lang="nl">Nederlands</a><a href="/en/" lang="en">English</a></nav>', '<a href="/es/" lang="es">Español</a><a href="/nl/" lang="nl">Nederlands</a></nav>'),
+('<a href="/">Otros países e idiomas</a></nav>', '<a href="/">Other countries and languages</a></nav>'),
 ('<a class="contact" href="#contacto"><span>Contacto</span>', '<a class="contact" href="#contacto"><span>Contact</span>'),
 ('aria-label="Abrir menú"', 'aria-label="Open menu"'),
 ('aria-label="Menú móvil"', 'aria-label="Mobile menu"'),
@@ -225,7 +225,7 @@ REEMPLAZOS = [
 ('<div><h4>Dental Data</h4><a href="#solucion">Cómo funciona</a><a href="#casos">Casos de uso</a><a href="#tecnologia">Tecnología</a><a href="#para-quien">Hoja de ruta</a></div>',
  '<div><h4>Dental Data</h4><a href="#solucion">How it works</a><a href="#casos">Use cases</a><a href="#tecnologia">Technology</a><a href="#para-quien">Roadmap</a></div>'),
 ('<div><h4>Para quién</h4><a href="#para-quien">Cadenas dentales</a><a href="#para-quien">Aseguradoras</a><a href="#para-quien">Clínicas independientes</a><a href="#para-quien">Software e industria</a></div>',
- '<div><h4>Markets</h4><a href="/es/" lang="es">España</a><a href="/nl/" lang="nl">Nederland</a><a href="#mercados">Belgium · Germany · Denmark</a><a href="#mercados">France · Italy · Portugal</a></div>'),
+ '<div><h4>Markets</h4><a href="/es/" lang="es">España</a><a href="/nl/" lang="nl">Nederland</a><a href="/nl-be/" lang="nl">België</a><a href="/fr-be/" lang="fr">Belgique</a><a href="/de/" lang="de">Deutschland</a><a href="#mercados">France · Italy · Portugal</a></div>'),
 ('<div><h4>Recursos</h4><a href="/docs/dental-health-data-spaces-europe-ehds.pdf">Estudio comparativo (EN)</a><a href="/docs/dental-data-es-nl-presentation-en.pdf">Presentación (EN)</a><a href="#destacados">Vídeos</a><a href="#preguntas">Preguntas frecuentes</a></div>',
  '<div><h4>Resources</h4><a href="/docs/dental-health-data-spaces-europe-ehds.pdf">Comparative study</a><a href="/docs/dental-data-es-nl-presentation-en.pdf">Presentation</a><a href="#destacados">Videos</a><a href="#preguntas">FAQ</a></div>'),
 ('<div><h4>Software in a Box</h4><a href="https://www.softwareinabox.eu/">Inicio</a><a href="https://datos.softwareinabox.eu/">Espacios de datos</a>',
