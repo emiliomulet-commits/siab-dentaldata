@@ -576,8 +576,8 @@ async function ia(text,t){
     else if(o.error){err=o.error}}}
   if(!d){hist.pop();busy=false;local(text,t);return}
   hist.push({role:'assistant',content:limpia(bruto)});
-  var mf=bruto.match(/\[FUENTE:\s*([^\]]+)\]/i),ms=bruto.match(/\[SEGUIR:\s*([^\]]+)\]/i);
-  if(mf){var fs=mf[1].split(/[,|]/).map(function(x){return x.trim()}).filter(function(x){return FUENTES[x]});if(fs.length){var fu=document.createElement('p');fu.style.cssText='font-size:13px;color:#5B6573;margin-top:10px';fu.innerHTML='Fuente: '+fs.map(function(f){return f.indexOf('10-')===0?'<a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener">'+FUENTES[f]+'</a>':FUENTES[f]}).join(' · ');d.appendChild(fu)}}
+  var mf=[],rx=/\[FUENTE:\s*([^\]]+)\]/gi,mm;while((mm=rx.exec(bruto)))mf.push(mm[1]);var ms=bruto.match(/\[SEGUIR:\s*([^\]]+)\]/i);
+  if(mf.length){var fs=mf.join(',').split(/[,|]/).map(function(x){return x.trim()}).filter(function(x,i,a){return FUENTES[x]&&a.indexOf(x)===i});if(fs.length){var fu=document.createElement('p');fu.style.cssText='font-size:13px;color:#5B6573;margin-top:10px';fu.innerHTML='Fuente: '+fs.map(function(f){return f.indexOf('10-')===0?'<a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener">'+FUENTES[f]+'</a>':FUENTES[f]}).join(' · ');d.appendChild(fu)}}
   if(ms){var sg=document.createElement('div');sg.className='sug';ms[1].split('|').map(function(x){return x.trim()}).filter(Boolean).slice(0,2).forEach(function(q){var b=document.createElement('button');b.type='button';b.textContent=q;b.addEventListener('click',function(){ask(q)});sg.appendChild(b)});d.appendChild(sg)}
   if(err){var e2=document.createElement('p');e2.style.cssText='font-size:13px;color:#B3261E';e2.textContent=err;d.appendChild(e2)}
   d.appendChild(fb());msgs.scrollTop=msgs.scrollHeight;
