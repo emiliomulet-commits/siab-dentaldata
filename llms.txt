@@ -1,8 +1,9 @@
 # Dental Data · Software in a Box
 
-> Federated dental health data space for Spain and the Netherlands, prepared for the European Health Data Space (EHDS). Software in a Box is looking for a Dutch technology partner.
+> Federated dental health data space for Europe, starting in Spain and the Netherlands, prepared for the European Health Data Space (EHDS; EEDS in Spanish). Software in a Box is looking for technology partners (ideally Microsoft Azure partners) and for the first dental chains and insurers.
 
 ## Pages
+- [Europe · Partners and markets](https://dentaldata.softwareinabox.eu/en/): European hub in English: product, five markets compared (Spain, Netherlands, Belgium, Germany, Denmark), France, Italy and Portugal being studied, partner programme
 - [España · Piloto](https://dentaldata.softwareinabox.eu/es/): Spanish market (43,672 dentists, 97% paid by patients, chain consolidation), federated solution on Microsoft Azure, EHDS timeline, pilot with a Spanish chain or insurer before March 2027, FAQ (Spanish)
 - [Nederland · Partnerprogramma](https://dentaldata.softwareinabox.eu/nl/): market (9,555 dentists, ~30% of practices closed to new patients, 500+ private-equity practices), solution, proposal, roadmap to March 2029 (Dutch)
 

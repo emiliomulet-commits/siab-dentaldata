@@ -6,11 +6,29 @@
 
 const ORIGENES = ['https://dentaldata.softwareinabox.eu', 'http://localhost:8765'];
 const KB_BASE = 'https://dentaldata.softwareinabox.eu/kb/';
-const KB_FILES = ['00-indice.md', '01-que-es-dental-data.md', '02-mercado-espana.md', '03-solucion-casos-uso.md',
-  '04-ehds-normativa.md', '05-tecnologia.md', '06-piloto-hoja-ruta.md', '07-europa-paises-bajos.md',
-  '08-empresa-recursos.md', '09-preguntas-frecuentes.md', '10-estudio-comparativo-en.md'];
+/* Base de conocimiento por mercado: una parte común y otra del país de la página.
+   Así un visitante de una página no recibe cifras, leyes ni ofertas de otro país. */
+const KB_COMUN = ['01-que-es-dental-data.md', '03-solucion-casos-uso.md', '05-tecnologia.md', '08-empresa-recursos.md',
+  '11-ehds-europa.md', '10-estudio-comparativo-en.md'];
+const KB_PAIS = {
+  es: ['02-mercado-espana.md', '04-ehds-normativa.md', '06-piloto-hoja-ruta.md', '07-europa-paises-bajos.md', '09-preguntas-frecuentes.md'],
+  nl: ['pais/nl.md'],
+  eu: ['pais/europa.md', '07-europa-paises-bajos.md']
+};
+const PAISES = { es: 'España', nl: 'Países Bajos', be: 'Bélgica', de: 'Alemania', dk: 'Dinamarca', fr: 'Francia', it: 'Italia', pt: 'Portugal', eu: 'Europa (página en inglés)' };
+const IDIOMAS = {
+  es: 'Responde SIEMPRE en español de España, tuteando al usuario (la parte en inglés de la base tradúcela con fidelidad). Usa «Espacio Europeo de Datos de Salud (EEDS)».',
+  en: 'Answer ALWAYS in British English (the knowledge base is mostly in Spanish: translate faithfully). Say "European Health Data Space (EHDS)" and "health data access body".',
+  nl: 'Antwoord ALTIJD in het Nederlands, met "u" (de kennisbank is grotendeels Spaans: vertaal getrouw). Gebruik "Europese ruimte voor gezondheidsgegevens (EHDS)".',
+  fr: 'Réponds TOUJOURS en français, en vouvoyant (la base est surtout en espagnol : traduis fidèlement). Dis « Espace européen des données de santé (EEDS) ».',
+  de: 'Antworte IMMER auf Deutsch und siezend (die Wissensbasis ist überwiegend Spanisch: getreu übersetzen). Sage „Europäischer Gesundheitsdatenraum (EHDS)“.',
+  it: 'Rispondi SEMPRE in italiano, con il Lei (la base è soprattutto in spagnolo: traduci fedelmente). Di\' «Spazio europeo dei dati sanitari (EHDS)».',
+  pt: 'Responde SEMPRE em português europeu (sem brasileirismos; a base está sobretudo em espanhol: traduz fielmente). Diz «Espaço Europeu de Dados de Saúde (EEDS)» e «médico dentista».',
+  da: 'Svar ALTID på dansk (vidensbasen er mest på spansk: oversæt nøjagtigt). Skriv "Det europæiske sundhedsdataområde (EHDS)".'
+};
+function kbDe(pais) { return KB_COMUN.concat(KB_PAIS[pais] || KB_PAIS.eu); }
 
-let KB_CACHE = null, KB_TIME = 0;          // caché en memoria del isolate
+const KB_CACHE = new Map();                 // caché en memoria del isolate, por mercado
 const memLimites = new Map();               // límite aproximado si no hay KV
 
 /* ── Registro anónimo de preguntas y respuestas (D1 «REGISTRO») ───────────────
@@ -33,12 +51,12 @@ async function guardar(env, r) {
   if (!env.REGISTRO || !RID_OK.test(r.rid || '')) return;
   const ahora = new Date().toISOString();
   try {
-    await env.REGISTRO.prepare(`INSERT INTO registro (rid, sid, fecha, idioma, pagina, tipo, clave, pregunta, respuesta, fuentes, modelo, ms, error, voto, actualizado, exportado)
-      VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, NULL, ?3, NULL)
+    await env.REGISTRO.prepare(`INSERT INTO registro (rid, sid, fecha, idioma, pais, pagina, tipo, clave, pregunta, respuesta, fuentes, modelo, ms, error, voto, actualizado, exportado)
+      VALUES (?1, ?2, ?3, ?4, ?14, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, NULL, ?3, NULL)
       ON CONFLICT(rid) DO NOTHING`)
       .bind(r.rid, RID_OK.test(r.sid || '') ? r.sid : null, ahora, r.idioma || 'es', String(r.pagina || '').slice(0, 80),
             r.tipo, r.clave ? String(r.clave).slice(0, 40) : null, tachar(r.pregunta).slice(0, 2000), tachar(r.respuesta).slice(0, 8000),
-            r.fuentes || null, r.modelo || null, r.ms || null, r.error || null).run();
+            r.fuentes || null, r.modelo || null, r.ms || null, r.error || null, r.pais || null).run();
   } catch (e) { console.log('registro_error', String(e)); }
 }
 
@@ -88,14 +106,16 @@ function json(obj, status, origin) {
   return new Response(JSON.stringify(obj), { status, headers: { 'Content-Type': 'application/json; charset=utf-8', ...cors(origin) } });
 }
 
-async function cargarKB() {
-  if (KB_CACHE && Date.now() - KB_TIME < 3600_000) return KB_CACHE;
-  const partes = await Promise.all(KB_FILES.map(async f => {
+async function cargarKB(pais) {
+  const c = KB_CACHE.get(pais);
+  if (c && Date.now() - c.t < 3600_000) return c.texto;
+  const partes = await Promise.all(kbDe(pais).map(async f => {
     const r = await fetch(KB_BASE + f, { cf: { cacheTtl: 3600, cacheEverything: true } });
     return r.ok ? `\n\n===== ${f} =====\n` + (await r.text()) : '';
   }));
-  KB_CACHE = partes.join(''); KB_TIME = Date.now();
-  return KB_CACHE;
+  const texto = partes.join('');
+  KB_CACHE.set(pais, { texto, t: Date.now() });
+  return texto;
 }
 
 async function dentroDeLimite(env, ip) {
@@ -127,7 +147,7 @@ export default {
       if (url.pathname === '/registro') {
         const tipo = ['preparada', 'preparada_por_palabras', 'sin_respuesta'].includes(c.tipo) ? c.tipo : null;
         if (!tipo) return json({ error: 'Tipo no válido' }, 400, origin);
-        ctx.waitUntil(guardar(env, { rid: c.rid, sid: c.sid, idioma: ['en', 'nl'].includes(c.idioma) ? c.idioma : 'es', pagina: c.pagina,
+        ctx.waitUntil(guardar(env, { rid: c.rid, sid: c.sid, idioma: IDIOMAS[c.idioma] ? c.idioma : 'es', pais: PAISES[c.pais] ? c.pais : null, pagina: c.pagina,
           tipo, clave: c.clave, pregunta: c.pregunta, respuesta: c.respuesta }));
       } else if (env.REGISTRO && RID_OK.test(c.rid || '') && (c.voto === 1 || c.voto === -1)) {
         ctx.waitUntil(env.REGISTRO.prepare('UPDATE registro SET voto = ?1, actualizado = ?2 WHERE rid = ?3')
@@ -141,7 +161,8 @@ export default {
 
     let cuerpo;
     try { cuerpo = await request.json(); } catch { return json({ error: 'Petición no válida' }, 400, origin); }
-    const idioma = ['en','nl'].includes(cuerpo.idioma) ? cuerpo.idioma : 'es';
+    const idioma = IDIOMAS[cuerpo.idioma] ? cuerpo.idioma : 'es';
+    const pais = PAISES[cuerpo.pais] ? cuerpo.pais : (idioma === 'nl' ? 'nl' : idioma === 'es' ? 'es' : 'eu');
     const limpios = (Array.isArray(cuerpo.messages) ? cuerpo.messages : []).slice(-12)
       .map(m => ({ role: m && m.role === 'assistant' ? 'assistant' : 'user', content: String((m && m.content) || '').trim().slice(0, 2000) }))
       .filter(m => m.content);
@@ -155,13 +176,11 @@ export default {
         : 'Ha alcanzado el límite diario de preguntas. Vuelva mañana o escriba a partners@softwareinabox.eu.' }, 429, origin);
     }
 
-    const kb = await cargarKB();
-    const reglaIdioma = idioma === 'en' ? 'Answer ALWAYS in English (the knowledge base is mostly in Spanish: translate faithfully).'
-      : idioma === 'nl' ? 'Antwoord ALTIJD in het Nederlands (de kennisbank is grotendeels Spaans: vertaal getrouw).'
-      : 'Responde SIEMPRE en español de España, tuteando al usuario (la parte en inglés de la base tradúcela con fidelidad).';
-    const instrucciones = `Eres el asistente de la web de Dental Data (dentaldata.softwareinabox.eu), el espacio de datos de salud dental federado de Software in a Box, preparado para el Espacio Europeo de Datos Sanitarios (EHDS) y desplegado sobre Microsoft Azure. ${reglaIdioma}
+    const kb = await cargarKB(pais);
+    const reglaIdioma = IDIOMAS[idioma] + ` La página desde la que te escriben es la de ${PAISES[pais]}: usa las cifras, leyes, organismos y ofertas de ese mercado; si preguntan por otro país, responde solo con lo que diga la base sobre él y, si existe, enlaza su página (https://dentaldata.softwareinabox.eu/es/, /nl/ o /en/).`;
+    const instrucciones = `Eres el asistente de la web de Dental Data (dentaldata.softwareinabox.eu), el espacio de datos de salud dental federado de Software in a Box, preparado para el Espacio Europeo de Datos de Salud (EEDS) y desplegado sobre Microsoft Azure. ${reglaIdioma}
 Hablas con dentistas, directivos de cadenas dentales, aseguradoras, proveedores de software y partners tecnológicos. Tono profesional, cercano y claro, sin jerga innecesaria. Máximo 5 frases por respuesta; usa **negritas** para lo esencial.
-Fundamenta cada respuesta EXCLUSIVAMENTE en la base de conocimiento adjunta. Si algo no está en ella, dilo con honestidad y sugiere escribir a partners@softwareinabox.eu o usar el formulario (#contacto). Nunca inventes cifras, fechas, precios, clientes, socios ni características. No des diagnóstico ni consejo clínico ni asesoramiento jurídico personalizado. No hables en nombre de Microsoft ni afirmes acuerdos con Microsoft que no estén en la base. No pidas ni almacenes datos personales y, si el usuario los escribe, no los repitas. Si preguntan por temas ajenos a Dental Data, salud dental, datos de salud o Software in a Box, indica amablemente que solo puedes hablar de Dental Data. Cuando encaje, invita a participar en el piloto.
+Fundamenta cada respuesta EXCLUSIVAMENTE en la base de conocimiento adjunta. Si algo no está en ella, dilo con honestidad y sugiere escribir a partners@softwareinabox.eu o usar el formulario (#contacto). Nunca inventes cifras, fechas, precios, clientes, socios ni características. No des diagnóstico ni consejo clínico ni asesoramiento jurídico personalizado. No hables en nombre de Microsoft ni afirmes acuerdos con Microsoft que no estén en la base. No pidas ni almacenes datos personales y, si el usuario los escribe, no los repitas. Si preguntan por temas ajenos a Dental Data, salud dental, datos de salud o Software in a Box, indica amablemente que solo puedes hablar de Dental Data. Cuando encaje, invita a contactar: al piloto en España, al programa de partners en Países Bajos y, en el resto, a escribir a partners@softwareinabox.eu.
 Al final de tu respuesta añade, cada una en su línea:
 [FUENTE: nombre-del-archivo.md] — uno o dos archivos de la base que fundamentan la respuesta. Obligatoria si usaste la base.
 [SEGUIR: pregunta uno | pregunta dos] — dos preguntas de seguimiento breves y naturales, en el idioma de la conversación.`;
@@ -212,7 +231,7 @@ Al final de tu respuesta añade, cada una en su línea:
         await emitir({ error: idioma === 'en' ? 'Connection lost.' : 'Se perdió la conexión.' });
       } finally {
         await w.close();
-        await guardar(env, { rid: cuerpo.rid, sid: cuerpo.sid, idioma, pagina: cuerpo.pagina, tipo: 'ia', pregunta,
+        await guardar(env, { rid: cuerpo.rid, sid: cuerpo.sid, idioma, pais, pagina: cuerpo.pagina, tipo: 'ia', pregunta,
           respuesta: limpiarRespuesta(texto), fuentes: fuentesDe(texto), modelo: env.MODEL || 'claude-haiku-5-5',
           ms: Date.now() - inicio, error: fallo || (hubo ? null : 'sin respuesta') });
       }

@@ -1,6 +1,6 @@
 # Qué es Dental Data
 
-Dental Data es un espacio de datos de salud dental **federado**, impulsado por Software in a Box (Madrid y Bruselas) y preparado para el Espacio Europeo de Datos Sanitarios (EHDS, Reglamento (UE) 2025/327).
+Dental Data es un espacio de datos de salud dental **federado**, impulsado por Software in a Box (Madrid y Bruselas) y preparado para el Espacio Europeo de Datos de Salud (EEDS, en inglés EHDS; Reglamento (UE) 2025/327).
 
 Idea central: los datos dentales son hoy los grandes ausentes de la arquitectura europea de datos de salud. No por falta de valor, sino por cómo está organizada la odontología: consultas pequeñas, gasto mayoritariamente privado en adultos, software de gestión propietario y poca integración con la historia clínica pública.
 

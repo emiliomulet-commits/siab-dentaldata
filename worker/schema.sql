@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS registro (
   rid         TEXT PRIMARY KEY,   -- id aleatorio de cada intercambio (navegador)
   sid         TEXT,               -- id aleatorio de la sesión del navegador (sessionStorage)
   fecha       TEXT NOT NULL,      -- ISO UTC
-  idioma      TEXT,               -- es | nl | en
+  idioma      TEXT,               -- es | en | nl | fr | de | it | pt | da
+  pais        TEXT,               -- es | nl | be | de | dk | fr | it | pt | eu (mercado de la página)
   pagina      TEXT,               -- /es/, /nl/…
   tipo        TEXT NOT NULL,      -- ia | preparada | preparada_por_palabras | sin_respuesta
   clave       TEXT,               -- id de la respuesta preparada, si la hay

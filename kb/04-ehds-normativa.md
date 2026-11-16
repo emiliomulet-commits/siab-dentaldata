@@ -1,6 +1,8 @@
 # EHDS y normativa
 
-## Espacio Europeo de Datos Sanitarios (Reglamento (UE) 2025/327)
+Nombre oficial en español: **Espacio Europeo de Datos de Salud (EEDS)**. En inglés, European Health Data Space (EHDS); ambas siglas se usan en España.
+
+## Espacio Europeo de Datos de Salud (EEDS; en inglés EHDS) · Reglamento (UE) 2025/327
 - **26/03/2027**: cada Estado miembro habrá designado sus organismos de acceso a datos de salud (HDAB).
 - **26/03/2029**: entra en vigor la mayor parte de las normas de uso secundario.
 - **2031**: se incorporan las imágenes médicas a las categorías prioritarias (radiografías, ortopantomografías, TC de haz cónico).
