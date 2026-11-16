@@ -69,5 +69,6 @@ La marca ya no usa verde petróleo: azul marino, blanco y oro.
 Fuentes: `https://www.softwareinabox.eu/assets/fonts.css` (alojadas en el propio dominio, sin Google Fonts).
 
 ## Estado
-- Español (`/es/`): marca nueva aplicada (16/11/2026).
-- Neerlandés (`/nl/`) y raíz (`/`): pendientes de aplicar.
+- Español (`/es/`), neerlandés (`/nl/`) y página de inicio (`/`): marca nueva aplicada (16/11/2026).
+- Cabecera clara (NL): logo `horizontal-color`; cabecera oscura (ES): logo `horizontal-white`.
+- `/nl/` conserva como imagen al compartir la miniatura vertical del vídeo (1080×1350), pensada para la campaña neerlandesa.
