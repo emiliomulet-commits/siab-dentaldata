@@ -54,10 +54,10 @@ export default {
     const origin = request.headers.get('Origin') || '';
     const url = new URL(request.url);
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(origin) });
-    if (url.pathname === '/salud') return json({ ok: true, modelo: env.MODEL || 'claude-haiku-5-5', clave: !!env.ANTHROPIC_API_KEY }, 200, origin);
+    if (url.pathname === '/salud') return json({ ok: true, modelo: env.MODEL || 'claude-haiku-5-5', clave: !!(env.ANTHROPIC_API_KEY || env.DENTAL_DATA) }, 200, origin);
     if (url.pathname !== '/chat' || request.method !== 'POST') return json({ error: 'No encontrado' }, 404, origin);
     if (!ORIGENES.includes(origin)) return json({ error: 'Origen no permitido' }, 403, origin);
-    if (!env.ANTHROPIC_API_KEY) return json({ error: 'El asistente aún no está configurado.' }, 500, origin);
+    if (!(env.ANTHROPIC_API_KEY || env.DENTAL_DATA)) return json({ error: 'El asistente aún no está configurado.' }, 500, origin);
 
     let cuerpo;
     try { cuerpo = await request.json(); } catch { return json({ error: 'Petición no válida' }, 400, origin); }
@@ -88,7 +88,7 @@ Al final de tu respuesta añade, cada una en su línea:
 
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': (env.ANTHROPIC_API_KEY || env.DENTAL_DATA), 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({
         model: env.MODEL || 'claude-haiku-5-5', max_tokens: 900, stream: true,
         system: [

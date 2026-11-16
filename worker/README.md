@@ -6,7 +6,7 @@ Recibe las preguntas del chat de https://dentaldata.softwareinabox.eu/es/, añad
 - `GET /salud` → estado y si la clave está configurada (nunca la muestra)
 
 Configuración en Cloudflare → Workers → dentaldata-chat → Settings → Variables and Secrets:
-- `ANTHROPIC_API_KEY` (secreto, obligatorio)
+- `DENTAL_DATA` o `ANTHROPIC_API_KEY` (secreto, obligatorio: clave de la API de Anthropic)
 - `MODEL` (opcional, por defecto `claude-haiku-5-5`)
 - `LIMITE_DIA` (opcional, preguntas por visitante y día, por defecto 30)
 
