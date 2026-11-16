@@ -61,7 +61,7 @@ export default {
 
     let cuerpo;
     try { cuerpo = await request.json(); } catch { return json({ error: 'Petición no válida' }, 400, origin); }
-    const idioma = cuerpo.['en','nl'].includes(cuerpo.idioma) ? cuerpo.idioma : 'es';
+    const idioma = ['en','nl'].includes(cuerpo.idioma) ? cuerpo.idioma : 'es';
     const limpios = (Array.isArray(cuerpo.messages) ? cuerpo.messages : []).slice(-12)
       .map(m => ({ role: m && m.role === 'assistant' ? 'assistant' : 'user', content: String((m && m.content) || '').trim().slice(0, 2000) }))
       .filter(m => m.content);
