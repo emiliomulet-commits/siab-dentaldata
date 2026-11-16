@@ -1,7 +1,24 @@
 name = "dentaldata-chat"
 main = "worker.js"
 compatibility_date = "2026-11-01"
-# Secreto obligatorio (no se guarda aquí):  wrangler secret put ANTHROPIC_API_KEY
+# Secretos (no se guardan aquí):
+#   wrangler secret put ANTHROPIC_API_KEY   (o DENTAL_DATA)
+#   wrangler secret put GITHUB_TOKEN        (token de GitHub con permiso Contents: Read and write SOLO en siab-dentaldata-dev)
 [vars]
 MODEL = "claude-haiku-5-5"
 LIMITE_DIA = "30"
+GITHUB_REPO = "emiliomulet-commits/siab-dentaldata-dev"
+GITHUB_BRANCH = "main"
+GITHUB_DIR = "_registro"
+
+# Registro anónimo de preguntas y respuestas. Crear con:
+#   wrangler d1 create dentaldata-registro      → copiar aquí el database_id
+#   wrangler d1 execute dentaldata-registro --remote --file=schema.sql
+[[d1_databases]]
+binding = "REGISTRO"
+database_name = "dentaldata-registro"
+database_id = "PEGAR_AQUI_EL_ID"
+
+# Exportación diaria al repositorio privado (03:15 UTC)
+[triggers]
+crons = ["15 3 * * *"]

@@ -13,6 +13,72 @@ const KB_FILES = ['00-indice.md', '01-que-es-dental-data.md', '02-mercado-espana
 let KB_CACHE = null, KB_TIME = 0;          // caché en memoria del isolate
 const memLimites = new Map();               // límite aproximado si no hay KV
 
+/* ── Registro anónimo de preguntas y respuestas (D1 «REGISTRO») ───────────────
+   Sin IP ni identificadores personales: solo un id aleatorio de sesión del navegador.
+   Se tachan correos, teléfonos, DNI/NIE e IBAN antes de guardar. Ver README.md. */
+const RID_OK = /^[A-Za-z0-9-]{8,48}$/;
+function tachar(t) {
+  return String(t || '')
+    .replace(/[\w.+-]+@[\w-]+(\.[\w-]+)+/g, '[correo]')
+    .replace(/\b[A-Z]{2}\d{2}(?:\s?[A-Z0-9]{4}){3,7}\b/gi, '[iban]')
+    .replace(/\b[XYZ]?\d{7,8}[A-Z]\b/gi, '[documento]')
+    .replace(/(?:\+\d{1,3}[\s.-]?)?(?:\d[\s.-]?){9,}/g, '[teléfono]');
+}
+function limpiarRespuesta(t) { return String(t || '').replace(/\[(FUENTE|SEGUIR)[^\]]*\]?/gi, '').trim(); }
+function fuentesDe(t) {
+  const m = [...String(t || '').matchAll(/\[FUENTE:\s*([^\]]+)\]/gi)].map(x => x[1]).join(',');
+  return [...new Set(m.split(/[,|]/).map(x => x.trim()).filter(Boolean))].join(', ');
+}
+async function guardar(env, r) {
+  if (!env.REGISTRO || !RID_OK.test(r.rid || '')) return;
+  const ahora = new Date().toISOString();
+  try {
+    await env.REGISTRO.prepare(`INSERT INTO registro (rid, sid, fecha, idioma, pagina, tipo, clave, pregunta, respuesta, fuentes, modelo, ms, error, voto, actualizado, exportado)
+      VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, NULL, ?3, NULL)
+      ON CONFLICT(rid) DO NOTHING`)
+      .bind(r.rid, RID_OK.test(r.sid || '') ? r.sid : null, ahora, r.idioma || 'es', String(r.pagina || '').slice(0, 80),
+            r.tipo, r.clave ? String(r.clave).slice(0, 40) : null, tachar(r.pregunta).slice(0, 2000), tachar(r.respuesta).slice(0, 8000),
+            r.fuentes || null, r.modelo || null, r.ms || null, r.error || null).run();
+  } catch (e) { console.log('registro_error', String(e)); }
+}
+
+/* Vuelca a GitHub (repositorio privado) lo nuevo o cambiado desde la última exportación. */
+function b64(texto) {
+  const bytes = new TextEncoder().encode(texto); let bin = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+function desde64(b) { const bin = atob(String(b).replace(/\n/g, '')); return new TextDecoder().decode(Uint8Array.from(bin, c => c.charCodeAt(0))); }
+async function exportar(env) {
+  if (!env.REGISTRO || !env.GITHUB_TOKEN || !env.GITHUB_REPO) return { ok: false, motivo: 'sin configurar' };
+  // retención: 12 meses
+  await env.REGISTRO.prepare("DELETE FROM registro WHERE fecha < ?1").bind(new Date(Date.now() - 365 * 86400_000).toISOString()).run();
+  const { results } = await env.REGISTRO.prepare(
+    "SELECT * FROM registro WHERE exportado IS NULL OR actualizado > exportado ORDER BY fecha LIMIT 2000").all();
+  if (!results.length) return { ok: true, filas: 0 };
+  const porDia = {};
+  for (const r of results) (porDia[r.fecha.slice(0, 10)] ||= []).push(r);
+  const api = `https://api.github.com/repos/${env.GITHUB_REPO}/contents/`;
+  const cab = { 'Authorization': `Bearer ${env.GITHUB_TOKEN}`, 'Accept': 'application/vnd.github+json', 'User-Agent': 'dentaldata-chat', 'X-GitHub-Api-Version': '2022-11-28' };
+  const ahora = new Date().toISOString();
+  for (const [dia, filas] of Object.entries(porDia)) {
+    const ruta = `${env.GITHUB_DIR || '_registro'}/${dia.slice(0, 4)}/${dia}.jsonl`;
+    const previo = await fetch(api + ruta + `?ref=${env.GITHUB_BRANCH || 'main'}`, { headers: cab });
+    let sha, contenido = '';
+    if (previo.ok) { const j = await previo.json(); sha = j.sha; contenido = desde64(j.content); }
+    const nuevas = filas.map(r => JSON.stringify({ ...r, exportado: undefined })).join('\n') + '\n';
+    const put = await fetch(api + ruta, { method: 'PUT', headers: { ...cab, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: `Registro del asistente ${dia} (${filas.length})`, content: b64(contenido + nuevas), sha, branch: env.GITHUB_BRANCH || 'main' }) });
+    if (!put.ok) { console.log('github_error', put.status, await put.text()); return { ok: false, motivo: 'GitHub ' + put.status }; }
+    const ids = filas.map(r => r.rid);
+    for (let i = 0; i < ids.length; i += 50) {
+      const lote = ids.slice(i, i + 50);
+      await env.REGISTRO.prepare(`UPDATE registro SET exportado = ?1 WHERE rid IN (${lote.map((_, k) => '?' + (k + 2)).join(',')})`).bind(ahora, ...lote).run();
+    }
+  }
+  return { ok: true, filas: results.length };
+}
+
 function cors(origin) {
   const ok = ORIGENES.includes(origin) ? origin : ORIGENES[0];
   return { 'Access-Control-Allow-Origin': ok, 'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -55,6 +121,20 @@ export default {
     const url = new URL(request.url);
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(origin) });
     if (url.pathname === '/salud') return json({ ok: true, modelo: env.MODEL || 'claude-haiku-5-5', clave: !!(env.ANTHROPIC_API_KEY || env.DENTAL_DATA) }, 200, origin);
+    if ((url.pathname === '/registro' || url.pathname === '/valoracion') && request.method === 'POST') {
+      if (!ORIGENES.includes(origin)) return json({ error: 'Origen no permitido' }, 403, origin);
+      let c; try { c = await request.json(); } catch { return json({ error: 'Petición no válida' }, 400, origin); }
+      if (url.pathname === '/registro') {
+        const tipo = ['preparada', 'preparada_por_palabras', 'sin_respuesta'].includes(c.tipo) ? c.tipo : null;
+        if (!tipo) return json({ error: 'Tipo no válido' }, 400, origin);
+        ctx.waitUntil(guardar(env, { rid: c.rid, sid: c.sid, idioma: ['en', 'nl'].includes(c.idioma) ? c.idioma : 'es', pagina: c.pagina,
+          tipo, clave: c.clave, pregunta: c.pregunta, respuesta: c.respuesta }));
+      } else if (env.REGISTRO && RID_OK.test(c.rid || '') && (c.voto === 1 || c.voto === -1)) {
+        ctx.waitUntil(env.REGISTRO.prepare('UPDATE registro SET voto = ?1, actualizado = ?2 WHERE rid = ?3')
+          .bind(c.voto, new Date().toISOString(), c.rid).run().catch(e => console.log('voto_error', String(e))));
+      }
+      return json({ ok: true }, 200, origin);
+    }
     if (url.pathname !== '/chat' || request.method !== 'POST') return json({ error: 'No encontrado' }, 404, origin);
     if (!ORIGENES.includes(origin)) return json({ error: 'Origen no permitido' }, 403, origin);
     if (!(env.ANTHROPIC_API_KEY || env.DENTAL_DATA)) return json({ error: 'El asistente aún no está configurado.' }, 500, origin);
@@ -106,12 +186,13 @@ Al final de tu respuesta añade, cada una en su línea:
         + (idioma === 'en' ? 'Please try again later.' : 'Inténtelo más tarde.') }, 502, origin);
     }
 
+    const inicio = Date.now(), pregunta = limpios[limpios.length - 1].content;
     const enc = new TextEncoder(), dec = new TextDecoder();
     const { readable, writable } = new TransformStream();
     const w = writable.getWriter();
     const emitir = o => w.write(enc.encode('data: ' + JSON.stringify(o) + '\n\n'));
     ctx.waitUntil((async () => {
-      const lector = resp.body.getReader(); let buf = '', hubo = false;
+      const lector = resp.body.getReader(); let buf = '', hubo = false, texto = '', fallo = null;
       try {
         while (true) {
           const { done, value } = await lector.read(); if (done) break;
@@ -121,15 +202,26 @@ Al final de tu respuesta añade, cada una en su línea:
             const linea = buf.slice(0, p).trim(); buf = buf.slice(p + 1);
             if (!linea.startsWith('data:')) continue;
             let j; try { j = JSON.parse(linea.slice(5)); } catch { continue; }
-            if (j.type === 'content_block_delta' && j.delta && j.delta.text) { hubo = true; await emitir({ t: j.delta.text }); }
-            else if (j.type === 'error') { await emitir({ error: idioma === 'en' ? 'The assistant was interrupted. Please try again.' : 'El asistente se interrumpió. Inténtelo de nuevo.' }); }
+            if (j.type === 'content_block_delta' && j.delta && j.delta.text) { hubo = true; texto += j.delta.text; await emitir({ t: j.delta.text }); }
+            else if (j.type === 'error') { fallo = 'interrumpida'; await emitir({ error: idioma === 'en' ? 'The assistant was interrupted. Please try again.' : 'El asistente se interrumpió. Inténtelo de nuevo.' }); }
           }
         }
         await emitir(hubo ? { fin: true } : { error: idioma === 'en' ? 'No answer received.' : 'No se recibió respuesta.' });
       } catch (e) {
+        fallo = 'conexión perdida';
         await emitir({ error: idioma === 'en' ? 'Connection lost.' : 'Se perdió la conexión.' });
-      } finally { await w.close(); }
+      } finally {
+        await w.close();
+        await guardar(env, { rid: cuerpo.rid, sid: cuerpo.sid, idioma, pagina: cuerpo.pagina, tipo: 'ia', pregunta,
+          respuesta: limpiarRespuesta(texto), fuentes: fuentesDe(texto), modelo: env.MODEL || 'claude-haiku-5-5',
+          ms: Date.now() - inicio, error: fallo || (hubo ? null : 'sin respuesta') });
+      }
     })());
     return new Response(readable, { headers: { 'Content-Type': 'text/event-stream; charset=utf-8', 'Cache-Control': 'no-cache', ...cors(origin) } });
+  },
+
+  /* Cron diario (wrangler.toml → [triggers]): vuelca el registro al repositorio privado. */
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(exportar(env).then(r => console.log('exportacion', JSON.stringify(r))));
   }
 };
