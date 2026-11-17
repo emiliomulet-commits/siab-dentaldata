@@ -15,7 +15,7 @@ PLANTILLA = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="index,follow">
 <title>{id_up} · {titulo_txt} · Dental Data</title>
 <meta name="description" content="{desc}">
 <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">

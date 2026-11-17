@@ -1,0 +1,425 @@
+[
+ {
+  "id": "p01",
+  "titulo": "¿Por qué faltan los datos dentales en el Espacio Europeo de Datos de Salud?",
+  "chip": "¿Por qué faltan los datos dentales en el EEDS?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 47.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Los grandes ausentes"
+   },
+   {
+    "t": 7.98,
+    "nombre": "Por qué"
+   },
+   {
+    "t": 12.76,
+    "nombre": "España en cifras"
+   },
+   {
+    "t": 22.58,
+    "nombre": "Islas de datos"
+   },
+   {
+    "t": 33.24,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p01/dentaldata-p01.mp4",
+  "poster": "/presentaciones/p01/poster.jpg",
+  "vtt": "/presentaciones/p01/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p01/",
+  "transcripcion": "Los datos dentales son los grandes ausentes del Espacio Europeo de Datos de Salud. No por falta de valor, sino por cómo está organizada la odontología. En España, el paciente paga el noventa y siete por ciento del gasto dental. Hay más de veintitrés mil clínicas y más de cuarenta y tres mil dentistas colegiados. Cada clínica guarda sus expedientes y radiografías en su propio software, sin conexión con la historia clínica pública. Y no existe un registro nacional de salud bucodental. Los datos existen, son abundantes y tienen dueños con motivos para compartirlos bajo control. Lo que falta es quién los conecte. Eso es Dental Data.",
+  "fuentes": "Fuentes: estudio comparativo de Software in a Box (nov. 2026) · INE · Consejo General de Dentistas (colegiados 2025)"
+ },
+ {
+  "id": "p02",
+  "titulo": "¿Cómo funciona un espacio de datos federado?",
+  "chip": "¿Cómo funciona un espacio de datos federado?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 42.2,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La clínica"
+   },
+   {
+    "t": 13.78,
+    "nombre": "La red"
+   },
+   {
+    "t": 19.08,
+    "nombre": "Una pregunta"
+   },
+   {
+    "t": 27.36,
+    "nombre": "Qué viaja y qué no"
+   },
+   {
+    "t": 34.22,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p02/dentaldata-p02.mp4",
+  "poster": "/presentaciones/p02/poster.jpg",
+  "vtt": "/presentaciones/p02/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p02/",
+  "transcripcion": "En un espacio de datos federado, cada clínica, cadena o aseguradora conserva sus expedientes en su propio software de gestión. Junto a ese software se instala un conector. El conector publica en un catálogo común qué datos hay, pero no los datos. Cuando alguien necesita un indicador, la pregunta viaja hasta cada clínica, se calcula allí y vuelve solo el resultado agregado. Por la red se mueven consentimientos, metadatos y resultados. Nunca un expediente identificable. El dato se queda en la clínica. Lo que viaja es la respuesta.",
+  "fuentes": "Fuente: Dental Data · la solución y los casos de uso (base de conocimiento pública)"
+ },
+ {
+  "id": "p03",
+  "titulo": "¿Mis datos salen de la clínica?",
+  "chip": "¿Mis datos salen de la clínica?",
+  "publico": [
+   "clinicas",
+   "cadenas"
+  ],
+  "duracion": 47.2,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La respuesta"
+   },
+   {
+    "t": 8.96,
+    "nombre": "El contrato"
+   },
+   {
+    "t": 21.22,
+    "nombre": "La máquina lo hace cumplir"
+   },
+   {
+    "t": 27.96,
+    "nombre": "El marco"
+   },
+   {
+    "t": 42.24,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p03/dentaldata-p03.mp4",
+  "poster": "/presentaciones/p03/poster.jpg",
+  "vtt": "/presentaciones/p03/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p03/",
+  "transcripcion": "¿Salen los datos de la clínica? No. Ningún expediente identificable abandona la clínica. Cada uso de los datos está regulado por un contrato digital que define quién accede, para qué y durante cuánto tiempo. Y ese contrato no se queda en papel: lo hace cumplir la propia máquina. Si una solicitud no tiene contrato, no hay acceso. Si lo tiene, solo vuelve un resultado agregado. La clínica decide siempre, dentro del marco del Reglamento General de Protección de Datos y la normativa española. Y con una regla clara del Espacio Europeo de Datos de Salud: los datos de salud nunca se usan para publicidad.",
+  "fuentes": "Fuentes: Dental Data (base de conocimiento) · RGPD · LO 3/2018 · Ley 41/2002 · Reglamento (UE) 2025/327, arts. 54 y 71 · Información general; no es asesoramiento jurídico"
+ },
+ {
+  "id": "p04",
+  "titulo": "¿Qué gana una cadena dental?",
+  "chip": "¿Qué gana una cadena dental?",
+  "publico": [
+   "cadenas"
+  ],
+  "duracion": 45.8,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "El problema"
+   },
+   {
+    "t": 14.34,
+    "nombre": "Sin migrar"
+   },
+   {
+    "t": 24.6,
+    "nombre": "Indicadores comparables"
+   },
+   {
+    "t": 30.38,
+    "nombre": "Valor añadido"
+   },
+   {
+    "t": 38.22,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p04/dentaldata-p04.mp4",
+  "poster": "/presentaciones/p04/poster.jpg",
+  "vtt": "/presentaciones/p04/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p04/",
+  "transcripcion": "Una cadena dental crece comprando clínicas. Y cada clínica llega con su propio software de gestión. Comparar la calidad entre centros obliga hoy a migrar expedientes, un proceso caro y arriesgado. Con Dental Data no hace falta. Se instala un conector junto a cada software y los indicadores de calidad se calculan en cada clínica con la misma definición. La dirección ve resultados comparables de toda la red, sin que ningún expediente cambie de sitio. Además, este caso de uso interno financia el despliegue del conector y prepara a la cadena para el Espacio Europeo de Datos de Salud. Conecta tus clínicas sin migrar un solo expediente.",
+  "fuentes": "Fuentes: Dental Data · casos de uso y piloto (base de conocimiento) · Reglamento (UE) 2025/327, art. 72 · Barras ilustrativas"
+ },
+ {
+  "id": "p05",
+  "titulo": "¿Qué gana una aseguradora con red dental?",
+  "chip": "¿Qué gana una aseguradora con red dental?",
+  "publico": [
+   "aseguradoras"
+  ],
+  "duracion": 49.1,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La red"
+   },
+   {
+    "t": 14.04,
+    "nombre": "Datos coherentes"
+   },
+   {
+    "t": 25.24,
+    "nombre": "Un canal"
+   },
+   {
+    "t": 30.48,
+    "nombre": "Límites claros"
+   },
+   {
+    "t": 40.98,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p05/dentaldata-p05.mp4",
+  "poster": "/presentaciones/p05/poster.jpg",
+  "vtt": "/presentaciones/p05/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p05/",
+  "transcripcion": "Una aseguradora con red dental trabaja con clínicas propias y concertadas, cada una con su software. Sus datos de costes y resultados están dispersos y no se pueden comparar. Dental Data le da datos coherentes de toda su red sin centralizar historias clínicas identificables: el cálculo se hace en cada clínica y solo vuelve el resultado agregado. La red, además, puede servir de canal para que participen clínicas independientes. Con límites claros: el Espacio Europeo de Datos de Salud prohíbe usar estos datos para publicidad o para decisiones que perjudiquen a las personas, también en seguros. Datos coherentes de toda la red, sin centralizar historias.",
+  "fuentes": "Fuentes: Dental Data (base de conocimiento) · Reglamento (UE) 2025/327, art. 54"
+ },
+ {
+  "id": "p06",
+  "titulo": "IA sobre radiografías sin mover las radiografías",
+  "chip": "¿Cómo funciona la IA sobre radiografías dentales?",
+  "publico": [
+   "clinicas",
+   "industria"
+  ],
+  "duracion": 50.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "El dilema"
+   },
+   {
+    "t": 10.64,
+    "nombre": "El algoritmo viaja"
+   },
+   {
+    "t": 20.06,
+    "nombre": "Computación confidencial"
+   },
+   {
+    "t": 25.62,
+    "nombre": "El modelo"
+   },
+   {
+    "t": 36.82,
+    "nombre": "Lo que viene"
+   },
+   {
+    "t": 44.36,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p06/dentaldata-p06.mp4",
+  "poster": "/presentaciones/p06/poster.jpg",
+  "vtt": "/presentaciones/p06/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p06/",
+  "transcripcion": "Entrenar una inteligencia artificial dental exige muchas radiografías. Pero reunirlas en un solo lugar es un riesgo. Dental Data invierte el camino: el algoritmo viaja a cada clínica, aprende allí y solo devuelve lo aprendido, nunca las imágenes. Los cálculos se hacen con computación confidencial, que protege los datos mientras se procesan. El primer modelo, para caries interproximal y pérdida ósea periodontal, está en fase de validación clínica. Es una ayuda para el profesional: no sustituye su diagnóstico. Y se prepara para lo que viene: en 2031 las imágenes médicas entran en el Espacio Europeo de Datos de Salud. El algoritmo va al dato.",
+  "fuentes": "Fuentes: Dental Data (base de conocimiento) · Reglamento (UE) 2026/1744 · Reglamento (UE) 2025/327 · Modelo en validación clínica; no sustituye el diagnóstico profesional"
+ },
+ {
+  "id": "p07",
+  "titulo": "¿Qué fechas marca el Espacio Europeo de Datos de Salud?",
+  "chip": "¿Qué fechas marca el EEDS?",
+  "publico": [
+   "todos",
+   "clinicas"
+  ],
+  "duracion": 59.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Línea de tiempo"
+   },
+   {
+    "t": 24.84,
+    "nombre": "La ventana"
+   },
+   {
+    "t": 30.61,
+    "nombre": "Artículo 50"
+   },
+   {
+    "t": 42.9,
+    "nombre": "España"
+   },
+   {
+    "t": 51.1,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p07/dentaldata-p07.mp4",
+  "poster": "/presentaciones/p07/poster.jpg",
+  "vtt": "/presentaciones/p07/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p07/",
+  "transcripcion": "El Espacio Europeo de Datos de Salud ya está en vigor y tiene fechas. En marzo de 2027, cada país habrá designado sus organismos de acceso a datos de salud. En marzo de 2029 se aplica la mayor parte de las normas de uso secundario. Y en 2031 entran las imágenes médicas, como las radiografías dentales. Entre 2027 y 2029 hay dos años para conectar clínicas y cadenas. La mayoría de las clínicas dentales son microempresas y quedan exentas por defecto. Para que participen hace falta un canal agregado, a través de colegios profesionales o redes de aseguradoras. En España, el Ministerio de Sanidad prepara una Ley de Salud Digital que prevé organismos de acceso autonómicos y uno nacional. Quien llegue a 2029 conectado será el interlocutor natural.",
+  "fuentes": "Fuentes: Reglamento (UE) 2025/327 (arts. 50 y 105) · Ministerio de Sanidad: consulta pública previa del anteproyecto de Ley de Salud Digital (sept. 2025) y declaraciones del 17/09/2026"
+ },
+ {
+  "id": "p08",
+  "titulo": "¿Qué tecnología hay detrás de Dental Data?",
+  "chip": "¿Qué tecnología hay detrás de Dental Data?",
+  "publico": [
+   "partners"
+  ],
+  "duracion": 50.6,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La regla"
+   },
+   {
+    "t": 10.14,
+    "nombre": "Dentro del nodo"
+   },
+   {
+    "t": 20.84,
+    "nombre": "En la frontera"
+   },
+   {
+    "t": 34.6,
+    "nombre": "Abierto a todos"
+   },
+   {
+    "t": 38.94,
+    "nombre": "Experiencia"
+   },
+   {
+    "t": 45.6,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p08/dentaldata-p08.mp4",
+  "poster": "/presentaciones/p08/poster.jpg",
+  "vtt": "/presentaciones/p08/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p08/",
+  "transcripcion": "Dental Data sigue una regla sencilla: Microsoft dentro del nodo, estándares abiertos en las fronteras. Dentro de cada nodo, el conector funciona sobre Microsoft Azure, con los datos en la Unión Europea, integrado con el software de gestión de la clínica y desplegado por partners de Azure. En las fronteras, el espacio habla estándares europeos abiertos: Gaia-X, el protocolo de espacios de datos, Eclipse EDC, credenciales verificables, FHIR, DICOM y HealthDCAT-AP. Así, cualquier participante puede conectarse aunque no use Microsoft. Y no partimos de cero: Software in a Box ya ha diseñado y ejecutado tres espacios de datos reales.",
+  "fuentes": "Fuentes: Dental Data · tecnología y empresa (base de conocimiento) · Microsoft y Azure son marcas de Microsoft Corporation; se citan como texto"
+ },
+ {
+  "id": "p09",
+  "titulo": "¿Qué ofrece Dental Data a la industria?",
+  "chip": "¿Qué ofrece Dental Data a la industria?",
+  "publico": [
+   "industria"
+  ],
+  "duracion": 48.4,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Quién"
+   },
+   {
+    "t": 15.64,
+    "nombre": "Evidencia del mundo real"
+   },
+   {
+    "t": 25.78,
+    "nombre": "Para el software de gestión"
+   },
+   {
+    "t": 34.14,
+    "nombre": "Las reglas"
+   },
+   {
+    "t": 40.92,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p09/dentaldata-p09.mp4",
+  "poster": "/presentaciones/p09/poster.jpg",
+  "vtt": "/presentaciones/p09/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p09/",
+  "transcripcion": "Para la industria dental, la evidencia del mundo real vale mucho. Fabricantes de implantes y materiales, y empresas de inteligencia artificial, necesitan saber cómo se comportan sus productos en la consulta. Dental Data les ofrece esa evidencia ordenada y bajo contrato: preguntas que se responden en las clínicas y resultados agregados que vuelven sin datos identificables. Para los proveedores de software de gestión clínica, el conector es una pieza que se integra con su producto y abre nuevos servicios a sus clientes. Las reglas no cambian: contrato para cada uso, solo resultados agregados y nunca publicidad. Evidencia real, ordenada y bajo contrato.",
+  "fuentes": "Fuentes: Dental Data (base de conocimiento) · Reglamento (UE) 2025/327, art. 54"
+ },
+ {
+  "id": "p10",
+  "titulo": "¿Cómo se participa en Dental Data?",
+  "chip": "¿Cómo se participa en Dental Data?",
+  "publico": [
+   "cadenas",
+   "aseguradoras",
+   "partners"
+  ],
+  "duracion": 51.6,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Buscamos"
+   },
+   {
+    "t": 11.84,
+    "nombre": "Cómo se financia"
+   },
+   {
+    "t": 15.9,
+    "nombre": "Hoja de ruta"
+   },
+   {
+    "t": 31.32,
+    "nombre": "También buscamos"
+   },
+   {
+    "t": 42.34,
+    "nombre": "¿Hablamos?"
+   }
+  ],
+  "mp4": "/presentaciones/p10/dentaldata-p10.mp4",
+  "poster": "/presentaciones/p10/poster.jpg",
+  "vtt": "/presentaciones/p10/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p10/",
+  "transcripcion": "Buscamos una cadena dental o una aseguradora en España para un piloto de indicadores de calidad entre clínicas, antes de marzo de 2027. El propio caso de uso interno financia el despliegue del conector. De 2027 a 2028 consolidamos los pilotos. En marzo de 2029, un espacio de datos dental catalogado y listo para el Espacio Europeo de Datos de Salud. Y a partir de 2029, la línea de imagen dental. También queremos hablar con proveedores de software de gestión, partners de Microsoft, la industria y los colegios profesionales. Y estamos construyendo una alianza con Países Bajos. ¿Hablamos? Escríbenos a partners arroba softwareinabox punto eu.",
+  "fuentes": "Fuentes: Dental Data · piloto, hoja de ruta y alianza España–Países Bajos (base de conocimiento) · Sin tarifas publicadas"
+ }
+]

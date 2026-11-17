@@ -97,6 +97,8 @@ def cadenas_js(html):
 def generar(codigo):
     m = cargar(codigo)
     html = open(PLANTILLA, encoding="utf-8").read()
+    # Las presentaciones animadas solo existen en español: sus bloques se quitan en los demás mercados
+    html = re.sub(r"<!--dd-videos-->.*?<!--/dd-videos-->\n?", "", html, flags=re.S)
     html = html.replace('<html lang="es">', f'<html lang="{m.LANG}">', 1)
     for ident, nuevo in getattr(m, "BLOQUES", {}).items():
         html = reemplazar_seccion(html, ident, nuevo)
