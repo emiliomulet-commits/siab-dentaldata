@@ -1,0 +1,81 @@
+WEBVTT
+
+00:00:05.660 --> 00:00:09.730
+Esto es lo que montamos en Microsoft
+Azure para Dental Data.
+
+00:00:09.780 --> 00:00:14.010
+Una regla guía el diseño:
+Microsoft dentro del nodo,
+
+00:00:14.060 --> 00:00:16.670
+estándares abiertos en la frontera.
+
+00:00:16.720 --> 00:00:20.110
+En la clínica, la radiografía sale del
+equipo por una pasarela
+
+00:00:20.160 --> 00:00:24.970
+DICOM de código abierto, Orthanc, y
+se seudonimiza en origen.
+
+00:00:25.020 --> 00:00:27.970
+En el nodo de datos, Azure
+Health Data Services
+
+00:00:28.020 --> 00:00:31.130
+guarda el expediente en FHIR y
+la imagen en DICOM.
+
+00:00:31.180 --> 00:00:35.910
+Microsoft Fabric y OneLake preparan los
+datos para la analítica.
+
+00:00:35.960 --> 00:00:40.050
+La seguridad la ponen Microsoft
+Entra ID, Azure Key Vault,
+
+00:00:40.100 --> 00:00:43.730
+Microsoft Defender for Cloud y
+Microsoft Sentinel.
+
+00:00:43.780 --> 00:00:46.970
+En la frontera trabaja el
+conector Eclipse EDC,
+
+00:00:47.020 --> 00:00:49.610
+desplegado en Azure Kubernetes Service.
+
+00:00:49.660 --> 00:00:52.650
+Publica el catálogo en HealthDCAT-AP,
+
+00:00:52.700 --> 00:00:57.550
+negocia contratos ODRL y se identifica
+con credenciales Gaia-X.
+
+00:00:57.600 --> 00:01:00.430
+La inteligencia artificial se entrena con
+
+00:01:00.480 --> 00:01:03.350
+Azure Machine Learning y
+aprendizaje federado:
+
+00:01:03.400 --> 00:01:07.610
+el modelo viaja a cada clínica y los
+datos se quedan donde están.
+
+00:01:07.660 --> 00:01:12.010
+La computación confidencial protege el dato
+incluso mientras se procesa,
+
+00:01:12.060 --> 00:01:16.490
+y Microsoft Foundry redacta borradores de
+informe que revisa el dentista.
+
+00:01:16.540 --> 00:01:20.370
+Así, cada radiografía sigue un
+camino seguro y auditado,
+
+00:01:20.420 --> 00:01:28.420
+de la clínica al modelo, sin que ningún dato
+identificable salga del nodo.

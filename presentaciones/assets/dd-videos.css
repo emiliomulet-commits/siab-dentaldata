@@ -69,3 +69,11 @@
 .bot .dd-vbtn{margin:10px 0 4px;color:#0B2545;background:#fff;font-size:14px;padding:6px 12px 6px 6px}
 .bot .dd-vbtn .pl{width:24px;height:24px}
 @media(max-width:900px){.dd-box{grid-template-columns:1fr}.dd-box video{border-radius:16px 16px 0 0}.dd-modal{padding:0}.dd-box{border-radius:0;height:100%}}
+/* Vídeo destacado de ancho completo: arquitectura en Microsoft Azure (P11) */
+.dd-arq{background:#050E1A;color:#fff;padding:56px 0 0}
+.dd-arq-cab{padding-bottom:28px}.dd-arq-cab h2{color:#fff;margin:8px 0 10px}.dd-arq-cab p{color:#C3CFDC;max-width:760px;margin:0}
+.dd-arq-v{width:100%;background:#000;line-height:0}
+.dd-arq-v video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000}
+.dd-arq-pie{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;padding:22px 28px 30px}
+.dd-arq-pie a{color:#EDBC6C;font-weight:600;text-decoration:none}.dd-arq-pie a:hover{text-decoration:underline}
+.dd-arq-pie small{color:#7F93AA;font-size:13px;margin-left:auto}

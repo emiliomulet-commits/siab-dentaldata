@@ -7,7 +7,7 @@ INTRO = 3.0
 T = json.load(open(os.path.join(AQUI, "tiempos.json")))
 LOC = json.load(open(os.path.join(AQUI, "locuciones.json")))
 PUB = {"p01":["todos"],"p02":["todos"],"p03":["clinicas","cadenas"],"p04":["cadenas"],"p05":["aseguradoras"],"p06":["clinicas","industria"],
-       "p07":["todos","clinicas"],"p08":["partners"],"p09":["industria"],"p10":["cadenas","aseguradoras","partners"]}
+       "p07":["todos","clinicas"],"p08":["partners"],"p09":["industria"],"p10":["cadenas","aseguradoras","partners"],"p11":["partners","industria"]}
 def norm(w): return re.sub(r"[^a-z0-9ñ]", "", unicodedata.normalize("NFKD", w.lower()).encode("ascii","ignore").decode())
 def ts(t):
     h, r = divmod(t, 3600); m, s = divmod(r, 60); return f"{int(h):02d}:{int(m):02d}:{s:06.3f}"

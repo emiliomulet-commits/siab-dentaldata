@@ -10,9 +10,9 @@ var PUB = [["todos","Todas"],["cadenas","Cadenas"],["aseguradoras","Aseguradoras
 var RUTAS = {cadenas:["p01","p02","p04","p03","p10"],aseguradoras:["p01","p02","p05","p03","p10"],clinicas:["p01","p03","p07","p10"],
   industria:["p02","p06","p09","p10"],partners:["p02","p08","p10"],todos:["p01","p02","p03","p04","p05","p06","p07","p08","p09","p10"]};
 var KB = {datos:"p03",seguridad:"p03",publicidad:"p03",cadena:"p04",aseguradora:"p05",ia:"p06",ehds:"p07",independiente:"p07",
-  tecnologia:"p08",experiencia:"p08",piloto:"p10",coste:"p10",paises:"p10"};
+  tecnologia:"p11",azure:"p11",arquitectura:"p11",experiencia:"p08",piloto:"p10",coste:"p10",paises:"p10"};
 var CTA = {p04:"¿Hablamos del piloto para tu cadena?",p05:"¿Hablamos del piloto para tu red?",p08:"¿Eres partner de Azure? Hablemos",
-  p09:"¿Hablamos de evidencia para tu producto?",p10:"Únete al piloto"};
+  p09:"¿Hablamos de evidencia para tu producto?",p10:"Únete al piloto",p11:"¿Montamos tu nodo en Azure? Hablemos"};
 var PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>';
 var V = [], byId = {}, ruta = RUTAS.todos, filtro = "todos";
 var vistos = {}; try{ vistos = JSON.parse(localStorage.getItem("dd-vistos") || "{}"); }catch(_){}
@@ -95,6 +95,7 @@ function videoteca(box){
     tabs.appendChild(b); });
   var grid = document.createElement("div"); grid.className = "dd-grid";
   V.forEach(function(v){
+    if(RUTAS.todos.indexOf(v.id) < 0) return; // P11 va destacada fuera de la videoteca
     var c = document.createElement("button"); c.type = "button"; c.className = "dd-card"; c.dataset.pres = v.id;
     c.setAttribute("aria-label", v.titulo + " (" + seg(v.duracion) + ")");
     c.innerHTML = '<span class="ph" style="background-image:url(' + v.poster + ')"><span class="pb">' + PLAY + '</span><span class="nu">' + v.id.toUpperCase() + '</span><span class="du">' + seg(v.duracion) + '</span><span class="vi">✓ Vista</span></span>' +
