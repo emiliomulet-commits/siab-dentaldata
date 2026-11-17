@@ -80,3 +80,7 @@
 .dd-arq-pie{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;padding:22px 28px 30px}
 .dd-arq-pie a{color:#EDBC6C;font-weight:600;text-decoration:none}.dd-arq-pie a:hover{text-decoration:underline}
 .dd-arq-pie small{color:#7F93AA;font-size:13px;margin-left:auto}
+/* enlace de la cabecera «sobre Microsoft Azure» */
+.brand .sub.dd-azure-link{cursor:pointer;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
+.brand .sub.dd-azure-link:hover,.brand .sub.dd-azure-link:focus-visible{color:#EDBC6C;border-bottom-color:#EDBC6C;outline:none}
+#arquitectura-azure{scroll-margin-top:68px}
