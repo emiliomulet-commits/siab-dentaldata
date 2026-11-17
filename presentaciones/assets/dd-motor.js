@@ -218,6 +218,23 @@ if(WEB && !VOZ){
 }
 if(reducido && !WEB) tl.seek(ETIQ[1] - .02, false);
 
+/* dentro de la web (iframe), como en ARGOS:
+   ?modo=video&auto=1 arranca con locución si el navegador lo permite (si no, queda el botón «Ver con locución»);
+   al terminar avisa a la página con {dd:"fin"} y Esc pide cerrar la ventana con {dd:"cerrar"} */
+const EN_WEB = window.parent !== window;
+const avisar = m => { try { window.parent.postMessage({dd: m}, "*"); } catch(e){} };
+if(VOZ && audio && q.get("auto") === "1" && !reducido){
+  vozActiva = true; audio.currentTime = 0;
+  audio.play().then(() => tl.seek(0).play()).catch(() => { vozActiva = false; });
+}
+if(EN_WEB && WEB){
+  let armado = false, avisado = false;
+  gsap.ticker.add(() => { const x = tl.time();
+    if(x > .3 && x < t - 1){ armado = true; avisado = false; }
+    if(armado && !avisado && x >= t - .05){ avisado = true; armado = false; avisar("fin"); } });
+  if(!q.get("embed")) addEventListener("keydown", e => { if(e.key === "Escape" && !document.fullscreenElement) avisar("cerrar"); });
+}
+
 /* API para el render del MP4 y para pruebas */
 window.DD = {tl, duracion:t, escenas:NOMBRES, inicios:ETIQ, seek:x => { tl.pause(); tl.seek(x, false); }};
 if(document.fonts) document.fonts.ready.then(() => { window.DD.listo = true; }); else window.DD.listo = true;

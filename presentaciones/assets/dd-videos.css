@@ -45,8 +45,10 @@
 /* reproductor */
 .dd-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(5,14,26,.86);padding:24px}
 .dd-modal.open{display:flex}
-.dd-box{width:min(1280px,100%);max-height:100%;overflow:auto;background:#0B2545;color:#fff;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5);display:grid;grid-template-columns:minmax(0,1fr) 320px}
-.dd-box video{width:100%;display:block;background:#000;aspect-ratio:16/9;border-radius:16px 0 0 16px}
+.dd-box{width:min(1440px,100%);max-height:100%;overflow:auto;background:#0B2545;color:#fff;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5);display:grid;grid-template-columns:minmax(0,1fr) 320px}
+.dd-fr{aspect-ratio:16/9;width:100%;background:#0B2545;border-radius:16px 0 0 16px;overflow:hidden;align-self:start}
+.dd-fr iframe{width:100%;height:100%;border:0;display:block}
+.dd-ayuda{font-size:14px;line-height:1.5;color:#AFC0D2;margin:0}
 .dd-side{padding:22px 22px 20px;display:flex;flex-direction:column;gap:14px;min-width:0}
 .dd-side .k{font:800 12px 'Hanken Grotesk';letter-spacing:.16em;text-transform:uppercase;color:#C9A227}
 .dd-side h2{color:#fff;font:700 21px/1.25 'Montserrat',sans-serif}
@@ -68,12 +70,13 @@
 .dd-next b{color:#fff}
 .bot .dd-vbtn{margin:10px 0 4px;color:#0B2545;background:#fff;font-size:14px;padding:6px 12px 6px 6px}
 .bot .dd-vbtn .pl{width:24px;height:24px}
-@media(max-width:900px){.dd-box{grid-template-columns:1fr}.dd-box video{border-radius:16px 16px 0 0}.dd-modal{padding:0}.dd-box{border-radius:0;height:100%}}
+@media(max-width:900px){.dd-box{grid-template-columns:1fr}.dd-fr{border-radius:0}.dd-modal{padding:0}.dd-box{border-radius:0;height:100%}}
 /* Vídeo destacado de ancho completo: arquitectura en Microsoft Azure (P11) */
 .dd-arq{background:#050E1A;color:#fff;padding:56px 0 0}
 .dd-arq-cab{padding-bottom:28px}.dd-arq-cab h2{color:#fff;margin:8px 0 10px}.dd-arq-cab p{color:#C3CFDC;max-width:760px;margin:0}
 .dd-arq-v{width:100%;background:#000;line-height:0}
-.dd-arq-v video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000}
+.dd-arq-v{aspect-ratio:16/9}
+.dd-arq-v iframe{display:block;width:100%;height:100%;border:0;background:#0B2545}
 .dd-arq-pie{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;padding:22px 28px 30px}
 .dd-arq-pie a{color:#EDBC6C;font-weight:600;text-decoration:none}.dd-arq-pie a:hover{text-decoration:underline}
 .dd-arq-pie small{color:#7F93AA;font-size:13px;margin-left:auto}
