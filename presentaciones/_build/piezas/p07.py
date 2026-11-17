@@ -2,7 +2,7 @@ from comun import *
 TITULO = "¿Qué fechas marca el Espacio Europeo de Datos de Salud?"
 CHIP = "¿Qué fechas marca el EEDS?"
 DESC = "Presentación animada de Dental Data: el calendario del Espacio Europeo de Datos de Salud y la ventana 2027–2029."
-FUENTES = "Fuentes: Reglamento (UE) 2025/327 (arts. 50 y 105) · Ministerio de Sanidad, consulta pública del anteproyecto de Ley de Salud Digital (2025)"
+FUENTES = "Fuentes: Reglamento (UE) 2025/327 (arts. 50 y 105) · Ministerio de Sanidad: consulta pública previa del anteproyecto de Ley de Salud Digital (sept. 2025) y declaraciones del 17/09/2026"
 HITOS = [("8%", "26 mar 2025", "Entra en vigor"), ("36%", "26 mar 2027", "Organismos de acceso designados"), ("64%", "26 mar 2029", "Uso secundario: la mayor parte de las normas"), ("92%", "26 mar 2031", "Imágenes médicas, como las radiografías")]
 W = [None, "2027", "2029", "2031"]
 def linea(t0, a="up"):
@@ -30,9 +30,9 @@ apertura(7, "¿Qué fechas marca el <span class=\"oro\">Espacio Europeo de Datos
 </section>""",
 """<section class="esc" data-nombre="España" data-dur="7.5">
   <div class="k" data-a="fade">España</div>
-  <div class="card" data-a="up" data-t=".4" style="max-width:1100px"><div class="ico"><i data-i="ley"></i></div><h3>Anteproyecto de Ley de Salud Digital</h3>
-    <p style="font-size:23px">Prevé organismos de acceso autonómicos y uno nacional (Ministerio de Sanidad), coordinados entre sí e integrados en HealthData@EU.</p>
-    <div style="margin-top:18px"><span class="pild" style="background:var(--paper);color:var(--navy);border-color:var(--line)" data-a="fade" data-t="2.0">En tramitación</span></div></div>
+  <div class="card" data-a="up" data-t=".4" style="max-width:1100px"><div class="ico"><i data-i="ley"></i></div><h3>Ley de Salud Digital (anteproyecto)</h3>
+    <p style="font-size:23px" data-a="fade" data-w="prevé">El Ministerio de Sanidad la prepara. Prevé organismos de acceso autonómicos y uno nacional (Ministerio de Sanidad), coordinados entre sí e integrados en HealthData@EU.</p>
+    <div style="margin-top:18px"><span class="pild" style="background:var(--paper);color:var(--navy);border-color:var(--line)" data-a="fade" data-w="autonomicos">Borrador en preparación · pendiente de audiencia pública</span></div></div>
 </section>""",
 cierre("Quien llegue a 2029 conectado", "será el interlocutor natural.", "de los organismos de acceso a datos de salud.", dur=7),
 ]
