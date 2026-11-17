@@ -540,13 +540,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenus(
 document.getElementById('reset').addEventListener('click',function(){msgs.innerHTML='';hist=[];welcome()});
 function welcome(){bot(['Bonjour ! Je suis l’assistant de Dental Data. Je vous explique comment fonctionne l’espace de données dentaires fédéré, ce qu’il apporte aux données de l’INAMI et ce que l’Espace européen des données de santé signifie pour les soins dentaires en Belgique.','Choisissez une question ou écrivez la vôtre. Merci de ne pas saisir de données personnelles ni de données de patients : nous conservons les questions et les réponses de manière anonyme pour améliorer l’assistant.'],['datos','inami','hda','ia','collaborer'],true)}
 function me(t){var d=document.createElement('div');d.className='me';d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
-function bot(paras,sug,noFb,rid){
+function bot(paras,sug,noFb,rid,kid){
  var d=document.createElement('div');d.className='bot';
  d.innerHTML=paras.map(function(p){return '<p>'+p+'</p>'}).join('');
  if(sug&&sug.length){var s=document.createElement('div');s.className='sug';sug.forEach(function(id){var b=document.createElement('button');b.type='button';b.textContent=byId[id].q;b.addEventListener('click',function(){ask(byId[id].q,id)});s.appendChild(b)});d.appendChild(s)}
  if(!noFb){var f=document.createElement('div');f.className='ft';f.innerHTML='<em style="font-style:normal">Réponse préparée</em><span><button type="button" aria-label="Réponse utile" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 10v11H3V10zM7 10l4-8a3 3 0 0 1 3 3v4h6a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.6 21H7"/></svg></button><button type="button" aria-label="Réponse peu utile" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 14V3h4v11zM17 14l-4 8a3 3 0 0 1-3-3v-4H4a2 2 0 0 1-2-2.3l1.4-8A2 2 0 0 1 5.4 3H17"/></svg></button></span>';
   votos(f,rid);d.appendChild(f)}
  d.querySelectorAll('a[data-close]').forEach(function(a){a.addEventListener('click',function(){if(window.innerWidth<860)closeP()})});
+ if(kid&&window.DDV)DDV.chat(d,kid);
  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
 }
 function match(t){var n=' '+norm(t)+' ',best=null,score=0;KB.forEach(function(e){var sc=0;e.k.forEach(function(k){if(n.indexOf(k)>-1)sc+=k.length>4?2:1});if(sc>score){score=sc;best=e}});return score?best:null}
@@ -567,7 +568,7 @@ function md(t){var h=esc(t.trim());
  return h.split(/\n{2,}/).map(function(b){if(/^\s*[-•] /m.test(b))return '<ul style="padding-left:18px;margin:6px 0">'+b.split('\n').map(function(l){return l.replace(/^\s*[-•]\s*/,'')}).filter(Boolean).map(function(l){return '<li>'+l+'</li>'}).join('')+'</ul>';return '<p>'+b.replace(/\n/g,'<br>')+'</p>'}).join('')}
 function limpia(t){return t.replace(/\[(FUENTE|SEGUIR)[^\]]*\]?/gi,'').trimEnd()}
 function fb(rid){var f=document.createElement('div');f.className='ft';f.innerHTML='<em style="font-style:normal">Réponse générée par IA</em><span><button type="button" aria-label="Réponse utile" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 10v11H3V10zM7 10l4-8a3 3 0 0 1 3 3v4h6a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.6 21H7"/></svg></button><button type="button" aria-label="Réponse peu utile" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 14V3h4v11zM17 14l-4 8a3 3 0 0 1-3-3v-4H4a2 2 0 0 1-2-2.3l1.4-8A2 2 0 0 1 5.4 3H17"/></svg></button></span>';votos(f,rid);return f}
-function local(text,t){t.remove();var e=match(text),rid=nid();if(e){bot(e.a,e.s,false,rid);reg(rid,'preparada_por_palabras',text,txt(e.a),e.id)}else{var m=['Je n’ai pas encore de réponse préparée à ce sujet. Vous pouvez <a href="#contacto" data-close>nous écrire</a> et une personne de l’équipe vous répondra.'];bot(m,['datos','hda','collaborer','tecnologia'],false,rid);reg(rid,'sin_respuesta',text,txt(m))}}
+function local(text,t){t.remove();var e=match(text),rid=nid();if(e){bot(e.a,e.s,false,rid,e.id);reg(rid,'preparada_por_palabras',text,txt(e.a),e.id)}else{var m=['Je n’ai pas encore de réponse préparée à ce sujet. Vous pouvez <a href="#contacto" data-close>nous écrire</a> et une personne de l’équipe vous répondra.'];bot(m,['datos','hda','collaborer','tecnologia'],false,rid);reg(rid,'sin_respuesta',text,txt(m))}}
 async function ia(text,t){
  hist.push({role:'user',content:text});busy=true;
  var d=null,cuerpo=null,bruto='',rid=nid();
@@ -586,6 +587,7 @@ async function ia(text,t){
   if(mf.length){var fs=mf.join(',').split(/[,|]/).map(function(x){return x.trim()}).filter(function(x,i,a){return FUENTES[x]&&a.indexOf(x)===i});if(fs.length){var fu=document.createElement('p');fu.style.cssText='font-size:13px;color:#5B6573;margin-top:10px';fu.innerHTML='Source : '+fs.map(function(f){return f.indexOf('10-')===0?'<a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener">'+FUENTES[f]+'</a>':FUENTES[f]}).join(' · ');d.appendChild(fu)}}
   if(ms){var sg=document.createElement('div');sg.className='sug';ms[1].split('|').map(function(x){return x.trim()}).filter(Boolean).slice(0,2).forEach(function(q){var b=document.createElement('button');b.type='button';b.textContent=q;b.addEventListener('click',function(){ask(q)});sg.appendChild(b)});d.appendChild(sg)}
   if(err){var e2=document.createElement('p');e2.style.cssText='font-size:13px;color:#B3261E';e2.textContent=err;d.appendChild(e2)}
+  if(window.DDV){var mk=match(text);if(mk)DDV.chat(d,mk.id)}
   d.appendChild(fb(rid));msgs.scrollTop=msgs.scrollHeight;
  }catch(e){hist.pop();if(!d)local(text,t)}
  busy=false;
@@ -593,7 +595,7 @@ async function ia(text,t){
 function ask(text,id){
  if(!text.trim()||busy)return;if(!panel.classList.contains('open'))openP();me(text);
  var t=document.createElement('div');t.className='bot typing';t.innerHTML='<i></i><i></i><i></i>';msgs.appendChild(t);msgs.scrollTop=msgs.scrollHeight;
- if(id){setTimeout(function(){t.remove();var e=byId[id],rid=nid();bot(e.a,e.s,false,rid);reg(rid,'preparada',text,txt(e.a),id);hist.push({role:'user',content:text},{role:'assistant',content:e.a.join(' ').replace(/<[^>]+>/g,'')})},500);return}
+ if(id){setTimeout(function(){t.remove();var e=byId[id],rid=nid();bot(e.a,e.s,false,rid,id);reg(rid,'preparada',text,txt(e.a),id);hist.push({role:'user',content:text},{role:'assistant',content:e.a.join(' ').replace(/<[^>]+>/g,'')})},500);return}
  ia(text,t);
 }
 document.querySelector('[data-ask]').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('q');ask(i.value);i.value=''});
