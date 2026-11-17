@@ -29,3 +29,13 @@ def cierre(frase1, frase2, lead, dur=6.5):
   <div class="lead" data-a="fade" data-t="2.3" style="font-size:31px;color:#fff">{lead}</div>
   <img class="logo-fin" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" style="margin-left:auto;margin-right:auto" data-a="pop" data-t="3.0">
 </section>'''
+def az(x, y, svg, nombre, sub="", t=0, w=None, ancho=210, a="pop"):
+    """Icono oficial de Microsoft (assets/azure) con el nombre completo del servicio debajo."""
+    s = f'<small>{sub}</small>' if sub else ''
+    cuando = f' data-w="{w}"' if w else at(t)
+    return (f'<div class="nodo az" style="left:{x}px;top:{y}px;width:{ancho}px" data-a="{a}"{cuando}>'
+            f'<div class="disco"><img src="/presentaciones/assets/azure/{svg}.svg" alt=""></div>{nombre}{s}</div>')
+def caja(x, y, w, h, titulo, c="", t=0, a="fade"):
+    """Recuadro de capa (borde fino) con su rótulo arriba a la izquierda."""
+    return (f'<div class="capa {c}" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px" data-a="{a}"{at(t)}>'
+            f'<span>{titulo}</span></div>')

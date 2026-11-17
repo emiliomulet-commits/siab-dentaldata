@@ -28,6 +28,7 @@
 - [¿Qué tecnología hay detrás de Dental Data?](https://dentaldata.softwareinabox.eu/presentaciones/p08/): vídeo de 51 s con transcripción (https://dentaldata.softwareinabox.eu/presentaciones/p08/dentaldata-p08.mp4)
 - [¿Qué ofrece Dental Data a la industria?](https://dentaldata.softwareinabox.eu/presentaciones/p09/): vídeo de 48 s con transcripción (https://dentaldata.softwareinabox.eu/presentaciones/p09/dentaldata-p09.mp4)
 - [¿Cómo se participa en Dental Data?](https://dentaldata.softwareinabox.eu/presentaciones/p10/): vídeo de 52 s con transcripción (https://dentaldata.softwareinabox.eu/presentaciones/p10/dentaldata-p10.mp4)
+- [¿Qué montamos en Microsoft Azure?](https://dentaldata.softwareinabox.eu/presentaciones/p11/): vídeo de 90 s sobre la arquitectura en Microsoft Azure (componentes de Azure y conector Eclipse EDC), con transcripción (https://dentaldata.softwareinabox.eu/presentaciones/p11/dentaldata-p11.mp4)
 
 ## Related
 - [Federated data spaces]( https://datos.softwareinabox.eu/)

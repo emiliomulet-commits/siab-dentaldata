@@ -13,6 +13,7 @@ ANCLAS = {
  "p07": ["el espacio europeo", "entre", "la mayoria", "en espana", "quien llegue"],
  "p08": ["sigue", "dentro de cada", "en las fronteras", "asi cualquier", "y no partimos", "FIN"],
  "p09": ["para la industria", "<1 les ofrece", "para los proveedores", "las reglas", "evidencia real"],
+ "p11": ["esto es", "en la clinica", "en el nodo", "la seguridad", "en la frontera trabaja", "la inteligencia", "asi cada", "FIN"],
  "p10": ["buscamos", "el propio caso", "<4 consolidamos", "tambien queremos", "hablamos"],
 }
 def norm(w): return re.sub(r"[^a-z0-9ñ]", "", unicodedata.normalize("NFKD", w.lower()).encode("ascii","ignore").decode())

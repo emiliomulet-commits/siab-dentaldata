@@ -421,5 +421,59 @@
   "interactiva": "/presentaciones/p10/",
   "transcripcion": "Buscamos una cadena dental o una aseguradora en España para un piloto de indicadores de calidad entre clínicas, antes de marzo de 2027. El propio caso de uso interno financia el despliegue del conector. De 2027 a 2028 consolidamos los pilotos. En marzo de 2029, un espacio de datos dental catalogado y listo para el Espacio Europeo de Datos de Salud. Y a partir de 2029, la línea de imagen dental. También queremos hablar con proveedores de software de gestión, partners de Microsoft, la industria y los colegios profesionales. Y estamos construyendo una alianza con Países Bajos. ¿Hablamos? Escríbenos a partners arroba softwareinabox punto eu.",
   "fuentes": "Fuentes: Dental Data · piloto, hoja de ruta y alianza España–Países Bajos (base de conocimiento) · Sin tarifas publicadas"
+ },
+ {
+  "id": "p11",
+  "titulo": "¿Qué montamos en Microsoft Azure?",
+  "chip": "¿Qué montamos en Microsoft Azure?",
+  "publico": [
+   "partners",
+   "industria"
+  ],
+  "duracion": 90.4,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Apertura"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La regla"
+   },
+   {
+    "t": 16.42,
+    "nombre": "La clínica"
+   },
+   {
+    "t": 24.72,
+    "nombre": "El nodo de datos"
+   },
+   {
+    "t": 35.66,
+    "nombre": "Seguridad"
+   },
+   {
+    "t": 43.48,
+    "nombre": "La frontera"
+   },
+   {
+    "t": 57.3,
+    "nombre": "La IA"
+   },
+   {
+    "t": 76.24,
+    "nombre": "El recorrido"
+   },
+   {
+    "t": 85.42,
+    "nombre": "Cierre"
+   }
+  ],
+  "mp4": "/presentaciones/p11/dentaldata-p11.mp4",
+  "poster": "/presentaciones/p11/poster.jpg",
+  "vtt": "/presentaciones/p11/subtitulos-es.vtt",
+  "interactiva": "/presentaciones/p11/",
+  "transcripcion": "Esto es lo que montamos en Microsoft Azure para Dental Data. Una regla guía el diseño: Microsoft dentro del nodo, estándares abiertos en la frontera. En la clínica, la radiografía sale del equipo por una pasarela DICOM de código abierto, Orthanc, y se seudonimiza en origen. En el nodo de datos, Azure Health Data Services guarda el expediente en FHIR y la imagen en DICOM. Microsoft Fabric y OneLake preparan los datos para la analítica. La seguridad la ponen Microsoft Entra ID, Azure Key Vault, Microsoft Defender for Cloud y Microsoft Sentinel. En la frontera trabaja el conector Eclipse EDC, desplegado en Azure Kubernetes Service. Publica el catálogo en HealthDCAT-AP, negocia contratos ODRL y se identifica con credenciales Gaia-X. La inteligencia artificial se entrena con Azure Machine Learning y aprendizaje federado: el modelo viaja a cada clínica y los datos se quedan donde están. La computación confidencial protege el dato incluso mientras se procesa, y Microsoft Foundry redacta borradores de informe que revisa el dentista. Así, cada radiografía sigue un camino seguro y auditado, de la clínica al modelo, sin que ningún dato identificable salga del nodo.",
+  "fuentes": "Fuentes: Dental Data · documento técnico «Espacio de datos de salud dental sobre tecnología Microsoft conforme a Gaia-X» (v1.3) y propuesta de MVP (v1.4) · Iconos oficiales de Microsoft (Azure, Microsoft Entra y Microsoft Fabric), usados según sus condiciones para diagramas de arquitectura · Microsoft, Azure, Entra, Fabric y los nombres de sus servicios son marcas de Microsoft Corporation"
  }
 ]
