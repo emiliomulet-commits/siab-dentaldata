@@ -112,6 +112,18 @@ document.addEventListener("click", function(e){
   var b = e.target.closest && e.target.closest("[data-pres]"); if(!b || b.classList.contains("dd-card")) return;
   e.preventDefault(); ruta = RUTAS.todos; abrir(b.dataset.pres, b);
 });
+/* cabecera: «sobre Microsoft Azure» lleva a la presentación de la arquitectura en Azure (P11) */
+(function(){
+  var sub = document.querySelector(".brand .sub"), sec = document.getElementById("arquitectura-azure");
+  if(!sub || !sec) return;
+  sub.classList.add("dd-azure-link"); sub.setAttribute("role", "link"); sub.setAttribute("tabindex", "0");
+  sub.title = "Ver qué montamos en Microsoft Azure";
+  function ir(e){ e.preventDefault(); e.stopPropagation();
+    sec.scrollIntoView({behavior: "smooth", block: "start"});
+    if(history.replaceState) history.replaceState(null, "", "#arquitectura-azure"); }
+  sub.addEventListener("click", ir);
+  sub.addEventListener("keydown", function(e){ if(e.key === "Enter" || e.key === " ") ir(e); });
+})();
 window.DDV = {
   open: abrir,
   chat: function(burbuja, kid){ var id = KB[kid]; if(!id) return; var b = boton(id, true), ft = burbuja.querySelector(".ft"); if(ft) burbuja.insertBefore(b, ft); else burbuja.appendChild(b); }
