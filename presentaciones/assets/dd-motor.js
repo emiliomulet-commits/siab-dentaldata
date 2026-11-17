@@ -206,15 +206,30 @@ if(!WEB && !RENDER) stage.addEventListener("click", siguiente);
 
 /* botón de locución (web) y arranque del vídeo */
 const vb = $("#voz-btn");
-if(vb){ vb.hidden = !(WEB && !VOZ && audio); vb.onclick = () => { vb.hidden = true; vozPlay(); }; }
+/* ?modo=web&sonido=1: intenta arrancar con locución; el botón alterna «Quitar audio» / «Activar audio» */
+const SONIDO = WEB && !VOZ && q.get("sonido") === "1";
+function rotular(){ if(!vb) return; const on = vozActiva && audio && !audio.muted && !audio.paused;
+  vb.textContent = SONIDO ? (on ? "🔇 Quitar audio" : "🔊 Activar audio") : "🔊 Activar locución"; vb.setAttribute("aria-pressed", on); }
+function conSonido(){ if(!audio) return Promise.reject();
+  vozActiva = true; audio.muted = false; audio.currentTime = 0;
+  return audio.play().then(() => { tl.seek(0).play(); rotular(); }).catch(e => { vozActiva = false; rotular(); throw e; }); }
+if(vb){ vb.hidden = !(WEB && !VOZ && audio);
+  vb.onclick = e => { e.stopPropagation();
+    if(!SONIDO){ vb.hidden = true; vozPlay(); return; }
+    if(vozActiva && !audio.paused){ audio.muted = !audio.muted; rotular(); } else conSonido().catch(() => {}); };
+  if(audio){ audio.addEventListener("play", rotular); audio.addEventListener("pause", rotular); audio.addEventListener("ended", rotular); }
+  rotular(); }
+/* la página puede pedir el sonido tras un clic del usuario (p. ej. el enlace de la cabecera) */
+addEventListener("message", e => { if(e.source === window.parent && e.data && e.data.dd === "sonido" && WEB && !VOZ) conSonido().catch(() => tl.play(0)); });
 const ini = $("#inicio span");
 if(VOZ){ ini.textContent = "▶ Ver con locución (sonido activado)"; ini.onclick = () => vozPlay(); }
 
 /* modo web: arranca al hacerse visible */
 if(WEB && !VOZ){
   if(reducido) tl.seek(t - .02, false);
-  else if("IntersectionObserver" in window){ let hecho = false; new IntersectionObserver(es => { es.forEach(e => { if(e.isIntersecting && !hecho){ hecho = true; tl.play(0); } }); }, {threshold:.4}).observe(document.body); }
-  else tl.play(0);
+  else { const arrancar = () => SONIDO ? conSonido().catch(() => tl.play(0)) : tl.play(0);
+    if("IntersectionObserver" in window){ let hecho = false; new IntersectionObserver(es => { es.forEach(e => { if(e.isIntersecting && !hecho){ hecho = true; arrancar(); } }); }, {threshold:.4}).observe(document.body); }
+    else arrancar(); }
 }
 if(reducido && !WEB) tl.seek(ETIQ[1] - .02, false);
 

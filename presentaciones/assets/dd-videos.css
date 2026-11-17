@@ -74,12 +74,12 @@
 /* Vídeo destacado de ancho completo: arquitectura en Microsoft Azure (P11) */
 .dd-arq{background:#050E1A;color:#fff;padding:56px 0 0}
 .dd-arq-cab{padding-bottom:28px}.dd-arq-cab h2{color:#fff;margin:8px 0 10px}.dd-arq-cab p{color:#C3CFDC;max-width:760px;margin:0}
-.dd-arq-v{width:100%;background:#000;line-height:0}
-.dd-arq-v{aspect-ratio:16/9}
+.dd-arq-v{background:#0B2545;line-height:0}
+.dd-arq-v{aspect-ratio:16/9;width:min(100% - 48px,calc((100vh - 220px) * 16 / 9));margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45)}
 .dd-arq-v iframe{display:block;width:100%;height:100%;border:0;background:#0B2545}
-.dd-arq-pie{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;padding:22px 28px 30px}
+.dd-arq-pie{justify-content:center;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;padding:22px 28px 30px}
 .dd-arq-pie a{color:#EDBC6C;font-weight:600;text-decoration:none}.dd-arq-pie a:hover{text-decoration:underline}
-.dd-arq-pie small{color:#7F93AA;font-size:13px;margin-left:auto}
+.dd-arq-pie small{color:#7F93AA;font-size:13px;flex-basis:100%;text-align:center}
 /* enlace de la cabecera «sobre Microsoft Azure» */
 .brand .sub.dd-azure-link{cursor:pointer;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
 .brand .sub.dd-azure-link:hover,.brand .sub.dd-azure-link:focus-visible{color:#EDBC6C;border-bottom-color:#EDBC6C;outline:none}

@@ -118,9 +118,14 @@ document.addEventListener("click", function(e){
   if(!sub || !sec) return;
   sub.classList.add("dd-azure-link"); sub.setAttribute("role", "link"); sub.setAttribute("tabindex", "0");
   sub.title = "Ver qué montamos en Microsoft Azure";
+  var caja = sec.querySelector(".dd-arq-v") || sec, fr = sec.querySelector("iframe");
+  function sonido(){ try{ fr.contentWindow.postMessage({dd: "sonido"}, "*"); }catch(_){} }
   function ir(e){ e.preventDefault(); e.stopPropagation();
-    sec.scrollIntoView({behavior: "smooth", block: "start"});
-    if(history.replaceState) history.replaceState(null, "", "#arquitectura-azure"); }
+    caja.scrollIntoView({behavior: "smooth", block: "center"});   /* la presentación queda centrada en la pantalla */
+    if(history.replaceState) history.replaceState(null, "", "#arquitectura-azure");
+    if(!fr) return; fr.loading = "eager";                        /* el clic permite arrancar con sonido */
+    var listo = false; try{ listo = !!(fr.contentWindow.DD && fr.contentWindow.DD.listo); }catch(_){}
+    if(listo) sonido(); else fr.addEventListener("load", function(){ setTimeout(sonido, 300); }, {once: true}); }
   sub.addEventListener("click", ir);
   sub.addEventListener("keydown", function(e){ if(e.key === "Enter" || e.key === " ") ir(e); });
 })();
