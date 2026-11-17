@@ -22,55 +22,51 @@ function seg(s){ return Math.round(s) + " s"; }
 function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
 
 /* ---------- reproductor */
-var modal, video, track, side, last = null, actual = null;
+var modal, marco, side, last = null, actual = null;
 function crearModal(){
   modal = document.createElement("div"); modal.className = "dd-modal"; modal.setAttribute("role","dialog"); modal.setAttribute("aria-modal","true"); modal.setAttribute("aria-labelledby","dd-mt");
-  modal.innerHTML = '<div class="dd-box" style="position:relative"><div><video controls playsinline preload="metadata" crossorigin="anonymous"></video></div>' +
-    '<div class="dd-side"><div class="k" id="dd-mk"></div><h2 id="dd-mt"></h2><ol class="dd-cap" aria-label="Capítulos"></ol>' +
+  modal.innerHTML = '<div class="dd-box" style="position:relative"><div class="dd-fr"><iframe title="Presentación animada con locución" allow="autoplay; fullscreen" allowfullscreen></iframe></div>' +
+    '<div class="dd-side"><div class="k" id="dd-mk"></div><h2 id="dd-mt"></h2><p class="dd-ayuda">Presentación animada con locución. Usa la barra inferior para pausar o saltar entre escenas.</p>' +
     '<button type="button" class="dd-next"></button><div class="dd-acc"></div></div>' +
     '<details class="dd-tr"><summary>Transcripción y fuentes</summary><p class="tx"></p><p class="fu"></p></details>' +
     '<button type="button" class="dd-x" aria-label="Cerrar">×</button></div>';
   document.body.appendChild(modal);
-  video = modal.querySelector("video"); side = modal.querySelector(".dd-side");
+  marco = modal.querySelector("iframe"); side = modal.querySelector(".dd-side");
   modal.querySelector(".dd-x").onclick = cerrar;
   modal.addEventListener("click", function(e){ if(e.target === modal) cerrar(); });
   document.addEventListener("keydown", function(e){ if(e.key === "Escape" && modal.classList.contains("open")) cerrar(); });
-  video.addEventListener("timeupdate", function(){
-    if(!actual) return; var t = video.currentTime;
-    modal.querySelectorAll(".dd-cap button").forEach(function(b, i){ var c = actual.capitulos, a = c[i].t, z = i + 1 < c.length ? c[i+1].t : 1e9; b.classList.toggle("on", t >= a && t < z); });
-    if(video.duration && t / video.duration > .85 && !vistos[actual.id]){ vistos[actual.id] = 1; guardar(); marcar(); }
+  /* la presentación (iframe) avisa al terminar o al pulsar Esc */
+  window.addEventListener("message", function(e){
+    if(!e.data || !actual || !modal.classList.contains("open") || e.source !== marco.contentWindow) return;
+    if(e.data.dd === "cerrar") return cerrar();
+    if(e.data.dd === "fin"){ if(!vistos[actual.id]){ vistos[actual.id] = 1; guardar(); marcar(); }
+      var n = siguiente(); if(n){ var b = modal.querySelector(".dd-next"); b.classList.add("on"); b.focus(); } }
   });
-  video.addEventListener("ended", function(){ var n = siguiente(); if(n){ var b = modal.querySelector(".dd-next"); b.classList.add("on"); b.focus(); } });
 }
 function siguiente(){ if(!actual) return null; var i = ruta.indexOf(actual.id); return i > -1 && i + 1 < ruta.length ? byId[ruta[i+1]] : null; }
 function abrir(id, desde){
   var v = byId[id]; if(!v) return; if(!modal) crearModal();
   last = desde || document.activeElement; actual = v;
   if(ruta.indexOf(id) < 0) ruta = RUTAS.todos;
-  video.pause(); video.innerHTML = ""; video.poster = v.poster; video.src = v.mp4;
-  track = document.createElement("track"); track.kind = "subtitles"; track.srclang = "es"; track.label = "Español"; track.src = v.vtt; track.default = true; video.appendChild(track);
+  marco.src = v.interactiva + "?modo=video&auto=1";
   modal.querySelector("#dd-mk").textContent = v.id.toUpperCase() + " · " + seg(v.duracion);
   modal.querySelector("#dd-mt").textContent = v.titulo;
-  var ol = modal.querySelector(".dd-cap"); ol.innerHTML = "";
-  v.capitulos.forEach(function(c){ var li = document.createElement("li"), b = document.createElement("button"); b.type = "button";
-    b.innerHTML = "<span>" + mmss(c.t) + "</span>" + esc(c.nombre); b.onclick = function(){ video.currentTime = c.t + .01; video.play(); }; li.appendChild(b); ol.appendChild(li); });
   var n = siguiente(), nb = modal.querySelector(".dd-next"); nb.classList.remove("on");
   if(n){ nb.innerHTML = PLAY.replace("<svg", '<svg style="width:14px;height:14px;fill:#C9A227"') + "<span>Siguiente: <b>" + esc(n.chip) + "</b></span>"; nb.onclick = function(){ abrir(n.id); }; nb.classList.add("on"); }
   var cta = CTA[id] || "¿Hablamos?";
   modal.querySelector(".dd-acc").innerHTML = '<a class="cta" href="#contacto" data-cerrar>' + esc(cta) + '</a>' +
-    '<a href="' + v.interactiva + '" target="_blank" rel="noopener">Abrir la versión interactiva ↗</a>' +
+    '<a href="' + v.interactiva + '?modo=video" target="_blank" rel="noopener">Abrir a pantalla completa ↗</a>' +
     '<a href="' + v.mp4 + '" download>Descargar el vídeo (MP4)</a>' +
     (n ? "" : '<a href="#videos" data-cerrar>Ver todas las presentaciones</a>');
   modal.querySelectorAll("[data-cerrar]").forEach(function(a){ a.addEventListener("click", cerrar); });
   modal.querySelector(".dd-tr .tx").textContent = v.transcripcion;
   modal.querySelector(".dd-tr .fu").textContent = v.fuentes;
   modal.classList.add("open"); document.documentElement.style.overflow = "hidden";
-  var p = video.play(); if(p && p.catch) p.catch(function(){});
   modal.querySelector(".dd-x").focus();
   if(window.history && history.replaceState) history.replaceState(null, "", "#video-" + id);
 }
 function cerrar(){
-  if(!modal) return; video.pause(); modal.classList.remove("open"); document.documentElement.style.overflow = "";
+  if(!modal) return; marco.src = "about:blank"; modal.classList.remove("open"); document.documentElement.style.overflow = "";
   if(location.hash.indexOf("#video-") === 0 && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
   if(last && last.focus) last.focus();
 }
