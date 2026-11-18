@@ -32,7 +32,7 @@ KB_JS = r'''[
 {id:'pvs',q:'Was haben PVS-Hersteller und MVZ davon?',k:['pvs','praxisverwaltung','software','hersteller','anbieter','mvz','imvz','kette','investor','partner','zusammenarbeit','integrator','bürokratie'],
  a:['<b>PVS-Hersteller</b> erhalten einen Konnektor, der Interoperabilität, Protokollierung und Datenqualität für den EHDS abdeckt, ohne eigene Entwicklung. <b>MVZ und Ketten</b>, darunter die investorengetragenen iMVZ (30,4 % der zahnärztlichen MVZ im 3. Quartal 2023), können Ergebnisse zwischen Standorten vergleichen und ihre Versorgungsqualität belegen.','Wichtig für Praxen: Die Lösung muss Zeit sparen, nicht zusätzlichen Aufwand erzeugen. Wir suchen eine Vereinbarung mit einem PVS-Hersteller oder einem auf Telematik spezialisierten Azure-Integrator. Schreiben Sie uns über das <a href="#contacto" data-close>Kontaktformular</a> oder an <a href="mailto:partners@softwareinabox.eu">partners@softwareinabox.eu</a>.'],s:['epa','markt']},
 {id:'markt',q:'Wie sieht der deutsche Dentalmarkt aus?',k:['markt','deutschland','zahnärzte','anzahl','gkv','pkv','kzbv','bzäk','kammer','zahlen'],
- a:['2024 gab es <b>43.663</b> aktive Zahnärztinnen und Zahnärzte, etwa 52 je 100.000 Einwohner. Die GKV versichert rund 88 % der Bevölkerung und trägt 65 % der zahnmedizinischen Ausgaben (2023).','Die Einzelpraxis überwiegt, doch die Konsolidierung über MVZ schreitet voran. Die KZBV legt mit den Kassen den Leistungskatalog fest; die BZÄK vereint die 17 Landeszahnärztekammern.'],s:['pvs','epa']},
+ a:['<b>62.874</b> Zahnärztinnen und Zahnärzte arbeiten in der vertragszahnärztlichen Versorgung (von 102.584 registrierten, KZBV). Die GKV versichert rund 88 % der Bevölkerung und trägt 65 % der zahnmedizinischen Ausgaben (2023).','Die Einzelpraxis überwiegt, doch die Konsolidierung über MVZ schreitet voran. Die KZBV legt mit den Kassen den Leistungskatalog fest; die BZÄK vereint die 17 Landeszahnärztekammern.'],s:['pvs','epa']},
 {id:'tecnologia',q:'Welche Technologie nutzen Sie? Welche Rolle hat Microsoft?',k:['technolog','microsoft','azure','konnektor','standard','gaia','idsa','eclipse','edc','fhir','dicom','integration'],
  a:['Ein Konnektor auf <b>Microsoft Azure</b> mit Daten in der EU, integriert in die Praxisverwaltungssoftware.','An den Grenzen des Datenraums nutzen wir offene europäische Standards: Gaia-X, IDSA und das Dataspace Protocol, Eclipse EDC, FHIR, DICOM und HealthDCAT-AP. So kann sich jeder anschließen, auch ohne Microsoft.'],s:['pvs','datos']},
 {id:'seguridad',q:'Ist das DSGVO-konform und sicher?',k:['dsgvo','gdpr','datenschutz','sicherheit','sicher','einwilligung','rechtlich','vertraulich'],
@@ -50,7 +50,7 @@ BLOQUES = {
 <section class="s soft" id="markt"><div class="wrap">
  <div class="head"><div class="eyebrow">Der deutsche Markt</div><h2>Die Infrastruktur steht. Es fehlen die Bausteine dazwischen.</h2><p>Deutschland verfolgt einen institutionellen, integrierten Ansatz: Zahnmedizinische Daten laufen über die Telematikinfrastruktur, die KZBV-Abrechnung liefert detaillierte Statistiken, und die ePA hat mit dem eZahnbonusheft einen eigenen zahnmedizinischen Teil. Kein anderes Land ist dem Weg der Daten zur Zugangsstelle so nah.</p></div>
  <div class="grid4">
-  <div class="card"><div class="num">ZAHNÄRZTE</div><h3 class="big">43.663</h3><p>aktiv im Jahr 2024 (von 103.998 registrierten), etwa 52 je 100.000 Einwohner.</p></div>
+  <div class="card"><div class="num">ZAHNÄRZTE</div><h3 class="big">62.874</h3><p>in der vertragszahnärztlichen Versorgung tätig (von 102.584 registrierten Zahnärztinnen und Zahnärzten, KZBV-Jahrbuch).</p></div>
   <div class="card"><div class="num">GESETZLICHE KRANKENVERSICHERUNG</div><h3 class="big">65 %</h3><p>der zahnmedizinischen Ausgaben trägt die GKV (2023); sie versichert rund 88 % der Bevölkerung.</p></div>
   <div class="card"><div class="num">EPA IN DER ZAHNARZTPRAXIS</div><h3 class="big">01.10.2025</h3><p>seitdem verpflichtend. Im April 2026: fast 73 Mio. ePAs und mehr als 5,5 Mio. eZahnbonushefte.</p></div>
   <div class="card"><div class="num">INVESTORENGETRAGENE MVZ</div><h3 class="big">30,4 %</h3><p>der zahnärztlichen MVZ im 3. Quartal 2023, mit steigender Tendenz.</p></div>
@@ -147,3 +147,6 @@ TEXTOS = {
 REEMPLAZOS = desde_claves(TEXTOS) + [
 ('<li><a href="/de/" hreflang="de-DE" lang="de">Deutsch · Deutschland</a></li>', '<li><a href="/de/" hreflang="de-DE" lang="de" aria-current="page">Deutsch · Deutschland</a></li>'),
 ]
+
+PRES = "de"
+VIDEOS_LANG = "de"

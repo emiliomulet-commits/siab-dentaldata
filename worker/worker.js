@@ -16,6 +16,9 @@ const KB_PAIS = {
   be: ['pais/be.md'],
   de: ['pais/de.md'],
   dk: ['pais/dk.md'],
+  fr: ['pais/fr.md'],
+  it: ['pais/it.md'],
+  pt: ['pais/pt.md'],
   eu: ['pais/europa.md', '07-europa-paises-bajos.md']
 };
 const PAISES = { es: 'España', nl: 'Países Bajos', be: 'Bélgica', de: 'Alemania', dk: 'Dinamarca', fr: 'Francia', it: 'Italia', pt: 'Portugal', eu: 'Europa (página en inglés)' };

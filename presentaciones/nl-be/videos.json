@@ -1,0 +1,479 @@
+[
+ {
+  "id": "p01",
+  "titulo": "Waarom ontbreken tandheelkundige gegevens in de Europese ruimte voor gezondheidsgegevens?",
+  "chip": "Waarom ontbreken tandheelkundige gegevens in de EHDS?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 52.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "De grote afwezigen"
+   },
+   {
+    "t": 8.74,
+    "nombre": "Waarom"
+   },
+   {
+    "t": 19.42,
+    "nombre": "België in cijfers"
+   },
+   {
+    "t": 30.25,
+    "nombre": "Eilanden van gegevens"
+   },
+   {
+    "t": 38.8,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p01/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p01/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p01/",
+  "transcripcion": "Tandheelkundige gegevens zijn de grote afwezigen in de Europese ruimte voor gezondheidsgegevens. In België zit de tandzorg nochtans in de verplichte verzekering: elke terugbetaalde prestatie heeft haar code en wordt sinds september tweeduizend vijfentwintig elektronisch gefactureerd. Jongeren onder de negentien krijgen de basiszorg gratis, zestig procent van de tandartsen is geconventioneerd, en toch gaat één op de vier Belgen niet elk jaar naar de tandarts. Niemand weet of de behandelingen die betaald worden ook werken: de prestaties worden gefactureerd, de resultaten worden niet gemeten. De klinische gegevens bestaan en zitten in elke praktijk, in haar eigen software. Wat ontbreekt, is iemand die ze verbindt. Dat is Dental Data.",
+  "fuentes": "Bronnen: vergelijkende studie van Software in a Box (nov. 2026) · RIZIV (conventie 2026) · Gezondheidsenquête Sciensano"
+ },
+ {
+  "id": "p02",
+  "titulo": "Hoe werkt een federatieve dataruimte?",
+  "chip": "Hoe werkt een federatieve dataruimte?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 44.3,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "De praktijk"
+   },
+   {
+    "t": 13.06,
+    "nombre": "Het netwerk"
+   },
+   {
+    "t": 20.26,
+    "nombre": "Een vraag"
+   },
+   {
+    "t": 29.0,
+    "nombre": "Wat reist en wat niet"
+   },
+   {
+    "t": 35.66,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p02/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p02/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p02/",
+  "transcripcion": "In een federatieve dataruimte houdt elke praktijk, groep of ziekenfonds zijn dossiers in zijn eigen praktijksoftware. Naast die software wordt een connector geïnstalleerd. De connector publiceert in een gemeenschappelijke catalogus welke gegevens er zijn, maar niet de gegevens zelf. Wanneer iemand een indicator nodig heeft, reist de vraag naar elke praktijk, wordt daar berekend, en komt alleen het geaggregeerde resultaat terug. Over het netwerk gaan toestemmingen, metadata en resultaten. Nooit een identificeerbaar dossier. De gegevens blijven in de praktijk. Wat reist, is het antwoord.",
+  "fuentes": "Bron: Dental Data · de oplossing en de toepassingen (openbare kennisbank)"
+ },
+ {
+  "id": "p03",
+  "titulo": "Verlaten mijn gegevens de praktijk?",
+  "chip": "Verlaten mijn gegevens de praktijk?",
+  "publico": [
+   "clinicas",
+   "cadenas"
+  ],
+  "duracion": 48.8,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Het antwoord"
+   },
+   {
+    "t": 9.5,
+    "nombre": "Het contract"
+   },
+   {
+    "t": 21.62,
+    "nombre": "De machine dwingt het af"
+   },
+   {
+    "t": 29.28,
+    "nombre": "Het kader"
+   },
+   {
+    "t": 43.84,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p03/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p03/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p03/",
+  "transcripcion": "Verlaten de gegevens de praktijk? Nee. Geen enkel identificeerbaar dossier verlaat de praktijk. Elk gebruik van de gegevens is geregeld door een digitaal contract dat bepaalt wie toegang krijgt, waarvoor en hoelang. En dat contract blijft niet op papier: de machine dwingt het zelf af. Als een verzoek geen contract heeft, is er geen toegang. Heeft het er wel een, dan komt alleen een geaggregeerd resultaat terug. De praktijk beslist altijd, binnen de algemene verordening gegevensbescherming en de Belgische wetgeving over patiëntenrechten. En met een duidelijke regel van de EHDS: gezondheidsgegevens worden nooit gebruikt voor reclame.",
+  "fuentes": "Bronnen: Dental Data (kennisbank) · AVG · wet van 30 juli 2018 · wet patiëntenrechten · Verordening (EU) 2025/327, art. 54 en 71 · Algemene informatie; geen juridisch advies"
+ },
+ {
+  "id": "p04",
+  "titulo": "Wat levert het een groep van praktijken op?",
+  "chip": "Wat levert het een praktijkgroep op?",
+  "publico": [
+   "cadenas"
+  ],
+  "duracion": 52.8,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Het probleem"
+   },
+   {
+    "t": 25.52,
+    "nombre": "Zonder migratie"
+   },
+   {
+    "t": 38.6,
+    "nombre": "Vergelijkbare indicatoren"
+   },
+   {
+    "t": 40.92,
+    "nombre": "Meerwaarde"
+   },
+   {
+    "t": 44.1,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p04/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p04/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p04/",
+  "transcripcion": "In België kopen financiële groepen tandartspraktijken en vormen ze ketens, met praktijken die elk hun eigen software gebruiken. De Raad voor de Tandheelkunde waarschuwde in tweeduizend vijfentwintig dat ons land een van de weinige is zonder regels voor die ketens, en vroeg dat kwaliteit voorop zou staan. Kwaliteit vergelijken tussen praktijken betekent vandaag dossiers migreren. Met Dental Data is dat niet nodig: naast elke software wordt een connector geïnstalleerd, en de indicatoren worden in elke praktijk berekend met dezelfde definitie, gekoppeld aan de codes van de nomenclatuur. De directie ziet vergelijkbare resultaten, zonder dat er één dossier van plek verandert. Een groep die vandaag haar kwaliteit meet, is voorbereid op de norm van morgen.",
+  "fuentes": "Bronnen: Dental Data · toepassingen en pilot (kennisbank) · Raad voor de Tandheelkunde (2025) · RIZIV-nomenclatuur · Verordening (EU) 2025/327, art. 72 · Illustratieve staven"
+ },
+ {
+  "id": "p05",
+  "titulo": "Wat levert het een ziekenfonds op?",
+  "chip": "Wat levert het een ziekenfonds op?",
+  "publico": [
+   "aseguradoras"
+  ],
+  "duracion": 53.2,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Het netwerk"
+   },
+   {
+    "t": 16.05,
+    "nombre": "Samenhangende gegevens"
+   },
+   {
+    "t": 25.61,
+    "nombre": "Een kanaal"
+   },
+   {
+    "t": 35.41,
+    "nombre": "Duidelijke grenzen"
+   },
+   {
+    "t": 43.49,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p05/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p05/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p05/",
+  "transcripcion": "In België betalen de ziekenfondsen de tandzorg terug, en het InterMutualistisch Agentschap analyseert de facturatie van allemaal. Ze weten welke prestaties betaald worden, maar niet welk resultaat ze hebben. Dental Data geeft hun dat resultaat zonder dossiers te centraliseren: de indicator wordt in elke praktijk berekend en alleen het aggregaat komt terug. Zo kan men nagaan of het mondzorgtraject de tandgezondheid verbetert, wat de gratis zorg voor jongeren onder de negentien oplevert of hoe de cone beam gebruikt wordt. Met duidelijke grenzen: de EHDS verbiedt deze gegevens te gebruiken voor reclame of voor beslissingen die mensen benadelen. Van gefactureerde prestatie naar gemeten resultaat, zonder dossiers te centraliseren.",
+  "fuentes": "Bronnen: Dental Data (kennisbank) · RIZIV · InterMutualistisch Agentschap (IMA) · Verordening (EU) 2025/327, art. 54"
+ },
+ {
+  "id": "p06",
+  "titulo": "AI op röntgenfoto's zonder de röntgenfoto's te verplaatsen",
+  "chip": "Hoe werkt AI op tandheelkundige röntgenfoto's?",
+  "publico": [
+   "clinicas",
+   "industria"
+  ],
+  "duracion": 50.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Het dilemma"
+   },
+   {
+    "t": 9.94,
+    "nombre": "Het algoritme reist"
+   },
+   {
+    "t": 19.26,
+    "nombre": "Vertrouwelijk rekenen"
+   },
+   {
+    "t": 25.14,
+    "nombre": "Het model"
+   },
+   {
+    "t": 35.98,
+    "nombre": "Wat komt"
+   },
+   {
+    "t": 44.4,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p06/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p06/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p06/",
+  "transcripcion": "Een tandheelkundige AI trainen vraagt veel röntgenfoto's. Maar ze op één plek samenbrengen is een risico. Dental Data draait de weg om: het algoritme reist naar elke praktijk, leert daar en geeft alleen het geleerde terug, nooit de beelden. De berekeningen gebeuren met vertrouwelijk rekenen, dat de gegevens beschermt terwijl ze worden verwerkt. Het eerste model, voor approximale cariës en parodontaal botverlies, is in klinische validatie. Het is een hulpmiddel voor de professional: het vervangt zijn diagnose niet. En het bereidt zich voor op wat komt: in tweeduizend eenendertig komen medische beelden in de Europese ruimte voor gezondheidsgegevens. Het algoritme gaat naar de gegevens.",
+  "fuentes": "Bronnen: Dental Data (kennisbank) · Verordening (EU) 2026/1744 · Verordening (EU) 2025/327 · Model in klinische validatie; vervangt de diagnose van de professional niet · Medische hulpmiddelen: FAGG · AI-autoriteit nog aan te wijzen"
+ },
+ {
+  "id": "p07",
+  "titulo": "Welke data legt de Europese ruimte voor gezondheidsgegevens vast?",
+  "chip": "Welke data legt de EHDS vast?",
+  "publico": [
+   "todos",
+   "clinicas"
+  ],
+  "duracion": 54.3,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Tijdlijn"
+   },
+   {
+    "t": 12.78,
+    "nombre": "Het venster"
+   },
+   {
+    "t": 21.56,
+    "nombre": "Artikel 50"
+   },
+   {
+    "t": 32.92,
+    "nombre": "België"
+   },
+   {
+    "t": 46.72,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p07/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p07/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p07/",
+  "transcripcion": "De Europese ruimte voor gezondheidsgegevens is al in werking en heeft data. In maart tweeduizend zevenentwintig heeft elk land zijn toegangsorganen aangewezen. In maart tweeduizend negenentwintig geldt het grootste deel van het secundaire gebruik, en in tweeduizend eenendertig komen de medische beelden. De meeste tandartspraktijken zijn micro-ondernemingen en zijn standaard vrijgesteld: om deel te nemen is een geaggregeerd kanaal nodig, via verenigingen, ziekenfondsen of praktijkgroepen. België was er vroeg bij: de Health Data Agency bestaat bij wet sinds tweeduizend drieëntwintig, heeft een nationale catalogus en zal naar verwachting het toegangsorgaan worden. Het eHealth-platform biedt al de pseudonimisering. Wie verbonden aankomt, wordt de natuurlijke gesprekspartner.",
+  "fuentes": "Bronnen: Verordening (EU) 2025/327 (art. 50 en 105) · wet van 2023 tot oprichting van de Health Data Agency · eHealth-platform"
+ },
+ {
+  "id": "p08",
+  "titulo": "Welke technologie zit er achter Dental Data?",
+  "chip": "Welke technologie zit er achter Dental Data?",
+  "publico": [
+   "partners"
+  ],
+  "duracion": 49.1,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "De regel"
+   },
+   {
+    "t": 10.17,
+    "nombre": "Binnen het knooppunt"
+   },
+   {
+    "t": 20.25,
+    "nombre": "Aan de grens"
+   },
+   {
+    "t": 33.01,
+    "nombre": "Open voor iedereen"
+   },
+   {
+    "t": 37.25,
+    "nombre": "Ervaring"
+   },
+   {
+    "t": 44.07,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p08/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p08/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p08/",
+  "transcripcion": "Dental Data volgt een eenvoudige regel: Microsoft binnen het knooppunt, open standaarden aan de grenzen. Binnen elk knooppunt draait de connector op Microsoft Azure, met de gegevens in de Europese Unie, geïntegreerd met de praktijksoftware en uitgerold door Azure-partners. Aan de grenzen spreekt de ruimte open Europese standaarden: Gaia-X, het dataspace protocol, Eclipse EDC, verifieerbare referenties, FHIR, DICOM en HealthDCAT-AP. Zo kan elke deelnemer aansluiten, ook zonder Microsoft. En we beginnen niet bij nul: Software in a Box heeft al drie echte dataruimten ontworpen en uitgevoerd.",
+  "fuentes": "Bronnen: Dental Data · technologie en bedrijf (kennisbank) · Microsoft en Azure zijn merken van Microsoft Corporation; als tekst genoemd"
+ },
+ {
+  "id": "p09",
+  "titulo": "Wat biedt Dental Data de industrie?",
+  "chip": "Wat biedt Dental Data de industrie?",
+  "publico": [
+   "industria"
+  ],
+  "duracion": 50.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Wie"
+   },
+   {
+    "t": 15.66,
+    "nombre": "Real-world evidence"
+   },
+   {
+    "t": 27.0,
+    "nombre": "Voor de praktijksoftware"
+   },
+   {
+    "t": 35.24,
+    "nombre": "De regels"
+   },
+   {
+    "t": 42.6,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p09/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p09/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p09/",
+  "transcripcion": "Voor de tandheelkundige industrie is real-world evidence veel waard. Fabrikanten van implantaten en materialen, en bedrijven in kunstmatige intelligentie, moeten weten hoe hun producten zich in de praktijk gedragen. Dental Data biedt hun die evidence geordend en onder contract: vragen die in de praktijken worden beantwoord en geaggregeerde resultaten die terugkomen zonder identificeerbare gegevens. Voor leveranciers van praktijksoftware is de connector een onderdeel dat in hun product wordt geïntegreerd en nieuwe diensten voor hun klanten opent. De regels veranderen niet: een contract voor elk gebruik, alleen geaggregeerde resultaten en nooit reclame. Echte evidence, geordend en onder contract.",
+  "fuentes": "Bronnen: Dental Data (kennisbank) · Verordening (EU) 2025/327, art. 54"
+ },
+ {
+  "id": "p10",
+  "titulo": "Hoe doet u mee met Dental Data?",
+  "chip": "Hoe doet u mee met Dental Data?",
+  "publico": [
+   "cadenas",
+   "aseguradoras",
+   "partners"
+  ],
+  "duracion": 54.4,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "We zoeken"
+   },
+   {
+    "t": 20.8,
+    "nombre": "Financiering"
+   },
+   {
+    "t": 26.46,
+    "nombre": "Routekaart"
+   },
+   {
+    "t": 37.06,
+    "nombre": "We willen ook praten met"
+   },
+   {
+    "t": 45.12,
+    "nombre": "Praten we?"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p10/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p10/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p10/",
+  "transcripcion": "In België willen we niet beginnen met een geïsoleerde pilot, maar met een alliantie. We willen met het RIZIV, de Health Data Agency, het eHealth-platform en de ziekenfondsen de eerste indicatoren voor tandheelkundige resultaten bepalen, en met ketens en praktijkgroepen die nu al hun kwaliteit willen meten. De groepen financieren de connector met hun interne toepassing; het onderzoek met gedeelde projecten. In tweeduizend zevenentwintig de eerste verbindingen; in tweeduizend negenentwintig gecatalogiseerde datasets, klaar voor de HDA; daarna de tandheelkundige beelden. We willen ook praten met de verenigingen van tandartsen, de raad voor de tandheelkunde, de leveranciers van erkende software en de praktijkgroepen. Praten we? Schrijf naar partners apenstaartje softwareinabox punt eu.",
+  "fuentes": "Bronnen: Dental Data · partnerprogramma België en routekaart (kennisbank) · Geen gepubliceerde tarieven"
+ },
+ {
+  "id": "p11",
+  "titulo": "Wat bouwen we op Microsoft Azure?",
+  "chip": "Wat bouwen we op Microsoft Azure?",
+  "publico": [
+   "partners",
+   "industria"
+  ],
+  "duracion": 89.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "De regel"
+   },
+   {
+    "t": 12.89,
+    "nombre": "De praktijk"
+   },
+   {
+    "t": 21.51,
+    "nombre": "Het dataknooppunt"
+   },
+   {
+    "t": 32.77,
+    "nombre": "Beveiliging"
+   },
+   {
+    "t": 40.71,
+    "nombre": "De grens"
+   },
+   {
+    "t": 55.23,
+    "nombre": "De AI"
+   },
+   {
+    "t": 73.84,
+    "nombre": "De route"
+   },
+   {
+    "t": 84.53,
+    "nombre": "Afsluiting"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/nl-be/p11/poster.jpg",
+  "vtt": "/presentaciones/nl-be/p11/subtitulos-nl.vtt",
+  "interactiva": "/presentaciones/nl-be/p11/",
+  "transcripcion": "Dit is wat we op Microsoft Azure bouwen voor Dental Data. Eén regel stuurt het ontwerp: Microsoft binnen het knooppunt, open standaarden aan de grens. In de praktijk verlaat de röntgenfoto het apparaat via een open source DICOM-gateway, Orthanc, en wordt hij bij de bron gepseudonimiseerd. In het dataknooppunt bewaart Azure Health Data Services het dossier in FHIR en het beeld in DICOM. Microsoft Fabric en OneLake bereiden de gegevens voor op analyse. De beveiliging komt van Microsoft Entra ID, Azure Key Vault, Microsoft Defender for Cloud en Microsoft Sentinel. Aan de grens werkt de Eclipse EDC-connector, uitgerold op Azure Kubernetes Service. Hij publiceert de catalogus in HealthDCAT-AP, onderhandelt ODRL-contracten en identificeert zich met Gaia-X-referenties. De kunstmatige intelligentie wordt getraind met Azure Machine Learning en federatief leren: het model reist naar elke praktijk en de gegevens blijven waar ze zijn. Vertrouwelijk rekenen beschermt de gegevens zelfs tijdens de verwerking, en Microsoft Foundry schrijft conceptverslagen die de tandarts controleert. Zo volgt elke röntgenfoto een veilige en gecontroleerde weg, van de praktijk naar het model, zonder dat er één identificeerbaar gegeven het knooppunt verlaat.",
+  "fuentes": "Bronnen: Dental Data · technisch document (v1.3) en MVP-voorstel (v1.4) · Officiële Microsoft-iconen (Azure, Microsoft Entra en Microsoft Fabric), gebruikt volgens hun voorwaarden voor architectuurdiagrammen · Microsoft, Azure, Entra, Fabric en de namen van hun diensten zijn merken van Microsoft Corporation"
+ }
+]

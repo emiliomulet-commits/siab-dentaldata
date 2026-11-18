@@ -266,3 +266,6 @@ REEMPLAZOS = [
 ("var FUENTES={'01-que-es-dental-data.md':'Qué es Dental Data','02-mercado-espana.md':'El mercado español','03-solucion-casos-uso.md':'Solución y casos de uso','04-ehds-normativa.md':'EHDS y normativa','05-tecnologia.md':'Tecnología','06-piloto-hoja-ruta.md':'Piloto y hoja de ruta','07-europa-paises-bajos.md':'Países Bajos y Europa','08-empresa-recursos.md':'Software in a Box','09-preguntas-frecuentes.md':'Preguntas frecuentes','10-estudio-comparativo-en.md':'Estudio comparativo (PDF)','11-ehds-europa.md':'El EEDS en Europa'}",
  "var FUENTES={'01-que-es-dental-data.md':'What Dental Data is','03-solucion-casos-uso.md':'Solution and use cases','05-tecnologia.md':'Technology','07-europa-paises-bajos.md':'The Netherlands and Europe','08-empresa-recursos.md':'Software in a Box','10-estudio-comparativo-en.md':'Comparative study (PDF)','11-ehds-europa.md':'The EHDS in Europe','pais/europa.md':'Dental Data in Europe'}"),
 ]
+
+PRES = "en"
+VIDEOS_LANG = "en"

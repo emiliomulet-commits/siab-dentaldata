@@ -147,3 +147,6 @@ TEXTOS = {
 REEMPLAZOS = desde_claves(TEXTOS) + [
 ('<li><a href="/nl-be/" hreflang="nl-BE" lang="nl">Nederlands · België</a></li>', '<li><a href="/nl-be/" hreflang="nl-BE" lang="nl" aria-current="page">Nederlands · België</a></li>'),
 ]
+
+PRES = "nl-be"
+VIDEOS_LANG = "nl"

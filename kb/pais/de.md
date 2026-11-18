@@ -10,7 +10,7 @@ Todavía no hay un piloto abierto en Alemania: invitamos a fabricantes de softwa
 ## Datos del mercado (estudio comparativo, noviembre de 2026)
 - Seguro público (GKV) para cerca del 88 % de la población y seguro privado sustitutivo (PKV) para el 11 %. El seguro público cubre el 65 % del gasto dental (2023); el gasto dental equivale al 0,7 % del PIB.
 - La KZBV define el catálogo de prestaciones con las cajas; la BZÄK agrupa a las 17 cámaras regionales.
-- 43.663 dentistas en activo en 2024 (de 103.998 registrados): unos 52 por 100.000 habitantes.
+- 62.874 dentistas en la atención concertada del seguro público (vertragszahnärztliche Versorgung), de 102.584 registrados (anuario de la KZBV). El gasto del seguro público en odontología fue de 19.100 millones de euros en 2025 y hay 1.511 centros MVZ dentales.
 - Predomina la consulta independiente, pero avanza la consolidación a través de los MVZ: los MVZ con capital inversor (iMVZ) eran el 30,4 % de los MVZ dentales en el tercer trimestre de 2023, y la profesión pide límites.
 - ePA para todos (modelo de oposición): piloto desde el 15/01/2025, nacional desde el 29/04/2025 y obligatoria en todas las consultas dentales desde el 01/10/2025. En abril de 2026: casi 73 millones de ePA creadas, más de 5,5 millones de cartillas dentales electrónicas (eZahnbonusheft) y hasta 93.000 consultas accediendo cada semana.
 - Procedimiento electrónico de solicitud y aprobación (EBZ) en producción desde el 01/01/2023.

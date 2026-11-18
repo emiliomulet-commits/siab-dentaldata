@@ -1,0 +1,479 @@
+[
+ {
+  "id": "p01",
+  "titulo": "Pourquoi les données dentaires manquent-elles à l'Espace européen des données de santé ?",
+  "chip": "Pourquoi les données dentaires manquent-elles à l'EHDS ?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 50.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Les grandes absentes"
+   },
+   {
+    "t": 7.46,
+    "nombre": "Pourquoi"
+   },
+   {
+    "t": 19.4,
+    "nombre": "La Belgique en chiffres"
+   },
+   {
+    "t": 29.48,
+    "nombre": "Îlots de données"
+   },
+   {
+    "t": 37.08,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p01/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p01/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p01/",
+  "transcripcion": "Les données dentaires sont les grandes absentes de l'Espace européen des données de santé. En Belgique, pourtant, les soins dentaires relèvent de l'assurance obligatoire : chaque acte remboursé a son code et, depuis septembre deux mille vingt-cinq, il est facturé électroniquement. Les jeunes de moins de dix-neuf ans ont des soins de base gratuits, soixante pour cent des dentistes sont conventionnés, et pourtant un Belge sur quatre ne va pas chez le dentiste chaque année. Personne ne sait si les traitements payés fonctionnent : les actes sont facturés, les résultats ne sont pas mesurés. Les données cliniques existent et se trouvent dans chaque cabinet, dans son propre logiciel. Ce qui manque, c'est quelqu'un pour les relier. C'est Dental Data.",
+  "fuentes": "Sources : étude comparative de Software in a Box (nov. 2026) · INAMI (accord 2026) · Enquête de santé Sciensano"
+ },
+ {
+  "id": "p02",
+  "titulo": "Comment fonctionne un espace de données fédéré ?",
+  "chip": "Comment fonctionne un espace de données fédéré ?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 45.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Le cabinet"
+   },
+   {
+    "t": 15.1,
+    "nombre": "Le réseau"
+   },
+   {
+    "t": 21.52,
+    "nombre": "Une question"
+   },
+   {
+    "t": 29.88,
+    "nombre": "Ce qui voyage et ce qui ne voyage pas"
+   },
+   {
+    "t": 36.7,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p02/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p02/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p02/",
+  "transcripcion": "Dans un espace de données fédéré, chaque cabinet, chaque groupe, chaque mutualité ou assureur garde ses dossiers dans son propre logiciel de gestion. À côté de ce logiciel, on installe un connecteur. Le connecteur publie dans un catalogue commun quelles données existent, mais pas les données elles-mêmes. Quand quelqu'un a besoin d'un indicateur, la question voyage jusqu'à chaque cabinet, y est calculée, et seul le résultat agrégé revient. Sur le réseau circulent des consentements, des métadonnées et des résultats. Jamais un dossier identifiable. La donnée reste au cabinet. Ce qui voyage, c'est la réponse.",
+  "fuentes": "Source : Dental Data · la solution et ses cas d'usage (base de connaissances publique)"
+ },
+ {
+  "id": "p03",
+  "titulo": "Mes données sortent-elles du cabinet ?",
+  "chip": "Mes données sortent-elles du cabinet ?",
+  "publico": [
+   "clinicas",
+   "cadenas"
+  ],
+  "duracion": 48.2,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La réponse"
+   },
+   {
+    "t": 8.94,
+    "nombre": "Le contrat"
+   },
+   {
+    "t": 20.86,
+    "nombre": "La machine le fait respecter"
+   },
+   {
+    "t": 27.06,
+    "nombre": "Le cadre"
+   },
+   {
+    "t": 43.22,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p03/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p03/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p03/",
+  "transcripcion": "Les données sortent-elles du cabinet ? Non. Aucun dossier identifiable ne quitte le cabinet. Chaque usage des données est régi par un contrat numérique qui définit qui accède, pour quoi et combien de temps. Et ce contrat ne reste pas sur le papier : la machine le fait respecter elle-même. Si une demande n'a pas de contrat, il n'y a pas d'accès. Si elle en a un, seul un résultat agrégé revient. Le cabinet décide toujours, dans le cadre du règlement général sur la protection des données et de la législation belge sur les droits du patient. Et avec une règle claire de l'Espace européen des données de santé : les données de santé ne sont jamais utilisées pour la publicité.",
+  "fuentes": "Sources : Dental Data (base de connaissances) · RGPD · loi du 30 juillet 2018 · loi relative aux droits du patient · Règlement (UE) 2025/327, art. 54 et 71 · Information générale ; pas un conseil juridique"
+ },
+ {
+  "id": "p04",
+  "titulo": "Que gagne un groupe de cabinets ?",
+  "chip": "Que gagne un groupe de cabinets ?",
+  "publico": [
+   "cadenas"
+  ],
+  "duracion": 49.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Le problème"
+   },
+   {
+    "t": 24.59,
+    "nombre": "Sans migration"
+   },
+   {
+    "t": 36.11,
+    "nombre": "Indicateurs comparables"
+   },
+   {
+    "t": 38.75,
+    "nombre": "Valeur ajoutée"
+   },
+   {
+    "t": 41.27,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p04/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p04/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p04/",
+  "transcripcion": "En Belgique, des groupes financiers rachètent des cabinets dentaires et forment des chaînes, chacune avec des cabinets qui utilisent leur propre logiciel. Le Conseil de l'Art dentaire a averti en deux mille vingt-cinq que le pays est l'un des rares sans règles pour ces chaînes, et a demandé que la qualité prime. Comparer la qualité entre cabinets oblige aujourd'hui à migrer les dossiers. Avec Dental Data, inutile de migrer : un connecteur est installé à côté de chaque logiciel et les indicateurs sont calculés dans chaque cabinet avec la même définition, liés aux codes de la nomenclature. La direction voit des résultats comparables sans qu'aucun dossier ne change de place. Un groupe qui mesure sa qualité aujourd'hui sera préparé pour la norme de demain.",
+  "fuentes": "Sources : Dental Data · cas d'usage et pilote (base de connaissances) · Conseil de l'Art dentaire (2025) · nomenclature INAMI · Règlement (UE) 2025/327, art. 72 · Barres illustratives"
+ },
+ {
+  "id": "p05",
+  "titulo": "Que gagne une mutualité ?",
+  "chip": "Que gagne une mutualité ?",
+  "publico": [
+   "aseguradoras"
+  ],
+  "duracion": 47.8,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Le réseau"
+   },
+   {
+    "t": 14.27,
+    "nombre": "Données cohérentes"
+   },
+   {
+    "t": 21.73,
+    "nombre": "Un canal"
+   },
+   {
+    "t": 31.53,
+    "nombre": "Limites claires"
+   },
+   {
+    "t": 39.25,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p05/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p05/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p05/",
+  "transcripcion": "En Belgique, les mutualités remboursent les soins dentaires, et l'Agence InterMutualiste analyse la facturation de toutes. Elles savent quels actes sont payés, mais pas quel résultat ils ont. Dental Data leur donne ce résultat sans centraliser les dossiers : l'indicateur est calculé dans chaque cabinet et seul l'agrégat revient. On peut ainsi évaluer si le trajet de soins buccaux améliore la santé dentaire, quel effet a la gratuité pour les moins de dix-neuf ans ou comment le cone beam est utilisé. Avec des limites claires : l'EHDS interdit d'utiliser ces données pour la publicité ou pour des décisions qui nuisent aux personnes. De l'acte facturé au résultat mesuré, sans centraliser les dossiers.",
+  "fuentes": "Sources : Dental Data (base de connaissances) · INAMI · Agence InterMutualiste (AIM) · Règlement (UE) 2025/327, art. 54"
+ },
+ {
+  "id": "p06",
+  "titulo": "L'IA sur les radiographies sans déplacer les radiographies",
+  "chip": "Comment fonctionne l'IA sur les radiographies dentaires ?",
+  "publico": [
+   "clinicas",
+   "industria"
+  ],
+  "duracion": 48.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Le dilemme"
+   },
+   {
+    "t": 9.3,
+    "nombre": "L'algorithme voyage"
+   },
+   {
+    "t": 19.0,
+    "nombre": "Calcul confidentiel"
+   },
+   {
+    "t": 24.3,
+    "nombre": "Le modèle"
+   },
+   {
+    "t": 33.9,
+    "nombre": "Ce qui vient"
+   },
+   {
+    "t": 41.57,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p06/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p06/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p06/",
+  "transcripcion": "Entraîner une IA dentaire exige beaucoup de radiographies. Mais les réunir en un seul lieu est un risque. Dental Data inverse le chemin : l'algorithme voyage jusqu'à chaque cabinet, y apprend et ne renvoie que ce qu'il a appris, jamais les images. Les calculs se font avec le calcul confidentiel, qui protège les données pendant leur traitement. Le premier modèle, pour les caries interproximales et la perte osseuse parodontale, est en validation clinique. C'est une aide pour le professionnel : il ne remplace pas son diagnostic. Et il se prépare à ce qui vient : en deux mille trente et un, les images médicales entrent dans l'Espace européen des données de santé. L'algorithme va vers la donnée.",
+  "fuentes": "Sources : Dental Data (base de connaissances) · Règlement (UE) 2026/1744 · Règlement (UE) 2025/327 · Modèle en validation clinique ; il ne remplace pas le diagnostic · Dispositifs médicaux : AFMPS · autorité IA encore à désigner"
+ },
+ {
+  "id": "p07",
+  "titulo": "Quelles dates fixe l'Espace européen des données de santé ?",
+  "chip": "Quelles dates fixe l'EHDS ?",
+  "publico": [
+   "todos",
+   "clinicas"
+  ],
+  "duracion": 52.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Calendrier"
+   },
+   {
+    "t": 11.93,
+    "nombre": "La fenêtre"
+   },
+   {
+    "t": 18.59,
+    "nombre": "Article 50"
+   },
+   {
+    "t": 30.93,
+    "nombre": "Belgique"
+   },
+   {
+    "t": 44.04,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p07/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p07/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p07/",
+  "transcripcion": "L'Espace européen des données de santé est déjà en vigueur et a des dates. En mars deux mille vingt-sept, chaque pays aura désigné ses organismes d'accès ; en mars deux mille vingt-neuf, l'essentiel de l'usage secondaire s'applique, et en deux mille trente et un arrivent les images médicales. La plupart des cabinets dentaires sont des microentreprises et sont exemptés par défaut : pour participer, il faut un canal agrégé, à travers les associations, les mutualités ou les groupes de cabinets. La Belgique a pris de l'avance : la Health Data Agency existe par la loi depuis deux mille vingt-trois, dispose d'un catalogue national et devrait devenir l'organisme d'accès. La plateforme eHealth offre déjà la pseudonymisation. Qui arrivera connecté sera l'interlocuteur naturel.",
+  "fuentes": "Sources : Règlement (UE) 2025/327 (art. 50 et 105) · loi de 2023 créant la Health Data Agency · plateforme eHealth"
+ },
+ {
+  "id": "p08",
+  "titulo": "Quelle technologie se cache derrière Dental Data ?",
+  "chip": "Quelle technologie derrière Dental Data ?",
+  "publico": [
+   "partners"
+  ],
+  "duracion": 49.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La règle"
+   },
+   {
+    "t": 9.97,
+    "nombre": "Dans le nœud"
+   },
+   {
+    "t": 19.74,
+    "nombre": "À la frontière"
+   },
+   {
+    "t": 33.88,
+    "nombre": "Ouvert à tous"
+   },
+   {
+    "t": 37.82,
+    "nombre": "Expérience"
+   },
+   {
+    "t": 44.55,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p08/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p08/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p08/",
+  "transcripcion": "Dental Data suit une règle simple : Microsoft dans le nœud, des standards ouverts aux frontières. Dans chaque nœud, le connecteur fonctionne sur Microsoft Azure, avec les données dans l'Union européenne, intégré au logiciel de gestion du cabinet et déployé par des partenaires. Aux frontières, l'espace parle des standards européens ouverts : Gaia-X, le protocole des espaces de données, Eclipse EDC, des attestations vérifiables, FHIR, DICOM et HealthDCAT-AP. Ainsi, tout participant peut se connecter, même sans Microsoft. Et nous ne partons pas de zéro : Software in a Box a déjà conçu et exploité trois espaces de données réels.",
+  "fuentes": "Sources : Dental Data · technologie et entreprise (base de connaissances) · Microsoft et Azure sont des marques de Microsoft Corporation ; cités comme texte"
+ },
+ {
+  "id": "p09",
+  "titulo": "Qu'offre Dental Data à l'industrie ?",
+  "chip": "Qu'offre Dental Data à l'industrie ?",
+  "publico": [
+   "industria"
+  ],
+  "duracion": 45.3,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Qui"
+   },
+   {
+    "t": 14.04,
+    "nombre": "Données de vie réelle"
+   },
+   {
+    "t": 24.24,
+    "nombre": "Pour les éditeurs"
+   },
+   {
+    "t": 31.58,
+    "nombre": "Les règles"
+   },
+   {
+    "t": 37.68,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p09/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p09/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p09/",
+  "transcripcion": "Pour l'industrie dentaire, les données de vie réelle valent beaucoup. Les fabricants d'implants et de matériaux, et les entreprises d'intelligence artificielle, doivent savoir comment leurs produits se comportent au cabinet. Dental Data leur offre ces preuves, ordonnées et sous contrat : des questions qui trouvent leur réponse dans les cabinets et des résultats agrégés qui reviennent sans données identifiables. Pour les éditeurs de logiciels de gestion, le connecteur est une brique qui s'intègre à leur produit et ouvre de nouveaux services à leurs clients. Les règles ne changent pas : un contrat pour chaque usage, seulement des résultats agrégés et jamais de publicité. Des preuves réelles, ordonnées et sous contrat.",
+  "fuentes": "Sources : Dental Data (base de connaissances) · Règlement (UE) 2025/327, art. 54"
+ },
+ {
+  "id": "p10",
+  "titulo": "Comment rejoindre Dental Data ?",
+  "chip": "Comment rejoindre Dental Data ?",
+  "publico": [
+   "cadenas",
+   "aseguradoras",
+   "partners"
+  ],
+  "duracion": 53.1,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Nous cherchons"
+   },
+   {
+    "t": 21.7,
+    "nombre": "Financement"
+   },
+   {
+    "t": 26.84,
+    "nombre": "Feuille de route"
+   },
+   {
+    "t": 36.34,
+    "nombre": "Nous voulons aussi parler avec"
+   },
+   {
+    "t": 44.04,
+    "nombre": "On en parle ?"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p10/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p10/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p10/",
+  "transcripcion": "En Belgique, nous ne voulons pas commencer par un pilote isolé, mais par une alliance. Nous voulons définir avec l'INAMI, la Health Data Agency, la plateforme eHealth et les mutualités les premiers indicateurs de résultats dentaires, et travailler avec des chaînes et des groupes de cabinets qui veulent mesurer leur qualité dès maintenant. Les groupes financent le connecteur par leur cas d'usage interne ; la recherche, par des projets partagés. En deux mille vingt-sept, les premières connexions ; en deux mille vingt-neuf, des jeux de données catalogués et prêts pour la HDA ; ensuite, l'imagerie dentaire. Nous voulons aussi parler avec les associations de dentistes, le conseil de l'art dentaire, les éditeurs de logiciels homologués et les groupes de cabinets. On en parle ? Écrivez à partners arobase softwareinabox point eu.",
+  "fuentes": "Sources : Dental Data · programme de partenaires Belgique et feuille de route (base de connaissances) · Pas de tarifs publiés"
+ },
+ {
+  "id": "p11",
+  "titulo": "Que construisons-nous sur Microsoft Azure ?",
+  "chip": "Que construisons-nous sur Microsoft Azure ?",
+  "publico": [
+   "partners",
+   "industria"
+  ],
+  "duracion": 86.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La règle"
+   },
+   {
+    "t": 13.03,
+    "nombre": "Le cabinet"
+   },
+   {
+    "t": 21.25,
+    "nombre": "Le nœud de données"
+   },
+   {
+    "t": 31.95,
+    "nombre": "Sécurité"
+   },
+   {
+    "t": 39.77,
+    "nombre": "La frontière"
+   },
+   {
+    "t": 54.22,
+    "nombre": "L'IA"
+   },
+   {
+    "t": 72.57,
+    "nombre": "Le parcours"
+   },
+   {
+    "t": 81.53,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr-be/p11/poster.jpg",
+  "vtt": "/presentaciones/fr-be/p11/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr-be/p11/",
+  "transcripcion": "Voici ce que nous construisons sur Microsoft Azure pour Dental Data. Une règle guide la conception : Microsoft dans le nœud, des standards ouverts à la frontière. Au cabinet, la radiographie quitte l'appareil par une passerelle DICOM open source, Orthanc, et elle est pseudonymisée à la source. Dans le nœud de données, Azure Health Data Services conserve le dossier en FHIR et l'image en DICOM. Microsoft Fabric et OneLake préparent les données pour l'analyse. La sécurité repose sur Microsoft Entra ID, Azure Key Vault, Microsoft Defender for Cloud et Microsoft Sentinel. À la frontière travaille le connecteur Eclipse EDC, déployé sur Azure Kubernetes Service. Il publie le catalogue en HealthDCAT-AP, négocie des contrats ODRL et s'identifie avec des attestations Gaia-X. L'intelligence artificielle est entraînée avec Azure Machine Learning et l'apprentissage fédéré : le modèle voyage jusqu'à chaque cabinet et les données restent où elles sont. Le calcul confidentiel protège les données même pendant le traitement, et Microsoft Foundry rédige des brouillons de comptes rendus que le dentiste vérifie. Ainsi, chaque radiographie suit un chemin sûr et contrôlé, du cabinet au modèle, sans qu'aucune donnée identifiable ne quitte le nœud.",
+  "fuentes": "Sources : Dental Data · document technique (v1.3) et proposition MVP (v1.4) · Icônes officielles Microsoft (Azure, Microsoft Entra et Microsoft Fabric), utilisées selon leurs conditions pour les schémas d'architecture · Microsoft, Azure, Entra, Fabric et les noms de leurs services sont des marques de Microsoft Corporation"
+ }
+]

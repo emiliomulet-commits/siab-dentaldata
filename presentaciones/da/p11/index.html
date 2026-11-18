@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>P11 · Hvad bygger vi på Microsoft Azure? · Dental Data</title>
+<meta name="description" content="Animeret præsentation fra Dental Data: arkitekturen i dataområdet for tandpleje med komponenter fra Microsoft Azure og Eclipse EDC-konnektoren.">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/dd-motor.css">
+</head>
+<body class="al-inicio">
+<div id="marco"><div id="stage" role="img" aria-label="Hvad bygger vi på Microsoft Azure?">
+<img id="marca" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" width="220" height="40">
+<div id="chip"><b>P11</b><span>Hvad bygger vi på Microsoft Azure?</span></div>
+<section class="esc centro" data-nombre="Indledning" data-dur="3.0">
+  <img src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="" style="height:64px;margin:0 auto 44px" data-a="pop">
+  <div class="k" data-a="fade" data-t=".5">Dental Data · Spørgsmål 11</div>
+  <div class="h1" data-a="up" data-t=".8">Hvad bygger vi på <span class="oro">Microsoft Azure</span>?</div>
+</section>
+<section class="esc" data-nombre="Reglen" data-dur="8.41">
+  <div class="h2" data-a="up">Én regel styrer designet</div>
+  <div class="lienzo fijo"><div class="capa oro" style="left:150px;top:30px;width:1108px;height:460px" data-a="fade" data-t="2.4"><span>Grænse · åbne standarder</span></div><div class="capa " style="left:340px;top:130px;width:728px;height:260px" data-a="fade" data-t="0.7"><span>Knude · Microsoft Azure</span></div><div style="position:absolute;left:704px;top:260px;transform:translate(-50%,-50%);text-align:center;font:800 40px/1.2 Montserrat,sans-serif;color:#fff" data-a="pop" data-t="1.1">Microsoft<br><span class="oro">inde i knuden</span></div><div class="etq oro" style="left:704px;top:490px" data-a="fade" data-t="2.9">Åbne standarder ved grænsen</div></div>
+</section>
+<section class="esc" data-nombre="Klinikken" data-dur="7.26">
+  <div class="h2" data-a="up">1 · I <span class="oro">klinikken</span></div>
+  <div class="lienzo fijo"><svg class="lineas" viewBox="0 0 1408 520"><path d="M300 250 L590 250" class="" data-a="draw" data-t="1.2"/><path d="M820 250 L1080 250" class="oro" data-a="draw" data-t="2.6"/></svg><div class="nodo" style="left:200px;top:250px;width:230px" data-a="pop" data-t="0.5"><div class="disco "><i data-i="rx" class=""></i></div>Røntgenapparat<small>røntgen, CBCT</small></div><div class="nodo" style="left:705px;top:250px;width:250px" data-t="3.58" data-a="pop"><div class="disco osc"><i data-i="conector" class="blanco"></i></div>DICOM-gateway<small>Orthanc · open source</small></div><div class="nodo" style="left:1190px;top:250px;width:290px" data-t="5.35" data-a="pop"><div class="disco oro"><i data-i="candado" class=""></i></div>Pseudonymiseret ved kilden<small>uden data, der identificerer patienten</small></div><div class="paquete " style="left:300px;top:250px" data-a="mover" data-dx="290" data-dy="0" data-d="1.1" data-t="1.8"></div><div class="paquete blanco" style="left:820px;top:250px" data-a="mover" data-dx="260" data-dy="0" data-d="1.1" data-t="3.3"></div></div>
+</section>
+<section class="esc" data-nombre="Dataknuden" data-dur="9.14">
+  <div class="h2" data-a="up">2 ·  <span class="oro">Dataknuden</span> på Azure</div>
+  <div class="lienzo fijo"><div class="capa " style="left:70px;top:20px;width:1268px;height:470px" data-a="fade" data-t="0.2"><span>Dataknude · Microsoft Azure</span></div><svg class="lineas" viewBox="0 0 1408 520"><path d="M480 200 L600 200" class="" data-a="draw" data-t="3.0"/><path d="M820 200 L940 200" class="" data-a="draw" data-t="4.0"/></svg><div class="nodo az" style="left:330px;top:200px;width:300px" data-a="pop" data-t="0.95"><div class="disco"><img src="/presentaciones/assets/azure/fhir.svg" alt=""></div>Azure Health Data Services</div><div class="etq " style="left:255px;top:365px" data-t="2.40" data-a="fade">Journal · FHIR</div><div class="etq " style="left:420px;top:365px" data-t="3.75" data-a="fade">Billede · DICOM</div><div class="nodo az" style="left:710px;top:200px;width:240px" data-a="pop" data-t="4.97"><div class="disco"><img src="/presentaciones/assets/azure/fabric.svg" alt=""></div>Microsoft Fabric<small>forbereder analysen</small></div><div class="nodo az" style="left:1050px;top:200px;width:240px" data-a="pop" data-t="6.31"><div class="disco"><img src="/presentaciones/assets/azure/onelake.svg" alt=""></div>OneLake<small>åbne formater</small></div></div>
+</section>
+<section class="esc" data-nombre="Sikkerhed" data-dur="7.22">
+  <div class="h2" data-a="up">3 · Et lag af <span class="oro">sikkerhed og identitet</span></div>
+  <div class="lienzo fijo"><div class="capa seg" style="left:50px;top:60px;width:1308px;height:400px" data-a="fade" data-t="0.2"><span>Sikkerhed og identitet · omkring det hele</span></div><div class="nodo az" style="left:225px;top:250px;width:270px" data-a="pop" data-t="1.35"><div class="disco"><img src="/presentaciones/assets/azure/entra-id.svg" alt=""></div>Microsoft Entra ID<small>identiteter</small></div><div class="nodo az" style="left:545px;top:250px;width:270px" data-a="pop" data-t="2.91"><div class="disco"><img src="/presentaciones/assets/azure/key-vault.svg" alt=""></div>Azure Key Vault<small>nøgler og hemmeligheder</small></div><div class="nodo az" style="left:865px;top:250px;width:290px" data-a="pop" data-t="4.33"><div class="disco"><img src="/presentaciones/assets/azure/defender.svg" alt=""></div>Microsoft Defender for Cloud<small>beskyttelse</small></div><div class="nodo az" style="left:1185px;top:250px;width:270px" data-a="pop" data-t="6.17"><div class="disco"><img src="/presentaciones/assets/azure/sentinel.svg" alt=""></div>Microsoft Sentinel<small>overvågning</small></div></div>
+</section>
+<section class="esc" data-nombre="Grænsen" data-dur="13.22">
+  <div class="h2" data-a="up">4 ·  <span class="oro">Grænsen</span>: Eclipse EDC-konnektoren</div>
+  <div class="lienzo fijo"><div class="capa oro" style="left:620px;top:60px;width:760px;height:380px" data-a="fade" data-t="2.0"><span>Grænse · åbne standarder</span></div><svg class="lineas" viewBox="0 0 1408 520"><path d="M290 250 L360 250" class="" data-a="draw" data-t="1.4"/><path d="M560 250 L690 250" class="oro" data-a="draw" data-t="2.4"/><path d="M850 250 L930 250" class="oro" data-a="draw" data-t="3.8"/><path d="M1090 250 L1170 250" class="oro" data-a="draw" data-t="5.0"/></svg><div class="nodo az" style="left:170px;top:250px;width:240px" data-a="pop" data-t="3.43"><div class="disco"><img src="/presentaciones/assets/azure/aks.svg" alt=""></div>Azure Kubernetes Service<small>hvor den kører</small></div><div class="nodo" style="left:460px;top:250px;width:220px" data-t="0.85" data-a="pop"><div class="disco oro"><i data-i="conector" class=""></i></div>Eclipse EDC-konnektor<small>open source</small></div><div class="nodo" style="left:770px;top:250px;width:170px" data-t="5.27" data-a="pop"><div class="disco "><i data-i="catalogo" class=""></i></div>Katalog<small>HealthDCAT-AP</small></div><div class="nodo" style="left:1010px;top:250px;width:170px" data-t="8.19" data-a="pop"><div class="disco "><i data-i="contrato" class=""></i></div>Kontrakt<small>ODRL</small></div><div class="nodo" style="left:1250px;top:250px;width:170px" data-t="10.31" data-a="pop"><div class="disco "><i data-i="escudo" class=""></i></div>Legitimationer<small>Gaia-X</small></div></div>
+</section>
+<section class="esc" data-nombre="AI'en" data-dur="15.14">
+  <div class="h2" data-a="up">5 ·  <span class="oro">AI'en</span>: modellen rejser, dataene gør ikke</div>
+  <div class="lienzo fijo"><svg class="lineas" viewBox="0 0 1408 520"><path d="M704 260 L420 400" class="oro" data-a="draw" data-t="1.6"/><path d="M704 260 L704 400" class="oro" data-a="draw" data-t="1.6"/><path d="M704 260 L988 400" class="oro" data-a="draw" data-t="1.6"/></svg><div class="nodo az" style="left:704px;top:150px;width:330px" data-a="pop" data-t="1.63"><div class="disco"><img src="/presentaciones/assets/azure/azure-ml.svg" alt=""></div>Azure Machine Learning<small>fødereret læring · NVIDIA FLARE</small></div><div class="nodo" style="left:420px;top:450px;width:160px" data-a="pop" data-t="1.2"><div class="disco "><i data-i="clinica" class=""></i></div>Klinik A</div><div class="nodo" style="left:704px;top:450px;width:160px" data-a="pop" data-t="1.3"><div class="disco "><i data-i="clinica" class=""></i></div>Klinik B</div><div class="nodo" style="left:988px;top:450px;width:160px" data-a="pop" data-t="1.4"><div class="disco "><i data-i="clinica" class=""></i></div>Klinik C</div><div class="paquete " style="left:704px;top:262px" data-t="4.15" data-a="mover" data-dx="-284" data-dy="140" data-d="1.2"></div><div class="paquete " style="left:704px;top:262px" data-t="4.15" data-a="mover" data-dx="0" data-dy="140" data-d="1.2"></div><div class="paquete " style="left:704px;top:262px" data-t="4.15" data-a="mover" data-dx="284" data-dy="140" data-d="1.2"></div><div class="nodo" style="left:170px;top:170px;width:260px" data-t="7.55" data-a="pop"><div class="disco osc"><i data-i="candado" class="blanco"></i></div>Fortrolig beregning<small>beskytter dataene under behandlingen</small></div><div class="nodo az" style="left:1235px;top:170px;width:270px" data-a="pop" data-t="10.97"><div class="disco"><img src="/presentaciones/assets/azure/foundry.svg" alt=""></div>Microsoft Foundry<small>udkast, som tandlægen kontrollerer</small></div></div>
+</section>
+<section class="esc" data-nombre="Vejen" data-dur="8.18">
+  <div class="h2" data-a="up">Et røntgenbilledes vej</div>
+  <div class="lienzo fijo"><svg class="lineas" viewBox="0 0 1408 520"><path d="M210 170 L330 170" class="" data-a="draw" data-t="0.9"/><path d="M510 170 L610 170" class="" data-a="draw" data-t="0.9"/><path d="M790 170 L890 170" class="" data-a="draw" data-t="0.9"/><path d="M1070 170 L1190 170" class="oro" data-a="draw" data-t="0.9"/></svg><div class="nodo" style="left:130px;top:170px;width:170px" data-a="pop" data-t="0.3"><div class="disco "><i data-i="rx" class=""></i></div>Klinik<small>DICOM-gateway</small></div><div class="nodo az" style="left:420px;top:170px;width:230px" data-a="pop" data-t="0.5"><div class="disco"><img src="/presentaciones/assets/azure/fhir.svg" alt=""></div>Azure Health Data Services</div><div class="nodo az" style="left:700px;top:170px;width:230px" data-a="pop" data-t="0.7"><div class="disco"><img src="/presentaciones/assets/azure/fabric.svg" alt=""></div>Microsoft Fabric og OneLake</div><div class="nodo" style="left:980px;top:170px;width:230px" data-a="pop" data-t="0.9"><div class="disco oro"><i data-i="conector" class=""></i></div>Eclipse EDC<small>på Azure Kubernetes Service</small></div><div class="nodo" style="left:1275px;top:170px;width:170px" data-a="pop" data-t="1.1"><div class="disco "><i data-i="red" class=""></i></div>Europæisk netværk<small>andre klinikker</small></div><div class="capa seg" style="left:60px;top:330px;width:1288px;height:100px" data-a="fade" data-t="1.4"><span>Sikkerhed og identitet</span></div><div style="position:absolute;left:704px;top:382px;transform:translate(-50%,-50%);font:700 21px Hanken Grotesk,sans-serif;color:#DDE5EF;white-space:nowrap" data-a="fade" data-t="1.6">Microsoft Entra ID · Azure Key Vault · Microsoft Defender for Cloud · Microsoft Sentinel</div><div class="paquete " style="left:130px;top:170px" data-a="mover" data-dx="1145" data-dy="0" data-d="3.6" data-t="2.2"></div><div style="position:absolute;left:704px;top:492px;transform:translate(-50%,-50%)"><span class="pild ok" data-a="pop" data-t="5.62"><i data-i="ok"></i>Ingen identificerbare data forlader knuden</span></div></div>
+</section>
+<section class="esc centro cierre" data-nombre="Afslutning" data-dur="5.0">
+  <div class="frase"><span data-a="up">Microsoft inde i knuden.</span><br><span class="oro" data-a="up" data-t=".9">Åbne standarder ved grænsen.</span></div>
+  <span class="raya" data-a="bar" data-t="1.8"></span>
+  <div class="lead" data-a="fade" data-t="2.3" style="font-size:31px;color:#fff">Sådan bygger vi Dental Data på Microsoft Azure.</div>
+  <img class="logo-fin" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" style="margin-left:auto;margin-right:auto" data-a="pop" data-t="3.0">
+</section>
+<div id="pie"><span>Kilder: Dental Data · teknisk dokument (v1.3) og MVP-forslag (v1.4) · Officielle Microsoft-ikoner (Azure, Microsoft Entra og Microsoft Fabric), brugt efter deres vilkår for arkitekturdiagrammer · Microsoft, Azure, Entra, Fabric og navnene på deres tjenester er varemærker tilhørende Microsoft Corporation</span><span>Dental Data · Software in a Box</span></div>
+</div></div>
+<div class="nota-rm">Reduceret bevægelse: hver scene vises i sin helhed.</div>
+<div id="inicio"><span>Tryk på → eller mellemrumstasten for at starte</span></div>
+<audio id="voz" src="voz-p11.mp3" preload="auto"></audio>
+<button id="voz-btn" hidden>🔊 Speak slået til</button>
+<nav class="ui" aria-label="Styring af præsentationen">
+<button id="ant" title="Forrige scene (←)" aria-label="Forrige scene"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7z"/></svg></button>
+<button title="Afspil eller pause" aria-label="Afspil eller pause"><svg viewBox="0 0 24 24" id="pp"><path d="M8 5v14l11-7z"/></svg></button>
+<button id="sig" title="Næste scene (→)" aria-label="Næste scene"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7z"/></svg></button>
+<div class="escenas" id="escenas"></div>
+<span class="pista">← → mellemrum · 1–9 · F · H skjuler</span>
+<button id="pc" title="Fuld skærm (F)" aria-label="Fuld skærm"><svg viewBox="0 0 24 24"><path d="M4 4h6v2H6v4H4zM14 4h6v6h-2V6h-4zM4 14h2v4h4v2H4zM18 14h2v6h-6v-2h4z"/></svg></button>
+</nav>
+<script>window.DD_UI={"escena": "Scene", "quitar": "🔇 Lyd fra", "activar": "🔊 Lyd til", "locucion": "🔊 Speak slået til", "ver": "▶ Se med speak (lyd til)"}</script>
+<script src="../../assets/gsap.min.js"></script>
+<script src="../../assets/dd-motor.js"></script>
+</body>
+</html>

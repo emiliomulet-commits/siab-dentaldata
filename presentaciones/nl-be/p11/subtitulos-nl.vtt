@@ -1,0 +1,81 @@
+WEBVTT
+
+00:00:03.310 --> 00:00:07.000
+Dit is wat we op Microsoft Azure
+bouwen voor Dental Data.
+
+00:00:07.050 --> 00:00:09.960
+Eén regel stuurt het ontwerp:
+Microsoft binnen
+
+00:00:10.010 --> 00:00:13.140
+het knooppunt, open
+standaarden aan de grens.
+
+00:00:13.190 --> 00:00:17.320
+In de praktijk verlaat de röntgenfoto het
+apparaat via een open source
+
+00:00:17.370 --> 00:00:21.760
+DICOM-gateway, Orthanc, en wordt hij bij
+de bron gepseudonimiseerd.
+
+00:00:21.810 --> 00:00:24.580
+In het dataknooppunt bewaart
+Azure Health Data
+
+00:00:24.630 --> 00:00:28.540
+Services het dossier in FHIR en
+het beeld in DICOM.
+
+00:00:28.590 --> 00:00:33.020
+Microsoft Fabric en OneLake bereiden de
+gegevens voor op analyse.
+
+00:00:33.070 --> 00:00:37.220
+De beveiliging komt van Microsoft
+Entra ID, Azure Key Vault,
+
+00:00:37.270 --> 00:00:40.960
+Microsoft Defender for Cloud en
+Microsoft Sentinel.
+
+00:00:41.010 --> 00:00:46.190
+Aan de grens werkt de Eclipse EDC-connector,
+uitgerold op Azure Kubernetes Service.
+
+00:00:46.240 --> 00:00:51.000
+Hij publiceert de catalogus in
+HealthDCAT-AP, onderhandelt
+
+00:00:51.050 --> 00:00:55.480
+ODRL-contracten en identificeert zich
+met Gaia-X-referenties.
+
+00:00:55.530 --> 00:00:57.720
+De kunstmatige intelligentie
+wordt getraind
+
+00:00:57.770 --> 00:01:00.820
+met Azure Machine Learning en
+federatief leren:
+
+00:01:00.870 --> 00:01:05.420
+het model reist naar elke praktijk en de
+gegevens blijven waar ze zijn.
+
+00:01:05.470 --> 00:01:09.460
+Vertrouwelijk rekenen beschermt de gegevens
+zelfs tijdens de verwerking,
+
+00:01:09.510 --> 00:01:14.090
+en Microsoft Foundry schrijft
+conceptverslagen die de tandarts controleert.
+
+00:01:14.140 --> 00:01:19.240
+Zo volgt elke röntgenfoto een veilige en
+gecontroleerde weg, van de praktijk
+
+00:01:19.290 --> 00:01:24.930
+naar het model, zonder dat er één
+identificeerbaar gegeven het knooppunt verlaat.

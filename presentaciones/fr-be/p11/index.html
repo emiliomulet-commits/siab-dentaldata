@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>P11 · Que construisons-nous sur Microsoft Azure ? · Dental Data</title>
+<meta name="description" content="Présentation animée de Dental Data : l&#x27;architecture de l&#x27;espace de données dentaires avec les composants Microsoft Azure et le connecteur Eclipse EDC.">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/dd-motor.css">
+</head>
+<body class="al-inicio">
+<div id="marco"><div id="stage" role="img" aria-label="Que construisons-nous sur Microsoft Azure ?">
+<img id="marca" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" width="220" height="40">
+<div id="chip"><b>P11</b><span>Que construisons-nous sur Microsoft Azure ?</span></div>
+<section class="esc centro" data-nombre="Ouverture" data-dur="3.0">
+  <img src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="" style="height:64px;margin:0 auto 44px" data-a="pop">
+  <div class="k" data-a="fade" data-t=".5">Dental Data · Question 11</div>
+  <div class="h1" data-a="up" data-t=".8">Que construisons-nous sur <span class="oro">Microsoft Azure</span> ?</div>
+</section>
+<section class="esc" data-nombre="La règle" data-dur="10.03">
+  <div class="h2" data-a="up">Une règle guide la conception</div>
+  <div class="lienzo fijo"><div class="capa oro" style="left:150px;top:30px;width:1108px;height:460px" data-a="fade" data-t="2.4"><span>Frontière · standards ouverts</span></div><div class="capa " style="left:340px;top:130px;width:728px;height:260px" data-a="fade" data-t="0.7"><span>Nœud · Microsoft Azure</span></div><div style="position:absolute;left:704px;top:260px;transform:translate(-50%,-50%);text-align:center;font:800 40px/1.2 Montserrat,sans-serif;color:#fff" data-a="pop" data-t="1.1">Microsoft<br><span class="oro">dans le nœud</span></div><div class="etq oro" style="left:704px;top:490px" data-a="fade" data-t="2.9">Des standards ouverts à la frontière</div></div>
+</section>
+<section class="esc" data-nombre="Le cabinet" data-dur="8.22">
+  <div class="h2" data-a="up">1 · Au <span class="oro">cabinet</span></div>
+  <div class="lienzo fijo"><svg class="lineas" viewBox="0 0 1408 520"><path d="M300 250 L590 250" class="" data-a="draw" data-t="1.2"/><path d="M820 250 L1080 250" class="oro" data-a="draw" data-t="2.6"/></svg><div class="nodo" style="left:200px;top:250px;width:230px" data-a="pop" data-t="0.5"><div class="disco "><i data-i="rx" class=""></i></div>Appareil de radiologie<small>radiographie, cone beam</small></div><div class="nodo" style="left:705px;top:250px;width:250px" data-t="2.61" data-a="pop"><div class="disco osc"><i data-i="conector" class="blanco"></i></div>Passerelle DICOM<small>Orthanc · open source</small></div><div class="nodo" style="left:1190px;top:250px;width:290px" data-t="6.01" data-a="pop"><div class="disco oro"><i data-i="candado" class=""></i></div>Pseudonymisée à la source<small>sans données identifiant le patient</small></div><div class="paquete " style="left:300px;top:250px" data-a="mover" data-dx="290" data-dy="0" data-d="1.1" data-t="1.8"></div><div class="paquete blanco" style="left:820px;top:250px" data-a="mover" data-dx="260" data-dy="0" data-d="1.1" data-t="3.3"></div></div>
+</section>
+<section class="esc" data-nombre="Le nœud de données" data-dur="10.7">
+  <div class="h2" data-a="up">2 · Le <span class="oro">nœud de données</span> sur Azure</div>
+  <div class="lienzo fijo"><div class="capa " style="left:70px;top:20px;width:1268px;height:470px" data-a="fade" data-t="0.2"><span>Nœud de données · Microsoft Azure</span></div><svg class="lineas" viewBox="0 0 1408 520"><path d="M480 200 L600 200" class="" data-a="draw" data-t="3.0"/><path d="M820 200 L940 200" class="" data-a="draw" data-t="4.0"/></svg><div class="nodo az" style="left:330px;top:200px;width:300px" data-a="pop" data-t="1.35"><div class="disco"><img src="/presentaciones/assets/azure/fhir.svg" alt=""></div>Azure Health Data Services</div><div class="etq " style="left:255px;top:365px" data-t="3.35" data-a="fade">Dossier · FHIR</div><div class="etq " style="left:420px;top:365px" data-t="4.77" data-a="fade">Image · DICOM</div><div class="nodo az" style="left:710px;top:200px;width:240px" data-a="pop" data-t="6.39"><div class="disco"><img src="/presentaciones/assets/azure/fabric.svg" alt=""></div>Microsoft Fabric<small>prépare l'analyse</small></div><div class="nodo az" style="left:1050px;top:200px;width:240px" data-a="pop" data-t="7.65"><div class="disco"><img src="/presentaciones/assets/azure/onelake.svg" alt=""></div>OneLake<small>formats ouverts</small></div></div>
+</section>
+<section class="esc" data-nombre="Sécurité" data-dur="7.82">
+  <div class="h2" data-a="up">3 · Une couche de <span class="oro">sécurité et d'identité</span></div>
+  <div class="lienzo fijo"><div class="capa seg" style="left:50px;top:60px;width:1308px;height:400px" data-a="fade" data-t="0.2"><span>Sécurité et identité · autour de tout</span></div><div class="nodo az" style="left:225px;top:250px;width:270px" data-a="pop" data-t="1.69"><div class="disco"><img src="/presentaciones/assets/azure/entra-id.svg" alt=""></div>Microsoft Entra ID<small>identités</small></div><div class="nodo az" style="left:545px;top:250px;width:270px" data-a="pop" data-t="3.13"><div class="disco"><img src="/presentaciones/assets/azure/key-vault.svg" alt=""></div>Azure Key Vault<small>clés et secrets</small></div><div class="nodo az" style="left:865px;top:250px;width:290px" data-a="pop" data-t="4.43"><div class="disco"><img src="/presentaciones/assets/azure/defender.svg" alt=""></div>Microsoft Defender for Cloud<small>protection</small></div><div class="nodo az" style="left:1185px;top:250px;width:270px" data-a="pop" data-t="6.53"><div class="disco"><img src="/presentaciones/assets/azure/sentinel.svg" alt=""></div>Microsoft Sentinel<small>surveillance</small></div></div>
+</section>
+<section class="esc" data-nombre="La frontière" data-dur="14.45">
+  <div class="h2" data-a="up">4 · La <span class="oro">frontière</span> : le connecteur Eclipse EDC</div>
+  <div class="lienzo fijo"><div class="capa oro" style="left:620px;top:60px;width:760px;height:380px" data-a="fade" data-t="2.0"><span>Frontière · standards ouverts</span></div><svg class="lineas" viewBox="0 0 1408 520"><path d="M290 250 L360 250" class="" data-a="draw" data-t="1.4"/><path d="M560 250 L690 250" class="oro" data-a="draw" data-t="2.4"/><path d="M850 250 L930 250" class="oro" data-a="draw" data-t="3.8"/><path d="M1090 250 L1170 250" class="oro" data-a="draw" data-t="5.0"/></svg><div class="nodo az" style="left:170px;top:250px;width:240px" data-a="pop" data-t="3.89"><div class="disco"><img src="/presentaciones/assets/azure/aks.svg" alt=""></div>Azure Kubernetes Service<small>où il tourne</small></div><div class="nodo" style="left:460px;top:250px;width:220px" data-t="1.81" data-a="pop"><div class="disco oro"><i data-i="conector" class=""></i></div>Connecteur Eclipse EDC<small>open source</small></div><div class="nodo" style="left:770px;top:250px;width:170px" data-t="6.17" data-a="pop"><div class="disco "><i data-i="catalogo" class=""></i></div>Catalogue<small>HealthDCAT-AP</small></div><div class="nodo" style="left:1010px;top:250px;width:170px" data-t="9.27" data-a="pop"><div class="disco "><i data-i="contrato" class=""></i></div>Contrat<small>ODRL</small></div><div class="nodo" style="left:1250px;top:250px;width:170px" data-t="11.77" data-a="pop"><div class="disco "><i data-i="escudo" class=""></i></div>Attestations<small>Gaia-X</small></div></div>
+</section>
+<section class="esc" data-nombre="L'IA" data-dur="18.35">
+  <div class="h2" data-a="up">5 · L' <span class="oro">IA</span> : le modèle voyage, pas les données</div>
+  <div class="lienzo fijo"><svg class="lineas" viewBox="0 0 1408 520"><path d="M704 260 L420 400" class="oro" data-a="draw" data-t="1.6"/><path d="M704 260 L704 400" class="oro" data-a="draw" data-t="1.6"/><path d="M704 260 L988 400" class="oro" data-a="draw" data-t="1.6"/></svg><div class="nodo az" style="left:704px;top:150px;width:330px" data-a="pop" data-t="2.28"><div class="disco"><img src="/presentaciones/assets/azure/azure-ml.svg" alt=""></div>Azure Machine Learning<small>apprentissage fédéré · NVIDIA FLARE</small></div><div class="nodo" style="left:420px;top:450px;width:160px" data-a="pop" data-t="1.2"><div class="disco "><i data-i="clinica" class=""></i></div>Cabinet A</div><div class="nodo" style="left:704px;top:450px;width:160px" data-a="pop" data-t="1.3"><div class="disco "><i data-i="clinica" class=""></i></div>Cabinet B</div><div class="nodo" style="left:988px;top:450px;width:160px" data-a="pop" data-t="1.4"><div class="disco "><i data-i="clinica" class=""></i></div>Cabinet C</div><div class="paquete " style="left:704px;top:262px" data-t="5.38" data-a="mover" data-dx="-284" data-dy="140" data-d="1.2"></div><div class="paquete " style="left:704px;top:262px" data-t="5.38" data-a="mover" data-dx="0" data-dy="140" data-d="1.2"></div><div class="paquete " style="left:704px;top:262px" data-t="5.38" data-a="mover" data-dx="284" data-dy="140" data-d="1.2"></div><div class="nodo" style="left:170px;top:170px;width:260px" data-t="9.94" data-a="pop"><div class="disco osc"><i data-i="candado" class="blanco"></i></div>Calcul confidentiel<small>protège les données pendant le traitement</small></div><div class="nodo az" style="left:1235px;top:170px;width:270px" data-a="pop" data-t="13.70"><div class="disco"><img src="/presentaciones/assets/azure/foundry.svg" alt=""></div>Microsoft Foundry<small>brouillons que le dentiste vérifie</small></div></div>
+</section>
+<section class="esc" data-nombre="Le parcours" data-dur="8.96">
+  <div class="h2" data-a="up">Le parcours d'une radiographie</div>
+  <div class="lienzo fijo"><svg class="lineas" viewBox="0 0 1408 520"><path d="M210 170 L330 170" class="" data-a="draw" data-t="0.9"/><path d="M510 170 L610 170" class="" data-a="draw" data-t="0.9"/><path d="M790 170 L890 170" class="" data-a="draw" data-t="0.9"/><path d="M1070 170 L1190 170" class="oro" data-a="draw" data-t="0.9"/></svg><div class="nodo" style="left:130px;top:170px;width:170px" data-a="pop" data-t="0.3"><div class="disco "><i data-i="rx" class=""></i></div>Cabinet<small>Passerelle DICOM</small></div><div class="nodo az" style="left:420px;top:170px;width:230px" data-a="pop" data-t="0.5"><div class="disco"><img src="/presentaciones/assets/azure/fhir.svg" alt=""></div>Azure Health Data Services</div><div class="nodo az" style="left:700px;top:170px;width:230px" data-a="pop" data-t="0.7"><div class="disco"><img src="/presentaciones/assets/azure/fabric.svg" alt=""></div>Microsoft Fabric et OneLake</div><div class="nodo" style="left:980px;top:170px;width:230px" data-a="pop" data-t="0.9"><div class="disco oro"><i data-i="conector" class=""></i></div>Eclipse EDC<small>sur Azure Kubernetes Service</small></div><div class="nodo" style="left:1275px;top:170px;width:170px" data-a="pop" data-t="1.1"><div class="disco "><i data-i="red" class=""></i></div>Réseau européen<small>autres cabinets</small></div><div class="capa seg" style="left:60px;top:330px;width:1288px;height:100px" data-a="fade" data-t="1.4"><span>Sécurité et identité</span></div><div style="position:absolute;left:704px;top:382px;transform:translate(-50%,-50%);font:700 21px Hanken Grotesk,sans-serif;color:#DDE5EF;white-space:nowrap" data-a="fade" data-t="1.6">Microsoft Entra ID · Azure Key Vault · Microsoft Defender for Cloud · Microsoft Sentinel</div><div class="paquete " style="left:130px;top:170px" data-a="mover" data-dx="1145" data-dy="0" data-d="3.6" data-t="2.2"></div><div style="position:absolute;left:704px;top:492px;transform:translate(-50%,-50%)"><span class="pild ok" data-a="pop" data-t="6.31"><i data-i="ok"></i>Aucune donnée identifiable ne quitte le nœud</span></div></div>
+</section>
+<section class="esc centro cierre" data-nombre="Conclusion" data-dur="5.0">
+  <div class="frase"><span data-a="up">Microsoft dans le nœud.</span><br><span class="oro" data-a="up" data-t=".9">Des standards ouverts à la frontière.</span></div>
+  <span class="raya" data-a="bar" data-t="1.8"></span>
+  <div class="lead" data-a="fade" data-t="2.3" style="font-size:31px;color:#fff">Voilà comment nous construisons Dental Data.</div>
+  <img class="logo-fin" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" style="margin-left:auto;margin-right:auto" data-a="pop" data-t="3.0">
+</section>
+<div id="pie"><span>Sources : Dental Data · document technique (v1.3) et proposition MVP (v1.4) · Icônes officielles Microsoft (Azure, Microsoft Entra et Microsoft Fabric), utilisées selon leurs conditions pour les schémas d'architecture · Microsoft, Azure, Entra, Fabric et les noms de leurs services sont des marques de Microsoft Corporation</span><span>Dental Data · Software in a Box</span></div>
+</div></div>
+<div class="nota-rm">Mouvement réduit : chaque scène est affichée en entier.</div>
+<div id="inicio"><span>Appuyez sur → ou sur la barre d'espace pour commencer</span></div>
+<audio id="voz" src="voz-p11.mp3" preload="auto"></audio>
+<button id="voz-btn" hidden>🔊 Voix off activée</button>
+<nav class="ui" aria-label="Commandes de la présentation">
+<button id="ant" title="Scène précédente (←)" aria-label="Scène précédente"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7z"/></svg></button>
+<button title="Lecture ou pause" aria-label="Lecture ou pause"><svg viewBox="0 0 24 24" id="pp"><path d="M8 5v14l11-7z"/></svg></button>
+<button id="sig" title="Scène suivante (→)" aria-label="Scène suivante"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7z"/></svg></button>
+<div class="escenas" id="escenas"></div>
+<span class="pista">← → espace · 1–9 · F · H masque</span>
+<button id="pc" title="Plein écran (F)" aria-label="Plein écran"><svg viewBox="0 0 24 24"><path d="M4 4h6v2H6v4H4zM14 4h6v6h-2V6h-4zM4 14h2v4h4v2H4zM18 14h2v6h-6v-2h4z"/></svg></button>
+</nav>
+<script>window.DD_UI={"escena": "Scène", "quitar": "🔇 Couper le son", "activar": "🔊 Activer le son", "locucion": "🔊 Voix off activée", "ver": "▶ Regarder avec la voix off (son activé)"}</script>
+<script src="../../assets/gsap.min.js"></script>
+<script src="../../assets/dd-motor.js"></script>
+</body>
+</html>

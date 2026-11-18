@@ -1,0 +1,42 @@
+WEBVTT
+
+00:00:03.300 --> 00:00:06.570
+I et fødereret dataområde
+beholder hver klinik, kæde,
+
+00:00:06.620 --> 00:00:09.657
+region eller forsikring sine journaler
+i sit eget kliniksystem.
+
+00:00:09.707 --> 00:00:12.990
+Ved siden af systemet
+installeres en konnektor.
+
+00:00:13.040 --> 00:00:15.270
+Konnektoren offentliggør i et
+fælles katalog,
+
+00:00:15.320 --> 00:00:18.177
+hvilke data der findes, men
+ikke selve dataene.
+
+00:00:18.227 --> 00:00:21.963
+Når nogen har brug for en indikator, rejser
+spørgsmålet til hver klinik,
+
+00:00:22.013 --> 00:00:25.400
+beregnes der, og kun det aggregerede
+resultat kommer tilbage.
+
+00:00:25.450 --> 00:00:29.490
+Over netværket går samtykker,
+metadata og resultater.
+
+00:00:29.540 --> 00:00:31.690
+Aldrig en identificerbar journal.
+
+00:00:31.740 --> 00:00:33.830
+Dataene bliver i klinikken.
+
+00:00:33.880 --> 00:00:36.000
+Det, der rejser, er svaret.

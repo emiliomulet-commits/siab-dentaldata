@@ -1,0 +1,69 @@
+WEBVTT
+
+00:00:03.230 --> 00:00:06.480
+Det her bygger vi på Microsoft
+Azure til Dental Data.
+
+00:00:06.530 --> 00:00:11.660
+Én regel styrer designet: Microsoft inde i
+knuden, åbne standarder ved grænsen.
+
+00:00:11.710 --> 00:00:14.600
+I klinikken forlader røntgenbilledet
+apparatet gennem en open
+
+00:00:14.650 --> 00:00:18.920
+source DICOM-gateway, Orthanc, og det
+pseudonymiseres ved kilden.
+
+00:00:18.970 --> 00:00:24.040
+I dataknuden gemmer Azure Health Data Services
+journalen i FHIR og billedet i DICOM.
+
+00:00:24.090 --> 00:00:28.060
+Microsoft Fabric og OneLake
+forbereder dataene til analyse.
+
+00:00:28.110 --> 00:00:31.980
+Sikkerheden kommer fra Microsoft
+Entra ID, Azure Key Vault,
+
+00:00:32.030 --> 00:00:35.280
+Microsoft Defender for Cloud og
+Microsoft Sentinel.
+
+00:00:35.330 --> 00:00:40.620
+Ved grænsen arbejder Eclipse EDC-konnektoren,
+udrullet på Azure Kubernetes Service.
+
+00:00:40.670 --> 00:00:43.620
+Den offentliggør kataloget i
+HealthDCAT-AP,
+
+00:00:43.670 --> 00:00:48.500
+forhandler ODRL-kontrakter og identificerer
+sig med Gaia-X-legitimationer.
+
+00:00:48.550 --> 00:00:52.800
+Den kunstige intelligens trænes med Azure
+Machine Learning og fødereret læring:
+
+00:00:52.850 --> 00:00:56.200
+modellen rejser til hver klinik, og
+dataene bliver, hvor de er.
+
+00:00:56.250 --> 00:00:59.440
+Fortrolig beregning beskytter dataene
+selv under behandlingen,
+
+00:00:59.490 --> 00:01:03.640
+og Microsoft Foundry skriver udkast til
+rapporter, som tandlægen kontrollerer.
+
+00:01:03.690 --> 00:01:06.920
+Sådan følger hvert røntgenbillede en
+sikker og kontrolleret vej,
+
+00:01:06.970 --> 00:01:11.970
+fra klinikken til modellen, uden at
+identificerbare data forlader knuden.

@@ -1,16 +1,19 @@
 # Dental Data · Software in a Box
 
-> Federated dental health data space for Europe, starting in Spain and the Netherlands, prepared for the European Health Data Space (EHDS; EEDS in Spanish). Software in a Box is looking for technology partners (ideally Microsoft Azure partners) and for the first dental chains and insurers.
+> Federated dental health data space for Europe, with versions for eight countries (Spain, the Netherlands, Belgium, France, Germany, Denmark, Italy, Portugal) and a European hub, prepared for the European Health Data Space (EHDS; EEDS in Spanish). Software in a Box is looking for technology partners (ideally Microsoft Azure partners) and for the first dental chains and insurers.
 
 ## Pages
-- [Europe · Partners and markets](https://dentaldata.softwareinabox.eu/en/): European hub in English: product, five markets compared (Spain, Netherlands, Belgium, Germany, Denmark), France, Italy and Portugal being studied, partner programme
+- [Europe · Partners and markets](https://dentaldata.softwareinabox.eu/en/): European hub in English: product, eight countries compared, two business models (social insurance and private dentistry), partner programme
 - [España · Piloto](https://dentaldata.softwareinabox.eu/es/): Spanish market (43,672 dentists, 97% paid by patients, chain consolidation), federated solution on Microsoft Azure, EHDS timeline, pilot with a Spanish chain or insurer before March 2027, FAQ (Spanish)
 - [Nederland · Partnerprogramma](https://dentaldata.softwareinabox.eu/nl/): market (9,555 dentists, ~30% of practices closed to new patients, 500+ private-equity practices), solution, proposal, roadmap to March 2029 (Dutch)
 - [België · Institutionele alliantie](https://dentaldata.softwareinabox.eu/nl-be/): Belgian market in Dutch (8,479 dentists, RIZIV/INAMI reimbursement €1.6bn in 2025, Health Data Agency), complement to RIZIV, institutional alliance, roadmap
 - [Belgique · Alliance institutionnelle](https://dentaldata.softwareinabox.eu/fr-be/): Belgian market in French (same content as the Dutch page)
-- [Deutschland · Partner für PVS und MVZ](https://dentaldata.softwareinabox.eu/de/): German market (43,663 dentists, ePA mandatory in dental practices since 1 Oct 2025, FDZ Gesundheit, GeDIG, iMVZ 30.4%), complement to ePA/FDZ for practice software vendors and MVZ (German)
+- [Deutschland · Partner für PVS und MVZ](https://dentaldata.softwareinabox.eu/de/): German market (62,874 dentists in contract care, €19.1bn statutory spending, 1,511 dental MVZ, ePA mandatory in dental practices since 1 Oct 2025, FDZ Gesundheit, GeDIG, iMVZ 30.4%), complement to ePA/FDZ for practice software vendors and MVZ (German)
 - [Danmark · Institutionel alliance](https://dentaldata.softwareinabox.eu/da/): Danish market (4,964 dentists, free care 0-21, SCOR register since 1972, adults ≈15% subsidy, Digital Sundhed Danmark), extending the SCOR logic to adults, institutional alliance (Danish)
 
+- [France · Complémentaires et centres de santé](https://dentaldata.softwareinabox.eu/fr/): French market (47,636 dentists, €13.2bn in private practice, 100% santé reform, ARS approval for dental centres, Plateforme des données de santé candidate access body), node on Azure in the EU or with a sovereign certified host (French)
+- [Italia · Catene e fondi sanitari](https://dentaldata.softwareinabox.eu/it/): Italian market (>€10bn private spending, €85m SSN spending, 64,965 dentists, chains under Law 124/2017, FSE 2.0 and Ecosistema Dati Sanitari), for chains and supplementary health funds (Italian)
+- [Portugal · Seguradoras e redes de clínicas](https://dentaldata.softwareinabox.eu/pt/): Portuguese market (13,876 dentists, €1,875m clinic turnover, cheque-dentista, 98 of 278 municipalities without an SNS dental office, SPMS), for insurers, clinic networks and public programmes (Portuguese)
 
 ## Documents
 - [Tandheelkundige gezondheidsdataruimtes in Europa · Vergelijkend onderzoek (PDF, NL)](https://dentaldata.softwareinabox.eu/docs/tandheelkundige-gezondheidsdataruimtes-europa-ehds.pdf): comparative study of Spain, Belgium, the Netherlands, Denmark and Germany, November 2026
@@ -29,6 +32,18 @@
 - [¿Qué ofrece Dental Data a la industria?](https://dentaldata.softwareinabox.eu/presentaciones/p09/): vídeo de 48 s con transcripción (https://dentaldata.softwareinabox.eu/presentaciones/p09/dentaldata-p09.mp4)
 - [¿Cómo se participa en Dental Data?](https://dentaldata.softwareinabox.eu/presentaciones/p10/): vídeo de 52 s con transcripción (https://dentaldata.softwareinabox.eu/presentaciones/p10/dentaldata-p10.mp4)
 - [¿Qué montamos en Microsoft Azure?](https://dentaldata.softwareinabox.eu/presentaciones/p11/): vídeo de 90 s sobre la arquitectura en Microsoft Azure (componentes de Azure y conector Eclipse EDC), con transcripción (https://dentaldata.softwareinabox.eu/presentaciones/p11/dentaldata-p11.mp4)
+
+## Animated presentations by language
+Each country page embeds 11 animated presentations with native voice-over, subtitles (WebVTT) and transcripts:
+- [English](https://dentaldata.softwareinabox.eu/presentaciones/en/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/en/videos.json
+- [Nederlands (Nederland)](https://dentaldata.softwareinabox.eu/presentaciones/nl/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/nl/videos.json
+- [Nederlands (België)](https://dentaldata.softwareinabox.eu/presentaciones/nl-be/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/nl-be/videos.json
+- [Français (France)](https://dentaldata.softwareinabox.eu/presentaciones/fr/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/fr/videos.json
+- [Français (Belgique)](https://dentaldata.softwareinabox.eu/presentaciones/fr-be/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/fr-be/videos.json
+- [Deutsch](https://dentaldata.softwareinabox.eu/presentaciones/de/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/de/videos.json
+- [Dansk](https://dentaldata.softwareinabox.eu/presentaciones/da/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/da/videos.json
+- [Italiano](https://dentaldata.softwareinabox.eu/presentaciones/it/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/it/videos.json
+- [Português](https://dentaldata.softwareinabox.eu/presentaciones/pt/p01/): catalogue at https://dentaldata.softwareinabox.eu/presentaciones/pt/videos.json
 
 ## Related
 - [Federated data spaces]( https://datos.softwareinabox.eu/)

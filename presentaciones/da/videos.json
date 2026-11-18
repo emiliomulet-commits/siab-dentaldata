@@ -1,0 +1,479 @@
+[
+ {
+  "id": "p01",
+  "titulo": "Hvorfor mangler tandlægedata i det europæiske sundhedsdataområde?",
+  "chip": "Hvorfor mangler tandlægedata i EHDS?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 45.4,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "De store fraværende"
+   },
+   {
+    "t": 10.16,
+    "nombre": "Hvorfor"
+   },
+   {
+    "t": 20.83,
+    "nombre": "Danmark i tal"
+   },
+   {
+    "t": 29.36,
+    "nombre": "Dataøer"
+   },
+   {
+    "t": 37.16,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p01/poster.jpg",
+  "vtt": "/presentaciones/da/p01/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p01/",
+  "transcripcion": "Tandlægedata er de store fraværende i det europæiske sundhedsdataområde, selv i Danmark, der har nogle af verdens bedste registre. Børn og unge får gratis kommunal tandpleje og registreres i SCOR, men voksne går til private klinikker, og om dem ved man kun, hvilke behandlinger der får tilskud, ikke hvordan munden har det. Tandplejen er gratis op til enogtyve år, knap femtusind tandlæger arbejder i landet, og i over halvtreds år har SCOR-registret fulgt børnenes tænder. Hver klinik gemmer de voksnes data i sin egen software, uden forbindelse til de andre, og med den nye tandkonto skal man vide, om den virker. Det, der mangler, er nogen, der forbinder dataene. Det er Dental Data.",
+  "fuentes": "Kilder: sammenlignende undersøgelse fra Software in a Box (nov. 2026) · Sundhedsdatastyrelsen (SCOR) · Tandlægeforeningen"
+ },
+ {
+  "id": "p02",
+  "titulo": "Hvordan fungerer et fødereret dataområde?",
+  "chip": "Hvordan fungerer et fødereret dataområde?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 39.4,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Klinikken"
+   },
+   {
+    "t": 12.74,
+    "nombre": "Netværket"
+   },
+   {
+    "t": 17.93,
+    "nombre": "Et spørgsmål"
+   },
+   {
+    "t": 25.15,
+    "nombre": "Hvad rejser, og hvad gør ikke"
+   },
+   {
+    "t": 31.44,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p02/poster.jpg",
+  "vtt": "/presentaciones/da/p02/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p02/",
+  "transcripcion": "I et fødereret dataområde beholder hver klinik, kæde, region eller forsikring sine journaler i sit eget kliniksystem. Ved siden af systemet installeres en konnektor. Konnektoren offentliggør i et fælles katalog, hvilke data der findes, men ikke selve dataene. Når nogen har brug for en indikator, rejser spørgsmålet til hver klinik, beregnes der, og kun det aggregerede resultat kommer tilbage. Over netværket går samtykker, metadata og resultater. Aldrig en identificerbar journal. Dataene bliver i klinikken. Det, der rejser, er svaret.",
+  "fuentes": "Kilde: Dental Data · løsningen og anvendelserne (offentlig vidensbase)"
+ },
+ {
+  "id": "p03",
+  "titulo": "Forlader mine data klinikken?",
+  "chip": "Forlader mine data klinikken?",
+  "publico": [
+   "clinicas",
+   "cadenas"
+  ],
+  "duracion": 43.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Svaret"
+   },
+   {
+    "t": 8.47,
+    "nombre": "Kontrakten"
+   },
+   {
+    "t": 18.19,
+    "nombre": "Maskinen håndhæver den"
+   },
+   {
+    "t": 25.07,
+    "nombre": "Rammen"
+   },
+   {
+    "t": 38.85,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p03/poster.jpg",
+  "vtt": "/presentaciones/da/p03/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p03/",
+  "transcripcion": "Forlader dataene klinikken? Nej. Ingen identificerbar journal forlader klinikken. Hver brug af dataene er reguleret af en digital kontrakt, der fastlægger, hvem der får adgang, til hvad og hvor længe. Og kontrakten bliver ikke på papiret: maskinen håndhæver den selv. Hvis en anmodning ikke har en kontrakt, er der ingen adgang. Har den en, kommer kun et aggregeret resultat tilbage. Klinikken bestemmer altid, inden for den generelle databeskyttelsesforordning og databeskyttelsesloven, under tilsyn af Datatilsynet. Og med en klar regel i det europæiske sundhedsdataområde: sundhedsdata bruges aldrig til reklame.",
+  "fuentes": "Kilder: Dental Data (vidensbase) · GDPR · databeskyttelsesloven · forordning (EU) 2025/327, art. 54 og 71 · Generel information; ikke juridisk rådgivning"
+ },
+ {
+  "id": "p04",
+  "titulo": "Hvad får en kæde ud af det?",
+  "chip": "Hvad får en kæde ud af det?",
+  "publico": [
+   "cadenas"
+  ],
+  "duracion": 44.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Problemet"
+   },
+   {
+    "t": 22.66,
+    "nombre": "Uden migrering"
+   },
+   {
+    "t": 32.15,
+    "nombre": "Sammenlignelige indikatorer"
+   },
+   {
+    "t": 34.18,
+    "nombre": "Merværdi"
+   },
+   {
+    "t": 37.8,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p04/poster.jpg",
+  "vtt": "/presentaciones/da/p04/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p04/",
+  "transcripcion": "I Danmark har tandlægekæder grænser: kun en tandlæge må eje flertallet af en klinik, og ingen må eje mere end to uden særlig tilladelse. Alligevel tæller kæderne i Dansk Tandsundhed over hundrede klinikker, og de tilbyder at dele data til forskning. Hver klinik bruger sin egen software, og at sammenligne kvaliteten kræver at migrere journaler. Med Dental Data er det ikke nødvendigt: en konnektor ved siden af hver software beregner indikatorerne i klinikken, med samme definition som børneregistret, når det er muligt. Kæden ser sammenlignelige resultater og kan bidrage med data til debatten om kvalitet og ejerskab, uden at udlevere en eneste journal.",
+  "fuentes": "Kilder: Dental Data · anvendelser og pilot (vidensbase) · autorisationsloven (ejerskabsregler) · Dansk Tandsundhed · forordning (EU) 2025/327, art. 72 · Illustrative søjler"
+ },
+ {
+  "id": "p05",
+  "titulo": "Hvad får regionerne ud af det?",
+  "chip": "Hvad får regionerne ud af det?",
+  "publico": [
+   "aseguradoras"
+  ],
+  "duracion": 50.1,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Netværket"
+   },
+   {
+    "t": 22.67,
+    "nombre": "Sammenhængende data"
+   },
+   {
+    "t": 27.29,
+    "nombre": "En kanal"
+   },
+   {
+    "t": 34.97,
+    "nombre": "Klare grænser"
+   },
+   {
+    "t": 41.87,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p05/poster.jpg",
+  "vtt": "/presentaciones/da/p05/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p05/",
+  "transcripcion": "I Danmark giver regionerne tilskud til en del af voksnes tandpleje, og fra slutningen af totusind syvogtyve skal de administrere en årlig tandkonto for alle over enogtyve år. Reformen har kritikere: tandlæger og ældreorganisationer frygter, at et gratis eftersyn hjælper lidt, hvis behandlingen bagefter ikke er til at betale. For at vide, om den virker, kræves kliniske data om voksne, som ikke findes i dag. Dental Data leverer dem uden at centralisere journaler: indikatoren beregnes i hver klinik, og kun aggregatet kommer tilbage. Med klare grænser: EHDS forbyder at bruge disse data til reklame eller til beslutninger, der skader mennesker. Evaluér reformen med data, uden at centralisere journaler.",
+  "fuentes": "Kilder: Dental Data (vidensbase) · aftale om tandkonto (2025) · forordning (EU) 2025/327, art. 54"
+ },
+ {
+  "id": "p06",
+  "titulo": "AI på røntgenbilleder uden at flytte røntgenbillederne",
+  "chip": "Hvordan fungerer AI på tandrøntgenbilleder?",
+  "publico": [
+   "clinicas",
+   "industria"
+  ],
+  "duracion": 43.6,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Dilemmaet"
+   },
+   {
+    "t": 8.61,
+    "nombre": "Algoritmen rejser"
+   },
+   {
+    "t": 16.76,
+    "nombre": "Fortrolig beregning"
+   },
+   {
+    "t": 21.38,
+    "nombre": "Modellen"
+   },
+   {
+    "t": 30.3,
+    "nombre": "Det, der kommer"
+   },
+   {
+    "t": 37.6,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p06/poster.jpg",
+  "vtt": "/presentaciones/da/p06/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p06/",
+  "transcripcion": "At træne en AI til tandpleje kræver mange røntgenbilleder. Men at samle dem ét sted er en risiko. Dental Data vender vejen om: algoritmen rejser til hver klinik, lærer der og sender kun det lærte tilbage, aldrig billederne. Beregningerne sker med fortrolig beregning, som beskytter dataene, mens de behandles. Den første model, for approksimal caries og parodontalt knogletab, er i klinisk validering. Den er en hjælp til tandlægen: den erstatter ikke diagnosen. Og den forbereder sig på det, der kommer: i totusind enogtredive kommer medicinske billeder ind i det europæiske sundhedsdataområde. Algoritmen går til dataene.",
+  "fuentes": "Kilder: Dental Data (vidensbase) · forordning (EU) 2026/1744 · forordning (EU) 2025/327 · Model i klinisk validering; erstatter ikke diagnosen · Medicinsk udstyr: Lægemiddelstyrelsen · AI: Digitaliseringsstyrelsen"
+ },
+ {
+  "id": "p07",
+  "titulo": "Hvilke datoer fastsætter det europæiske sundhedsdataområde?",
+  "chip": "Hvilke datoer fastsætter EHDS?",
+  "publico": [
+   "todos",
+   "clinicas"
+  ],
+  "duracion": 47.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Tidslinje"
+   },
+   {
+    "t": 10.77,
+    "nombre": "Vinduet"
+   },
+   {
+    "t": 15.53,
+    "nombre": "Artikel 50"
+   },
+   {
+    "t": 23.73,
+    "nombre": "Danmark"
+   },
+   {
+    "t": 41.11,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p07/poster.jpg",
+  "vtt": "/presentaciones/da/p07/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p07/",
+  "transcripcion": "Det europæiske sundhedsdataområde er allerede i kraft og har datoer: adgangsorganer i marts totusind syvogtyve, sekundær brug i marts totusind niogtyve og medicinske billeder i totusind enogtredive. De fleste klinikker er små og fritaget som udgangspunkt: for at deltage kræves en aggregeret kanal, gennem kæderne eller tandlægeforeningen. Danmark samler den første januar totusind syvogtyve Sundhedsdatastyrelsen, sundhed.dk og MedCom i en ny styrelse og forbereder sit adgangsorgan og et nationalt metadatakatalog, men det er stadig under forberedelse. Voksnes tandlægedata er det, der mangler i kataloget. Den, der kommer forbundet, bliver den naturlige partner.",
+  "fuentes": "Kilder: forordning (EU) 2025/327 (art. 50 og 105) · Indenrigs- og Sundhedsministeriet (2026) · Sundhedsdatastyrelsen"
+ },
+ {
+  "id": "p08",
+  "titulo": "Hvilken teknologi ligger bag Dental Data?",
+  "chip": "Hvilken teknologi ligger bag Dental Data?",
+  "publico": [
+   "partners"
+  ],
+  "duracion": 46.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Reglen"
+   },
+   {
+    "t": 9.01,
+    "nombre": "Inde i knuden"
+   },
+   {
+    "t": 18.53,
+    "nombre": "Ved grænsen"
+   },
+   {
+    "t": 31.25,
+    "nombre": "Åben for alle"
+   },
+   {
+    "t": 34.91,
+    "nombre": "Erfaring"
+   },
+   {
+    "t": 41.49,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p08/poster.jpg",
+  "vtt": "/presentaciones/da/p08/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p08/",
+  "transcripcion": "Dental Data følger en enkel regel: Microsoft inde i knuden, åbne standarder ved grænserne. Inde i hver knude kører konnektoren på Microsoft Azure, med dataene i Den Europæiske Union, integreret med klinikkens system og udrullet af Azure-partnere. Ved grænserne taler området åbne europæiske standarder: Gaia-X, dataområdeprotokollen, Eclipse EDC, verificerbare legitimationer, FHIR, DICOM og HealthDCAT-AP. Så kan enhver deltager koble sig på, også uden Microsoft. Og vi starter ikke fra nul: Software in a Box har allerede designet og drevet tre rigtige dataområder.",
+  "fuentes": "Kilder: Dental Data · teknologi og virksomhed (vidensbase) · Microsoft og Azure er varemærker tilhørende Microsoft Corporation; nævnt som tekst"
+ },
+ {
+  "id": "p09",
+  "titulo": "Hvad tilbyder Dental Data industrien?",
+  "chip": "Hvad tilbyder Dental Data industrien?",
+  "publico": [
+   "industria"
+  ],
+  "duracion": 44.4,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Hvem"
+   },
+   {
+    "t": 13.1,
+    "nombre": "Real-world evidence"
+   },
+   {
+    "t": 23.74,
+    "nombre": "Til kliniksystemet"
+   },
+   {
+    "t": 30.82,
+    "nombre": "Reglerne"
+   },
+   {
+    "t": 37.32,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p09/poster.jpg",
+  "vtt": "/presentaciones/da/p09/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p09/",
+  "transcripcion": "For tandindustrien er real-world evidence meget værd. Producenter af implantater og materialer og virksomheder inden for kunstig intelligens skal vide, hvordan deres produkter klarer sig i klinikken. Dental Data tilbyder dem den evidens, ordnet og under kontrakt: spørgsmål, der besvares i klinikkerne, og aggregerede resultater, der kommer tilbage uden identificerbare data. For leverandører af kliniksystemer er konnektoren en komponent, der integreres i deres produkt og åbner nye tjenester for deres kunder. Reglerne ændrer sig ikke: en kontrakt for hver brug, kun aggregerede resultater og aldrig reklame. Ægte evidens, ordnet og under kontrakt.",
+  "fuentes": "Kilder: Dental Data (vidensbase) · forordning (EU) 2025/327, art. 54"
+ },
+ {
+  "id": "p10",
+  "titulo": "Hvordan kommer man med i Dental Data?",
+  "chip": "Hvordan kommer man med i Dental Data?",
+  "publico": [
+   "cadenas",
+   "aseguradoras",
+   "partners"
+  ],
+  "duracion": 48.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Vi søger"
+   },
+   {
+    "t": 21.41,
+    "nombre": "Finansiering"
+   },
+   {
+    "t": 27.93,
+    "nombre": "Køreplan"
+   },
+   {
+    "t": 35.47,
+    "nombre": "Vi vil også tale med"
+   },
+   {
+    "t": 38.63,
+    "nombre": "Skal vi tale sammen?"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p10/poster.jpg",
+  "vtt": "/presentaciones/da/p10/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p10/",
+  "transcripcion": "I Danmark søger vi ikke en isoleret pilot, men et institutionelt samarbejde: med ministeriet, den nye styrelse for digital sundhed, regionerne og kommunerne, for at definere indikatorer, der kan evaluere tandkontoen og udvide logikken fra SCOR til voksne. Og med de kæder, der allerede vil dele data, som første brugere. Kæderne finansierer konnektoren med deres anvendelse; evalueringen med offentlige projekter eller forskningsprojekter. I totusind syvogtyve de første forbindelser; i totusind niogtyve katalogiserede datasæt; derefter tandbillederne. Vi vil også tale med tandlægeforeningen og universiteterne. Skal vi tale sammen? Skriv til partners snabel-a softwareinabox punktum eu.",
+  "fuentes": "Kilder: Dental Data · partnerprogram Danmark og køreplan (vidensbase) · Ingen offentliggjorte priser"
+ },
+ {
+  "id": "p11",
+  "titulo": "Hvad bygger vi på Microsoft Azure?",
+  "chip": "Hvad bygger vi på Microsoft Azure?",
+  "publico": [
+   "partners",
+   "industria"
+  ],
+  "duracion": 76.6,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Indledning"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Reglen"
+   },
+   {
+    "t": 11.41,
+    "nombre": "Klinikken"
+   },
+   {
+    "t": 18.67,
+    "nombre": "Dataknuden"
+   },
+   {
+    "t": 27.81,
+    "nombre": "Sikkerhed"
+   },
+   {
+    "t": 35.03,
+    "nombre": "Grænsen"
+   },
+   {
+    "t": 48.25,
+    "nombre": "AI'en"
+   },
+   {
+    "t": 63.39,
+    "nombre": "Vejen"
+   },
+   {
+    "t": 71.57,
+    "nombre": "Afslutning"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/da/p11/poster.jpg",
+  "vtt": "/presentaciones/da/p11/subtitulos-da.vtt",
+  "interactiva": "/presentaciones/da/p11/",
+  "transcripcion": "Det her bygger vi på Microsoft Azure til Dental Data. Én regel styrer designet: Microsoft inde i knuden, åbne standarder ved grænsen. I klinikken forlader røntgenbilledet apparatet gennem en open source DICOM-gateway, Orthanc, og det pseudonymiseres ved kilden. I dataknuden gemmer Azure Health Data Services journalen i FHIR og billedet i DICOM. Microsoft Fabric og OneLake forbereder dataene til analyse. Sikkerheden kommer fra Microsoft Entra ID, Azure Key Vault, Microsoft Defender for Cloud og Microsoft Sentinel. Ved grænsen arbejder Eclipse EDC-konnektoren, udrullet på Azure Kubernetes Service. Den offentliggør kataloget i HealthDCAT-AP, forhandler ODRL-kontrakter og identificerer sig med Gaia-X-legitimationer. Den kunstige intelligens trænes med Azure Machine Learning og fødereret læring: modellen rejser til hver klinik, og dataene bliver, hvor de er. Fortrolig beregning beskytter dataene selv under behandlingen, og Microsoft Foundry skriver udkast til rapporter, som tandlægen kontrollerer. Sådan følger hvert røntgenbillede en sikker og kontrolleret vej, fra klinikken til modellen, uden at identificerbare data forlader knuden.",
+  "fuentes": "Kilder: Dental Data · teknisk dokument (v1.3) og MVP-forslag (v1.4) · Officielle Microsoft-ikoner (Azure, Microsoft Entra og Microsoft Fabric), brugt efter deres vilkår for arkitekturdiagrammer · Microsoft, Azure, Entra, Fabric og navnene på deres tjenester er varemærker tilhørende Microsoft Corporation"
+ }
+]

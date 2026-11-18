@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental Data France · Espace de données dentaires fédéré pour l’EEDS | Software in a Box</title>
+<meta name="description" content="Dental Data est un espace de données dentaires fédéré : mesurer la qualité des soins dentaires sans déplacer un seul dossier. Nœud sur Microsoft Azure en Europe ou chez un hébergeur souverain. Pour les complémentaires et les centres de santé.">
+<link rel="canonical" href="https://dentaldata.softwareinabox.eu/fr/">
+<link rel="alternate" hreflang="es-ES" href="https://dentaldata.softwareinabox.eu/es/">
+<link rel="alternate" hreflang="nl-NL" href="https://dentaldata.softwareinabox.eu/nl/">
+<link rel="alternate" hreflang="nl-BE" href="https://dentaldata.softwareinabox.eu/nl-be/">
+<link rel="alternate" hreflang="fr-BE" href="https://dentaldata.softwareinabox.eu/fr-be/">
+<link rel="alternate" hreflang="fr-FR" href="https://dentaldata.softwareinabox.eu/fr/">
+<link rel="alternate" hreflang="de-DE" href="https://dentaldata.softwareinabox.eu/de/">
+<link rel="alternate" hreflang="da-DK" href="https://dentaldata.softwareinabox.eu/da/">
+<link rel="alternate" hreflang="it-IT" href="https://dentaldata.softwareinabox.eu/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://dentaldata.softwareinabox.eu/pt/">
+<link rel="alternate" hreflang="en" href="https://dentaldata.softwareinabox.eu/en/">
+<link rel="alternate" hreflang="x-default" href="https://dentaldata.softwareinabox.eu/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Software in a Box"><meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Dental Data France · Mesurer la qualité des soins dentaires sans déplacer un seul dossier">
+<meta property="og:description" content="Les indicateurs sont calculés au cabinet, seul le résultat circule. Hébergement en Europe, avec une option souveraine.">
+<meta property="og:url" content="https://dentaldata.softwareinabox.eu/fr/">
+<meta property="og:image" content="https://dentaldata.softwareinabox.eu/assets/brand/og-dentaldata.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","@id":"https://dentaldata.softwareinabox.eu/fr/#webpage","url":"https://dentaldata.softwareinabox.eu/fr/","name":"Dental Data France · Espace de données dentaires fédéré","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","@id":"https://www.softwareinabox.eu/#website","name":"Software in a Box"},"publisher":{"@type":"Organization","@id":"https://www.softwareinabox.eu/#org","name":"Software in a Box","url":"https://www.softwareinabox.eu/"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Les données sont-elles hébergées chez Microsoft ?","acceptedAnswer":{"@type":"Answer","text":"Le nœud peut fonctionner sur Microsoft Azure dans l’Union européenne ou chez un hébergeur souverain certifié pour les données de santé. Dans les deux cas, les dossiers ne quittent pas le cabinet : seuls des résultats agrégés circulent."}},
+{"@type":"Question","name":"Qu’apporte Dental Data aux complémentaires ?","acceptedAnswer":{"@type":"Answer","text":"Des résultats cliniques mesurés dans les cabinets de leurs réseaux, sans centraliser les dossiers : de quoi évaluer le 100 % santé et la qualité des réseaux, avec l’interdiction stricte d’utiliser ces données pour la publicité ou pour fixer des primes."}},
+{"@type":"Question","name":"Quel lien avec la Plateforme des données de santé ?","acceptedAnswer":{"@type":"Answer","text":"Dental Data publie un catalogue HealthDCAT-AP compatible. La Plateforme des données de santé est candidate au rôle d’organisme d’accès ; la décision n’est pas encore prise (novembre 2026)."}}
+]}]}
+</script>
+<!--dd-videos--><link rel="stylesheet" href="/presentaciones/assets/dd-videos.css"><!--/dd-videos-->
+<style>
+:root{--navy:#0B2545;--gold:#C9A227;--gold-t:#8A6D0B;--teal:#8A6D0B;--dteal:#7A600A;--deep:#14335C;--bar:#050E1A;--cream:#F6F7FA;--ink:#1E2633;--mute:#5B6573;--line:#E3E6EC;--panel:#0A1C33}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;background:#fff}
+h1,h2,h3{font-family:'Montserrat',sans-serif;color:var(--navy);letter-spacing:-.015em}
+a{color:inherit}.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.sr{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* ===== Barra superior (estilo Ignite) ===== */
+.top{position:sticky;top:0;z-index:60;background:var(--bar);color:#fff}
+.top .wrap{display:flex;align-items:center;height:68px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;flex:none}
+.brand .logo{height:40px;width:auto;display:block}
+.brand .div{width:1.5px;height:28px;background:rgba(255,255,255,.8)}
+.brand .sub{font-weight:700;font-size:15px}
+.nav{display:flex;align-items:center;gap:6px;flex:1}
+.dd{position:relative}
+.dd>button,.nav>a{white-space:nowrap;background:none;border:0;color:#fff;font-size:15.5px;font-weight:500;padding:10px 10px;cursor:pointer;display:flex;align-items:center;gap:6px;text-decoration:none;border-radius:6px}
+.dd>button:hover,.nav>a:hover{background:rgba(255,255,255,.08)}
+.dd>button svg{width:12px;height:12px;transition:transform .2s}
+.dd>button[aria-expanded="true"] svg{transform:rotate(180deg)}
+.dd ul{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:250px;list-style:none;background:#fff;border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,.35);padding:8px}
+.dd ul.open{display:block}
+.dd li a{display:block;padding:10px 14px;border-radius:7px;color:var(--ink);text-decoration:none;font-size:15px}
+.dd li a:hover{background:#F7F2E3;color:var(--dteal)}
+.dd li a small{display:block;color:var(--mute);font-size:12.5px}
+.tbtn{display:inline-flex;align-items:center;gap:9px;height:48px;padding:0 20px;border-radius:6px;font-size:17px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.tbtn.white{background:#fff;color:#000;border:2px solid #fff}
+.tbtn.white:hover{background:#F7F2E3}
+.tbtn.outline{background:transparent;color:#fff;border:2px solid #fff}
+.tbtn.outline:hover{background:rgba(255,255,255,.1)}
+.tbtn svg{width:20px;height:20px}
+.right{display:flex;align-items:center;gap:16px;margin-left:auto;flex:none}
+.lang{position:relative}
+.lang>button{background:none;border:0;color:#9CC7FF;cursor:pointer;padding:8px;border-radius:6px;display:flex}
+.lang>button svg{width:24px;height:24px}
+.lang ul{right:0;left:auto;min-width:180px}
+.contact{color:#fff;text-decoration:none;font-weight:600;font-size:16px;display:flex;align-items:center;gap:10px}
+.contact .av{width:42px;height:42px;border-radius:50%;border:1.5px solid #fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat';font-weight:700;font-size:14px}
+.burger{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer}
+.burger svg{width:26px;height:26px}
+
+/* ===== Portada (hero con buscador) ===== */
+.hero{position:relative;overflow:hidden;color:#fff;text-align:center;
+ background:radial-gradient(700px 520px at 6% 40%,rgba(58,110,190,.38),transparent 65%),radial-gradient(900px 500px at 100% 0%,rgba(201,162,39,.10),transparent 60%),linear-gradient(170deg,#0B2545 0%,#0F2A4C 55%,#14335C 100%);
+ border-radius:22px 22px 0 0;margin-top:0}
+.hero .wrap{padding:82px 28px 78px;position:relative;z-index:1}
+.hero .pre{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{color:#fff;font-weight:600;font-size:clamp(36px,4.6vw,64px);line-height:1.08;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{max-width:760px;margin:18px auto 0;color:#D5DEE8;font-size:20px;line-height:1.5}
+.ask{max-width:1030px;margin:44px auto 0;display:flex;align-items:center;gap:16px;background:#fff;border-radius:46px;height:90px;padding:0 22px 0 30px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.ask svg.bk{width:22px;height:22px;flex:none;stroke:var(--dteal)}
+.ask input{flex:1;border:0;outline:0;font:inherit;font-size:20px;color:var(--ink);background:transparent;min-width:0}
+.ask input::placeholder{color:#6B7380}
+.ask button{flex:none;width:48px;height:48px;border-radius:50%;border:0;background:#E9EDF1;color:#5B6573;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.ask button:hover{background:var(--teal);color:#fff}
+.ask button svg{width:20px;height:20px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:1080px;margin:30px auto 0}
+.chip{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.32);color:#fff;border-radius:6px;padding:14px 24px;font-size:17px;cursor:pointer;transition:background .2s,border-color .2s}
+.chip:hover{background:rgba(255,255,255,.14);border-color:var(--gold)}
+.hero .trust{margin-top:34px;font-size:14px;color:#AFC0D2}
+.hero .trust b{color:#fff}
+
+/* ===== Bloque "Qué consigues" (estilo "What signing in unlocks") ===== */
+.dark{background:linear-gradient(180deg,#14335C 0%,#0B2545 22%,#0B2545 100%);color:#fff;padding:20px 0 90px}
+.unlock{display:grid;grid-template-columns:1fr 1fr;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,#0D2B4A,#0B2545)}
+.unlock .l{padding:70px 46px;display:flex;flex-direction:column;justify-content:center}
+.unlock .l h2{color:#fff;font-weight:600;font-size:clamp(30px,3.2vw,44px);line-height:1.12}
+.unlock .l p{color:#D5DEE8;font-size:19px;margin-top:18px;max-width:540px}
+.unlock .btns{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
+.unlock .btns .tbtn.outline{border-color:rgba(255,255,255,.35);border-width:1.5px}
+.unlock .r{padding:48px 46px;background:linear-gradient(160deg,rgba(201,162,39,.10),rgba(11,37,69,.2)),repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 44px),repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 44px)}
+.unlock .cap{font-size:13.5px;letter-spacing:.2em;text-transform:uppercase;color:#AFC0D2;font-weight:600}
+.unlock ol{list-style:none;margin-top:18px}
+.unlock li{display:grid;grid-template-columns:42px 1fr;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.unlock li .n{color:#EDBC6C;font-size:15px;padding-top:2px}
+.unlock li b{display:block;font-family:'Montserrat';font-weight:600;font-size:18px;color:#fff}
+.unlock li span{color:#C3CFDC;font-size:15.5px}
+
+/* ===== Tarjetas "Lo más consultado" (estilo "Trending sessions") ===== */
+.trend{margin-top:90px}
+.trend .th{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px;flex-wrap:wrap}
+.trend h2{color:#fff;font-weight:600;font-size:clamp(32px,3.6vw,52px)}
+.trend .th p{color:#C3CFDC;font-size:17px;margin-top:8px}
+.trend .all{color:#EDBC6C;font-weight:600;text-decoration:none;font-size:16px}
+.trend .all:hover{text-decoration:underline}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.tc{border:1px solid rgba(255,255,255,.16);border-radius:16px;background:rgba(255,255,255,.04);padding:16px 16px 22px;display:flex;flex-direction:column}
+.art{position:relative;height:238px;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.art .k{position:relative;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.art .k:before{content:'';display:block;width:24px;height:4px;border-radius:2px;background:currentColor;margin-bottom:12px}
+.art .t{position:relative;font-family:'Montserrat';font-weight:700;color:#fff;font-size:27px;margin-top:4px}
+.a1{background:linear-gradient(140deg,#0B2545,#123E66)}.a1 .k{color:#E8C55A}
+.a2{background:linear-gradient(140deg,#081A33,#14335C)}.a2 .k{color:#EDBC6C}
+.a3{background:linear-gradient(140deg,#1A1F3D,#0B2545)}.a3 .k{color:#F0A35E}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 6px 0}
+.tag{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);border-radius:6px;padding:7px 13px;font-size:14.5px;color:#E3EAF2}
+.tc h3{color:#fff;font-size:22px;line-height:1.3;font-weight:600;margin:18px 6px 0}
+.tc p{color:#C3CFDC;font-size:15.5px;margin:12px 6px 0}.tc .meta{margin-top:auto}.tc>p{margin-bottom:4px}
+.tc .go{display:block;margin:12px 6px 0;color:#EDBC6C;font-weight:700;text-decoration:none;background:none;border:0;cursor:pointer;font-size:15.5px;text-align:left;padding:0}
+.tc .go:hover{text-decoration:underline}
+.tc .meta{margin:auto 6px 0;padding-top:22px;border-top:0;display:flex;flex-direction:column;gap:10px;color:#C3CFDC;font-size:14.5px}
+.tc .meta .who{display:flex;align-items:center;gap:10px;color:#fff;font-weight:600}
+.tc .meta .who i{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px}
+.yt{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;margin-top:14px;display:none}
+.yt.on{display:block}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ===== Secciones de contenido ===== */
+section.s{padding:92px 0}
+.head{max-width:800px;margin-bottom:40px}
+.eyebrow{font-family:'Montserrat';font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-t);display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:'';width:28px;height:3px;background:var(--gold);border-radius:2px}
+.on-dark .eyebrow{color:var(--gold)}
+.head h2{font-size:clamp(28px,3.1vw,42px);line-height:1.12;margin-top:12px;font-weight:700}
+.head p{font-size:18px;color:var(--mute);margin-top:12px}
+.soft{background:var(--cream)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{border:1px solid var(--line);border-radius:16px;padding:24px;background:#fff;box-shadow:0 4px 18px rgba(11,37,69,.05)}
+.card h3{font-size:18px;margin:12px 0 6px}.card p{font-size:15.5px;color:var(--mute)}
+.num{font-family:'Montserrat';font-weight:800;color:var(--teal);font-size:13px;letter-spacing:.1em}
+.big{font-size:34px!important;margin-top:8px!important}
+.ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#F7F2E3}
+.ic svg{width:24px;height:24px;stroke:var(--dteal)}
+.pcap{font-size:14px;color:var(--mute);margin-top:16px}
+.on-dark{background:var(--navy);color:#fff}.on-dark h2{color:#fff}.on-dark .head p{color:#AAB7C8}
+.dgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:start}
+.dcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:24px}
+.dcard h3{color:#fff;font-size:19px;margin-bottom:10px}.dcard p,.dcard li{color:#C9D3E0;font-size:15.5px}.dcard ul{padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.tl{display:flex;flex-direction:column;gap:12px}.tl div{display:flex;gap:14px;align-items:baseline}.tl b{font-family:'Montserrat';color:var(--gold);min-width:104px;font-size:15px}.tl span{color:#C9D3E0;font-size:15px}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{background:#fff;border-radius:14px;padding:22px 18px;text-align:center;border:1px solid var(--line)}
+.step b{display:block;font-family:'Montserrat';color:var(--navy);margin:10px 0 6px;font-size:16px}.step span{font-size:14px;color:var(--mute)}
+.step .c{width:38px;height:38px;border-radius:50%;margin:0 auto;background:var(--navy);color:var(--gold);font-weight:800;font-family:'Montserrat';display:flex;align-items:center;justify-content:center}
+.who-grid .card h3{margin-top:0}
+.faq{max-width:900px}
+.faq details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq summary{cursor:pointer;list-style:none;font-family:'Montserrat';font-weight:600;font-size:18px;color:var(--navy);padding:16px 36px 16px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';position:absolute;right:6px;top:12px;font-size:26px;color:var(--teal);font-weight:400}
+.faq details[open] summary:after{content:'−'}
+.faq details p{color:var(--mute);font-size:16px;padding:0 36px 18px 0}
+.nl-band{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:26px;padding:24px 28px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.nl-band b{font-family:'Montserrat';color:var(--navy);font-size:18px}.nl-band p{color:var(--mute);font-size:15.5px}
+.nl-band a{color:var(--dteal);font-weight:700;text-decoration:none;white-space:nowrap}
+
+/* ===== Formulario ===== */
+.cta{background:linear-gradient(160deg,#14335C,#0B2545);color:#fff;text-align:center}
+.cta h2{color:#fff;font-size:clamp(28px,3.2vw,42px)}.cta>.wrap>p{color:#C9D3E0;font-size:18px;margin:12px auto 0;max-width:660px}
+.cform{max-width:640px;margin:30px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.cform input,.cform select,.cform textarea{width:100%;font:inherit;font-size:15px;padding:13px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.28);background:#fff;color:var(--ink)}
+.cform textarea,.cform .full{grid-column:1/-1}.cform textarea{min-height:100px;resize:vertical}
+.cform .ok{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:#DCE3EC}.cform .ok input{width:18px;height:18px;margin-top:2px;flex:none;accent-color:var(--gold)}.cform .ok a{color:var(--gold);font-weight:600}
+.cform button{grid-column:1/-1;justify-content:center;border:0;cursor:pointer;background:var(--gold);color:var(--navy);font-weight:700;height:52px;border-radius:8px;font-size:16px}
+.cform button:hover{background:#D8B43C}
+
+/* ===== Pie (estilo Microsoft) ===== */
+footer{background:#000;color:#fff;padding:60px 0 40px}
+.flogo{display:inline-block;margin:0 0 36px -14px}.flogo img{display:block;width:240px;height:auto}
+.fcols{display:grid;grid-template-columns:repeat(5,1fr);gap:28px}
+.fcols h4{font-family:'Montserrat';font-weight:600;font-size:17px;margin-bottom:16px}
+.fcols a{display:block;color:#D9DEE5;text-decoration:none;font-size:14px;margin-bottom:14px}
+.fcols a:hover{color:#fff;text-decoration:underline}
+.fbot{display:flex;flex-wrap:wrap;gap:22px;align-items:center;margin-top:34px;font-size:13.5px;color:#D9DEE5}
+.fbot a{color:#D9DEE5;text-decoration:none}.fbot a:hover{text-decoration:underline}
+.fbot .glob{display:flex;align-items:center;gap:8px}
+.fbot .copy{margin-left:auto}
+
+/* ===== Asistente flotante (estilo "Event assistant") ===== */
+.pill{position:fixed;right:34px;bottom:34px;z-index:70;display:flex;align-items:center;gap:16px;background:#071628;color:#fff;border:2px dashed rgba(255,255,255,.55);border-radius:16px;padding:14px 16px 14px 18px;cursor:pointer;box-shadow:0 14px 40px rgba(0,0,0,.35);font-size:18px;font-weight:600}
+.pill .lg{width:40px;height:40px;border-radius:10px;overflow:hidden;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.pill .lg img,.ph .lg img{width:100%;height:100%;display:block}
+.pill .pl{width:40px;height:40px;border-radius:8px;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:400}
+.pill:hover{border-color:var(--gold)}
+.pill[hidden]{display:none}
+.panel{position:fixed;right:28px;top:84px;bottom:22px;width:580px;max-width:calc(100vw - 32px);z-index:80;background:linear-gradient(180deg,#0E2340,#0A1C33);border-radius:20px;box-shadow:0 24px 70px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(255,255,255,.1);transform:translateX(110%);transition:transform .28s ease;visibility:hidden}
+.panel.open{transform:none;visibility:visible}
+.ph{display:flex;align-items:center;gap:14px;padding:18px 20px}
+.ph .lg{width:42px;height:42px;border-radius:10px;overflow:hidden;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:none}
+.ph .lg svg{width:24px;height:24px}
+.ph b{display:block;color:#fff;font-family:'Montserrat';font-size:19px;font-weight:600}
+.ph small{color:#C9D3E0;font-size:12.5px}.ph small a{color:#fff;font-weight:600}
+.ph .x{margin-left:auto;width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);background:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none}
+.ph .x svg{width:18px;height:18px}
+.msgs{flex:1;overflow-y:auto;padding:6px 20px 20px;display:flex;flex-direction:column;gap:18px}
+.bot{background:#fff;color:var(--ink);border-radius:12px;padding:18px 20px;max-width:94%;font-size:16px;line-height:1.55}
+.bot p+p{margin-top:12px}
+.bot a{color:#2F6FD1}
+.bot .ft{display:flex;justify-content:space-between;align-items:center;margin-top:14px;color:var(--mute);font-size:13.5px}
+.bot .ft span{display:flex;gap:6px}
+.bot .ft button{background:none;border:0;cursor:pointer;color:var(--mute);padding:4px;border-radius:6px}
+.bot .ft button:hover,.bot .ft button[aria-pressed="true"]{color:var(--dteal);background:#F7F2E3}
+.bot .ft svg{width:18px;height:18px}
+.bot .sug{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.bot .sug button{border:1px solid #C9D6E3;background:#F6F7FA;border-radius:999px;padding:7px 12px;font-size:13.5px;cursor:pointer;color:var(--navy)}
+.bot .sug button:hover{border-color:var(--teal)}
+.me{align-self:flex-end;background:#3A4A60;color:#fff;border-radius:12px;padding:12px 18px;font-size:16px;max-width:85%}
+.typing{display:flex;gap:5px;padding:16px 20px}
+.typing i{width:8px;height:8px;border-radius:50%;background:#9AA6B4;animation:b 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes b{0%,80%,100%{opacity:.3}40%{opacity:1}}
+.pin{margin:0 14px 14px;background:#fff;border-radius:12px;display:flex;align-items:center;gap:12px;padding:12px 14px 12px 18px;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#C9A227,#C9A227) 1}
+.pin input{flex:1;border:0;outline:0;font:inherit;font-size:17px;min-width:0}
+.pin button{background:none;border:0;cursor:pointer;color:#7C8796;padding:6px;display:flex}
+.pin button:hover{color:var(--dteal)}
+.pin svg{width:22px;height:22px}
+.pin .nw{color:#7C8796}
+
+@media(max-width:1380px) and (min-width:1101px){.top .wrap{gap:14px}.dd>button,.nav>a{padding:10px 7px;font-size:15px}.brand .div,.brand .sub{display:none}.right .contact span{display:none}}
+@media(max-width:1100px){.nav .dd,.nav>a{display:none}.burger{display:flex}.right .contact span{display:none}.cards{grid-template-columns:1fr 1fr}.fcols{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:860px){.unlock,.grid2,.dgrid{grid-template-columns:1fr}.grid4,.grid3{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.top .tbtn.white{display:none}.brand .div,.brand .sub{display:none}
+ .ask{height:72px}.ask input{font-size:16px}.chip{font-size:15px;padding:11px 16px}.unlock .l,.unlock .r{padding:40px 26px}section.s{padding:64px 0}
+ .panel{right:0;left:0;top:0;bottom:0;width:100%;max-width:100%;border-radius:0}.pill{right:14px;bottom:14px;font-size:0;gap:10px;padding:10px;border-style:solid}.pill .pl{width:32px;height:32px}.right .contact,.right .lang{display:none}.top .wrap{gap:12px}}
+@media(max-width:560px){.grid4,.grid3,.cform{grid-template-columns:1fr}.fcols{grid-template-columns:1fr 1fr}.top .tbtn.outline span{display:none}.tbtn{padding:0 12px}}
+.mnav{display:none;background:var(--bar);border-top:1px solid rgba(255,255,255,.1);padding:10px 28px 18px}
+.mnav.open{display:block}.mnav a{display:block;color:#fff;text-decoration:none;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+</style>
+</head>
+<body>
+
+<header class="top">
+ <div class="wrap">
+  <a class="brand" href="/fr/" aria-label="Dental Data France, accueil">
+   <img class="logo" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" width="220" height="40"><span class="div" aria-hidden="true"></span><span class="sub">sur Microsoft Azure</span>
+  </a>
+  <nav class="nav" aria-label="Menu principal">
+   <div class="dd"><button type="button" aria-expanded="false" aria-controls="m1">Solution <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 4 4 4 4-4"/></svg></button>
+    <ul id="m1"><li><a href="#solucion">Fonctionnement<small>Les données ne quittent jamais le cabinet</small></a></li><li><a href="#casos">Cas d’usage<small>Qualité, IA sur images, preuves</small></a></li><li><a href="#tecnologia">Technologie<small>Azure et standards ouverts européens</small></a></li></ul></div>
+   <div class="dd"><button type="button" aria-expanded="false" aria-controls="m2">Pour qui <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 4 4 4 4-4"/></svg></button>
+    <ul id="m2"><li><a href="#para-quien">Complémentaires</a></li><li><a href="#para-quien">Centres de santé et réseaux</a></li><li><a href="#para-quien">Assurance maladie et ARS</a></li><li><a href="#para-quien">Éditeurs et DSI</a></li></ul></div>
+   <div class="dd"><button type="button" aria-expanded="false" aria-controls="m3">Ressources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 4 4 4 4-4"/></svg></button>
+    <ul id="m3"><!--dd-videos--><li><a href="#videos">Présentations animées<small>10 réponses en moins d&#x27;une minute</small></a></li><li><a href="#arquitectura-azure">Architecture sur Microsoft Azure<small>vidéo d&#x27;une minute et demie</small></a></li><!--/dd-videos--><li><a href="#destacados">Étude, présentation et vidéos</a></li><li><a href="#marche">Le marché français</a></li><li><a href="#preguntas">Questions fréquentes</a></li><li><a href="https://datos.softwareinabox.eu/fr/">Nos espaces de données</a></li></ul></div>
+  </nav>
+  <a class="tbtn white" href="#contacto">Nous contacter</a>
+  <button class="tbtn outline" type="button" data-open-assistant><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/></svg><span>Demandez</span></button>
+  <div class="right">
+   <div class="lang dd"><button type="button" aria-expanded="false" aria-controls="m4" aria-label="Pays et langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg></button>
+    <ul id="m4"><li><a href="/es/" hreflang="es-ES" lang="es">Español · España</a></li><li><a href="/nl/" hreflang="nl-NL" lang="nl">Nederlands · Nederland</a></li><li><a href="/nl-be/" hreflang="nl-BE" lang="nl">Nederlands · België</a></li><li><a href="/fr-be/" hreflang="fr-BE" lang="fr">Français · Belgique</a></li><li><a href="/fr/" hreflang="fr-FR" lang="fr" aria-current="page">Français · France</a></li><li><a href="/de/" hreflang="de-DE" lang="de">Deutsch · Deutschland</a></li><li><a href="/da/" hreflang="da-DK" lang="da">Dansk · Danmark</a></li><li><a href="/it/" hreflang="it-IT" lang="it">Italiano · Italia</a></li><li><a href="/pt/" hreflang="pt-PT" lang="pt">Português · Portugal</a></li><li><a href="/en/" hreflang="en" lang="en">English · Europe</a></li></ul></div>
+   <a class="contact" href="#contacto"><span>Contact</span><i class="av" aria-hidden="true">DD</i></a>
+   <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+ </div>
+ <nav class="mnav" id="mnav" aria-label="Menu mobile"><a href="#solucion">Solution</a><a href="#para-quien">Pour qui</a><a href="#destacados">Ressources</a><a href="#preguntas">Questions fréquentes</a><a href="#contacto">Nous contacter</a><a href="/">Autres pays et langues</a></nav>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+ <div class="wrap">
+  <div class="pre">France · Espace européen des données de santé</div>
+  <h1 id="h1">Mesurer la qualité des soins dentaires <em>sans déplacer un seul dossier</em></h1>
+  <p class="lead">Dental Data relie cabinets, centres de santé et complémentaires dans un espace de données fédéré : les indicateurs sont calculés au cabinet, seul le résultat circule. Hébergement en Europe, avec une option souveraine.</p>
+  <form class="ask" role="search" data-ask>
+   <svg class="bk" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/></svg>
+   <label class="sr" for="q">Posez votre question sur Dental Data</label>
+   <input id="q" type="text" autocomplete="off" placeholder="Posez votre question sur Dental Data…">
+   <button type="submit" aria-label="Envoyer la question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  </form>
+  <div class="chips">
+   <button class="chip" type="button" data-q="hebergement">Où sont hébergées les données ?</button>
+   <button class="chip" type="button" data-q="complementaires">Qu’apporte-t-il aux complémentaires ?</button>
+   <button class="chip" type="button" data-q="centres">Et pour les centres de santé ?</button>
+   <button class="chip" type="button" data-q="ehds">Quel calendrier pour l’EEDS ?</button>
+   <button class="chip" type="button" data-q="collaborer">Comment collaborer ?</button>
+  </div>
+ <!--dd-videos--> <div class="dd-hero-v"><button type="button" class="dd-vbtn" data-pres="p01" aria-label="Voir l&#x27;animation : Pourquoi les données dentaires manquent-elles à l&#x27;Espace européen des données de santé ?"><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span><span>Pourquoi les données dentaires manquent-elles à l&#x27;EHDS ? <small data-dur>52 s</small></span></button><a href="#videos">Voir les 10 présentations animées →</a></div><!--/dd-videos-->
+ <p class="trust">Expérience dans <b>3 espaces de données</b> financés par des fonds publics · Nœud sur <b>Microsoft Azure</b> en Europe ou chez un <b>hébergeur souverain</b></p>
+ </div>
+</section>
+
+<div class="dark">
+ <div class="wrap">
+  <div class="unlock">
+   <div class="l">
+    <h2>Mesurer ce que l’on obtient, pas seulement ce que l’on rembourse</h2>
+    <p>Nous recherchons une complémentaire ou un réseau de centres de santé dentaires pour un premier projet d’indicateurs de qualité, et un hébergeur souverain partenaire.</p>
+    <div class="btns"><a class="tbtn white" href="#contacto">Nous contacter</a><button class="tbtn outline" type="button" data-open-assistant>Interroger l’assistant</button></div>
+   </div>
+   <div class="r">
+    <div class="cap">Ce que vous obtenez</div>
+    <ol>
+     <li><span class="n">01</span><div><b>Des résultats cliniques, pas seulement des remboursements</b><span>Mesurés au cabinet, sans centraliser les dossiers.</span></div></li>
+     <li><span class="n">02</span><div><b>Une qualité démontrable devant l’ARS</b><span>Des indicateurs comparables entre centres d’un même réseau.</span></div></li>
+     <li><span class="n">03</span><div><b>Le choix de l’hébergement</b><span>Azure dans l’UE ou hébergeur souverain : les règles ne changent pas.</span></div></li>
+     <li><span class="n">04</span><div><b>Prêt pour l’EEDS avant 2029</b><span>Un catalogue HealthDCAT-AP compatible avec la Plateforme des données de santé.</span></div></li>
+    </ol>
+   </div>
+  </div>
+
+  <div class="trend" id="destacados">
+   <div class="th"><div><h2>Les plus consultés</h2><p>L’étude, la présentation et les vidéos les plus téléchargées par les cabinets et les partenaires.</p></div><a class="all" href="#preguntas">Voir les questions fréquentes →</a></div>
+   <div class="cards">
+    <article class="tc">
+     <div class="art a1"><svg viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke-width="4"><path d="M-10 40H230a60 60 0 0 1 60 60v150" stroke="#C9A227" opacity=".85"/><path d="M-10 58H222a46 46 0 0 1 46 46v150" stroke="#E8C55A" opacity=".55"/><path d="M-10 76H214a32 32 0 0 1 32 32v150" stroke="#EDBC6C" opacity=".5"/><path d="M420 190H330a50 50 0 0 0-50 50" stroke="#C9A227" opacity=".9"/><path d="M420 206H338a34 34 0 0 0-34 34" stroke="#EDBC6C" opacity=".6"/></svg><span class="k">Étude</span><span class="t">Dental Data 2026</span></div>
+     <div class="tags"><span class="tag">PDF · 45 p.</span><span class="tag">Anglais</span><span class="tag">Aussi en néerlandais</span><span class="tag">Dirigeants et équipes techniques</span></div>
+     <h3>Espaces de données de santé dentaire en Europe</h3>
+     <p>Étude comparative de l’Espagne, la Belgique, les Pays-Bas, le Danemark et l’Allemagne : système de santé, marché, infrastructure numérique et adaptation à l’EEDS.</p>
+     <a class="go" href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener">Télécharger en anglais →</a><a class="go" href="/docs/tandheelkundige-gezondheidsdataruimtes-europa-ehds.pdf" target="_blank" rel="noopener" lang="nl">Télécharger en néerlandais →</a>
+     <div class="meta"><span>Novembre 2026</span><span class="who"><i>SB</i>Software in a Box</span></div>
+    </article>
+    <article class="tc">
+     <div class="art a2"><svg viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke-width="4"><path d="M-10 30H120a40 40 0 0 1 40 40v200" stroke="#EDBC6C" opacity=".85"/><path d="M-10 48H108a30 30 0 0 1 30 30v200" stroke="#C9A227" opacity=".7"/><path d="M420 40H300a40 40 0 0 0-40 40v40a40 40 0 0 0 40 40h120" stroke="#EDBC6C" opacity=".55"/><path d="M420 60H310a24 24 0 0 0-24 24v32a24 24 0 0 0 24 24h110" stroke="#C9A227" opacity=".6"/><path d="M200 250V160" stroke="#EDBC6C" opacity=".5"/></svg><span class="k">Vidéo</span><span class="t">Dental Data 2026</span></div>
+     <div class="tags"><span class="tag">11 min 35 s</span><span class="tag">Anglais</span><span class="tag">Présentateurs générés par IA</span></div>
+     <h3>Dental Data : l’opportunité invisible de l’Europe</h3>
+     <p>Sarah (Madrid) et James (Amsterdam) parcourent l’étude : le problème, cinq pays, la proposition et la feuille de route.</p>
+     <button class="go" type="button" data-yt="wGCGvV_ksMY" aria-controls="yt1">Voir la vidéo ici →</button>
+     <div class="yt" id="yt1"></div>
+     <div class="meta"><span>Novembre 2026 · Chargée depuis YouTube uniquement au clic</span><span class="who"><i>SB</i>Software in a Box</span></div>
+    </article>
+    <article class="tc">
+     <div class="art a3"><svg viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke-width="4"><path d="M-10 120H90a40 40 0 0 0 40-40V-10" stroke="#F0A35E" opacity=".85"/><path d="M-10 138H96a52 52 0 0 0 52-52V-10" stroke="#E8C55A" opacity=".55"/><path d="M420 120H300a60 60 0 0 0-60 60v70" stroke="#F0A35E" opacity=".8"/><path d="M420 140H308a46 46 0 0 0-46 46v64" stroke="#EDBC6C" opacity=".45"/><path d="M420 160H316a32 32 0 0 0-32 32v58" stroke="#C9A227" opacity=".6"/></svg><span class="k">Présentation</span><span class="t">Dental Data 2026</span></div>
+     <div class="tags"><span class="tag">PDF · 32 diapositives</span><span class="tag">Anglais</span><span class="tag">Espagne et Pays-Bas</span></div>
+     <h3>Un espace de données dentaires, deux marchés</h3>
+     <p>La proposition de Dental Data pour l’Espagne et les Pays-Bas dans l’Espace européen des données de santé, avec la feuille de route jusqu’en 2029.</p>
+     <a class="go" href="/docs/dental-data-es-nl-presentation-en.pdf" target="_blank" rel="noopener">Télécharger la présentation →</a>
+     <div class="meta"><span>Novembre 2026</span><span class="who"><i>SB</i>Software in a Box</span></div>
+    </article>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!--dd-videos--><section class="s dd-vt" id="videos"><div class="wrap">
+ <div class="head"><div class="eyebrow">Présentations animées</div><h2>Dental Data en 10 réponses de moins d&#x27;une minute</h2><p>Avec voix off et sous-titres. Choisissez votre profil pour suivre le parcours qui vous intéresse, ou cliquez sur une carte.</p></div>
+ <div id="dd-videoteca"></div>
+ <noscript><p><a href="/presentaciones/fr/p01/">Voir les présentations</a></p></noscript>
+</div></section>
+<!--/dd-videos-->
+<!--dd-videos--><section class="dd-arq" id="arquitectura-azure" aria-labelledby="dd-arq-t">
+ <div class="wrap dd-arq-cab"><div class="eyebrow">Architecture · Microsoft Azure</div><h2 id="dd-arq-t">Que construisons-nous sur Microsoft Azure ?</h2><p>Les composants Microsoft Azure et le connecteur Eclipse EDC qui forment l&#x27;espace de données de santé dentaire, expliqués en une minute et demie. L&#x27;animation démarre seule avec la voix off ; vous pouvez couper le son avec le bouton dans le coin.</p></div>
+ <div class="dd-arq-v"><iframe src="/presentaciones/fr/p11/?modo=web&amp;sonido=1" title="Présentation animée avec voix off: Que construisons-nous sur Microsoft Azure ?" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+ <div class="wrap dd-arq-pie"><button type="button" class="dd-vbtn" data-pres="p11" aria-label="Voir l&#x27;animation : Que construisons-nous sur Microsoft Azure ?"><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span><span>Regarder avec la voix off <small data-dur>94 s</small></span></button><a href="/presentaciones/fr/p11/?modo=video" target="_blank" rel="noopener">Plein écran ↗</a><small>Icônes officielles Microsoft. Microsoft, Azure, Entra et Fabric sont des marques de Microsoft Corporation.</small></div>
+</section><!--/dd-videos-->
+<section class="s soft" id="marche"><div class="wrap">
+ <div class="head"><div class="eyebrow">Le marché français</div><h2>Le 100 % santé a changé qui paie. Il reste à mesurer ce que l’on obtient.</h2><p>Les soins dentaires sont financés par l’Assurance maladie et surtout par les complémentaires. Le Système national des données de santé sait ce qui est remboursé, mais pas ce qui a été trouvé en bouche ni le résultat du traitement : ces données restent dans chaque cabinet et chaque centre, dans leur propre logiciel.</p></div>
+ <div class="grid4">
+  <div class="card"><div class="num">CHIRURGIENS-DENTISTES</div><h3 class="big">47 636</h3><p>chirurgiens-dentistes au 1er janvier 2025 (DREES).</p></div>
+  <div class="card"><div class="num">DÉPENSE EN CABINET</div><h3 class="big">13,2 Md€</h3><p>de soins dentaires en cabinet libéral en 2024 (DREES, comptes de la santé).</p></div>
+  <div class="card"><div class="num">100 % SANTÉ</div><h3 class="big">0 €</h3><p>de reste à charge sur les prothèses du panier 100 % santé, depuis la réforme de 2019-2020.</p></div>
+  <div class="card"><div class="num">CENTRES DE SANTÉ</div><h3 class="big">2 055</h3><p>centres de santé (dentaire, ophtalmologie, orthoptie) soumis au nouvel agrément.</p></div>
+ </div>
+ <div class="grid2" style="margin-top:22px">
+  <div class="card"><h3>Après Dentexia et Proxidentaire</h3><p>La loi du 19 mai 2023 rétablit l’agrément préalable de l’agence régionale de santé pour les centres dentaires, avec des amendes pouvant atteindre 500 000 €. Démontrer sa qualité devient une condition pour rester ouvert.</p></div>
+  <div class="card"><h3>Les complémentaires, premier financeur</h3><p>Le reste à charge des ménages en dentaire est passé de 18,8 % en 2019 à 15,8 % en 2021. Mais 2,5 millions de personnes sans complémentaire restent en dehors du 100 % santé, et personne ne mesure les résultats cliniques des soins payés.</p></div>
+ </div>
+ <p class="pcap">Source : Software in a Box, <a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener" lang="en">Dental health data spaces in Europe · Étude comparative</a> (novembre 2026), chapitre France, et les sources qui y sont citées (DREES, ministère de la Santé, Plateforme des données de santé). Données à novembre 2026.</p>
+</div></section>
+
+<section class="s on-dark" id="solucion"><div class="wrap">
+ <div class="head"><div class="eyebrow">La solution</div><h2>Un espace de données fédéré : les données ne quittent jamais le cabinet</h2><p>Cabinets, chaînes et assureurs conservent leurs dossiers. Seuls les consentements, les métadonnées et les résultats agrégés circulent. L’espace devient l’interlocuteur naturel des organismes responsables de l’accès aux données de santé.</p><!--dd-videos--><div class="dd-vrow"><button type="button" class="dd-vbtn" data-pres="p02" aria-label="Voir l&#x27;animation : Comment fonctionne un espace de données fédéré ?"><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span><span>Comment fonctionne un espace de données fédéré ? <small data-dur>42 s</small></span></button><button type="button" class="dd-vbtn" data-pres="p03" aria-label="Voir l&#x27;animation : Mes données sortent-elles du cabinet ?"><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span><span>Mes données sortent-elles du cabinet ? <small data-dur>46 s</small></span></button></div><!--/dd-videos--></div>
+ <div class="dgrid" id="casos">
+  <div class="dcard"><h3>Des cas d’usage à revenus récurrents</h3><ul>
+   <li><b style="color:#fff">Indicateurs de qualité</b> entre cabinets d’un même groupe : le premier cas d’usage, applicable dès aujourd’hui.</li>
+   <li><b style="color:#fff">IA sur les images dentaires</b>, sans déplacer une seule radiographie. Notre modèle de caries interproximales et de perte osseuse parodontale est en phase de validation clinique.<!--dd-videos--> <button type="button" class="dd-vbtn" data-pres="p06" aria-label="Voir l&#x27;animation : L&#x27;IA sur les radiographies sans déplacer les radiographies"><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span><span>Comment fonctionne l&#x27;IA sur les radiographies dentaires ? <small data-dur>44 s</small></span></button><!--/dd-videos--></li>
+   <li><b style="color:#fff">Des preuves pour l’industrie</b> sur les implants et les matériaux.</li>
+   <li><b style="color:#fff">Jamais pour la publicité</b> : l’EEDS l’interdit.</li></ul></div>
+  <div class="dcard"><h3>La fenêtre d’opportunité</h3><div class="tl">
+   <div><b>26/03/2027</b><span>Chaque État membre aura désigné ses organismes responsables de l’accès aux données de santé</span></div>
+   <div><b>26/03/2029</b><span>Entrée en application de la plupart des règles d’utilisation secondaire</span></div>
+   <div><b>2031</b><span>Ajout des images médicales : radiographies, orthopantomogrammes et CBCT</span></div></div>
+   <p style="margin-top:16px">Celui qui disposera en 2029 d’un espace de données dentaires opérationnel sera le partenaire naturel des régulateurs.</p><!--dd-videos--><button type="button" class="dd-vbtn" data-pres="p07" aria-label="Voir l&#x27;animation : Quelles dates fixe l&#x27;Espace européen des données de santé ?"><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span><span>Quelles dates fixe l&#x27;EHDS ? <small data-dur>48 s</small></span></button><!--/dd-videos--></div>
+ </div>
+</div></section>
+
+<section class="s" id="tecnologia"><div class="wrap">
+ <div class="head"><div class="eyebrow">Technologie et expérience</div><h2>Des standards ouverts européens, déjà éprouvés dans trois espaces de données réels</h2><p>Un connecteur sur Microsoft Azure, intégré au logiciel de gestion du cabinet. Format européen de dossier médical et métadonnées communes, adaptés à chaque marché.</p><!--dd-videos--><div class="dd-vrow"><button type="button" class="dd-vbtn" data-pres="p08" aria-label="Voir l&#x27;animation : Quelle technologie se cache derrière Dental Data ?"><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span><span>Quelle technologie derrière Dental Data ? <small data-dur>47 s</small></span></button></div><!--/dd-videos--></div>
+ <div class="grid4">
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Souveraineté</h3><p>Le cabinet décide qui accède, dans quel but et pour combien de temps.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="m16 16 3-8 3 8c-.9.6-1.9 1-3 1s-2.1-.4-3-1zM2 16l3-8 3 8c-.9.6-1.9 1-3 1s-2.1-.4-3-1zM7 21h10M12 3v18"/></svg></div><h3>Contrats ODRL</h3><p>Des conditions d’utilisation appliquées par la machine. Pas de contrat, pas d’accès.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Gaia-X et IDSA</h3><p>Identifiants vérifiables, Dataspace Protocol, Eclipse EDC, FHIR, DICOM et HealthDCAT-AP.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div><h3>L’IA sans déplacer les données</h3><p>Apprentissage fédéré et informatique confidentielle : l’algorithme va vers la donnée.</p></div>
+ </div>
+ <div class="grid3" style="margin-top:22px">
+  <div class="card"><div class="num">SANTÉ</div><h3>Global Data Care</h3><p>Espace de données de santé fédéré sur Gaia-X et Pontus-X.</p></div>
+  <div class="card"><div class="num">ACHATS</div><h3>PROCUREDATA</h3><p>Espace de données fédéré pour les marchés publics et les achats.</p></div>
+  <div class="card"><div class="num">ÉCONOMIE CIRCULAIRE</div><h3>EcoDataNet</h3><p>Espace de données pour les déchets et l’économie circulaire.</p></div>
+ </div>
+ <p class="pcap">Trois démonstrateurs conçus et réalisés entre 2024 et 2026 grâce au financement de la SEDIA, le secrétariat d’État espagnol à la Numérisation et à l’Intelligence artificielle. <a href="https://datos.softwareinabox.eu/fr/">En savoir plus sur nos espaces de données</a></p>
+</div></section>
+
+<section class="s soft" id="para-quien"><div class="wrap">
+ <div class="head"><div class="eyebrow">Pour qui</div><h2>Ce qui manque au DMP, à Mon espace santé et au SNDS : la donnée clinique dentaire</h2><p>Dental Data ne remplace ni le DMP, ni Mon espace santé, ni le SNDS. Il apporte la donnée clinique dentaire, avec un catalogue HealthDCAT-AP compatible avec la Plateforme des données de santé, et un nœud hébergé sur Azure en Europe ou chez un hébergeur souverain.</p></div>
+ <div class="grid4 who-grid">
+  <div class="card"><div class="num">COMPLÉMENTAIRES</div><h3>Évaluer le 100 % santé</h3><p>Des résultats cliniques mesurés dans les cabinets des réseaux de soins, sans centraliser les dossiers.</p></div>
+  <div class="card"><div class="num">CENTRES DE SANTÉ</div><h3>Démontrer la qualité</h3><p>Des indicateurs comparables entre centres, présentables à l’ARS et à l’Assurance maladie.</p></div>
+  <div class="card"><div class="num">ASSURANCE MALADIE ET ARS</div><h3>Mesurer la prévention</h3><p>M’T dents, génération sans carie et usage du cone beam : des indicateurs calculés au cabinet.</p></div>
+  <div class="card"><div class="num">ÉDITEURS ET DSI</div><h3>Un connecteur de plus</h3><p>À côté des logiciels référencés Ségur, avec SNOMED CT et la CCAM.</p></div>
+ </div>
+ <div class="head" style="margin-top:56px;margin-bottom:22px"><h2 style="font-size:28px">Feuille de route</h2></div>
+ <div class="flow">
+  <div class="step"><div class="c">1</div><b>2027 · Premiers nœuds</b><span>Un premier projet d’indicateurs avec une complémentaire ou un réseau de centres, hébergé au choix sur Azure ou chez un hébergeur souverain.</span></div>
+  <div class="step"><div class="c">2</div><b>2027–2028 · Consolidation</b><span>Consolidation des projets et participation aux consultations ; migration de la Plateforme des données de santé vers un hébergement souverain.</span></div>
+  <div class="step"><div class="c">3</div><b>Mars 2029 · Catalogué</b><span>Des jeux de données catalogués et prêts pour l’EEDS. La Plateforme est candidate au rôle d’organisme d’accès ; sa désignation dépend d’une décision politique.</span></div>
+ </div>
+ <div class="nl-band"><div><b>Aussi en Belgique et ailleurs en Europe</b><p>Un seul produit pour toute l’Europe, adapté à la langue, aux données et au droit de chaque pays.</p></div><a href="/fr-be/" lang="fr" hreflang="fr-BE">Belgique →</a>&nbsp;&nbsp;<a href="/en/" lang="en" hreflang="en">Europe →</a></div>
+</div></section>
+
+<section class="s" id="preguntas"><div class="wrap">
+ <div class="head"><div class="eyebrow">Questions fréquentes</div><h2>Ce que l’on nous demande le plus</h2><p>Vous ne trouvez pas votre réponse ? Interrogez l’assistant ou écrivez-nous.</p></div>
+ <div class="faq" id="faqlist"></div>
+</div></section>
+
+<section class="s cta" id="contacto"><div class="wrap">
+ <h2>Premiers partenaires en France</h2>
+ <p>Complémentaires, réseaux de centres de santé dentaires, hébergeurs souverains et éditeurs : dites-nous brièvement qui vous êtes et nous vous proposerons un échange, en ligne ou à Bruxelles.</p>
+ <form class="cform" action="https://formsubmit.co/partners@softwareinabox.eu" method="POST">
+  <input type="hidden" name="_subject" value="Dental Data · France">
+  <input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://www.softwareinabox.eu/gracias.html">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <label class="sr" for="f-n">Nom</label><input id="f-n" name="Nom" required placeholder="Prénom et nom" autocomplete="name">
+  <label class="sr" for="f-o">Organisation</label><input id="f-o" name="Organisation" placeholder="Organisation" autocomplete="organization">
+  <label class="sr" for="f-p">Profil</label><select id="f-p" class="full" name="Profil"><option value="">Profil de votre organisation</option><option>Complémentaire (mutuelle, institution de prévoyance, assureur)</option><option>Réseau de centres de santé dentaires</option><option>Cabinet dentaire</option><option>Institution ou administration</option><option>Hébergeur de données de santé</option><option>Éditeur de logiciel ou partenaire Microsoft</option><option>Autre</option></select>
+  <label class="sr" for="f-e">E-mail</label><input id="f-e" class="full" type="email" name="E-mail" required placeholder="Adresse e-mail professionnelle" autocomplete="email">
+  <label class="sr" for="f-m">Message</label><textarea id="f-m" name="Message" placeholder="De quoi souhaitez-vous nous parler ?"></textarea>
+  <label class="ok full"><input type="checkbox" name="Consentement" value="Accepte la politique de confidentialité" required><span>J’ai lu et j’accepte la <a href="https://www.softwareinabox.eu/fr/privacidad.html" target="_blank" rel="noopener">politique de confidentialité</a>. Nous n’utiliserons vos données que pour vous répondre.</span></label>
+  <button type="submit">Envoyer</button>
+ </form>
+ <p style="font-size:15px;margin-top:18px">Ou écrivez à <a href="mailto:partners@softwareinabox.eu" style="color:#fff;font-weight:600">partners@softwareinabox.eu</a> · <a href="tel:+34601398868" style="color:#fff;font-weight:600">+34 601 398 868</a> · Bruxelles et Madrid</p>
+</div></section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <a class="flogo" href="/fr/" aria-label="Dental Data France, accueil"><img src="/assets/brand/dentaldata-logo-vertical-white.svg" alt="Dental Data · Federated Dental Data Space" width="240" height="172"></a>
+  <div class="fcols">
+   <div><h4>Dental Data</h4><a href="#solucion">Fonctionnement</a><a href="#casos">Cas d’usage</a><a href="#tecnologia">Technologie</a><a href="#para-quien">Feuille de route</a></div>
+   <div><h4>Pays</h4><a href="/fr-be/" lang="fr">Belgique</a><a href="/de/" lang="de">Deutschland</a><a href="/it/" lang="it">Italia</a><a href="/">Tous les pays</a></div>
+   <div><h4>Ressources</h4><a href="/docs/dental-health-data-spaces-europe-ehds.pdf">Étude comparative (EN)</a><a href="/docs/dental-data-es-nl-presentation-en.pdf">Présentation (EN)</a><a href="#destacados">Vidéos</a><a href="#preguntas">Questions fréquentes</a></div>
+   <div><h4>Software in a Box</h4><a href="https://www.softwareinabox.eu/fr/">Accueil</a><a href="https://datos.softwareinabox.eu/fr/">Espaces de données</a><a href="https://cognitiv.softwareinabox.eu/fr/">COGNITIV</a><a href="https://argos.softwareinabox.eu/fr/">ARGOS</a></div>
+   <div><h4>Contact</h4><a href="#contacto">Nous contacter</a><a href="mailto:partners@softwareinabox.eu">partners@softwareinabox.eu</a><a href="tel:+34601398868">+34 601 398 868</a><a href="/en/" lang="en">Dental Data Europe</a></div>
+  </div>
+  <div class="fbot">
+   <span class="glob"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg>Français (France)</span>
+   <a href="https://www.softwareinabox.eu/fr/aviso-legal.html">Mentions légales</a><a href="https://www.softwareinabox.eu/fr/privacidad.html">Confidentialité</a><a href="https://www.softwareinabox.eu/fr/cookies.html">Cookies</a>
+   <span>Microsoft et Azure sont des marques de Microsoft Corporation.</span>
+   <span class="copy">© 2026 Software in a Box · Madrid · Bruxelles</span>
+  </div>
+ </div>
+</footer>
+
+<!-- Asistente flotante -->
+<button class="pill" type="button" id="pill" data-open-assistant aria-label="Ouvrir l’assistant Dental Data">
+ <span class="lg"><img src="/assets/brand/favicon.svg" alt="" width="40" height="40"></span>
+ Assistant Dental Data <span class="pl" aria-hidden="true">+</span>
+</button>
+<aside class="panel" id="panel" role="dialog" aria-modal="false" aria-labelledby="ph-t" aria-hidden="true">
+ <div class="ph">
+  <span class="lg"><img src="/assets/brand/favicon.svg" alt="" width="40" height="40"></span>
+  <div><b id="ph-t">Assistant Dental Data</b><small>Avec IA, fondé sur notre documentation · <a href="https://www.softwareinabox.eu/fr/privacidad.html" target="_blank" rel="noopener">Confidentialité</a></small></div>
+  <button class="x" type="button" id="close" aria-label="Fermer l’assistant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+ </div>
+ <div class="msgs" id="msgs" aria-live="polite"></div>
+ <form class="pin" id="pin">
+  <button type="button" class="nw" id="reset" aria-label="Nouvelle conversation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></button>
+  <label class="sr" for="pq">Écrivez votre question</label>
+  <input id="pq" type="text" autocomplete="off" placeholder="Écrivez votre question…">
+  <button type="submit" aria-label="Envoyer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 20 4l-4 16-4-6z"/><path d="m12 14 8-10"/></svg></button>
+ </form>
+</aside>
+
+<script>
+(function(){
+// ---------- Base de conocimiento (preguntas frecuentes + asistente) ----------
+var KB=[
+{id:'datos',q:'Mes données quittent-elles le cabinet ?',k:['quitter','quittent','déplac','central','stock','où sont','serveur','copie','partag'],
+ a:['Non. Les dossiers restent dans le logiciel de gestion de chaque cabinet, centre de santé ou réseau. Dental Data est un espace de données <b>fédéré</b> : seuls les consentements, les métadonnées et les résultats agrégés circulent.','Chaque accès est régi par un contrat ODRL que la machine fait respecter : le cabinet décide qui accède, dans quel but et pour combien de temps. Pas de contrat, pas d’accès.'],s:['hebergement','seguridad']},
+{id:'hebergement',q:'Où sont hébergées les données ?',k:['héberg','hds','secnumcloud','souverain','microsoft','azure','cloud','cnil'],
+ a:['Deux options pour le nœud : <b>Microsoft Azure dans l’Union européenne</b>, ou un <b>hébergeur souverain</b> certifié pour les données de santé et qualifié de cloud de confiance.','Le choix de l’hébergement ne change rien aux règles : les données ne quittent pas le cabinet, et le connecteur Eclipse EDC, le catalogue HealthDCAT-AP et les contrats ODRL restent les mêmes. Dental Data n’héberge pas de dossiers centralisés.'],s:['datos','tecnologia']},
+{id:'complementaires',q:'Qu’apporte Dental Data aux complémentaires ?',k:['complémentaire','mutuelle','prévoyance','assureur','100 %','100%','panier','réseau de soins','prime'],
+ a:['Les complémentaires sont le premier financeur des soins dentaires et paient les prothèses du panier <b>100 % santé</b>, sans savoir si ces traitements durent ni quel résultat ils obtiennent.','Dental Data leur donne des résultats cliniques mesurés dans les cabinets de leurs réseaux, sans centraliser les dossiers. L’EEDS interdit d’utiliser ces données pour la publicité ou pour des décisions qui nuisent aux personnes, y compris pour fixer des primes.'],s:['centres','datos']},
+{id:'centres',q:'Et pour les centres de santé dentaires ?',k:['centre','agrément','ars','dentexia','proxidentaire','réseau','chaîne','qualité'],
+ a:['Depuis la loi du 19 mai 2023, les centres dentaires doivent obtenir un <b>agrément préalable de l’ARS</b>, qui peut le refuser ou sanctionner. Démontrer sa qualité est devenu une condition pour rester ouvert.','Avec Dental Data, un connecteur à côté de chaque logiciel calcule les indicateurs dans chaque centre, avec la même définition et des actes codés en CCAM. La direction voit des résultats comparables de tout le réseau, sans transmettre un seul dossier.'],s:['complementaires','collaborer']},
+{id:'ehds',q:'Quel calendrier pour l’EEDS en France ?',k:['eeds','ehds','2027','2029','2031','plateforme','health data hub','pds','organisme','article 50','micro'],
+ a:['Dates clés : d’ici le <b>26 mars 2027</b>, chaque État désigne ses organismes d’accès ; à partir du <b>26 mars 2029</b>, la plupart des règles d’utilisation secondaire s’appliquent ; en <b>2031</b>, les images médicales entrent dans l’espace.','En France, la <b>Plateforme des données de santé</b> est candidate au rôle d’organisme d’accès, mais la décision n’est pas prise. Elle migre vers un hébergement souverain entre fin 2026 et 2027. La plupart des cabinets sont des microentreprises, exemptées par défaut : il faut un canal agrégé.'],s:['hebergement','collaborer']},
+{id:'ia',q:'Comment fonctionne l’IA sur les radiographies ?',k:[' ia ','intelligence artificielle','radio','image','carie','parodont','algorithme','modèle','cone beam'],
+ a:['Grâce à l’apprentissage fédéré et au calcul confidentiel : <b>l’algorithme va vers la donnée</b>, et non l’inverse. Aucune radiographie ne quitte le cabinet.','Notre modèle de caries interproximales et de perte osseuse parodontale est en phase de validation clinique. Il aide le professionnel sans remplacer son diagnostic.'],s:['datos','tecnologia']},
+{id:'tecnologia',q:'Quelle technologie utilisez-vous ?',k:['technolog','connecteur','standard','gaia','idsa','eclipse','edc','fhir','dicom','snomed','ccam','ségur','logiciel'],
+ a:['Un connecteur intégré au logiciel de gestion du cabinet, compatible avec les logiciels référencés Ségur. Terminologie <b>SNOMED CT</b> (édition nationale de l’ANS) et actes codés en <b>CCAM</b>.','Aux frontières de l’espace, des standards ouverts européens : Gaia-X, IDSA et le Dataspace Protocol, Eclipse EDC, FHIR, DICOM et HealthDCAT-AP. Chacun peut se connecter, même sans Microsoft.'],s:['hebergement','collaborer']},
+{id:'seguridad',q:'Est-ce conforme au RGPD ?',k:['rgpd','gdpr','informatique et libertés','cnil','vie privée','sécurité','consentement','juridique'],
+ a:['Les données identifiables ne sont jamais centralisées : seuls des résultats agrégés circulent, sous contrat, dans le cadre du RGPD et de la loi Informatique et Libertés.','Chaque projet est documenté avec le délégué à la protection des données de l’organisation et une analyse d’impact. L’hébergement du nœud se fait chez un hébergeur certifié pour les données de santé.'],s:['datos','hebergement']},
+{id:'publicidad',q:'Les données serviront-elles à la publicité ?',k:['publicit','marketing','vendre','vente','commercial'],
+ a:['Jamais. L’EEDS interdit expressément l’utilisation des données de santé à des fins publicitaires, et le code de déontologie encadre déjà la communication des chirurgiens-dentistes.','Les usages prévus sont la qualité des soins, l’IA sur les images et des preuves pour l’industrie sur les implants et les matériaux.'],s:['datos','complementaires']},
+{id:'collaborer',q:'Comment pouvons-nous collaborer ?',k:['collabor','partenaire','particip','rejoindre','projet','pilote','contact','hébergeur'],
+ a:['En France, nous recherchons une <b>complémentaire</b> ou un <b>réseau de centres de santé dentaires</b> pour un premier projet d’indicateurs de qualité, ainsi qu’un <b>hébergeur souverain</b> partenaire pour l’option certifiée.','Le cas d’usage finance le connecteur. Laissez vos coordonnées dans le formulaire et nous vous proposerons un échange.'],s:['complementaires','centres']},
+{id:'experiencia',q:'Qui êtes-vous et quelle est votre expérience ?',k:['qui','entreprise','expérience','software in a box','référence','projets','global data care'],
+ a:['Software in a Box, avec des bureaux à Madrid et à Bruxelles. Entre 2024 et 2026, nous avons conçu et réalisé trois démonstrateurs d’espaces de données financés par le secrétariat d’État espagnol à la Numérisation et à l’IA : <b>Global Data Care</b> (santé), <b>PROCUREDATA</b> (achats) et <b>EcoDataNet</b> (économie circulaire).','Plus d’informations sur <a href="https://datos.softwareinabox.eu/fr/" target="_blank" rel="noopener">nos espaces de données</a>.'],s:['tecnologia','collaborer']},
+{id:'documentos',q:'Où puis-je lire l’étude ?',k:['étude','document','pdf','télécharg','rapport','présentation','vidéo','lire'],
+ a:['L’étude comparative européenne est disponible en <a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener" lang="en">anglais</a>, avec la présentation et la vidéo complète. Les présentations animées de cette page résument chaque question en moins d’une minute.'],s:['datos','ehds']}
+];
+var byId={};KB.forEach(function(e){byId[e.id]=e});
+
+// FAQ visible en la página
+var fl=document.getElementById('faqlist');
+KB.forEach(function(e){var d=document.createElement('details');d.innerHTML='<summary>'+e.q+'</summary><p>'+e.a.join(' ')+'</p>';fl.appendChild(d)});
+
+// ---------- Menús desplegables ----------
+document.querySelectorAll('.dd>button').forEach(function(b){
+ b.addEventListener('click',function(ev){ev.stopPropagation();var ul=document.getElementById(b.getAttribute('aria-controls'));var o=!ul.classList.contains('open');closeMenus();if(o){ul.classList.add('open');b.setAttribute('aria-expanded','true')}});
+});
+function closeMenus(){document.querySelectorAll('.dd ul.open').forEach(function(u){u.classList.remove('open')});document.querySelectorAll('.dd>button').forEach(function(b){b.setAttribute('aria-expanded','false')})}
+document.addEventListener('click',closeMenus);
+document.querySelectorAll('.dd ul a').forEach(function(a){a.addEventListener('click',closeMenus)});
+var bur=document.querySelector('.burger'),mn=document.getElementById('mnav');
+bur.addEventListener('click',function(){var o=mn.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');bur.setAttribute('aria-expanded','false')})});
+
+// ---------- Vídeo de YouTube bajo demanda ----------
+document.querySelectorAll('[data-yt]').forEach(function(b){b.addEventListener('click',function(){var box=document.getElementById(b.getAttribute('aria-controls'));if(!box.firstChild){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-yt')+'?autoplay=1&rel=0';f.title='Dental Data : l’opportunité invisible de l’Europe';f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen');f.setAttribute('allowfullscreen','');box.appendChild(f)}box.classList.add('on');b.style.display='none'})});
+
+// ---------- Asistente ----------
+var panel=document.getElementById('panel'),pill=document.getElementById('pill'),msgs=document.getElementById('msgs'),pq=document.getElementById('pq'),started=false;
+function norm(t){return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[¿?¡!.,;:]/g,' ')}
+function openP(){panel.classList.add('open');panel.setAttribute('aria-hidden','false');pill.hidden=true;if(!started){welcome();started=true}setTimeout(function(){pq.focus()},300)}
+function closeP(){panel.classList.remove('open');panel.setAttribute('aria-hidden','true');pill.hidden=false}
+document.querySelectorAll('[data-open-assistant]').forEach(function(b){b.addEventListener('click',openP)});
+document.getElementById('close').addEventListener('click',closeP);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenus();if(panel.classList.contains('open'))closeP()}});
+document.getElementById('reset').addEventListener('click',function(){msgs.innerHTML='';hist=[];welcome()});
+function welcome(){bot(['Bonjour ! Je suis l’assistant de Dental Data. Je vous explique comment fonctionne l’espace de données dentaires fédéré, où sont hébergées les données et ce que l’Espace européen des données de santé signifie pour les soins dentaires en France.','Choisissez une question ou écrivez la vôtre. Merci de ne pas saisir de données personnelles ni de données de patients : nous conservons les questions et les réponses de manière anonyme pour améliorer l’assistant.'],['hebergement','complementaires','centres','ehds','collaborer'],true)}
+function me(t){var d=document.createElement('div');d.className='me';d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
+function bot(paras,sug,noFb,rid,kid){
+ var d=document.createElement('div');d.className='bot';
+ d.innerHTML=paras.map(function(p){return '<p>'+p+'</p>'}).join('');
+ if(sug&&sug.length){var s=document.createElement('div');s.className='sug';sug.forEach(function(id){var b=document.createElement('button');b.type='button';b.textContent=byId[id].q;b.addEventListener('click',function(){ask(byId[id].q,id)});s.appendChild(b)});d.appendChild(s)}
+ if(!noFb){var f=document.createElement('div');f.className='ft';f.innerHTML='<em style="font-style:normal">Réponse préparée</em><span><button type="button" aria-label="Réponse utile" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 10v11H3V10zM7 10l4-8a3 3 0 0 1 3 3v4h6a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.6 21H7"/></svg></button><button type="button" aria-label="Réponse peu utile" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 14V3h4v11zM17 14l-4 8a3 3 0 0 1-3-3v-4H4a2 2 0 0 1-2-2.3l1.4-8A2 2 0 0 1 5.4 3H17"/></svg></button></span>';
+  votos(f,rid);d.appendChild(f)}
+ d.querySelectorAll('a[data-close]').forEach(function(a){a.addEventListener('click',function(){if(window.innerWidth<860)closeP()})});
+ if(kid&&window.DDV)DDV.chat(d,kid);
+ msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
+function match(t){var n=' '+norm(t)+' ',best=null,score=0;KB.forEach(function(e){var sc=0;e.k.forEach(function(k){if(n.indexOf(k)>-1)sc+=k.length>4?2:1});if(sc>score){score=sc;best=e}});return score?best:null}
+// ---------- IA (Cloudflare Worker dentaldata-chat) ----------
+var API='https://dentaldata-chat.emilio-mulet-b52.workers.dev/chat',hist=[],busy=false;
+// ---------- Registro anónimo de preguntas y respuestas (sin IP ni datos personales) ----------
+var REG=API.replace(/\/chat$/,''),SID=(function(){try{var v=sessionStorage.getItem('dd_sid');if(!v){v=nid();sessionStorage.setItem('dd_sid',v)}return v}catch(_){return nid()}})();
+function nid(){try{return crypto.randomUUID()}catch(_){return 'r'+Date.now().toString(36)+Math.random().toString(36).slice(2,10)}}
+function enviar(ruta,o){try{fetch(REG+ruta,{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(o)}).catch(function(){})}catch(_){}}
+function reg(rid,tipo,pregunta,respuesta,clave){enviar('/registro',{rid:rid,sid:SID,idioma:'fr',pais:'fr',pagina:location.pathname,tipo:tipo,pregunta:pregunta,respuesta:respuesta,clave:clave||null})}
+function txt(a){return (Array.isArray(a)?a.join('\n\n'):String(a)).replace(/<[^>]+>/g,'')}
+function votos(f,rid){f.querySelectorAll('button').forEach(function(b,i){b.addEventListener('click',function(){f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');if(rid)enviar('/valoracion',{rid:rid,voto:i===0?1:-1})})})}
+var FUENTES={'01-que-es-dental-data.md':'Ce qu’est Dental Data','03-solucion-casos-uso.md':'Solution et cas d’usage','05-tecnologia.md':'Technologie','08-empresa-recursos.md':'Software in a Box','10-estudio-comparativo-en.md':'Étude comparative (PDF)','11-ehds-europa.md':'L’EEDS en Europe','pais/fr.md':'Dental Data en France'};
+function esc(t){return t.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function md(t){var h=esc(t.trim());
+ h=h.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+|#[a-z-]+)\)/g,'<a href="$2">$1</a>')
+  .replace(/(^|[\s(])(https?:\/\/[^\s<)]+)/g,'$1<a href="$2" target="_blank" rel="noopener">$2</a>').replace(/(^|[\s(])(partners@softwareinabox\.eu)/g,'$1<a href="mailto:$2">$2</a>');
+ return h.split(/\n{2,}/).map(function(b){if(/^\s*[-•] /m.test(b))return '<ul style="padding-left:18px;margin:6px 0">'+b.split('\n').map(function(l){return l.replace(/^\s*[-•]\s*/,'')}).filter(Boolean).map(function(l){return '<li>'+l+'</li>'}).join('')+'</ul>';return '<p>'+b.replace(/\n/g,'<br>')+'</p>'}).join('')}
+function limpia(t){return t.replace(/\[(FUENTE|SEGUIR)[^\]]*\]?/gi,'').trimEnd()}
+function fb(rid){var f=document.createElement('div');f.className='ft';f.innerHTML='<em style="font-style:normal">Réponse générée par IA</em><span><button type="button" aria-label="Réponse utile" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 10v11H3V10zM7 10l4-8a3 3 0 0 1 3 3v4h6a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.6 21H7"/></svg></button><button type="button" aria-label="Réponse peu utile" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 14V3h4v11zM17 14l-4 8a3 3 0 0 1-3-3v-4H4a2 2 0 0 1-2-2.3l1.4-8A2 2 0 0 1 5.4 3H17"/></svg></button></span>';votos(f,rid);return f}
+function local(text,t){t.remove();var e=match(text),rid=nid();if(e){bot(e.a,e.s,false,rid,e.id);reg(rid,'preparada_por_palabras',text,txt(e.a),e.id)}else{var m=['Je n’ai pas encore de réponse préparée à ce sujet. Vous pouvez <a href="#contacto" data-close>nous écrire</a> et une personne de l’équipe vous répondra.'];bot(m,['datos','hebergement','ehds','collaborer'],false,rid);reg(rid,'sin_respuesta',text,txt(m))}}
+async function ia(text,t){
+ hist.push({role:'user',content:text});busy=true;
+ var d=null,cuerpo=null,bruto='',rid=nid();
+ try{
+  var r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:hist.slice(-12),idioma:'fr',pais:'fr',rid:rid,sid:SID,pagina:location.pathname})});
+  var ct=r.headers.get('Content-Type')||'';
+  if(!r.ok||ct.indexOf('event-stream')<0){var j={};try{j=await r.json()}catch(_){}hist.pop();busy=false;if(r.status===429&&j.error){t.remove();bot([esc(j.error)],['piloto']);return}local(text,t);return}
+  var rd=r.body.getReader(),dec=new TextDecoder(),buf='',err=null;
+  while(true){var x=await rd.read();if(x.done)break;buf+=dec.decode(x.value,{stream:true});var p;
+   while((p=buf.indexOf('\n\n'))>-1){var ln=buf.slice(0,p).trim();buf=buf.slice(p+2);if(ln.indexOf('data:')!==0)continue;var o;try{o=JSON.parse(ln.slice(5))}catch(_){continue}
+    if(o.t){if(!d){t.remove();d=document.createElement('div');d.className='bot';cuerpo=document.createElement('div');d.appendChild(cuerpo);msgs.appendChild(d)}bruto+=o.t;cuerpo.innerHTML=md(limpia(bruto));msgs.scrollTop=msgs.scrollHeight}
+    else if(o.error){err=o.error}}}
+  if(!d){hist.pop();busy=false;local(text,t);return}
+  hist.push({role:'assistant',content:limpia(bruto)});
+  var mf=[],rx=/\[FUENTE:\s*([^\]]+)\]/gi,mm;while((mm=rx.exec(bruto)))mf.push(mm[1]);var ms=bruto.match(/\[SEGUIR:\s*([^\]]+)\]/i);
+  if(mf.length){var fs=mf.join(',').split(/[,|]/).map(function(x){return x.trim()}).filter(function(x,i,a){return FUENTES[x]&&a.indexOf(x)===i});if(fs.length){var fu=document.createElement('p');fu.style.cssText='font-size:13px;color:#5B6573;margin-top:10px';fu.innerHTML='Source : '+fs.map(function(f){return f.indexOf('10-')===0?'<a href="/docs/dental-health-data-spaces-europe-ehds.pdf" target="_blank" rel="noopener">'+FUENTES[f]+'</a>':FUENTES[f]}).join(' · ');d.appendChild(fu)}}
+  if(ms){var sg=document.createElement('div');sg.className='sug';ms[1].split('|').map(function(x){return x.trim()}).filter(Boolean).slice(0,2).forEach(function(q){var b=document.createElement('button');b.type='button';b.textContent=q;b.addEventListener('click',function(){ask(q)});sg.appendChild(b)});d.appendChild(sg)}
+  if(err){var e2=document.createElement('p');e2.style.cssText='font-size:13px;color:#B3261E';e2.textContent=err;d.appendChild(e2)}
+  if(window.DDV){var mk=match(text);if(mk)DDV.chat(d,mk.id)}
+  d.appendChild(fb(rid));msgs.scrollTop=msgs.scrollHeight;
+ }catch(e){hist.pop();if(!d)local(text,t)}
+ busy=false;
+}
+function ask(text,id){
+ if(!text.trim()||busy)return;if(!panel.classList.contains('open'))openP();me(text);
+ var t=document.createElement('div');t.className='bot typing';t.innerHTML='<i></i><i></i><i></i>';msgs.appendChild(t);msgs.scrollTop=msgs.scrollHeight;
+ if(id){setTimeout(function(){t.remove();var e=byId[id],rid=nid();bot(e.a,e.s,false,rid,id);reg(rid,'preparada',text,txt(e.a),id);hist.push({role:'user',content:text},{role:'assistant',content:e.a.join(' ').replace(/<[^>]+>/g,'')})},500);return}
+ ia(text,t);
+}
+document.querySelector('[data-ask]').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('q');ask(i.value);i.value=''});
+document.getElementById('pin').addEventListener('submit',function(e){e.preventDefault();ask(pq.value);pq.value=''});
+document.querySelectorAll('.chip[data-q]').forEach(function(c){c.addEventListener('click',function(){ask(c.textContent,c.getAttribute('data-q'))})});
+})();
+</script>
+<!--dd-videos--><script type="application/ld+json" id="dd-videos-ld">
+{"@context": "https://schema.org", "@type": "ItemList", "name": "Présentations animées de Dental Data", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "VideoObject", "name": "Pourquoi les données dentaires manquent-elles à l'Espace européen des données de santé ?", "description": "Les données dentaires sont les grandes absentes de l'Espace européen des données de santé. En France, les soins dentaires sont financés par l'Assurance maladie et surtout par les complémentaires, et la réforme cent pour cent santé a supprimé le reste à charge sur une partie des prothèses. Le pays co", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p01/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p01/", "uploadDate": "2026-11-18", "duration": "PT52S", "transcript": "Les données dentaires sont les grandes absentes de l'Espace européen des données de santé. En France, les soins dentaires sont financés par l'Assurance maladie et surtout par les complémentaires, et la réforme cent pour cent santé a supprimé le reste à charge sur une partie des prothèses. Le pays compte près de quarante-huit mille chirurgiens-dentistes, la dépense en cabinet libéral dépasse treize milliards d'euros, et plus de deux mille centres de santé dentaires sont soumis à agrément. Le Système national des données de santé sait ce qui est remboursé, mais pas ce qui a été trouvé en bouche ni le résultat du traitement : ces données restent dans chaque cabinet et chaque centre, dans leur propre logiciel. Les données existent et ont des propriétaires qui ont des raisons de les partager sous contrôle. Ce qui manque, c'est quelqu'un pour les relier. C'est Dental Data."}}, {"@type": "ListItem", "position": 2, "item": {"@type": "VideoObject", "name": "Comment fonctionne un espace de données fédéré ?", "description": "Dans un espace de données fédéré, chaque cabinet ou centre de santé, chaque réseau ou complémentaire garde ses dossiers dans son propre logiciel de gestion. À côté de ce logiciel, on installe un connecteur. Le connecteur publie dans un catalogue commun quelles données existent, mais pas les données ", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p02/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p02/", "uploadDate": "2026-11-18", "duration": "PT42S", "transcript": "Dans un espace de données fédéré, chaque cabinet ou centre de santé, chaque réseau ou complémentaire garde ses dossiers dans son propre logiciel de gestion. À côté de ce logiciel, on installe un connecteur. Le connecteur publie dans un catalogue commun quelles données existent, mais pas les données elles-mêmes. Quand quelqu'un a besoin d'un indicateur, la question voyage jusqu'à chaque cabinet, y est calculée, et seul le résultat agrégé revient. Sur le réseau circulent des consentements, des métadonnées et des résultats. Jamais un dossier identifiable. La donnée reste au cabinet. Ce qui voyage, c'est la réponse."}}, {"@type": "ListItem", "position": 3, "item": {"@type": "VideoObject", "name": "Mes données sortent-elles du cabinet ?", "description": "Les données sortent-elles du cabinet ? Non. Aucun dossier identifiable ne quitte le cabinet. Chaque usage des données est régi par un contrat numérique qui définit qui accède, pour quoi et combien de temps. Et ce contrat ne reste pas sur le papier : la machine le fait respecter elle-même. Si une dem", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p03/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p03/", "uploadDate": "2026-11-18", "duration": "PT46S", "transcript": "Les données sortent-elles du cabinet ? Non. Aucun dossier identifiable ne quitte le cabinet. Chaque usage des données est régi par un contrat numérique qui définit qui accède, pour quoi et combien de temps. Et ce contrat ne reste pas sur le papier : la machine le fait respecter elle-même. Si une demande n'a pas de contrat, il n'y a pas d'accès. Si elle en a un, seul un résultat agrégé revient. Le cabinet décide toujours, dans le cadre du règlement général sur la protection des données et de la loi Informatique et Libertés, avec un hébergeur certifié pour les données de santé. Et avec une règle claire de l'Espace européen des données de santé : les données de santé ne sont jamais utilisées pour la publicité."}}, {"@type": "ListItem", "position": 4, "item": {"@type": "VideoObject", "name": "Que gagne un réseau de centres ?", "description": "Un réseau de centres de santé dentaires grandit en ouvrant ou en rachetant des centres, chacun avec son logiciel. Après les scandales Dentexia et Proxidentaire, la loi de deux mille vingt-trois impose aux centres dentaires un agrément préalable de l'agence régionale de santé, qui peut le refuser ou ", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p04/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p04/", "uploadDate": "2026-11-18", "duration": "PT51S", "transcript": "Un réseau de centres de santé dentaires grandit en ouvrant ou en rachetant des centres, chacun avec son logiciel. Après les scandales Dentexia et Proxidentaire, la loi de deux mille vingt-trois impose aux centres dentaires un agrément préalable de l'agence régionale de santé, qui peut le refuser ou sanctionner. Démontrer sa qualité est devenu une condition pour rester ouvert. Avec Dental Data, inutile de migrer les dossiers : un connecteur à côté de chaque logiciel calcule les indicateurs dans chaque centre, avec la même définition et des actes codés dans la classification commune. La direction voit des résultats comparables de tout le réseau, et peut les montrer à l'agence régionale et à l'Assurance maladie sans transmettre un seul dossier médical. Une qualité démontrable, sans migrer un seul dossier."}}, {"@type": "ListItem", "position": 5, "item": {"@type": "VideoObject", "name": "Que gagne une complémentaire ?", "description": "En France, les complémentaires sont le premier financeur des soins dentaires, et beaucoup travaillent avec des réseaux de cabinets partenaires. Elles paient des prothèses du panier cent pour cent santé, mais ne savent pas si ces traitements durent ni quel résultat ils obtiennent. Dental Data leur do", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p05/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p05/", "uploadDate": "2026-11-18", "duration": "PT48S", "transcript": "En France, les complémentaires sont le premier financeur des soins dentaires, et beaucoup travaillent avec des réseaux de cabinets partenaires. Elles paient des prothèses du panier cent pour cent santé, mais ne savent pas si ces traitements durent ni quel résultat ils obtiennent. Dental Data leur donne des données cohérentes de tout leur réseau sans centraliser les dossiers : le calcul se fait dans chaque cabinet et seul le résultat agrégé revient. Elles peuvent ainsi évaluer la réforme avec des données cliniques et améliorer la qualité de leurs réseaux. Avec des limites claires : l'Espace européen des données de santé interdit d'utiliser ces données pour la publicité ou pour des décisions qui nuisent aux personnes, y compris en assurance et sur les primes. Des résultats mesurés, sans centraliser les dossiers."}}, {"@type": "ListItem", "position": 6, "item": {"@type": "VideoObject", "name": "L'IA sur les radiographies sans déplacer les radiographies", "description": "Entraîner une IA dentaire exige beaucoup de radiographies. Mais les réunir en un seul lieu est un risque. Dental Data inverse le chemin : l'algorithme voyage jusqu'à chaque cabinet, y apprend et ne renvoie que ce qu'il a appris, jamais les images. Les calculs se font avec le calcul confidentiel, qui", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p06/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p06/", "uploadDate": "2026-11-18", "duration": "PT44S", "transcript": "Entraîner une IA dentaire exige beaucoup de radiographies. Mais les réunir en un seul lieu est un risque. Dental Data inverse le chemin : l'algorithme voyage jusqu'à chaque cabinet, y apprend et ne renvoie que ce qu'il a appris, jamais les images. Les calculs se font avec le calcul confidentiel, qui protège les données pendant leur traitement. Le premier modèle, pour les caries interproximales et la perte osseuse parodontale, est en validation clinique. C'est une aide pour le professionnel : il ne remplace pas son diagnostic. Et il se prépare à ce qui vient : en deux mille trente et un, les images médicales entrent dans l'Espace européen des données de santé. L'algorithme va vers la donnée."}}, {"@type": "ListItem", "position": 7, "item": {"@type": "VideoObject", "name": "Quelles dates fixe l'Espace européen des données de santé ?", "description": "L'Espace européen des données de santé est déjà en vigueur et a des dates. En mars deux mille vingt-sept, chaque pays aura désigné ses organismes d'accès ; en mars deux mille vingt-neuf, l'essentiel de l'usage secondaire s'applique, et en deux mille trente et un arrivent les images médicales, comme ", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p07/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p07/", "uploadDate": "2026-11-18", "duration": "PT48S", "transcript": "L'Espace européen des données de santé est déjà en vigueur et a des dates. En mars deux mille vingt-sept, chaque pays aura désigné ses organismes d'accès ; en mars deux mille vingt-neuf, l'essentiel de l'usage secondaire s'applique, et en deux mille trente et un arrivent les images médicales, comme les radiographies dentaires. La plupart des cabinets sont des microentreprises et sont exemptés par défaut : pour participer, il faut un canal agrégé, à travers les réseaux de centres, les complémentaires ou les syndicats. En France, la Plateforme des données de santé est candidate pour être l'organisme d'accès, mais la décision n'est pas prise, et elle migre vers un hébergement souverain entre fin deux mille vingt-six et deux mille vingt-sept. Qui arrivera connecté sera l'interlocuteur naturel."}}, {"@type": "ListItem", "position": 8, "item": {"@type": "VideoObject", "name": "Quelle technologie se cache derrière Dental Data ?", "description": "Dental Data suit une règle simple : Microsoft dans le nœud, des standards ouverts aux frontières. Dans chaque nœud, le connecteur fonctionne sur Microsoft Azure dans l'Union européenne ou chez un hébergeur souverain certifié, intégré au logiciel de gestion du cabinet et déployé par des partenaires. ", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p08/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p08/", "uploadDate": "2026-11-18", "duration": "PT47S", "transcript": "Dental Data suit une règle simple : Microsoft dans le nœud, des standards ouverts aux frontières. Dans chaque nœud, le connecteur fonctionne sur Microsoft Azure dans l'Union européenne ou chez un hébergeur souverain certifié, intégré au logiciel de gestion du cabinet et déployé par des partenaires. Aux frontières, l'espace parle des standards européens ouverts : Gaia-X, le protocole des espaces de données, Eclipse EDC, des attestations vérifiables, FHIR, DICOM et HealthDCAT-AP. Ainsi, tout participant peut se connecter, même sans Microsoft. Et nous ne partons pas de zéro : Software in a Box a déjà conçu et exploité trois espaces de données réels."}}, {"@type": "ListItem", "position": 9, "item": {"@type": "VideoObject", "name": "Qu'offre Dental Data à l'industrie ?", "description": "Pour l'industrie dentaire, les données de vie réelle valent beaucoup. Les fabricants d'implants et de matériaux, et les entreprises d'intelligence artificielle, doivent savoir comment leurs produits se comportent au cabinet. Dental Data leur offre ces preuves, ordonnées et sous contrat : des questio", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p09/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p09/", "uploadDate": "2026-11-18", "duration": "PT43S", "transcript": "Pour l'industrie dentaire, les données de vie réelle valent beaucoup. Les fabricants d'implants et de matériaux, et les entreprises d'intelligence artificielle, doivent savoir comment leurs produits se comportent au cabinet. Dental Data leur offre ces preuves, ordonnées et sous contrat : des questions qui trouvent leur réponse dans les cabinets et des résultats agrégés qui reviennent sans données identifiables. Pour les éditeurs de logiciels de gestion, le connecteur est une brique qui s'intègre à leur produit et ouvre de nouveaux services à leurs clients. Les règles ne changent pas : un contrat pour chaque usage, seulement des résultats agrégés et jamais de publicité. Des preuves réelles, ordonnées et sous contrat."}}, {"@type": "ListItem", "position": 10, "item": {"@type": "VideoObject", "name": "Comment rejoindre Dental Data ?", "description": "En France, nous cherchons une complémentaire ou un réseau de centres de santé dentaires pour un premier projet d'indicateurs de qualité. Le cas d'usage finance le connecteur, et le client choisit où le nœud est hébergé : sur Azure, dans l'Union européenne, ou chez un hébergeur souverain certifié pou", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p10/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p10/", "uploadDate": "2026-11-18", "duration": "PT48S", "transcript": "En France, nous cherchons une complémentaire ou un réseau de centres de santé dentaires pour un premier projet d'indicateurs de qualité. Le cas d'usage finance le connecteur, et le client choisit où le nœud est hébergé : sur Azure, dans l'Union européenne, ou chez un hébergeur souverain certifié pour les données de santé. En deux mille vingt-sept, les premiers nœuds ; puis nous consolidons les projets ; en deux mille vingt-neuf, des jeux de données catalogués et prêts pour l'espace européen ; ensuite, l'imagerie dentaire. Nous voulons aussi parler avec les éditeurs de logiciels référencés Ségur, avec les prestataires d'hébergement certifiés, avec l'Ordre et avec les syndicats de chirurgiens-dentistes. On en parle ? Écrivez à partners arobase softwareinabox point eu."}}, {"@type": "ListItem", "position": 11, "item": {"@type": "VideoObject", "name": "Que construisons-nous sur Microsoft Azure ?", "description": "Voici ce que nous construisons sur Microsoft Azure pour Dental Data. Une règle guide la conception : le nœud chez l'hébergeur de votre choix, des standards ouverts à la frontière. Au cabinet, la radiographie quitte l'appareil par une passerelle DICOM open source, Orthanc, et elle est pseudonymisée à", "inLanguage": "fr", "thumbnailUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p11/poster.jpg", "embedUrl": "https://dentaldata.softwareinabox.eu/presentaciones/fr/p11/", "uploadDate": "2026-11-18", "duration": "PT94S", "transcript": "Voici ce que nous construisons sur Microsoft Azure pour Dental Data. Une règle guide la conception : le nœud chez l'hébergeur de votre choix, des standards ouverts à la frontière. Au cabinet, la radiographie quitte l'appareil par une passerelle DICOM open source, Orthanc, et elle est pseudonymisée à la source. Dans le nœud de données, Azure Health Data Services conserve le dossier en FHIR et l'image en DICOM. Microsoft Fabric et OneLake préparent les données pour l'analyse. Si le client l'exige, le même nœud peut être installé chez un hébergeur européen certifié pour les données de santé et qualifié de cloud de confiance. La sécurité repose sur Microsoft Entra ID, Azure Key Vault, Microsoft Defender for Cloud et Microsoft Sentinel. À la frontière travaille le connecteur Eclipse EDC, déployé sur Azure Kubernetes Service. Il publie le catalogue en HealthDCAT-AP, négocie des contrats ODRL et s'identifie avec des attestations Gaia-X. La frontière ne change pas : le même connecteur, le même catalogue et les mêmes contrats. L'intelligence artificielle est entraînée avec Azure Machine Learning et l'apprentissage fédéré : le modèle voyage jusqu'à chaque cabinet et les données restent où elles sont. Le calcul confidentiel protège les données même pendant le traitement, et Microsoft Foundry rédige des brouillons de comptes rendus que le dentiste vérifie. Ainsi, chaque radiographie suit un chemin sûr et contrôlé, du cabinet au modèle, sans qu'aucune donnée identifiable ne quitte le nœud."}}]}
+</script>
+<script>window.DD_VIDEOS={"base": "/presentaciones/fr/", "t": {"iframe": "Présentation animée avec voix off", "ayuda": "Présentation animée avec voix off. Utilisez la barre du bas pour mettre en pause ou passer d'une scène à l'autre.", "transcripcion": "Transcription et sources", "cerrar": "Fermer", "siguiente": "Suivante :", "hablamos": "On en parle ?", "completa": "Ouvrir en plein écran ↗", "descargar": "Télécharger la vidéo (MP4)", "todas": "Voir toutes les présentations", "de": "sur", "vistas": "vues", "recorrido": "Parcours pour", "presentaciones": "présentations, environ", "minutos": "minutes", "continuar": "Continuer", "empezar": "Commencer", "completo": "✓ Parcours terminé", "filtrar": "Filtrer par profil", "vista": "✓ Vue", "paratodos": "Pour tous", "ver": "Voir l'animation", "azure": "Voir ce que nous construisons sur Microsoft Azure"}, "pub": [["todos", "Toutes"], ["cadenas", "Réseaux et groupes"], ["aseguradoras", "Complémentaires et mutualités"], ["clinicas", "Cabinets"], ["industria", "Industrie et IA"], ["partners", "Partenaires et DSI"]], "cta": {"p04": "On parle d'un projet pour votre réseau ?", "p05": "On parle d'un projet pour votre organisme ?", "p08": "Vous êtes partenaire Azure ? Parlons-en", "p09": "On parle de preuves pour votre produit ?", "p10": "Rejoindre Dental Data", "p11": "On construit votre nœud ? Parlons-en"}};</script>
+<script src="/presentaciones/assets/dd-videos.js" defer></script><!--/dd-videos-->
+</body>
+</html>

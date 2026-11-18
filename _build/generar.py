@@ -94,11 +94,100 @@ def cadenas_js(html):
     return re.sub(r"\b[\w.-]+\.(?:eu|com|es|nl)\b", " ", texto)  # ni los dominios
 
 
+def reemplazar_saltando_videos(html, viejo, nuevo):
+    """Reemplaza viejo (escrito sobre la plantilla sin bloques de vídeo) aunque en html haya bloques
+    <!--dd-videos--> intercalados; los bloques que caen dentro del tramo reemplazado se pierden."""
+    mapa, limpio, i = [], [], 0
+    for mm in re.finditer(r"<!--dd-videos-->.*?<!--/dd-videos-->\n?", html, flags=re.S):
+        for k in range(i, mm.start()):
+            mapa.append(k)
+        limpio.append(html[i:mm.start()]); i = mm.end()
+    for k in range(i, len(html)):
+        mapa.append(k)
+    limpio.append(html[i:]); limpio = "".join(limpio)
+    out, pos, hecho = [], 0, False
+    for mm in re.finditer(re.escape(viejo), limpio):
+        a, b = mapa[mm.start()], mapa[mm.end() - 1] + 1
+        out.append(html[pos:a]); out.append(nuevo); pos = b; hecho = True
+    if not hecho:
+        return None
+    out.append(html[pos:])
+    return "".join(out)
+
+
+def videos_mercado(html, pmk, vl):
+    """Traduce los bloques <!--dd-videos--> de la plantilla a la versión de presentaciones del mercado pmk."""
+    import json, html as H
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from videos_i18n import L
+    t = L[vl]
+    vids = {v["id"]: v for v in json.load(open(os.path.join(RAIZ, "presentaciones", pmk, "videos.json"), encoding="utf-8"))}
+    base = f"/presentaciones/{pmk}/"
+    play = '<span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span>'
+    e = lambda x: H.escape(x, quote=True)
+    def dur(pid): return f'{round(float(vids[pid]["duracion"]))} s'
+    def boton(pid, etiqueta=None):
+        v = vids[pid]
+        return (f'<button type="button" class="dd-vbtn" data-pres="{pid}" aria-label="{e(t["ver"] + " " + v["titulo"])}">{play}'
+                f'<span>{e(etiqueta or v["chip"])} <small data-dur>{dur(pid)}</small></span></button>')
+    def botones(txt):
+        return re.sub(r'<button type="button" class="dd-vbtn" data-pres="(p\d\d)".*?</button>', lambda x: boton(x.group(1)), txt, flags=re.S)
+    def bloque(mm):
+        b = mm.group(1)
+        if "dd-videos.css" in b:
+            out = b
+        elif b.startswith('<li><a href="#videos">'):
+            out = (f'<li><a href="#videos">{e(t["menu"][0])}<small>{e(t["menu"][1])}</small></a></li>'
+                   f'<li><a href="#arquitectura-azure">{e(t["menu"][2])}<small>{e(t["menu"][3])}</small></a></li>')
+        elif b.strip() == '<a href="#videos">Presentaciones animadas</a>':
+            out = f'<a href="#videos">{e(t["menu"][0])}</a>'
+        elif "dd-hero-v" in b:
+            out = f' <div class="dd-hero-v">{boton("p01")}<a href="#videos">{e(t["hero"])}</a></div>'
+        elif 'id="videos"' in b:
+            s = t["sec"]
+            out = (f'<section class="s dd-vt" id="videos"><div class="wrap">\n <div class="head"><div class="eyebrow">{e(s[0])}</div>'
+                   f'<h2>{e(s[1])}</h2><p>{e(s[2])}</p></div>\n <div id="dd-videoteca"></div>\n'
+                   f' <noscript><p><a href="{base}p01/">{e(s[3])}</a></p></noscript>\n</div></section>\n')
+        elif 'id="arquitectura-azure"' in b:
+            a, v = t["arq"], vids["p11"]
+            out = (f'<section class="dd-arq" id="arquitectura-azure" aria-labelledby="dd-arq-t">\n'
+                   f' <div class="wrap dd-arq-cab"><div class="eyebrow">{e(a[0])}</div><h2 id="dd-arq-t">{e(v["titulo"])}</h2><p>{e(a[1])}</p></div>\n'
+                   f' <div class="dd-arq-v"><iframe src="{base}p11/?modo=web&amp;sonido=1" title="{e(t["T"]["iframe"] + ": " + v["titulo"])}" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>\n'
+                   f' <div class="wrap dd-arq-pie">{boton("p11", t["locucion"])}<a href="{base}p11/?modo=video" target="_blank" rel="noopener">{e(t["completa"])}</a>'
+                   f'<small>{e(a[2])}</small></div>\n</section>')
+        elif "dd-videos-ld" in b:
+            dom = "https://dentaldata.softwareinabox.eu"
+            items = []
+            for i, (pid, v) in enumerate(sorted(vids.items()), 1):
+                items.append({"@type": "ListItem", "position": i, "item": {"@type": "VideoObject", "name": v["titulo"],
+                    "description": v["transcripcion"][:300], "inLanguage": vl, "thumbnailUrl": dom + v["poster"],
+                    "embedUrl": dom + base + pid + "/", "uploadDate": "2026-11-18", "duration": f"PT{round(float(v['duracion']))}S",
+                    "transcript": v["transcripcion"]}})
+            ld = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name": t["lista"], "itemListElement": items}, ensure_ascii=False)
+            cfg = json.dumps({"base": base, "t": t["T"], "pub": t["PUB"], "cta": t["CTA"]}, ensure_ascii=False)
+            out = (f'<script type="application/ld+json" id="dd-videos-ld">\n{ld}\n</script>\n'
+                   f'<script>window.DD_VIDEOS={cfg};</script>\n<script src="/presentaciones/assets/dd-videos.js" defer></script>')
+        elif "dd-vbtn" in b:
+            out = botones(b)
+        elif b.strip().startswith('<a href="#videos"'):
+            out = f'<a href="#videos">{e(t["menu"][0])}</a>'
+        else:
+            raise SystemExit("[error] bloque de vídeo no reconocido: " + b[:120])
+        return "<!--dd-videos-->" + out + "<!--/dd-videos-->"
+    return re.sub(r"<!--dd-videos-->(.*?)<!--/dd-videos-->", bloque, html, flags=re.S)
+
+
 def generar(codigo):
     m = cargar(codigo)
     html = open(PLANTILLA, encoding="utf-8").read()
-    # Las presentaciones animadas solo existen en español: sus bloques se quitan en los demás mercados
-    html = re.sub(r"<!--dd-videos-->.*?<!--/dd-videos-->\n?", "", html, flags=re.S)
+    # Presentaciones animadas: si el mercado tiene versión propia (presentaciones/<PRES>/videos.json), los bloques se
+    # traducen y apuntan a ella; si no, se quitan.
+    pres = getattr(m, "PRES", None)
+    vjson = os.path.join(RAIZ, "presentaciones", pres or "-", "videos.json")
+    if pres and os.path.exists(vjson):
+        html = videos_mercado(html, pres, m.VIDEOS_LANG)
+    else:
+        html = re.sub(r"<!--dd-videos-->.*?<!--/dd-videos-->\n?", "", html, flags=re.S)
     html = html.replace('<html lang="es">', f'<html lang="{m.LANG}">', 1)
     for ident, nuevo in getattr(m, "BLOQUES", {}).items():
         html = reemplazar_seccion(html, ident, nuevo)
@@ -126,13 +215,17 @@ def generar(codigo):
     faltan = []
     for viejo, nuevo in reemplazos:
         if viejo not in html:
-            faltan.append(viejo[:90])
+            html2 = reemplazar_saltando_videos(html, viejo, nuevo)
+            if html2 is None:
+                faltan.append(viejo[:90])
+            else:
+                html = html2
             continue
         html = html.replace(viejo, nuevo)
     if faltan:
         raise SystemExit("[error] textos de la plantilla no encontrados:\n  - " + "\n  - ".join(faltan))
     restos = []
-    permitido = getattr(m, "PERMITIDO", []) + permitido_extra
+    permitido = getattr(m, "PERMITIDO", []) + permitido_extra + ['["aseguradoras"', '["clinicas"']
     for fuente, texto in (("visible", texto_visible(html)), ("asistente", cadenas_js(html)), ("atributos", atributos(html))):
         for marca in MARCAS_ES:
             if marca in marcas_propias:
