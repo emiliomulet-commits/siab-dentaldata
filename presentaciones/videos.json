@@ -6,7 +6,7 @@
   "publico": [
    "todos"
   ],
-  "duracion": 47.9,
+  "duracion": 47.6,
   "capitulos": [
    {
     "t": 0.0,
@@ -17,19 +17,19 @@
     "nombre": "Los grandes ausentes"
    },
    {
-    "t": 7.98,
+    "t": 7.72,
     "nombre": "Por qué"
    },
    {
-    "t": 12.76,
+    "t": 12.42,
     "nombre": "España en cifras"
    },
    {
-    "t": 22.58,
+    "t": 22.2,
     "nombre": "Islas de datos"
    },
    {
-    "t": 33.24,
+    "t": 32.72,
     "nombre": "Cierre"
    }
   ],
@@ -37,7 +37,7 @@
   "poster": "/presentaciones/p01/poster.jpg",
   "vtt": "/presentaciones/p01/subtitulos-es.vtt",
   "interactiva": "/presentaciones/p01/",
-  "transcripcion": "Los datos dentales son los grandes ausentes del Espacio Europeo de Datos de Salud. No por falta de valor, sino por cómo está organizada la odontología. En España, el paciente paga el noventa y siete por ciento del gasto dental. Hay más de veintitrés mil clínicas y más de cuarenta y tres mil dentistas colegiados. Cada clínica guarda sus expedientes y radiografías en su propio software, sin conexión con la historia clínica pública. Y no existe un registro nacional de salud bucodental. Los datos existen, son abundantes y tienen dueños con motivos para compartirlos bajo control. Lo que falta es quién los conecte. Eso es Dental Data.",
+  "transcripcion": "Los datos dentales son los grandes ausentes del Espacio Europeo de Datos de Salud. No por falta de valor, sino por cómo está organizada la odontología. En España, los hogares pagan el noventa y ocho por ciento del gasto dental. Hay más de veintitrés mil clínicas y más de cuarenta y tres mil dentistas colegiados. Cada clínica guarda sus expedientes y radiografías en su propio software, sin conexión con la historia clínica pública. Y no existe un registro nacional de salud bucodental. Los datos existen, son abundantes y tienen dueños con motivos para compartirlos bajo control. Lo que falta es quién los conecte. Eso es Dental Data.",
   "fuentes": "Fuentes: estudio comparativo de Software in a Box (nov. 2026) · INE · Consejo General de Dentistas (colegiados 2025)"
  },
  {

@@ -40,7 +40,7 @@ ESCENAS = [
   <div class="k" data-a="fade">España</div>
   <div class="h2" data-a="up" data-t=".2">Un mercado grande, privado y fragmentado</div>
   <div class="fila" style="margin-top:64px">
-    <div><div class="cifra"><span data-a="count" data-to="97" data-suf="&lt;small&gt;%&lt;/small&gt;" data-w="97">0</span></div><div class="cifra-t" data-a="fade" data-w="paga">del gasto dental lo paga directamente el paciente</div></div>
+    <div><div class="cifra"><span data-a="count" data-to="98" data-suf="&lt;small&gt;%&lt;/small&gt;" data-w="98">0</span></div><div class="cifra-t" data-a="fade" data-w="pagan">del gasto dental lo pagan los hogares</div></div>
     <div><div class="cifra"><span data-a="count" data-to="23000" data-mil="." data-pre="&lt;small&gt;+&lt;/small&gt;" data-w="23">0</span></div><div class="cifra-t" data-a="fade" data-w="clinicas">clínicas registradas, casi todas privadas</div></div>
     <div><div class="cifra"><span data-a="count" data-to="43672" data-mil="." data-w="43">0</span></div><div class="cifra-t" data-a="fade" data-w="dentistas">dentistas colegiados en 2025</div></div>
   </div>

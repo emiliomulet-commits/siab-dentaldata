@@ -4,7 +4,7 @@
 
 ## Pages
 - [Europe · Partners and markets](https://dentaldata.softwareinabox.eu/en/): European hub in English: product, eight countries compared, two business models (social insurance and private dentistry), partner programme
-- [España · Piloto](https://dentaldata.softwareinabox.eu/es/): Spanish market (43,672 dentists, 97% paid by patients, chain consolidation), federated solution on Microsoft Azure, EHDS timeline, pilot with a Spanish chain or insurer before March 2027, FAQ (Spanish)
+- [España · Piloto](https://dentaldata.softwareinabox.eu/es/): Spanish market (43,672 dentists, 98% of dental spending paid by households, chain consolidation), federated solution on Microsoft Azure, EHDS timeline, pilot with a Spanish chain or insurer before March 2027, FAQ (Spanish)
 - [Nederland · Partnerprogramma](https://dentaldata.softwareinabox.eu/nl/): market (9,555 dentists, ~30% of practices closed to new patients, 500+ private-equity practices), solution, proposal, roadmap to March 2029 (Dutch)
 - [België · Institutionele alliantie](https://dentaldata.softwareinabox.eu/nl-be/): Belgian market in Dutch (8,479 dentists, RIZIV/INAMI reimbursement €1.6bn in 2025, Health Data Agency), complement to RIZIV, institutional alliance, roadmap
 - [Belgique · Alliance institutionnelle](https://dentaldata.softwareinabox.eu/fr-be/): Belgian market in French (same content as the Dutch page)
