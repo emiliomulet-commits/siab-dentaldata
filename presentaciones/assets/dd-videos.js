@@ -5,13 +5,14 @@
    El progreso («Vista») se guarda solo en este navegador (localStorage), sin cookies. */
 (function(){
 "use strict";
-var BASE = "/presentaciones/";
-var PUB = [["todos","Todas"],["cadenas","Cadenas"],["aseguradoras","Aseguradoras"],["clinicas","Clínicas"],["industria","Industria e IA"],["partners","Partners y TI"]];
-var RUTAS = {cadenas:["p01","p02","p04","p03","p10"],aseguradoras:["p01","p02","p05","p03","p10"],clinicas:["p01","p03","p07","p10"],
+var CFG = window.DD_VIDEOS || {}, T = CFG.t || {};
+var BASE = CFG.base || "/presentaciones/";
+var PUB = CFG.pub || [["todos","Todas"],["cadenas","Cadenas"],["aseguradoras","Aseguradoras"],["clinicas","Clínicas"],["industria","Industria e IA"],["partners","Partners y TI"]];
+var RUTAS = CFG.rutas || {cadenas:["p01","p02","p04","p03","p10"],aseguradoras:["p01","p02","p05","p03","p10"],clinicas:["p01","p03","p07","p10"],
   industria:["p02","p06","p09","p10"],partners:["p02","p08","p10"],todos:["p01","p02","p03","p04","p05","p06","p07","p08","p09","p10"]};
 var KB = {datos:"p03",seguridad:"p03",publicidad:"p03",cadena:"p04",aseguradora:"p05",ia:"p06",ehds:"p07",independiente:"p07",
   tecnologia:"p11",azure:"p11",arquitectura:"p11",experiencia:"p08",piloto:"p10",coste:"p10",paises:"p10"};
-var CTA = {p04:"¿Hablamos del piloto para tu cadena?",p05:"¿Hablamos del piloto para tu red?",p08:"¿Eres partner de Azure? Hablemos",
+var CTA = CFG.cta || {p04:"¿Hablamos del piloto para tu cadena?",p05:"¿Hablamos del piloto para tu red?",p08:"¿Eres partner de Azure? Hablemos",
   p09:"¿Hablamos de evidencia para tu producto?",p10:"Únete al piloto",p11:"¿Montamos tu nodo en Azure? Hablemos"};
 var PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>';
 var V = [], byId = {}, ruta = RUTAS.todos, filtro = "todos";
@@ -25,11 +26,11 @@ function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return {"&":"&
 var modal, marco, side, last = null, actual = null;
 function crearModal(){
   modal = document.createElement("div"); modal.className = "dd-modal"; modal.setAttribute("role","dialog"); modal.setAttribute("aria-modal","true"); modal.setAttribute("aria-labelledby","dd-mt");
-  modal.innerHTML = '<div class="dd-box" style="position:relative"><div class="dd-fr"><iframe title="Presentación animada con locución" allow="autoplay; fullscreen" allowfullscreen></iframe></div>' +
-    '<div class="dd-side"><div class="k" id="dd-mk"></div><h2 id="dd-mt"></h2><p class="dd-ayuda">Presentación animada con locución. Usa la barra inferior para pausar o saltar entre escenas.</p>' +
+  modal.innerHTML = '<div class="dd-box" style="position:relative"><div class="dd-fr"><iframe title="' + esc(T.iframe || "Presentación animada con locución") + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>' +
+    '<div class="dd-side"><div class="k" id="dd-mk"></div><h2 id="dd-mt"></h2><p class="dd-ayuda">' + esc(T.ayuda || "Presentación animada con locución. Usa la barra inferior para pausar o saltar entre escenas.") + '</p>' +
     '<button type="button" class="dd-next"></button><div class="dd-acc"></div></div>' +
-    '<details class="dd-tr"><summary>Transcripción y fuentes</summary><p class="tx"></p><p class="fu"></p></details>' +
-    '<button type="button" class="dd-x" aria-label="Cerrar">×</button></div>';
+    '<details class="dd-tr"><summary>' + esc(T.transcripcion || "Transcripción y fuentes") + '</summary><p class="tx"></p><p class="fu"></p></details>' +
+    '<button type="button" class="dd-x" aria-label="' + esc(T.cerrar || "Cerrar") + '">×</button></div>';
   document.body.appendChild(modal);
   marco = modal.querySelector("iframe"); side = modal.querySelector(".dd-side");
   modal.querySelector(".dd-x").onclick = cerrar;
@@ -52,12 +53,12 @@ function abrir(id, desde){
   modal.querySelector("#dd-mk").textContent = v.id.toUpperCase() + " · " + seg(v.duracion);
   modal.querySelector("#dd-mt").textContent = v.titulo;
   var n = siguiente(), nb = modal.querySelector(".dd-next"); nb.classList.remove("on");
-  if(n){ nb.innerHTML = PLAY.replace("<svg", '<svg style="width:14px;height:14px;fill:#C9A227"') + "<span>Siguiente: <b>" + esc(n.chip) + "</b></span>"; nb.onclick = function(){ abrir(n.id); }; nb.classList.add("on"); }
-  var cta = CTA[id] || "¿Hablamos?";
+  if(n){ nb.innerHTML = PLAY.replace("<svg", '<svg style="width:14px;height:14px;fill:#C9A227"') + "<span>" + (T.siguiente || "Siguiente:") + " <b>" + esc(n.chip) + "</b></span>"; nb.onclick = function(){ abrir(n.id); }; nb.classList.add("on"); }
+  var cta = CTA[id] || T.hablamos || "¿Hablamos?";
   modal.querySelector(".dd-acc").innerHTML = '<a class="cta" href="#contacto" data-cerrar>' + esc(cta) + '</a>' +
-    '<a href="' + v.interactiva + '?modo=video" target="_blank" rel="noopener">Abrir a pantalla completa ↗</a>' +
-    '<a href="' + v.mp4 + '" download>Descargar el vídeo (MP4)</a>' +
-    (n ? "" : '<a href="#videos" data-cerrar>Ver todas las presentaciones</a>');
+    '<a href="' + v.interactiva + '?modo=video" target="_blank" rel="noopener">' + esc(T.completa || "Abrir a pantalla completa ↗") + '</a>' +
+    (v.mp4 ? '<a href="' + v.mp4 + '" download>' + esc(T.descargar || "Descargar el vídeo (MP4)") + '</a>' : '') +
+    (n ? "" : '<a href="#videos" data-cerrar>' + esc(T.todas || "Ver todas las presentaciones") + '</a>');
   modal.querySelectorAll("[data-cerrar]").forEach(function(a){ a.addEventListener("click", cerrar); });
   modal.querySelector(".dd-tr .tx").textContent = v.transcripcion;
   modal.querySelector(".dd-tr .fu").textContent = v.fuentes;
@@ -77,13 +78,13 @@ function pintarRuta(){
   var r = document.querySelector(".dd-ruta"); if(!r) return;
   var lista = RUTAS[filtro], hechos = lista.filter(function(i){ return vistos[i]; }).length, pend = lista.filter(function(i){ return !vistos[i]; })[0];
   var nombre = PUB.filter(function(p){ return p[0] === filtro; })[0][1].toLowerCase();
-  r.innerHTML = (filtro === "todos" ? "<span><b>" + hechos + " de " + lista.length + "</b> vistas</span>" :
-     "<span>Recorrido para <b>" + esc(nombre) + "</b>: " + lista.length + " presentaciones, unos " + Math.round(lista.reduce(function(s, i){ return s + byId[i].duracion; }, 0) / 60) + " minutos · <b>" + hechos + " de " + lista.length + "</b> vistas</span>") +
-    (pend ? '<button type="button">' + (hechos ? "Continuar" : "Empezar") + " · " + esc(pend.toUpperCase()) + "</button>" : "<span>✓ Recorrido completo</span>");
+  r.innerHTML = (filtro === "todos" ? "<span><b>" + hechos + " " + (T.de || "de") + " " + lista.length + "</b> " + (T.vistas || "vistas") + "</span>" :
+     "<span>" + (T.recorrido || "Recorrido para") + " <b>" + esc(nombre) + "</b>: " + lista.length + " " + (T.presentaciones || "presentaciones, unos") + " " + Math.round(lista.reduce(function(s, i){ return s + byId[i].duracion; }, 0) / 60) + " " + (T.minutos || "minutos") + " · <b>" + hechos + " " + (T.de || "de") + " " + lista.length + "</b> " + (T.vistas || "vistas") + "</span>") +
+    (pend ? '<button type="button">' + (hechos ? (T.continuar || "Continuar") : (T.empezar || "Empezar")) + " · " + esc(pend.toUpperCase()) + "</button>" : "<span>" + (T.completo || "✓ Recorrido completo") + "</span>");
   var b = r.querySelector("button"); if(b) b.onclick = function(){ ruta = lista; abrir(pend, b); };
 }
 function videoteca(box){
-  var tabs = document.createElement("div"); tabs.className = "dd-tabs"; tabs.setAttribute("role","group"); tabs.setAttribute("aria-label","Filtrar por perfil");
+  var tabs = document.createElement("div"); tabs.className = "dd-tabs"; tabs.setAttribute("role","group"); tabs.setAttribute("aria-label", T.filtrar || "Filtrar por perfil");
   PUB.forEach(function(p){ var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-pressed", p[0] === "todos"); b.dataset.f = p[0];
     b.innerHTML = esc(p[1]) + '<span class="cnt">' + RUTAS[p[0]].length + "</span>";
     b.onclick = function(){ filtro = p[0]; ruta = RUTAS[filtro]; tabs.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x === b); });
@@ -94,8 +95,8 @@ function videoteca(box){
     if(RUTAS.todos.indexOf(v.id) < 0) return; // P11 va destacada fuera de la videoteca
     var c = document.createElement("button"); c.type = "button"; c.className = "dd-card"; c.dataset.pres = v.id;
     c.setAttribute("aria-label", v.titulo + " (" + seg(v.duracion) + ")");
-    c.innerHTML = '<span class="ph" style="background-image:url(' + v.poster + ')"><span class="pb">' + PLAY + '</span><span class="nu">' + v.id.toUpperCase() + '</span><span class="du">' + seg(v.duracion) + '</span><span class="vi">✓ Vista</span></span>' +
-      '<span class="tx"><span class="h3">' + esc(v.chip) + '</span><span class="pu">' + esc(v.publico.filter(function(x){ return x !== "todos"; }).map(function(x){ return PUB.filter(function(p){ return p[0] === x; })[0][1]; }).join(" · ") || "Para todos") + "</span></span>";
+    c.innerHTML = '<span class="ph" style="background-image:url(' + v.poster + ')"><span class="pb">' + PLAY + '</span><span class="nu">' + v.id.toUpperCase() + '</span><span class="du">' + seg(v.duracion) + '</span><span class="vi">' + esc(T.vista || "✓ Vista") + '</span></span>' +
+      '<span class="tx"><span class="h3">' + esc(v.chip) + '</span><span class="pu">' + esc(v.publico.filter(function(x){ return x !== "todos"; }).map(function(x){ return PUB.filter(function(p){ return p[0] === x; })[0][1]; }).join(" · ") || T.paratodos || "Para todos") + "</span></span>";
     c.onclick = function(){ ruta = RUTAS[filtro]; abrir(v.id, c); };
     grid.appendChild(c); });
   var r = document.createElement("div"); r.className = "dd-ruta";
@@ -106,7 +107,7 @@ function videoteca(box){
 /* ---------- botones y asistente */
 function boton(id, claro){
   var v = byId[id] || {duracion:0}, b = document.createElement("button"); b.type = "button"; b.className = "dd-vbtn" + (claro ? " claro" : ""); b.dataset.pres = id;
-  b.innerHTML = '<span class="pl">' + PLAY + "</span><span>Ver animación <small>" + (v.duracion ? seg(v.duracion) : "") + "</small></span>"; return b;
+  b.innerHTML = '<span class="pl">' + PLAY + "</span><span>" + (T.ver || "Ver animación") + " <small>" + (v.duracion ? seg(v.duracion) : "") + "</small></span>"; return b;
 }
 document.addEventListener("click", function(e){
   var b = e.target.closest && e.target.closest("[data-pres]"); if(!b || b.classList.contains("dd-card")) return;
@@ -117,7 +118,7 @@ document.addEventListener("click", function(e){
   var sub = document.querySelector(".brand .sub"), sec = document.getElementById("arquitectura-azure");
   if(!sub || !sec) return;
   sub.classList.add("dd-azure-link"); sub.setAttribute("role", "link"); sub.setAttribute("tabindex", "0");
-  sub.title = "Ver qué montamos en Microsoft Azure";
+  sub.title = T.azure || "Ver qué montamos en Microsoft Azure";
   var caja = sec.querySelector(".dd-arq-v") || sec, fr = sec.querySelector("iframe");
   function sonido(){ try{ fr.contentWindow.postMessage({dd: "sonido"}, "*"); }catch(_){} }
   function ir(e){ e.preventDefault(); e.stopPropagation();

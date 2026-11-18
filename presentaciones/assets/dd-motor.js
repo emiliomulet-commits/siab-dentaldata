@@ -4,6 +4,7 @@
    y data-t="segundos desde el inicio de la escena" (data-d = duración).
    Modos: presentación (por defecto) · ?modo=web (sola y muda, botón «Activar locución») · ?modo=video (con locución)
    · &embed=1 (visor del asistente) · ?render=1 (captura de fotogramas para el MP4). */
+const UI = window.DD_UI || {};
 (function(){
 "use strict";
 const $ = (s, r=document) => r.querySelector(s), $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
@@ -135,7 +136,7 @@ const NOMBRES = [];
 let t = 0;
 ESC.forEach((s, i) => {
   const dur = parseFloat(s.dataset.dur || "6");
-  NOMBRES.push(s.dataset.nombre || `Escena ${i + 1}`);
+  NOMBRES.push(s.dataset.nombre || `${UI.escena || "Escena"} ${i + 1}`);
   tl.addLabel("s" + (i + 1), t);
   if(i > 0){ const prev = ESC[i - 1]; tl.to(prev, {opacity:0, duration:.45, ease:"power2.in"}, t).set(prev, {visibility:"hidden"}, t + .45); }
   tl.set(s, {visibility:"visible"}, t).to(s, {opacity:1, duration:.45, ease:"none"}, t + (i ? .3 : 0));
@@ -209,7 +210,7 @@ const vb = $("#voz-btn");
 /* ?modo=web&sonido=1: intenta arrancar con locución; el botón alterna «Quitar audio» / «Activar audio» */
 const SONIDO = WEB && !VOZ && q.get("sonido") === "1";
 function rotular(){ if(!vb) return; const on = vozActiva && audio && !audio.muted && !audio.paused;
-  vb.textContent = SONIDO ? (on ? "🔇 Quitar audio" : "🔊 Activar audio") : "🔊 Activar locución"; vb.setAttribute("aria-pressed", on); }
+  vb.textContent = SONIDO ? (on ? (UI.quitar || "🔇 Quitar audio") : (UI.activar || "🔊 Activar audio")) : (UI.locucion || "🔊 Activar locución"); vb.setAttribute("aria-pressed", on); }
 function conSonido(){ if(!audio) return Promise.reject();
   vozActiva = true; audio.muted = false; audio.currentTime = 0;
   return audio.play().then(() => { tl.seek(0).play(); rotular(); }).catch(e => { vozActiva = false; rotular(); throw e; }); }
@@ -222,7 +223,7 @@ if(vb){ vb.hidden = !(WEB && !VOZ && audio);
 /* la página puede pedir el sonido tras un clic del usuario (p. ej. el enlace de la cabecera) */
 addEventListener("message", e => { if(e.source === window.parent && e.data && e.data.dd === "sonido" && WEB && !VOZ) conSonido().catch(() => tl.play(0)); });
 const ini = $("#inicio span");
-if(VOZ){ ini.textContent = "▶ Ver con locución (sonido activado)"; ini.onclick = () => vozPlay(); }
+if(VOZ){ ini.textContent = UI.ver || "▶ Ver con locución (sonido activado)"; ini.onclick = () => vozPlay(); }
 
 /* modo web: arranca al hacerse visible */
 if(WEB && !VOZ){
