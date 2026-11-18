@@ -1,0 +1,479 @@
+[
+ {
+  "id": "p01",
+  "titulo": "Why are dental data missing from the European Health Data Space?",
+  "chip": "Why are dental data missing from the EHDS?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 58.6,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "The great absentees"
+   },
+   {
+    "t": 7.64,
+    "nombre": "Why"
+   },
+   {
+    "t": 25.38,
+    "nombre": "Europe in figures"
+   },
+   {
+    "t": 34.0,
+    "nombre": "Data islands"
+   },
+   {
+    "t": 43.0,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p01/poster.jpg",
+  "vtt": "/presentaciones/en/p01/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p01/",
+  "transcripcion": "Dental data are the great absentees of the European Health Data Space. Not for lack of value, but because of how dentistry is organised. Across Europe, most practices are small businesses with their own software. In some countries public insurance pays for dental care; in others, families and private insurers pay almost everything. We studied eight countries and found two funding models, and none of them has yet formally designated its health data access body. In nearly all of them, clinical dental data stay in each practice, with no registry for adults and no link to national health records. The data exist, they are abundant, and their owners have reasons to share them under control. What is missing is someone to connect them. That is Dental Data.",
+  "fuentes": "Sources: comparative study by Software in a Box covering eight countries (Nov. 2026) · Regulation (EU) 2025/327"
+ },
+ {
+  "id": "p02",
+  "titulo": "How does a federated data space work?",
+  "chip": "How does a federated data space work?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 46.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "The practice"
+   },
+   {
+    "t": 15.15,
+    "nombre": "The network"
+   },
+   {
+    "t": 21.55,
+    "nombre": "A question"
+   },
+   {
+    "t": 30.31,
+    "nombre": "What travels and what does not"
+   },
+   {
+    "t": 37.39,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p02/poster.jpg",
+  "vtt": "/presentaciones/en/p02/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p02/",
+  "transcripcion": "In a federated data space, each practice, chain, insurer or payer keeps its records in its own practice management software. A connector is installed next to that software. The connector publishes in a common catalogue which data exist, but not the data themselves. When someone needs an indicator, the question travels to each practice, is computed there, and only the aggregated result comes back. Consents, metadata and results move over the network. Never an identifiable record. The data stay in the practice. What travels is the answer.",
+  "fuentes": "Source: Dental Data · the solution and its use cases (public knowledge base)"
+ },
+ {
+  "id": "p03",
+  "titulo": "Do my data leave the practice?",
+  "chip": "Do my data leave the practice?",
+  "publico": [
+   "clinicas",
+   "cadenas"
+  ],
+  "duracion": 53.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "The answer"
+   },
+   {
+    "t": 9.62,
+    "nombre": "The contract"
+   },
+   {
+    "t": 22.84,
+    "nombre": "The machine enforces it"
+   },
+   {
+    "t": 30.46,
+    "nombre": "The framework"
+   },
+   {
+    "t": 48.52,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p03/poster.jpg",
+  "vtt": "/presentaciones/en/p03/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p03/",
+  "transcripcion": "Do the data leave the practice? No. No identifiable record leaves the practice. Every use of the data is governed by a digital contract that defines who accesses, for what and for how long. And that contract does not stay on paper: the machine enforces it itself. If a request has no contract, there is no access. If it has one, only an aggregated result comes back. The practice always decides, within the framework of the General Data Protection Regulation and national law in each country, under the supervision of its data protection authority. And with a clear rule of the European Health Data Space: health data are never used for advertising.",
+  "fuentes": "Sources: Dental Data (knowledge base) · GDPR · Regulation (EU) 2025/327, Art. 54 and 71 · General information; not legal advice"
+ },
+ {
+  "id": "p04",
+  "titulo": "What does a dental chain gain?",
+  "chip": "What does a dental chain gain?",
+  "publico": [
+   "cadenas"
+  ],
+  "duracion": 54.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "The problem"
+   },
+   {
+    "t": 19.7,
+    "nombre": "No migration"
+   },
+   {
+    "t": 32.04,
+    "nombre": "Comparable indicators"
+   },
+   {
+    "t": 37.73,
+    "nombre": "Added value"
+   },
+   {
+    "t": 45.8,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p04/poster.jpg",
+  "vtt": "/presentaciones/en/p04/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p04/",
+  "transcripcion": "A dental chain grows by acquiring practices, and each practice comes with its own software. Across Europe, chains and groups are consolidating fast. Comparing quality today means migrating records, a costly and risky process. With Dental Data there is no need. A connector is installed next to each software, and the indicators are computed in each practice with the same definition, based on clinical guidelines. Management sees comparable results for the whole network, without a single record moving. And the chain can demonstrate its quality to regulators, payers and insurers, ready for the European Health Data Space. Demonstrable quality, without migrating a single record.",
+  "fuentes": "Sources: Dental Data · use cases and pilot (knowledge base) · Regulation (EU) 2025/327, Art. 72 · Illustrative bars"
+ },
+ {
+  "id": "p05",
+  "titulo": "What does an insurer or payer gain?",
+  "chip": "What does an insurer or payer gain?",
+  "publico": [
+   "aseguradoras"
+  ],
+  "duracion": 48.6,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "The network"
+   },
+   {
+    "t": 11.65,
+    "nombre": "Consistent data"
+   },
+   {
+    "t": 23.63,
+    "nombre": "A channel"
+   },
+   {
+    "t": 29.41,
+    "nombre": "Clear limits"
+   },
+   {
+    "t": 39.79,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p05/poster.jpg",
+  "vtt": "/presentaciones/en/p05/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p05/",
+  "transcripcion": "An insurer, a mutual or a public payer works with hundreds of practices, each with its own software, and cannot compare their results. Dental Data gives it consistent data from the whole network without centralising records: the computation happens in each practice and only the aggregated result comes back. The same applies to public dental programmes and reforms, which will have to measure their outcomes. With clear limits: the European Health Data Space prohibits using these data for advertising or for decisions that harm people, including in insurance. Consistent data from the whole network, without centralising records.",
+  "fuentes": "Sources: Dental Data (knowledge base) · Regulation (EU) 2025/327, Art. 54"
+ },
+ {
+  "id": "p06",
+  "titulo": "AI on X-rays without moving the X-rays",
+  "chip": "How does AI on dental X-rays work?",
+  "publico": [
+   "clinicas",
+   "industria"
+  ],
+  "duracion": 50.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "The dilemma"
+   },
+   {
+    "t": 9.37,
+    "nombre": "The algorithm travels"
+   },
+   {
+    "t": 19.05,
+    "nombre": "Confidential computing"
+   },
+   {
+    "t": 24.69,
+    "nombre": "The model"
+   },
+   {
+    "t": 35.69,
+    "nombre": "What comes next"
+   },
+   {
+    "t": 44.41,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p06/poster.jpg",
+  "vtt": "/presentaciones/en/p06/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p06/",
+  "transcripcion": "Training a dental AI requires many X-rays. But pooling them in one place is a risk. Dental Data reverses the path: the algorithm travels to each practice, learns there and returns only what it learned, never the images. The computations use confidential computing, which protects the data while they are being processed. The first model, for interproximal caries and periodontal bone loss, is in clinical validation. It is an aid for the professional: it does not replace their diagnosis. And it is getting ready for what comes next: in two thousand thirty-one, medical images enter the European Health Data Space. The algorithm goes to the data.",
+  "fuentes": "Sources: Dental Data (knowledge base) · Regulation (EU) 2026/1744 · Regulation (EU) 2025/327 · Model in clinical validation; it does not replace the professional's diagnosis · Supervision: national medical device authorities and AI Act authorities"
+ },
+ {
+  "id": "p07",
+  "titulo": "Which dates does the European Health Data Space set?",
+  "chip": "Which dates does the EHDS set?",
+  "publico": [
+   "todos",
+   "clinicas"
+  ],
+  "duracion": 52.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Timeline"
+   },
+   {
+    "t": 13.09,
+    "nombre": "The window"
+   },
+   {
+    "t": 23.69,
+    "nombre": "Article 50"
+   },
+   {
+    "t": 34.03,
+    "nombre": "Europe"
+   },
+   {
+    "t": 45.35,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p07/poster.jpg",
+  "vtt": "/presentaciones/en/p07/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p07/",
+  "transcripcion": "The European Health Data Space is already in force and has dates. By March two thousand twenty-seven, each country must designate its access bodies. In March two thousand twenty-nine, most of the rules on secondary use apply, and in two thousand thirty-one medical images arrive, such as dental X-rays. Most practices are micro-businesses and are exempt by default: to take part they need an aggregated channel, through chains, associations or insurers. Each Member State is preparing its access body: some have a draft law, others a candidate agency. None had been formally designated by November two thousand twenty-six. Whoever arrives connected will be the natural partner.",
+  "fuentes": "Sources: Regulation (EU) 2025/327 (Art. 50 and 105) · Software in a Box comparative study (Nov. 2026)"
+ },
+ {
+  "id": "p08",
+  "titulo": "What technology is behind Dental Data?",
+  "chip": "What technology is behind Dental Data?",
+  "publico": [
+   "partners"
+  ],
+  "duracion": 56.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "The rule"
+   },
+   {
+    "t": 10.18,
+    "nombre": "Inside the node"
+   },
+   {
+    "t": 21.48,
+    "nombre": "At the border"
+   },
+   {
+    "t": 35.9,
+    "nombre": "Open to everyone"
+   },
+   {
+    "t": 39.64,
+    "nombre": "Experience"
+   },
+   {
+    "t": 51.86,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p08/poster.jpg",
+  "vtt": "/presentaciones/en/p08/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p08/",
+  "transcripcion": "Dental Data follows a simple rule: Microsoft inside the node, open standards at the borders. Inside each node, the connector runs on Microsoft Azure, with the data in the European Union, integrated with the practice management software and deployed by Azure partners. At the borders, the space speaks open European standards: Gaia-X, the dataspace protocol, Eclipse EDC, verifiable credentials, FHIR, DICOM and HealthDCAT-AP. So any participant can connect, even without Microsoft. And we are not starting from scratch: Software in a Box has already designed and run three real data spaces. In France, the node is also available on a certified sovereign provider.",
+  "fuentes": "Sources: Dental Data · technology and company (knowledge base) · Microsoft and Azure are trademarks of Microsoft Corporation; cited as text"
+ },
+ {
+  "id": "p09",
+  "titulo": "What does Dental Data offer the industry?",
+  "chip": "What does Dental Data offer the industry?",
+  "publico": [
+   "industria"
+  ],
+  "duracion": 48.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Who"
+   },
+   {
+    "t": 14.82,
+    "nombre": "Real-world evidence"
+   },
+   {
+    "t": 26.06,
+    "nombre": "For practice software"
+   },
+   {
+    "t": 33.88,
+    "nombre": "The rules"
+   },
+   {
+    "t": 41.1,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p09/poster.jpg",
+  "vtt": "/presentaciones/en/p09/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p09/",
+  "transcripcion": "For the dental industry, real-world evidence is worth a lot. Manufacturers of implants and materials, and artificial intelligence companies, need to know how their products perform in the practice. Dental Data offers them that evidence, organised and under contract: questions answered in the practices and aggregated results that come back without identifiable data. For practice software vendors, the connector is a component that integrates with their product and opens new services for their customers. The rules do not change: a contract for each use, only aggregated results and never advertising. Real evidence, organised and under contract.",
+  "fuentes": "Sources: Dental Data (knowledge base) · Regulation (EU) 2025/327, Art. 54"
+ },
+ {
+  "id": "p10",
+  "titulo": "How do you join Dental Data?",
+  "chip": "How do you join Dental Data?",
+  "publico": [
+   "cadenas",
+   "aseguradoras",
+   "partners"
+  ],
+  "duracion": 49.7,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "We are looking for"
+   },
+   {
+    "t": 16.59,
+    "nombre": "Funding"
+   },
+   {
+    "t": 20.95,
+    "nombre": "Roadmap"
+   },
+   {
+    "t": 34.87,
+    "nombre": "We also want to talk to"
+   },
+   {
+    "t": 41.09,
+    "nombre": "Shall we talk?"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p10/poster.jpg",
+  "vtt": "/presentaciones/en/p10/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p10/",
+  "transcripcion": "We are looking for technology partners, dental software vendors and industry partners across Europe, and for chains and insurers ready to start in their own country. Our country pages explain what we are looking for in each market. Your own use case funds the connector, and countries share the costs. Between two thousand twenty-seven and two thousand twenty-nine we will connect the first practices; in two thousand twenty-nine, a catalogued dental data space ready for the European Health Data Space; then, dental imaging. We also want to talk to the dental industry, EU projects, research and professional associations. Shall we talk? Write to partners at softwareinabox dot eu.",
+  "fuentes": "Sources: Dental Data · partner programme and roadmap (knowledge base) · No published prices"
+ },
+ {
+  "id": "p11",
+  "titulo": "What do we build on Microsoft Azure?",
+  "chip": "What do we build on Microsoft Azure?",
+  "publico": [
+   "partners",
+   "industria"
+  ],
+  "duracion": 87.1,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Opening"
+   },
+   {
+    "t": 3.0,
+    "nombre": "The rule"
+   },
+   {
+    "t": 13.43,
+    "nombre": "The practice"
+   },
+   {
+    "t": 21.39,
+    "nombre": "The data node"
+   },
+   {
+    "t": 32.15,
+    "nombre": "Security"
+   },
+   {
+    "t": 39.85,
+    "nombre": "The border"
+   },
+   {
+    "t": 54.65,
+    "nombre": "The AI"
+   },
+   {
+    "t": 72.83,
+    "nombre": "The path"
+   },
+   {
+    "t": 82.13,
+    "nombre": "Closing"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/en/p11/poster.jpg",
+  "vtt": "/presentaciones/en/p11/subtitulos-en.vtt",
+  "interactiva": "/presentaciones/en/p11/",
+  "transcripcion": "This is what we build on Microsoft Azure for Dental Data. One rule guides the design: Microsoft inside the node, open standards at the border. In the practice, the X-ray leaves the unit through an open source DICOM gateway, Orthanc, and is pseudonymised at source. In the data node, Azure Health Data Services stores the record in FHIR and the image in DICOM. Microsoft Fabric and OneLake prepare the data for analysis. Security comes from Microsoft Entra ID, Azure Key Vault, Microsoft Defender for Cloud and Microsoft Sentinel. At the border, the Eclipse EDC connector works, deployed on Azure Kubernetes Service. It publishes the catalogue in HealthDCAT-AP, negotiates ODRL contracts and identifies itself with Gaia-X credentials. The artificial intelligence is trained with Azure Machine Learning and federated learning: the model travels to each practice and the data stay where they are. Confidential computing protects the data even during processing, and Microsoft Foundry writes draft reports that the dentist reviews. So every X-ray follows a safe and controlled path, from the practice to the model, without any identifiable data leaving the node.",
+  "fuentes": "Sources: Dental Data · technical document (v1.3) and MVP proposal (v1.4) · Official Microsoft icons (Azure, Microsoft Entra and Microsoft Fabric), used under their terms for architecture diagrams · Microsoft, Azure, Entra, Fabric and their service names are trademarks of Microsoft Corporation"
+ }
+]

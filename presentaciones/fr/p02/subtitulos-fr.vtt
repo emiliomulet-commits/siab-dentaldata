@@ -1,0 +1,45 @@
+WEBVTT
+
+00:00:03.320 --> 00:00:07.070
+Dans un espace de données fédéré, chaque
+cabinet ou centre de santé,
+
+00:00:07.120 --> 00:00:09.430
+chaque réseau ou complémentaire garde ses
+
+00:00:09.480 --> 00:00:11.950
+dossiers dans son propre
+logiciel de gestion.
+
+00:00:12.000 --> 00:00:14.510
+À côté de ce logiciel, on
+installe un connecteur.
+
+00:00:14.560 --> 00:00:17.370
+Le connecteur publie dans un
+catalogue commun quelles
+
+00:00:17.420 --> 00:00:20.170
+données existent, mais pas les
+données elles-mêmes.
+
+00:00:20.220 --> 00:00:23.410
+Quand quelqu'un a besoin d'un indicateur,
+la question voyage jusqu'à
+
+00:00:23.460 --> 00:00:27.830
+chaque cabinet, y est calculée, et seul
+le résultat agrégé revient.
+
+00:00:27.880 --> 00:00:31.850
+Sur le réseau circulent des consentements,
+des métadonnées et des résultats.
+
+00:00:31.900 --> 00:00:33.770
+Jamais un dossier identifiable.
+
+00:00:33.820 --> 00:00:35.550
+La donnée reste au cabinet.
+
+00:00:35.600 --> 00:00:38.100
+Ce qui voyage, c'est la réponse.

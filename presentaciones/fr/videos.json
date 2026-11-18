@@ -1,0 +1,479 @@
+[
+ {
+  "id": "p01",
+  "titulo": "Pourquoi les données dentaires manquent-elles à l'Espace européen des données de santé ?",
+  "chip": "Pourquoi les données dentaires manquent-elles à l'EHDS ?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 51.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Les grandes absentes"
+   },
+   {
+    "t": 7.02,
+    "nombre": "Pourquoi"
+   },
+   {
+    "t": 17.28,
+    "nombre": "La France en chiffres"
+   },
+   {
+    "t": 27.54,
+    "nombre": "Îlots de données"
+   },
+   {
+    "t": 39.0,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p01/poster.jpg",
+  "vtt": "/presentaciones/fr/p01/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p01/",
+  "transcripcion": "Les données dentaires sont les grandes absentes de l'Espace européen des données de santé. En France, les soins dentaires sont financés par l'Assurance maladie et surtout par les complémentaires, et la réforme cent pour cent santé a supprimé le reste à charge sur une partie des prothèses. Le pays compte près de quarante-huit mille chirurgiens-dentistes, la dépense en cabinet libéral dépasse treize milliards d'euros, et plus de deux mille centres de santé dentaires sont soumis à agrément. Le Système national des données de santé sait ce qui est remboursé, mais pas ce qui a été trouvé en bouche ni le résultat du traitement : ces données restent dans chaque cabinet et chaque centre, dans leur propre logiciel. Les données existent et ont des propriétaires qui ont des raisons de les partager sous contrôle. Ce qui manque, c'est quelqu'un pour les relier. C'est Dental Data.",
+  "fuentes": "Sources : étude comparative de Software in a Box (nov. 2026) · DREES (2025) · Comptes de la santé · ARS"
+ },
+ {
+  "id": "p02",
+  "titulo": "Comment fonctionne un espace de données fédéré ?",
+  "chip": "Comment fonctionne un espace de données fédéré ?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 41.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Le cabinet"
+   },
+   {
+    "t": 14.26,
+    "nombre": "Le réseau"
+   },
+   {
+    "t": 19.92,
+    "nombre": "Une question"
+   },
+   {
+    "t": 27.58,
+    "nombre": "Ce qui voyage et ce qui ne voyage pas"
+   },
+   {
+    "t": 33.52,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p02/poster.jpg",
+  "vtt": "/presentaciones/fr/p02/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p02/",
+  "transcripcion": "Dans un espace de données fédéré, chaque cabinet ou centre de santé, chaque réseau ou complémentaire garde ses dossiers dans son propre logiciel de gestion. À côté de ce logiciel, on installe un connecteur. Le connecteur publie dans un catalogue commun quelles données existent, mais pas les données elles-mêmes. Quand quelqu'un a besoin d'un indicateur, la question voyage jusqu'à chaque cabinet, y est calculée, et seul le résultat agrégé revient. Sur le réseau circulent des consentements, des métadonnées et des résultats. Jamais un dossier identifiable. La donnée reste au cabinet. Ce qui voyage, c'est la réponse.",
+  "fuentes": "Source : Dental Data · la solution et ses cas d'usage (base de connaissances publique)"
+ },
+ {
+  "id": "p03",
+  "titulo": "Mes données sortent-elles du cabinet ?",
+  "chip": "Mes données sortent-elles du cabinet ?",
+  "publico": [
+   "clinicas",
+   "cadenas"
+  ],
+  "duracion": 46.1,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La réponse"
+   },
+   {
+    "t": 7.79,
+    "nombre": "Le contrat"
+   },
+   {
+    "t": 18.97,
+    "nombre": "La machine le fait respecter"
+   },
+   {
+    "t": 24.87,
+    "nombre": "Le cadre"
+   },
+   {
+    "t": 41.09,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p03/poster.jpg",
+  "vtt": "/presentaciones/fr/p03/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p03/",
+  "transcripcion": "Les données sortent-elles du cabinet ? Non. Aucun dossier identifiable ne quitte le cabinet. Chaque usage des données est régi par un contrat numérique qui définit qui accède, pour quoi et combien de temps. Et ce contrat ne reste pas sur le papier : la machine le fait respecter elle-même. Si une demande n'a pas de contrat, il n'y a pas d'accès. Si elle en a un, seul un résultat agrégé revient. Le cabinet décide toujours, dans le cadre du règlement général sur la protection des données et de la loi Informatique et Libertés, avec un hébergeur certifié pour les données de santé. Et avec une règle claire de l'Espace européen des données de santé : les données de santé ne sont jamais utilisées pour la publicité.",
+  "fuentes": "Sources : Dental Data (base de connaissances) · RGPD · loi Informatique et Libertés · Règlement (UE) 2025/327, art. 54 et 71 · Information générale ; pas un conseil juridique"
+ },
+ {
+  "id": "p04",
+  "titulo": "Que gagne un réseau de centres ?",
+  "chip": "Que gagne un réseau de centres ?",
+  "publico": [
+   "cadenas"
+  ],
+  "duracion": 50.8,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Le problème"
+   },
+   {
+    "t": 23.51,
+    "nombre": "Sans migration"
+   },
+   {
+    "t": 35.03,
+    "nombre": "Indicateurs comparables"
+   },
+   {
+    "t": 37.81,
+    "nombre": "Valeur ajoutée"
+   },
+   {
+    "t": 43.47,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p04/poster.jpg",
+  "vtt": "/presentaciones/fr/p04/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p04/",
+  "transcripcion": "Un réseau de centres de santé dentaires grandit en ouvrant ou en rachetant des centres, chacun avec son logiciel. Après les scandales Dentexia et Proxidentaire, la loi de deux mille vingt-trois impose aux centres dentaires un agrément préalable de l'agence régionale de santé, qui peut le refuser ou sanctionner. Démontrer sa qualité est devenu une condition pour rester ouvert. Avec Dental Data, inutile de migrer les dossiers : un connecteur à côté de chaque logiciel calcule les indicateurs dans chaque centre, avec la même définition et des actes codés dans la classification commune. La direction voit des résultats comparables de tout le réseau, et peut les montrer à l'agence régionale et à l'Assurance maladie sans transmettre un seul dossier médical. Une qualité démontrable, sans migrer un seul dossier.",
+  "fuentes": "Sources : Dental Data · cas d'usage et pilote (base de connaissances) · loi du 19 mai 2023 (agrément des centres de santé) · Règlement (UE) 2025/327, art. 72 · Barres illustratives"
+ },
+ {
+  "id": "p05",
+  "titulo": "Que gagne une complémentaire ?",
+  "chip": "Que gagne une complémentaire ?",
+  "publico": [
+   "aseguradoras"
+  ],
+  "duracion": 47.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Le réseau"
+   },
+   {
+    "t": 15.72,
+    "nombre": "Données cohérentes"
+   },
+   {
+    "t": 24.7,
+    "nombre": "Un canal"
+   },
+   {
+    "t": 29.66,
+    "nombre": "Limites claires"
+   },
+   {
+    "t": 39.84,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p05/poster.jpg",
+  "vtt": "/presentaciones/fr/p05/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p05/",
+  "transcripcion": "En France, les complémentaires sont le premier financeur des soins dentaires, et beaucoup travaillent avec des réseaux de cabinets partenaires. Elles paient des prothèses du panier cent pour cent santé, mais ne savent pas si ces traitements durent ni quel résultat ils obtiennent. Dental Data leur donne des données cohérentes de tout leur réseau sans centraliser les dossiers : le calcul se fait dans chaque cabinet et seul le résultat agrégé revient. Elles peuvent ainsi évaluer la réforme avec des données cliniques et améliorer la qualité de leurs réseaux. Avec des limites claires : l'Espace européen des données de santé interdit d'utiliser ces données pour la publicité ou pour des décisions qui nuisent aux personnes, y compris en assurance et sur les primes. Des résultats mesurés, sans centraliser les dossiers.",
+  "fuentes": "Sources : Dental Data (base de connaissances) · DREES · réforme 100 % santé · Règlement (UE) 2025/327, art. 54"
+ },
+ {
+  "id": "p06",
+  "titulo": "L'IA sur les radiographies sans déplacer les radiographies",
+  "chip": "Comment fonctionne l'IA sur les radiographies dentaires ?",
+  "publico": [
+   "clinicas",
+   "industria"
+  ],
+  "duracion": 44.2,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Le dilemme"
+   },
+   {
+    "t": 8.87,
+    "nombre": "L'algorithme voyage"
+   },
+   {
+    "t": 17.45,
+    "nombre": "Calcul confidentiel"
+   },
+   {
+    "t": 22.33,
+    "nombre": "Le modèle"
+   },
+   {
+    "t": 31.57,
+    "nombre": "Ce qui vient"
+   },
+   {
+    "t": 37.97,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p06/poster.jpg",
+  "vtt": "/presentaciones/fr/p06/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p06/",
+  "transcripcion": "Entraîner une IA dentaire exige beaucoup de radiographies. Mais les réunir en un seul lieu est un risque. Dental Data inverse le chemin : l'algorithme voyage jusqu'à chaque cabinet, y apprend et ne renvoie que ce qu'il a appris, jamais les images. Les calculs se font avec le calcul confidentiel, qui protège les données pendant leur traitement. Le premier modèle, pour les caries interproximales et la perte osseuse parodontale, est en validation clinique. C'est une aide pour le professionnel : il ne remplace pas son diagnostic. Et il se prépare à ce qui vient : en deux mille trente et un, les images médicales entrent dans l'Espace européen des données de santé. L'algorithme va vers la donnée.",
+  "fuentes": "Sources : Dental Data (base de connaissances) · Règlement (UE) 2026/1744 · Règlement (UE) 2025/327 · Modèle en validation clinique ; il ne remplace pas le diagnostic · Dispositifs médicaux : ANSM · Autorités IA : loi DDADUE (en attente)"
+ },
+ {
+  "id": "p07",
+  "titulo": "Quelles dates fixe l'Espace européen des données de santé ?",
+  "chip": "Quelles dates fixe l'EHDS ?",
+  "publico": [
+   "todos",
+   "clinicas"
+  ],
+  "duracion": 47.6,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Calendrier"
+   },
+   {
+    "t": 11.25,
+    "nombre": "La fenêtre"
+   },
+   {
+    "t": 18.97,
+    "nombre": "Article 50"
+   },
+   {
+    "t": 29.7,
+    "nombre": "France"
+   },
+   {
+    "t": 40.36,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p07/poster.jpg",
+  "vtt": "/presentaciones/fr/p07/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p07/",
+  "transcripcion": "L'Espace européen des données de santé est déjà en vigueur et a des dates. En mars deux mille vingt-sept, chaque pays aura désigné ses organismes d'accès ; en mars deux mille vingt-neuf, l'essentiel de l'usage secondaire s'applique, et en deux mille trente et un arrivent les images médicales, comme les radiographies dentaires. La plupart des cabinets sont des microentreprises et sont exemptés par défaut : pour participer, il faut un canal agrégé, à travers les réseaux de centres, les complémentaires ou les syndicats. En France, la Plateforme des données de santé est candidate pour être l'organisme d'accès, mais la décision n'est pas prise, et elle migre vers un hébergement souverain entre fin deux mille vingt-six et deux mille vingt-sept. Qui arrivera connecté sera l'interlocuteur naturel.",
+  "fuentes": "Sources : Règlement (UE) 2025/327 (art. 50 et 105) · Plateforme des données de santé · Ministère de la Santé (2026)"
+ },
+ {
+  "id": "p08",
+  "titulo": "Quelle technologie se cache derrière Dental Data ?",
+  "chip": "Quelle technologie derrière Dental Data ?",
+  "publico": [
+   "partners"
+  ],
+  "duracion": 47.4,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La règle"
+   },
+   {
+    "t": 8.94,
+    "nombre": "Dans le nœud"
+   },
+   {
+    "t": 19.08,
+    "nombre": "À la frontière"
+   },
+   {
+    "t": 32.38,
+    "nombre": "Ouvert à tous"
+   },
+   {
+    "t": 36.2,
+    "nombre": "Expérience"
+   },
+   {
+    "t": 42.38,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p08/poster.jpg",
+  "vtt": "/presentaciones/fr/p08/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p08/",
+  "transcripcion": "Dental Data suit une règle simple : Microsoft dans le nœud, des standards ouverts aux frontières. Dans chaque nœud, le connecteur fonctionne sur Microsoft Azure dans l'Union européenne ou chez un hébergeur souverain certifié, intégré au logiciel de gestion du cabinet et déployé par des partenaires. Aux frontières, l'espace parle des standards européens ouverts : Gaia-X, le protocole des espaces de données, Eclipse EDC, des attestations vérifiables, FHIR, DICOM et HealthDCAT-AP. Ainsi, tout participant peut se connecter, même sans Microsoft. Et nous ne partons pas de zéro : Software in a Box a déjà conçu et exploité trois espaces de données réels.",
+  "fuentes": "Sources : Dental Data · technologie et entreprise (base de connaissances) · Microsoft et Azure sont des marques de Microsoft Corporation ; cités comme texte"
+ },
+ {
+  "id": "p09",
+  "titulo": "Qu'offre Dental Data à l'industrie ?",
+  "chip": "Qu'offre Dental Data à l'industrie ?",
+  "publico": [
+   "industria"
+  ],
+  "duracion": 43.4,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Qui"
+   },
+   {
+    "t": 13.21,
+    "nombre": "Données de vie réelle"
+   },
+   {
+    "t": 23.14,
+    "nombre": "Pour les éditeurs"
+   },
+   {
+    "t": 30.2,
+    "nombre": "Les règles"
+   },
+   {
+    "t": 36.48,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p09/poster.jpg",
+  "vtt": "/presentaciones/fr/p09/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p09/",
+  "transcripcion": "Pour l'industrie dentaire, les données de vie réelle valent beaucoup. Les fabricants d'implants et de matériaux, et les entreprises d'intelligence artificielle, doivent savoir comment leurs produits se comportent au cabinet. Dental Data leur offre ces preuves, ordonnées et sous contrat : des questions qui trouvent leur réponse dans les cabinets et des résultats agrégés qui reviennent sans données identifiables. Pour les éditeurs de logiciels de gestion, le connecteur est une brique qui s'intègre à leur produit et ouvre de nouveaux services à leurs clients. Les règles ne changent pas : un contrat pour chaque usage, seulement des résultats agrégés et jamais de publicité. Des preuves réelles, ordonnées et sous contrat.",
+  "fuentes": "Sources : Dental Data (base de connaissances) · Règlement (UE) 2025/327, art. 54"
+ },
+ {
+  "id": "p10",
+  "titulo": "Comment rejoindre Dental Data ?",
+  "chip": "Comment rejoindre Dental Data ?",
+  "publico": [
+   "cadenas",
+   "aseguradoras",
+   "partners"
+  ],
+  "duracion": 48.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Nous cherchons"
+   },
+   {
+    "t": 9.56,
+    "nombre": "Financement"
+   },
+   {
+    "t": 18.98,
+    "nombre": "Feuille de route"
+   },
+   {
+    "t": 29.8,
+    "nombre": "Nous voulons aussi parler avec"
+   },
+   {
+    "t": 38.92,
+    "nombre": "On en parle ?"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p10/poster.jpg",
+  "vtt": "/presentaciones/fr/p10/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p10/",
+  "transcripcion": "En France, nous cherchons une complémentaire ou un réseau de centres de santé dentaires pour un premier projet d'indicateurs de qualité. Le cas d'usage finance le connecteur, et le client choisit où le nœud est hébergé : sur Azure, dans l'Union européenne, ou chez un hébergeur souverain certifié pour les données de santé. En deux mille vingt-sept, les premiers nœuds ; puis nous consolidons les projets ; en deux mille vingt-neuf, des jeux de données catalogués et prêts pour l'espace européen ; ensuite, l'imagerie dentaire. Nous voulons aussi parler avec les éditeurs de logiciels référencés Ségur, avec les prestataires d'hébergement certifiés, avec l'Ordre et avec les syndicats de chirurgiens-dentistes. On en parle ? Écrivez à partners arobase softwareinabox point eu.",
+  "fuentes": "Sources : Dental Data · programme de partenaires France et feuille de route (base de connaissances) · Pas de tarifs publiés"
+ },
+ {
+  "id": "p11",
+  "titulo": "Que construisons-nous sur Microsoft Azure ?",
+  "chip": "Que construisons-nous sur Microsoft Azure ?",
+  "publico": [
+   "partners",
+   "industria"
+  ],
+  "duracion": 94.1,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Ouverture"
+   },
+   {
+    "t": 3.0,
+    "nombre": "La règle"
+   },
+   {
+    "t": 13.08,
+    "nombre": "Le cabinet"
+   },
+   {
+    "t": 20.56,
+    "nombre": "Le nœud de données"
+   },
+   {
+    "t": 38.2,
+    "nombre": "Sécurité"
+   },
+   {
+    "t": 45.56,
+    "nombre": "La frontière"
+   },
+   {
+    "t": 63.98,
+    "nombre": "L'IA"
+   },
+   {
+    "t": 80.58,
+    "nombre": "Le parcours"
+   },
+   {
+    "t": 89.12,
+    "nombre": "Conclusion"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/fr/p11/poster.jpg",
+  "vtt": "/presentaciones/fr/p11/subtitulos-fr.vtt",
+  "interactiva": "/presentaciones/fr/p11/",
+  "transcripcion": "Voici ce que nous construisons sur Microsoft Azure pour Dental Data. Une règle guide la conception : le nœud chez l'hébergeur de votre choix, des standards ouverts à la frontière. Au cabinet, la radiographie quitte l'appareil par une passerelle DICOM open source, Orthanc, et elle est pseudonymisée à la source. Dans le nœud de données, Azure Health Data Services conserve le dossier en FHIR et l'image en DICOM. Microsoft Fabric et OneLake préparent les données pour l'analyse. Si le client l'exige, le même nœud peut être installé chez un hébergeur européen certifié pour les données de santé et qualifié de cloud de confiance. La sécurité repose sur Microsoft Entra ID, Azure Key Vault, Microsoft Defender for Cloud et Microsoft Sentinel. À la frontière travaille le connecteur Eclipse EDC, déployé sur Azure Kubernetes Service. Il publie le catalogue en HealthDCAT-AP, négocie des contrats ODRL et s'identifie avec des attestations Gaia-X. La frontière ne change pas : le même connecteur, le même catalogue et les mêmes contrats. L'intelligence artificielle est entraînée avec Azure Machine Learning et l'apprentissage fédéré : le modèle voyage jusqu'à chaque cabinet et les données restent où elles sont. Le calcul confidentiel protège les données même pendant le traitement, et Microsoft Foundry rédige des brouillons de comptes rendus que le dentiste vérifie. Ainsi, chaque radiographie suit un chemin sûr et contrôlé, du cabinet au modèle, sans qu'aucune donnée identifiable ne quitte le nœud.",
+  "fuentes": "Sources : Dental Data · document technique (v1.3) et proposition MVP (v1.4) · Icônes officielles Microsoft (Azure, Microsoft Entra et Microsoft Fabric), utilisées selon leurs conditions pour les schémas d'architecture · Microsoft, Azure, Entra, Fabric et les noms de leurs services sont des marques de Microsoft Corporation"
+ }
+]

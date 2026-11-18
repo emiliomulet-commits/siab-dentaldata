@@ -1,0 +1,479 @@
+[
+ {
+  "id": "p01",
+  "titulo": "Warum fehlen zahnärztliche Daten im Europäischen Gesundheitsdatenraum?",
+  "chip": "Warum fehlen zahnärztliche Daten im EHDS?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 56.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Die großen Abwesenden"
+   },
+   {
+    "t": 7.92,
+    "nombre": "Warum"
+   },
+   {
+    "t": 15.75,
+    "nombre": "Deutschland in Zahlen"
+   },
+   {
+    "t": 29.38,
+    "nombre": "Dateninseln"
+   },
+   {
+    "t": 42.7,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p01/poster.jpg",
+  "vtt": "/presentaciones/de/p01/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p01/",
+  "transcripcion": "Zahnärztliche Daten sind die großen Abwesenden im Europäischen Gesundheitsdatenraum. In Deutschland übernimmt die gesetzliche Krankenversicherung die Behandlung als Sachleistung und bezuschusst Zahnersatz mit einem festen Betrag. Zweitausendfünfundzwanzig gab sie dafür neunzehn Komma eins Milliarden Euro aus. Fast dreiundsechzigtausend Zahnärzte arbeiten in der vertragszahnärztlichen Versorgung, und es gibt mehr als eintausendfünfhundert zahnärztliche MVZ. Doch die klinischen Daten, etwa zur Parodontitis, zur Haltbarkeit von Zahnersatz oder zur Begründung eines Röntgenbilds, bleiben in jeder Praxis, in ihrer eigenen Software, ohne einen Kreislauf, der Ergebnisse misst. Die Daten existieren und haben Eigentümer mit Gründen, sie kontrolliert zu teilen. Was fehlt, ist jemand, der sie verbindet. Das ist Dental Data.",
+  "fuentes": "Quellen: Vergleichsstudie von Software in a Box (Nov. 2026) · KZBV-Jahrbuch · GKV-Statistik (2025) · Zahn-MVZ-Statistik der KZBV"
+ },
+ {
+  "id": "p02",
+  "titulo": "Wie funktioniert ein föderierter Datenraum?",
+  "chip": "Wie funktioniert ein föderierter Datenraum?",
+  "publico": [
+   "todos"
+  ],
+  "duracion": 45.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Die Praxis"
+   },
+   {
+    "t": 15.83,
+    "nombre": "Das Netz"
+   },
+   {
+    "t": 22.15,
+    "nombre": "Eine Frage"
+   },
+   {
+    "t": 30.19,
+    "nombre": "Was reist und was nicht"
+   },
+   {
+    "t": 36.81,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p02/poster.jpg",
+  "vtt": "/presentaciones/de/p02/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p02/",
+  "transcripcion": "In einem föderierten Datenraum behält jede Praxis, jedes MVZ, jede Krankenkasse oder jeder Versicherer seine Akten in der eigenen Praxisverwaltungssoftware. Neben dieser Software wird ein Konnektor installiert. Der Konnektor veröffentlicht in einem gemeinsamen Katalog, welche Daten es gibt, aber nicht die Daten selbst. Wenn jemand einen Indikator braucht, reist die Frage zu jeder Praxis, wird dort berechnet, und nur das aggregierte Ergebnis kommt zurück. Über das Netz gehen Einwilligungen, Metadaten und Ergebnisse. Niemals eine identifizierbare Akte. Die Daten bleiben in der Praxis. Was reist, ist die Antwort.",
+  "fuentes": "Quelle: Dental Data · die Lösung und ihre Anwendungsfälle (öffentliche Wissensbasis)"
+ },
+ {
+  "id": "p03",
+  "titulo": "Verlassen meine Daten die Praxis?",
+  "chip": "Verlassen meine Daten die Praxis?",
+  "publico": [
+   "clinicas",
+   "cadenas"
+  ],
+  "duracion": 48.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Die Antwort"
+   },
+   {
+    "t": 8.79,
+    "nombre": "Der Vertrag"
+   },
+   {
+    "t": 20.37,
+    "nombre": "Die Maschine setzt ihn durch"
+   },
+   {
+    "t": 27.23,
+    "nombre": "Der Rahmen"
+   },
+   {
+    "t": 43.47,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p03/poster.jpg",
+  "vtt": "/presentaciones/de/p03/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p03/",
+  "transcripcion": "Verlassen die Daten die Praxis? Nein. Keine identifizierbare Akte verlässt die Praxis. Jede Nutzung der Daten ist durch einen digitalen Vertrag geregelt, der festlegt, wer zugreift, wofür und wie lange. Und dieser Vertrag bleibt nicht auf Papier: Die Maschine setzt ihn selbst durch. Hat eine Anfrage keinen Vertrag, gibt es keinen Zugriff. Hat sie einen, kommt nur ein aggregiertes Ergebnis zurück. Die Praxis entscheidet immer, im Rahmen der Datenschutz-Grundverordnung und des Bundesdatenschutzgesetzes, und die Dokumentation wird zehn Jahre aufbewahrt. Und mit einer klaren Regel des Europäischen Gesundheitsdatenraums: Gesundheitsdaten werden niemals für Werbung verwendet.",
+  "fuentes": "Quellen: Dental Data (Wissensbasis) · DSGVO · BDSG · § 630f BGB · Verordnung (EU) 2025/327, Art. 54 und 71 · Allgemeine Information; keine Rechtsberatung"
+ },
+ {
+  "id": "p04",
+  "titulo": "Was gewinnt ein MVZ-Verbund?",
+  "chip": "Was gewinnt ein MVZ-Verbund?",
+  "publico": [
+   "cadenas"
+  ],
+  "duracion": 53.9,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Das Problem"
+   },
+   {
+    "t": 25.13,
+    "nombre": "Ohne Migration"
+   },
+   {
+    "t": 35.39,
+    "nombre": "Vergleichbare Indikatoren"
+   },
+   {
+    "t": 46.93,
+    "nombre": "Mehrwert"
+   },
+   {
+    "t": 47.59,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p04/poster.jpg",
+  "vtt": "/presentaciones/de/p04/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p04/",
+  "transcripcion": "In Deutschland gibt es mehr als eintausendfünfhundert zahnärztliche MVZ, und rund ein Drittel gehört Investoren. Der Berufsstand wirft ihnen Überversorgung vor, und der Koalitionsvertrag hat ein Gesetz mit mehr Transparenz angekündigt. Ein Verbund, der durch Zukäufe wächst, bekommt in jeder Praxis eine andere Software, und Qualität zu vergleichen heißt, Akten zu migrieren. Mit Dental Data ist das nicht nötig: Ein Konnektor neben jeder Software berechnet die Indikatoren in der Praxis, mit derselben Definition und verknüpft mit den Abrechnungspositionen. Die Leitung sieht vergleichbare Ergebnisse des ganzen Verbunds, ohne Krankenakten herauszugeben, und kann sie gegenüber der Kassenzahnärztlichen Vereinigung, den Krankenkassen und dem Gesetzgeber belegen. So entsteht Transparenz, die man belegen kann.",
+  "fuentes": "Quellen: Dental Data · Anwendungsfälle und Pilot (Wissensbasis) · KZBV (2026) · Koalitionsvertrag 2025 · Verordnung (EU) 2025/327, Art. 72 · Illustrative Balken"
+ },
+ {
+  "id": "p05",
+  "titulo": "Was gewinnen Selbstverwaltung und Krankenkassen?",
+  "chip": "Was gewinnen Selbstverwaltung und Kassen?",
+  "publico": [
+   "aseguradoras"
+  ],
+  "duracion": 52.8,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Das Netz"
+   },
+   {
+    "t": 23.07,
+    "nombre": "Kohärente Daten"
+   },
+   {
+    "t": 32.35,
+    "nombre": "Ein Kanal"
+   },
+   {
+    "t": 37.93,
+    "nombre": "Klare Grenzen"
+   },
+   {
+    "t": 45.75,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p05/poster.jpg",
+  "vtt": "/presentaciones/de/p05/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p05/",
+  "transcripcion": "In Deutschland bezahlen die gesetzlichen Krankenkassen die Zahnmedizin von vierundsiebzig Millionen Menschen, und die Kassenzahnärztlichen Vereinigungen rechnen jede Behandlung ab und analysieren sie. Ab zweitausendsiebenundzwanzig sinkt der Festzuschuss für Zahnersatz um zehn Prozentpunkte: Es wird wichtig sein zu wissen, ob sich Behandlungen und ihr Ergebnis verändern. Dental Data liefert diese klinischen Daten, ohne Akten zu zentralisieren: Der Indikator wird in jeder Praxis berechnet, und nur das Aggregat kommt zurück. Das hilft beim Zahnersatz, bei der Parodontitis und beim angemessenen Einsatz von Röntgenbildern. Mit klaren Grenzen: Der EHDS verbietet, diese Daten für Werbung oder für Entscheidungen zum Nachteil von Menschen zu verwenden. Gemessene Ergebnisse, ohne Akten zu zentralisieren.",
+  "fuentes": "Quellen: Dental Data (Wissensbasis) · GKV-Spitzenverband (2025) · KZBV · Verordnung (EU) 2025/327, Art. 54"
+ },
+ {
+  "id": "p06",
+  "titulo": "KI auf Röntgenbildern, ohne die Röntgenbilder zu bewegen",
+  "chip": "Wie funktioniert KI auf zahnärztlichen Röntgenbildern?",
+  "publico": [
+   "clinicas",
+   "industria"
+  ],
+  "duracion": 48.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Das Dilemma"
+   },
+   {
+    "t": 9.78,
+    "nombre": "Der Algorithmus reist"
+   },
+   {
+    "t": 17.88,
+    "nombre": "Vertrauliches Rechnen"
+   },
+   {
+    "t": 23.8,
+    "nombre": "Das Modell"
+   },
+   {
+    "t": 34.0,
+    "nombre": "Was kommt"
+   },
+   {
+    "t": 41.84,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p06/poster.jpg",
+  "vtt": "/presentaciones/de/p06/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p06/",
+  "transcripcion": "Eine zahnärztliche KI zu trainieren braucht viele Röntgenbilder. Aber sie an einem Ort zu bündeln, ist ein Risiko. Dental Data kehrt den Weg um: Der Algorithmus reist zu jeder Praxis, lernt dort und gibt nur das Gelernte zurück, niemals die Bilder. Die Berechnungen laufen mit vertraulichem Rechnen, das die Daten schützt, während sie verarbeitet werden. Das erste Modell, für Approximalkaries und parodontalen Knochenabbau, ist in klinischer Validierung. Es ist eine Hilfe für die Fachkraft: Es ersetzt nicht ihre Diagnose. Und es bereitet sich auf das vor, was kommt: Zweitausendeinunddreißig kommen medizinische Bilder in den Europäischen Gesundheitsdatenraum. Der Algorithmus geht zu den Daten.",
+  "fuentes": "Quellen: Dental Data (Wissensbasis) · Verordnung (EU) 2026/1744 · Verordnung (EU) 2025/327 · Modell in klinischer Validierung; ersetzt nicht die Diagnose · Aufsicht: BfArM (Medizinprodukte) · Bundesnetzagentur (KI-Marktüberwachung)"
+ },
+ {
+  "id": "p07",
+  "titulo": "Welche Termine setzt der Europäische Gesundheitsdatenraum?",
+  "chip": "Welche Termine setzt der EHDS?",
+  "publico": [
+   "todos",
+   "clinicas"
+  ],
+  "duracion": 55.6,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Zeitplan"
+   },
+   {
+    "t": 10.27,
+    "nombre": "Das Fenster"
+   },
+   {
+    "t": 16.39,
+    "nombre": "Artikel 50"
+   },
+   {
+    "t": 28.57,
+    "nombre": "Deutschland"
+   },
+   {
+    "t": 48.43,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p07/poster.jpg",
+  "vtt": "/presentaciones/de/p07/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p07/",
+  "transcripcion": "Der Europäische Gesundheitsdatenraum ist schon in Kraft und hat Termine: Zugangsstellen im März zweitausendsiebenundzwanzig, Sekundärnutzung im März zweitausendneunundzwanzig und medizinische Bilder zweitausendeinunddreißig. Die meisten Praxen sind Kleinstunternehmen und standardmäßig befreit: Um teilzunehmen, braucht es einen aggregierten Kanal, über die Kassenzahnärztlichen Vereinigungen, die MVZ-Verbünde oder die Softwarehersteller. Deutschland ist schon weiter: Das Gesundheitsdatennutzungsgesetz ist seit zweitausendvierundzwanzig in Kraft, und das Forschungsdatenzentrum beim BfArM erhält bereits die Abrechnungsdaten der gesetzlichen Krankenversicherung. Das GeDIG, das im Bundestag beraten wird, soll die koordinierende Zugangsstelle beim BfArM ansiedeln. Wer angebunden ankommt, wird zum natürlichen Partner.",
+  "fuentes": "Quellen: Verordnung (EU) 2025/327 (Art. 50 und 105) · Gesundheitsdatennutzungsgesetz (2024) · Regierungsentwurf GeDIG (2026)"
+ },
+ {
+  "id": "p08",
+  "titulo": "Welche Technologie steckt hinter Dental Data?",
+  "chip": "Welche Technologie steckt hinter Dental Data?",
+  "publico": [
+   "partners"
+  ],
+  "duracion": 47.8,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Die Regel"
+   },
+   {
+    "t": 8.6,
+    "nombre": "Im Knoten"
+   },
+   {
+    "t": 19.4,
+    "nombre": "An der Grenze"
+   },
+   {
+    "t": 32.5,
+    "nombre": "Offen für alle"
+   },
+   {
+    "t": 35.72,
+    "nombre": "Erfahrung"
+   },
+   {
+    "t": 42.76,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p08/poster.jpg",
+  "vtt": "/presentaciones/de/p08/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p08/",
+  "transcripcion": "Dental Data folgt einer einfachen Regel: Microsoft im Knoten, offene Standards an den Grenzen. In jedem Knoten läuft der Konnektor auf Microsoft Azure, mit den Daten in der Europäischen Union, integriert in die Praxisverwaltungssoftware und bereitgestellt von Azure-Partnern. An den Grenzen spricht der Raum offene europäische Standards: Gaia-X, das Dataspace Protokoll, Eclipse EDC, verifizierbare Nachweise, FHIR, DICOM und HealthDCAT-AP. So kann sich jeder Teilnehmer anbinden, auch ohne Microsoft. Und wir fangen nicht bei null an: Software in a Box hat bereits drei echte Datenräume entworfen und umgesetzt.",
+  "fuentes": "Quellen: Dental Data · Technologie und Unternehmen (Wissensbasis) · Microsoft und Azure sind Marken der Microsoft Corporation; als Text genannt"
+ },
+ {
+  "id": "p09",
+  "titulo": "Was bietet Dental Data der Industrie?",
+  "chip": "Was bietet Dental Data der Industrie?",
+  "publico": [
+   "industria"
+  ],
+  "duracion": 48.0,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Wer"
+   },
+   {
+    "t": 14.91,
+    "nombre": "Real-World-Evidence"
+   },
+   {
+    "t": 26.17,
+    "nombre": "Für die PVS"
+   },
+   {
+    "t": 33.97,
+    "nombre": "Die Regeln"
+   },
+   {
+    "t": 40.67,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p09/poster.jpg",
+  "vtt": "/presentaciones/de/p09/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p09/",
+  "transcripcion": "Für die Dentalindustrie ist Real-World-Evidence viel wert. Hersteller von Implantaten und Materialien sowie Unternehmen für künstliche Intelligenz müssen wissen, wie sich ihre Produkte in der Praxis bewähren. Dental Data bietet ihnen diese Evidenz geordnet und unter Vertrag: Fragen, die in den Praxen beantwortet werden, und aggregierte Ergebnisse, die ohne identifizierbare Daten zurückkommen. Für die Hersteller von Praxissoftware ist der Konnektor ein Baustein, der sich in ihr Produkt integriert und ihren Kunden neue Dienste eröffnet. Die Regeln ändern sich nicht: ein Vertrag für jede Nutzung, nur aggregierte Ergebnisse und niemals Werbung. Echte Evidenz, geordnet und unter Vertrag.",
+  "fuentes": "Quellen: Dental Data (Wissensbasis) · KZBV (PVS-Marktanteile) · Verordnung (EU) 2025/327, Art. 54"
+ },
+ {
+  "id": "p10",
+  "titulo": "Wie macht man bei Dental Data mit?",
+  "chip": "Wie macht man bei Dental Data mit?",
+  "publico": [
+   "cadenas",
+   "aseguradoras",
+   "partners"
+  ],
+  "duracion": 51.1,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Wir suchen"
+   },
+   {
+    "t": 13.75,
+    "nombre": "Finanzierung"
+   },
+   {
+    "t": 18.41,
+    "nombre": "Fahrplan"
+   },
+   {
+    "t": 31.67,
+    "nombre": "Wir wollen auch sprechen mit"
+   },
+   {
+    "t": 42.11,
+    "nombre": "Sprechen wir?"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p10/poster.jpg",
+  "vtt": "/presentaciones/de/p10/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p10/",
+  "transcripcion": "In Deutschland suchen wir Hersteller von Praxissoftware, die den Konnektor ihren Kunden als weiteren Dienst anbieten wollen, und einen MVZ-Verbund für ein erstes Projekt mit Qualitätsindikatoren. Der Hersteller gewinnt einen neuen Dienst, der Verbund nachweisbare Qualität. Zweitausendsiebenundzwanzig kommen die Integration und das erste Projekt; bis zweitausendneunundzwanzig erweitern wir das Netz, und dann entsteht ein katalogisierter Datensatz für die nationale Zugangsstelle; danach die zahnärztlichen Bilder. Wir wollen auch mit der Kassenzahnärztlichen Bundesvereinigung sprechen, mit der Bundeszahnärztekammer, ihrem Institut, der gematik, dem BfArM und den Krankenkassen. Sprechen wir? Schreiben Sie an partners at softwareinabox punkt eu.",
+  "fuentes": "Quellen: Dental Data · Partnerprogramm Deutschland und Fahrplan (Wissensbasis) · Keine veröffentlichten Preise"
+ },
+ {
+  "id": "p11",
+  "titulo": "Was bauen wir auf Microsoft Azure?",
+  "chip": "Was bauen wir auf Microsoft Azure?",
+  "publico": [
+   "partners",
+   "industria"
+  ],
+  "duracion": 82.5,
+  "capitulos": [
+   {
+    "t": 0.0,
+    "nombre": "Eröffnung"
+   },
+   {
+    "t": 3.0,
+    "nombre": "Die Regel"
+   },
+   {
+    "t": 12.09,
+    "nombre": "Die Praxis"
+   },
+   {
+    "t": 19.59,
+    "nombre": "Der Datenknoten"
+   },
+   {
+    "t": 30.21,
+    "nombre": "Sicherheit"
+   },
+   {
+    "t": 37.73,
+    "nombre": "Die Grenze"
+   },
+   {
+    "t": 51.25,
+    "nombre": "Die KI"
+   },
+   {
+    "t": 68.09,
+    "nombre": "Der Weg"
+   },
+   {
+    "t": 77.55,
+    "nombre": "Abschluss"
+   }
+  ],
+  "mp4": null,
+  "poster": "/presentaciones/de/p11/poster.jpg",
+  "vtt": "/presentaciones/de/p11/subtitulos-de.vtt",
+  "interactiva": "/presentaciones/de/p11/",
+  "transcripcion": "Das bauen wir auf Microsoft Azure für Dental Data. Eine Regel leitet das Design: Microsoft im Knoten, offene Standards an der Grenze. In der Praxis verlässt das Röntgenbild das Gerät über ein Open-Source-DICOM-Gateway, Orthanc, und wird an der Quelle pseudonymisiert. Im Datenknoten speichert Azure Health Data Services die Akte in FHIR und das Bild in DICOM. Microsoft Fabric und OneLake bereiten die Daten für die Analyse vor. Die Sicherheit kommt von Microsoft Entra ID, Azure Key Vault, Microsoft Defender for Cloud und Microsoft Sentinel. An der Grenze arbeitet der Eclipse-EDC-Konnektor, bereitgestellt auf Azure Kubernetes Service. Er veröffentlicht den Katalog in HealthDCAT-AP, verhandelt ODRL-Verträge und weist sich mit Gaia-X-Nachweisen aus. Die künstliche Intelligenz wird mit Azure Machine Learning und föderiertem Lernen trainiert: Das Modell reist zu jeder Praxis, und die Daten bleiben, wo sie sind. Vertrauliches Rechnen schützt die Daten sogar während der Verarbeitung, und Microsoft Foundry schreibt Berichtsentwürfe, die der Zahnarzt prüft. So folgt jedes Röntgenbild einem sicheren und kontrollierten Weg, von der Praxis zum Modell, ohne dass ein identifizierbares Datum den Knoten verlässt.",
+  "fuentes": "Quellen: Dental Data · technisches Dokument (v1.3) und MVP-Vorschlag (v1.4) · Offizielle Microsoft-Symbole (Azure, Microsoft Entra und Microsoft Fabric), gemäß ihren Bedingungen für Architekturdiagramme verwendet · Microsoft, Azure, Entra, Fabric und die Namen ihrer Dienste sind Marken der Microsoft Corporation"
+ }
+]

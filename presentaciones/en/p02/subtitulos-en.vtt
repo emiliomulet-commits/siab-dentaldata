@@ -1,0 +1,42 @@
+WEBVTT
+
+00:00:03.330 --> 00:00:07.000
+In a federated data space, each
+practice, chain,
+
+00:00:07.050 --> 00:00:12.220
+insurer or payer keeps its records in its
+own practice management software.
+
+00:00:12.270 --> 00:00:15.400
+A connector is installed next
+to that software.
+
+00:00:15.450 --> 00:00:17.920
+The connector publishes in a
+common catalogue
+
+00:00:17.970 --> 00:00:21.800
+which data exist, but not the
+data themselves.
+
+00:00:21.850 --> 00:00:26.160
+When someone needs an indicator, the
+question travels to each practice,
+
+00:00:26.210 --> 00:00:30.560
+is computed there, and only the
+aggregated result comes back.
+
+00:00:30.610 --> 00:00:35.040
+Consents, metadata and results
+move over the network.
+
+00:00:35.090 --> 00:00:37.640
+Never an identifiable record.
+
+00:00:37.690 --> 00:00:40.020
+The data stay in the practice.
+
+00:00:40.070 --> 00:00:42.610
+What travels is the answer.

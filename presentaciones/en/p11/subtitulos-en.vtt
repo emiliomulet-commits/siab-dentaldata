@@ -1,0 +1,80 @@
+WEBVTT
+
+00:00:03.330 --> 00:00:07.260
+This is what we build on Microsoft
+Azure for Dental Data.
+
+00:00:07.310 --> 00:00:13.680
+One rule guides the design: Microsoft inside the
+node, open standards at the border.
+
+00:00:13.730 --> 00:00:16.880
+In the practice, the X-ray leaves
+the unit through an open
+
+00:00:16.930 --> 00:00:21.640
+source DICOM gateway, Orthanc, and is
+pseudonymised at source.
+
+00:00:21.690 --> 00:00:24.160
+In the data node, Azure
+Health Data Services
+
+00:00:24.210 --> 00:00:28.440
+stores the record in FHIR and
+the image in DICOM.
+
+00:00:28.490 --> 00:00:32.400
+Microsoft Fabric and OneLake prepare
+the data for analysis.
+
+00:00:32.450 --> 00:00:36.680
+Security comes from Microsoft Entra
+ID, Azure Key Vault,
+
+00:00:36.730 --> 00:00:40.100
+Microsoft Defender for Cloud and
+Microsoft Sentinel.
+
+00:00:40.150 --> 00:00:43.560
+At the border, the Eclipse EDC
+connector works,
+
+00:00:43.610 --> 00:00:45.620
+deployed on Azure Kubernetes Service.
+
+00:00:45.670 --> 00:00:49.360
+It publishes the catalogue in
+HealthDCAT-AP,
+
+00:00:49.410 --> 00:00:54.900
+negotiates ODRL contracts and identifies
+itself with Gaia-X credentials.
+
+00:00:54.950 --> 00:00:57.120
+The artificial intelligence
+is trained with
+
+00:00:57.170 --> 00:01:00.180
+Azure Machine Learning and
+federated learning:
+
+00:01:00.230 --> 00:01:04.580
+the model travels to each practice and
+the data stay where they are.
+
+00:01:04.630 --> 00:01:08.360
+Confidential computing protects the
+data even during processing,
+
+00:01:08.410 --> 00:01:13.080
+and Microsoft Foundry writes draft
+reports that the dentist reviews.
+
+00:01:13.130 --> 00:01:16.920
+So every X-ray follows a safe
+and controlled path,
+
+00:01:16.970 --> 00:01:22.530
+from the practice to the model, without any
+identifiable data leaving the node.

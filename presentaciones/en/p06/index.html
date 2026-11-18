@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>P06 · AI on X-rays without moving the X-rays · Dental Data</title>
+<meta name="description" content="Animated presentation by Dental Data: federated learning and confidential computing on dental images.">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/dd-motor.css">
+</head>
+<body class="al-inicio">
+<div id="marco"><div id="stage" role="img" aria-label="AI on X-rays without moving the X-rays">
+<img id="marca" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" width="220" height="40">
+<div id="chip"><b>P06</b><span>How does AI on dental X-rays work?</span></div>
+<section class="esc centro" data-nombre="Opening" data-dur="3.0">
+  <img src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="" style="height:64px;margin:0 auto 44px" data-a="pop">
+  <div class="k" data-a="fade" data-t=".5">Dental Data · Question 6</div>
+  <div class="h1" data-a="up" data-t=".8">How do you train a <span class="oro">dental AI</span> without moving the X-rays?</div>
+</section>
+<section class="esc" data-nombre="The dilemma" data-dur="6.37">
+  <div class="h2" data-a="up">Training AI requires many X-rays… <span class="oro">pooling them is a risk</span></div>
+  <div class="lienzo fijo"><div class="nodo" style="left:120px;top:130px;width:110px" data-a="pop" data-t="0.4"><div class="disco "><i data-i="rx" class=""></i></div></div><div class="nodo" style="left:120px;top:430px;width:110px" data-a="pop" data-t="0.52"><div class="disco "><i data-i="rx" class=""></i></div></div><div class="nodo" style="left:420px;top:110px;width:110px" data-a="pop" data-t="0.64"><div class="disco "><i data-i="rx" class=""></i></div></div><div class="nodo" style="left:988px;top:110px;width:110px" data-a="pop" data-t="0.76"><div class="disco "><i data-i="rx" class=""></i></div></div><div class="nodo" style="left:1288px;top:130px;width:110px" data-a="pop" data-t="0.88"><div class="disco "><i data-i="rx" class=""></i></div></div><div class="nodo" style="left:1288px;top:430px;width:110px" data-a="pop" data-t="1.0"><div class="disco "><i data-i="rx" class=""></i></div></div><div class="paquete blanco" style="left:120px;top:102px" data-a="mover" data-dx="584" data-dy="120" data-d="1.0" data-t="1.8"></div><div class="paquete blanco" style="left:120px;top:402px" data-a="mover" data-dx="584" data-dy="-180" data-d="1.0" data-t="1.9000000000000001"></div><div class="paquete blanco" style="left:420px;top:82px" data-a="mover" data-dx="284" data-dy="140" data-d="1.0" data-t="2.0"></div><div class="paquete blanco" style="left:988px;top:82px" data-a="mover" data-dx="-284" data-dy="140" data-d="1.0" data-t="2.1"></div><div class="paquete blanco" style="left:1288px;top:102px" data-a="mover" data-dx="-584" data-dy="120" data-d="1.0" data-t="2.2"></div><div class="paquete blanco" style="left:1288px;top:402px" data-a="mover" data-dx="-584" data-dy="-180" data-d="1.0" data-t="2.3"></div><div class="nodo" style="left:704px;top:260px;width:200px" data-a="pop" data-t="1.4"><div class="disco osc"><i data-i="nube" class="blanco"></i></div>One central store</div><div style="position:absolute;left:704px;top:440px;transform:translate(-50%,-50%)"><span class="pild ko" data-a="pop" data-t="3.2"><i data-i="no"></i>Centralising X-rays increases the risk</span></div></div>
+</section>
+<section class="esc" data-nombre="The algorithm travels" data-dur="9.68">
+  <div class="h2" data-a="up">Dental Data reverses the path: <span class="oro">the algorithm travels</span></div>
+  <div class="lienzo fijo"><svg class="lineas" viewBox="0 0 1408 520"><path d="M704 62 L250 382" class="disc" data-a="draw" data-t="0.6"/><path d="M704 62 L704 402" class="disc" data-a="draw" data-t="0.8"/><path d="M704 62 L1158 382" class="disc" data-a="draw" data-t="1.0"/></svg><div class="nodo" style="left:704px;top:90px;width:200px" data-a="pop" data-t="0.3"><div class="disco oro"><i data-i="ia" class=""></i></div>AI model</div><div class="nodo" style="left:250px;top:410px;width:240px" data-a="pop" data-t="0.6"><div class="disco "><i data-i="clinica" class=""></i></div>Practice<small>the X-rays stay</small></div><div class="nodo" style="left:704px;top:430px;width:240px" data-a="pop" data-t="0.8"><div class="disco "><i data-i="clinica" class=""></i></div>Practice<small>the X-rays stay</small></div><div class="nodo" style="left:1158px;top:410px;width:240px" data-a="pop" data-t="1.0"><div class="disco "><i data-i="clinica" class=""></i></div>Practice<small>the X-rays stay</small></div><div class="paquete blanco" style="left:704px;top:62px" data-a="mover" data-dx="-454" data-dy="320" data-d="1.1" data-t="1.8"></div><div class="paquete blanco" style="left:704px;top:62px" data-a="mover" data-dx="0" data-dy="340" data-d="1.1" data-t="2.0"></div><div class="paquete blanco" style="left:704px;top:62px" data-a="mover" data-dx="454" data-dy="320" data-d="1.1" data-t="2.2"></div><div class="paquete " style="left:250px;top:382px" data-a="mover" data-dx="454" data-dy="-320" data-d="1.1" data-t="4.2"></div><div class="paquete " style="left:704px;top:402px" data-a="mover" data-dx="0" data-dy="-340" data-d="1.1" data-t="4.4"></div><div class="paquete " style="left:1158px;top:382px" data-a="mover" data-dx="-454" data-dy="-320" data-d="1.1" data-t="4.6000000000000005"></div><div class="etq " style="left:400px;top:250px" data-a="fade" data-t="5.01">Learns in each practice</div><div class="etq oro" style="left:1010px;top:250px" data-a="fade" data-t="6.03">Returns only what it learned</div></div>
+</section>
+<section class="esc centro" data-nombre="Confidential computing" data-dur="5.64">
+  <div class="card" data-a="pop" style="width:140px;min-height:0;height:140px;margin:0 auto;display:flex;align-items:center;justify-content:center"><i data-i="candado" class="g" style="width:70px;height:70px"></i></div>
+  <div class="h2" data-a="up" data-t=".8" style="margin-top:34px">Confidential <span class="oro">computing</span></div>
+  <div class="lead" data-a="fade" data-t="1.6">Protects the data even while they are processed.</div>
+</section>
+<section class="esc" data-nombre="The model" data-dur="11.0">
+  <div class="k" data-a="fade">First model</div>
+  <div class="fila" style="margin-top:20px">
+    <div class="card" data-a="up" data-t=".5"><div class="ico"><i data-i="muela"></i></div><h3>Interproximal caries</h3><p>On dental X-rays.</p></div>
+    <div class="card" data-a="up" data-t="3.55"><div class="ico"><i data-i="rx"></i></div><h3>Periodontal bone loss</h3><p>On dental X-rays.</p></div>
+  </div>
+  <div class="pasos" style="margin-top:36px"><span class="pild oro" data-a="pop" data-t="5.03">In clinical validation</span><span class="pild" data-a="pop" data-t="6.65">An aid for the professional: it does not replace the diagnosis</span></div>
+</section>
+<section class="esc" data-nombre="What comes next" data-dur="8.72">
+  <div class="h2" data-a="up">Ready for <span class="oro">what comes next</span></div>
+  <div class="tl"><div class="eje" data-a="bar" data-t=".5"></div>
+    <div class="hito" style="left:28%" data-a="up" data-t="1.2"><div class="f">2 Aug 2028</div><span class="p"></span><div class="t">AI Act: obligations for AI in medical devices</div></div>
+    <div class="hito" style="left:72%" data-a="up" data-t="3.24"><div class="f">26 Mar 2031</div><span class="p"></span><div class="t">Medical images enter the European Health Data Space</div></div>
+  </div>
+</section>
+<section class="esc centro cierre" data-nombre="Closing" data-dur="6.46">
+  <div class="frase"><span data-a="up">The algorithm</span><br><span class="oro" data-a="up" data-t=".9">goes to the data.</span></div>
+  <span class="raya" data-a="bar" data-t="1.8"></span>
+  <div class="lead" data-a="fade" data-t="2.3" style="font-size:31px;color:#fff">AI on dental images without moving X-rays.</div>
+  <img class="logo-fin" src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" style="margin-left:auto;margin-right:auto" data-a="pop" data-t="3.0">
+</section>
+<div id="pie"><span>Sources: Dental Data (knowledge base) · Regulation (EU) 2026/1744 · Regulation (EU) 2025/327 · Model in clinical validation; it does not replace the professional's diagnosis · Supervision: national medical device authorities and AI Act authorities</span><span>Dental Data · Software in a Box</span></div>
+</div></div>
+<div class="nota-rm">Reduced motion: each scene is shown complete.</div>
+<div id="inicio"><span>Press → or the space bar to start</span></div>
+<audio id="voz" src="voz-p06.mp3" preload="auto"></audio>
+<button id="voz-btn" hidden>🔊 Voice-over on</button>
+<nav class="ui" aria-label="Presentation controls">
+<button id="ant" title="Previous scene (←)" aria-label="Previous scene"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7z"/></svg></button>
+<button title="Play or pause" aria-label="Play or pause"><svg viewBox="0 0 24 24" id="pp"><path d="M8 5v14l11-7z"/></svg></button>
+<button id="sig" title="Next scene (→)" aria-label="Next scene"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7z"/></svg></button>
+<div class="escenas" id="escenas"></div>
+<span class="pista">← → space · 1–7 · F · H hides</span>
+<button id="pc" title="Full screen (F)" aria-label="Full screen"><svg viewBox="0 0 24 24"><path d="M4 4h6v2H6v4H4zM14 4h6v6h-2V6h-4zM4 14h2v4h4v2H4zM18 14h2v6h-6v-2h4z"/></svg></button>
+</nav>
+<script>window.DD_UI={"escena": "Scene", "quitar": "🔇 Sound off", "activar": "🔊 Sound on", "locucion": "🔊 Voice-over on", "ver": "▶ Watch with voice-over (sound on)"}</script>
+<script src="../../assets/gsap.min.js"></script>
+<script src="../../assets/dd-motor.js"></script>
+</body>
+</html>

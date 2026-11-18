@@ -1,0 +1,42 @@
+WEBVTT
+
+00:00:03.250 --> 00:00:08.620
+In einem föderierten Datenraum behält jede
+Praxis, jedes MVZ, jede Krankenkasse
+
+00:00:08.670 --> 00:00:13.120
+oder jeder Versicherer seine Akten in der
+eigenen Praxisverwaltungssoftware.
+
+00:00:13.170 --> 00:00:16.080
+Neben dieser Software wird ein
+Konnektor installiert.
+
+00:00:16.130 --> 00:00:19.140
+Der Konnektor veröffentlicht in
+einem gemeinsamen Katalog,
+
+00:00:19.190 --> 00:00:22.400
+welche Daten es gibt, aber nicht
+die Daten selbst.
+
+00:00:22.450 --> 00:00:26.400
+Wenn jemand einen Indikator braucht,
+reist die Frage zu jeder Praxis,
+
+00:00:26.450 --> 00:00:30.440
+wird dort berechnet, und nur das
+aggregierte Ergebnis kommt zurück.
+
+00:00:30.490 --> 00:00:34.040
+Über das Netz gehen Einwilligungen,
+Metadaten und Ergebnisse.
+
+00:00:34.090 --> 00:00:37.060
+Niemals eine identifizierbare Akte.
+
+00:00:37.110 --> 00:00:39.240
+Die Daten bleiben in der Praxis.
+
+00:00:39.290 --> 00:00:41.610
+Was reist, ist die Antwort.

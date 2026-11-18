@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00:03.370 --> 00:00:06.760
+Training a dental AI requires many X-rays.
+
+00:00:06.810 --> 00:00:09.620
+But pooling them in one place is a risk.
+
+00:00:09.670 --> 00:00:14.780
+Dental Data reverses the path: the
+algorithm travels to each practice,
+
+00:00:14.830 --> 00:00:19.300
+learns there and returns only what it
+learned, never the images.
+
+00:00:19.350 --> 00:00:22.100
+The computations use
+confidential computing,
+
+00:00:22.150 --> 00:00:24.940
+which protects the data while they
+are being processed.
+
+00:00:24.990 --> 00:00:27.900
+The first model, for
+interproximal caries and
+
+00:00:27.950 --> 00:00:31.380
+periodontal bone loss, is in
+clinical validation.
+
+00:00:31.430 --> 00:00:35.940
+It is an aid for the professional: it does
+not replace their diagnosis.
+
+00:00:35.990 --> 00:00:40.620
+And it is getting ready for what comes
+next: in two thousand thirty-one,
+
+00:00:40.670 --> 00:00:44.660
+medical images enter the European
+Health Data Space.
+
+00:00:44.710 --> 00:00:47.470
+The algorithm goes to the data.

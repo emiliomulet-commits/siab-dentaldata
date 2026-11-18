@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00:03.280 --> 00:00:07.190
+Voici ce que nous construisons sur
+Microsoft Azure pour Dental Data.
+
+00:00:07.240 --> 00:00:10.230
+Une règle guide la conception : le
+nœud chez l'hébergeur
+
+00:00:10.280 --> 00:00:13.330
+de votre choix, des standards
+ouverts à la frontière.
+
+00:00:13.380 --> 00:00:16.340
+Au cabinet, la radiographie quitte
+l'appareil par une passerelle
+
+00:00:16.390 --> 00:00:20.810
+DICOM open source, Orthanc, et elle est
+pseudonymisée à la source.
+
+00:00:20.860 --> 00:00:23.530
+Dans le nœud de données, Azure
+Health Data Services
+
+00:00:23.580 --> 00:00:26.790
+conserve le dossier en FHIR et
+l'image en DICOM.
+
+00:00:26.840 --> 00:00:30.050
+Microsoft Fabric et OneLake préparent
+les données pour l'analyse.
+
+00:00:30.100 --> 00:00:33.930
+Si le client l'exige, le même nœud peut
+être installé chez un hébergeur
+
+00:00:33.980 --> 00:00:38.450
+européen certifié pour les données de santé et
+qualifié de cloud de confiance.
+
+00:00:38.500 --> 00:00:42.470
+La sécurité repose sur Microsoft
+Entra ID, Azure Key Vault,
+
+00:00:42.520 --> 00:00:45.810
+Microsoft Defender for Cloud et
+Microsoft Sentinel.
+
+00:00:45.860 --> 00:00:48.850
+À la frontière travaille le
+connecteur Eclipse EDC,
+
+00:00:48.900 --> 00:00:51.450
+déployé sur Azure Kubernetes Service.
+
+00:00:51.500 --> 00:00:54.570
+Il publie le catalogue en HealthDCAT-AP,
+
+00:00:54.620 --> 00:00:58.930
+négocie des contrats ODRL et s'identifie
+avec des attestations Gaia-X.
+
+00:00:58.980 --> 00:01:02.150
+La frontière ne change pas : le
+même connecteur,
+
+00:01:02.200 --> 00:01:04.230
+le même catalogue et les mêmes contrats.
+
+00:01:04.280 --> 00:01:06.970
+L'intelligence artificielle est
+entraînée avec Azure Machine
+
+00:01:07.020 --> 00:01:10.020
+Learning et l'apprentissage
+fédéré : le modèle voyage
+
+00:01:10.070 --> 00:01:13.030
+jusqu'à chaque cabinet et les données
+restent où elles sont.
+
+00:01:13.080 --> 00:01:16.270
+Le calcul confidentiel protège les données
+même pendant le traitement,
+
+00:01:16.320 --> 00:01:18.630
+et Microsoft Foundry rédige des brouillons
+
+00:01:18.680 --> 00:01:20.830
+de comptes rendus que le dentiste vérifie.
+
+00:01:20.880 --> 00:01:24.610
+Ainsi, chaque radiographie suit un
+chemin sûr et contrôlé,
+
+00:01:24.660 --> 00:01:29.520
+du cabinet au modèle, sans qu'aucune donnée
+identifiable ne quitte le nœud.
