@@ -21,3 +21,11 @@
 **¿Se usarán los datos para publicidad?** Nunca; el EHDS lo prohíbe.
 
 **¿Hay estudio en español?** Todavía no; está en inglés y neerlandés.
+
+**¿Sirve a las administraciones, por ejemplo para el PADI?** Sí: calcula en cada clínica habilitada los indicadores de cobertura y actividad que exige la ampliación de la cartera bucodental (Orden SND/606/2024) y entrega solo el agregado.
+
+**¿Qué cambia con la Ley de Salud Digital?** Es un anteproyecto en tramitación que prevé un organismo nacional de acceso y organismos autonómicos. Las clínicas no tienen aún obligaciones nuevas; el calendario europeo fija marzo de 2027 (organismos designados) y marzo de 2029 (uso secundario).
+
+**¿Cuánto se conservan las historias clínicas?** Mínimo cinco años desde el alta de cada proceso (Ley 41/2002); varias comunidades fijan plazos más largos.
+
+**¿Puede una aseguradora fijar primas con los datos?** No. El EEDS prohíbe usar los datos de salud para decisiones que perjudiquen a las personas, también en seguros.

@@ -115,6 +115,26 @@ def reemplazar_saltando_videos(html, viejo, nuevo):
     return "".join(out)
 
 
+def noeud_fr():
+    """Francia: «Où s'installe le nœud ?» · dos opciones de alojamiento del nodo (plan A4.6)."""
+    col = ('<div style="flex:1 1 320px;background:#0B2545;border:1px solid #1E3A5F;border-radius:14px;padding:24px 26px">'
+           '<div style="font:700 12px/1.2 Montserrat,sans-serif;letter-spacing:.12em;color:#EDBC6C;text-transform:uppercase">{0}</div>'
+           '<h3 style="color:#fff;font-size:20px;margin:10px 0 8px">{1}</h3><p style="color:#C3CFDC;font-size:15.5px;margin:0 0 12px">{2}</p>'
+           '<ul style="color:#C3CFDC;font-size:15px;margin:0;padding-left:18px">{3}</ul></div>')
+    li = lambda xs: "".join(f"<li>{x}</li>" for x in xs)
+    a = col.format("Option 1 · Microsoft Azure", "Nœud sur Azure, région Union européenne",
+                   "La même architecture que dans les autres pays : les services Azure présentés dans l&#x27;animation, avec les données hébergées dans l&#x27;Union européenne.",
+                   li(["Identité Microsoft Entra et calcul confidentiel pour l&#x27;IA", "Déploiement le plus rapide, catalogue de services complet", "Certification HDS d&#x27;Azure, à confirmer pour chaque service utilisé"]))
+    b = col.format("Option 2 · Hébergeur souverain", "Nœud chez un hébergeur qualifié SecNumCloud et certifié HDS",
+                   "Pour les établissements qui exigent un hébergement souverain : le nœud est installé chez un hébergeur français qualifié par l&#x27;ANSSI et certifié pour les données de santé.",
+                   li(["Données et opérations soumises au seul droit de l&#x27;Union", "Mêmes fonctions de connecteur et de catalogue", "Le choix de l&#x27;hébergeur revient à chaque participant"]))
+    return ('<div class="wrap" style="padding:8px 28px 56px"><div style="max-width:760px;margin-bottom:22px">'
+            '<div class="eyebrow">Où s&#x27;installe le nœud ?</div>'
+            '<h2 style="color:#fff;margin:8px 0 10px">Deux options d&#x27;hébergement, les mêmes standards aux frontières</h2>'
+            '<p style="color:#C3CFDC;margin:0">Les données cliniques ne quittent jamais le cabinet ou le centre : seuls circulent des questions et des résultats agrégés. '
+            'Chaque participant choisit où s&#x27;installe son nœud ; le connecteur Eclipse EDC, le catalogue HealthDCAT-AP, les règles ODRL et les identifiants Gaia-X restent identiques.</p></div>'
+            f'<div style="display:flex;flex-wrap:wrap;gap:20px">{a}{b}</div></div>\n')
+
 def videos_mercado(html, pmk, vl):
     """Traduce los bloques <!--dd-videos--> de la plantilla a la versión de presentaciones del mercado pmk."""
     import json, html as H
@@ -154,7 +174,7 @@ def videos_mercado(html, pmk, vl):
                    f' <div class="wrap dd-arq-cab"><div class="eyebrow">{e(a[0])}</div><h2 id="dd-arq-t">{e(v["titulo"])}</h2><p>{e(a[1])}</p></div>\n'
                    f' <div class="dd-arq-v"><iframe src="{base}p11/?modo=web&amp;sonido=1" title="{e(t["T"]["iframe"] + ": " + v["titulo"])}" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>\n'
                    f' <div class="wrap dd-arq-pie">{boton("p11", t["locucion"])}<a href="{base}p11/?modo=video" target="_blank" rel="noopener">{e(t["completa"])}</a>'
-                   f'<small>{e(a[2])}</small></div>\n</section>')
+                   f'<small>{e(a[2])}</small></div>\n{noeud_fr() if pmk == "fr" else ""}</section>')
         elif "dd-videos-ld" in b:
             dom = "https://dentaldata.softwareinabox.eu"
             items = []
