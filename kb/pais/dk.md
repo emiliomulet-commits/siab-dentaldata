@@ -25,3 +25,14 @@ Der er endnu ikke et pilotprojekt i Danmark: vi inviterer myndigheder, regioner,
 
 ## Kontakt
 partners@softwareinabox.eu · +34 601 398 868
+
+## Preguntas frecuentes propias del mercado
+
+**¿Sustituye Dental Data al registro SCOR?**
+No. SCOR recoge la salud dental infantil desde 1972 como parte de la historia clínica. Dental Data extiende esa lógica a los adultos, que hoy no tienen datos clínicos en ningún registro, calculando indicadores en las clínicas privadas.
+
+**¿Cuánto tiempo se conservan las historias?**
+Los dentistas deben conservar sus registros, incluidas las radiografías, al menos 10 años. La nueva norma de historias clínicas (BEK 1361/2025) refuerza la responsabilidad de la dirección de la clínica.
+
+**¿Quién supervisa la IA?**
+La Digitaliseringsstyrelsen coordina el Reglamento de IA según la ley de mayo de 2025; la Lægemiddelstyrelsen supervisa los productos sanitarios con IA. El marco nacional completo está pendiente tras decaer el proyecto L 111.

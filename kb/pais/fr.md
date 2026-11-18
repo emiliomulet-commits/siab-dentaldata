@@ -26,3 +26,17 @@ Buscamos una complementaria (mutua, institución de previsión o aseguradora) o 
 - Que la PDS esté designada como organismo de acceso.
 - Cifras de Bélgica u otros países como si fueran francesas.
 - Que Dental Data tenga certificación HDS propia.
+
+## Preguntas frecuentes propias del mercado
+
+**¿Están los datos alojados en Microsoft?**
+Los datos clínicos no salen nunca del cabinet o del centro: lo que circula son preguntas y resultados agregados. El nodo de cada participante puede instalarse en Azure, en la Unión Europea, o en un proveedor soberano con certificación HDS y calificación SecNumCloud, a elección del cliente. El conector y los estándares de frontera son los mismos en los dos casos.
+
+**¿Qué relación tiene con el Health Data Hub?**
+La Plataforma de datos de salud facilita el acceso al SNDS, que contiene datos de reembolso. Dental Data aporta datos clínicos dentales, que el SNDS no tiene, con un catálogo compatible. La Plataforma aspira a ser el organismo de acceso del EEDS, pero la decisión aún no está tomada.
+
+**¿Qué aporta a un centro de salud dental?**
+Desde la ley de 19 de mayo de 2023, los centros con actividad dental necesitan el agrément de la agencia regional de salud. Dental Data les permite medir y demostrar su calidad con indicadores comparables, sin entregar historias clínicas.
+
+**¿Qué relación tiene con el 100 % santé?**
+La reforma cambió quién paga las prótesis, pero no se mide su resultado clínico. Dental Data permite a las complementarias y al seguro evaluar la duración y la calidad de los tratamientos con datos de los cabinets.

@@ -17,3 +17,17 @@ Medir la calidad entre clínicas sin mover un solo proceso clínico, para asegur
 ## No decir
 - Que el organismo de acceso portugués esté designado.
 - Que las aseguradoras puedan usar los datos para primas.
+
+## Preguntas frecuentes propias del mercado
+
+**¿Quién regula la publicidad en salud?**
+La ERS, con el Decreto-Lei 238/2015 y su Reglamento 1058/2016. Exigen transparencia, veracidad y rigor científico, también en webs y redes sociales. Dental Data no hace publicidad y su información es verificable.
+
+**¿Quién es la autoridad de IA?**
+La ANACOM, designada en septiembre de 2025 como autoridad de vigilancia del mercado y punto de contacto único del Reglamento de IA. Para los productos sanitarios, el INFARMED.
+
+**¿Pueden las aseguradoras usar los datos para fijar primas?**
+No. El EEDS prohíbe usar los datos de salud para decisiones que perjudiquen a las personas, también en seguros. Las aseguradoras reciben solo resultados agregados de su red.
+
+**¿Qué hay que saber de la radiología?**
+El Decreto-Lei 108/2018 exige registrar la práctica en la Agência Portuguesa do Ambiente, con renovación cada cinco años. Las imágenes no salen de la clínica con Dental Data.

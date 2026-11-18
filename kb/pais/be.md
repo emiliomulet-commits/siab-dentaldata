@@ -25,3 +25,20 @@ Todavía no hay un piloto abierto en Bélgica: invitamos a instituciones, asocia
 
 ## Contacto
 partners@softwareinabox.eu · +34 601 398 868 · oficina en Bruselas (barrio europeo).
+
+## Preguntas frecuentes propias del mercado
+
+**¿Es la Health Data Agency el organismo de acceso del EHDS?**
+La HDA existe desde la ley de 14 de marzo de 2023 y funciona desde enero de 2024, con un catálogo nacional de metadatos. Se espera que sea el organismo de acceso, pero a noviembre de 2026 la designación no es formal y la estructura de gobierno nacional aún debe cerrarse.
+
+**¿Cuánto tiempo hay que conservar el expediente del paciente?**
+La ley de calidad de 2019 obliga a conservarlo entre 30 y 50 años desde el último contacto. Son series históricas muy largas, que Dental Data puede aprovechar para indicadores de resultado a largo plazo.
+
+**¿Qué hay que saber del cone beam?**
+Para que el INAMI-RIZIV reembolse un cone beam, el escáner y sus usuarios deben estar registrados y cumplir las reglas de la AFCN-FANC. El uso del cone beam es uno de los indicadores que Dental Data puede medir.
+
+**¿Puede Dental Data hacer publicidad de una consulta?**
+No. Desde la ley de 30 de octubre de 2018, los profesionales sanitarios pueden dar información profesional objetiva y verificable, pero no hacer publicidad con incentivos o comparativas. Y el EHDS prohíbe usar los datos de salud para publicidad.
+
+**¿Funciona con mi software?**
+El conector se instala junto al software de la consulta. La puerta de entrada técnica es el software homologado para eHealth (eAttest, eFact, MyCareNet), cuya lista publica el Colegio Intermutualista Nacional.

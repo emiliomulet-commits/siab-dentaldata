@@ -18,3 +18,17 @@ Toda comunicación debe ser informativa, nunca promocional (ley 145/2018, comma 
 ## No decir
 - Que el organismo de acceso italiano esté designado.
 - Mensajes promocionales o comparativos sobre consultas.
+
+## Preguntas frecuentes propias del mercado
+
+**¿Qué relación tiene con el Fascicolo Sanitario Elettronico?**
+El FSE 2.0 reúne los documentos sanitarios del ciudadano, sobre todo del SSN. La odontología es casi toda privada y queda fuera. Dental Data hace interoperable ese dato dental sin moverlo y lo prepara para conectarse al Ecosistema Dati Sanitari.
+
+**¿Quién es la autoridad de IA?**
+La Ley 132/2025 designa a la AgID y a la ACN como autoridades nacionales de IA: la ACN como autoridad de vigilancia del mercado y punto de contacto único, y la AgID para notificaciones y promoción.
+
+**¿Puedo usar los datos para promocionar mi consulta?**
+No. El apartado 525 de la Ley 145/2018 solo permite información funcional a la seguridad de los tratamientos, sin elementos atractivos o sugestivos, y el EEDS prohíbe usar los datos de salud para publicidad.
+
+**¿Qué cambia para una sociedad con director sanitario?**
+Nada en su organización: Dental Data no sustituye al director sanitario. Le da indicadores comparables entre consultas para demostrar calidad ante fondos, colegios y reguladores.

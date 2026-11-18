@@ -25,3 +25,17 @@ Todavía no hay un piloto abierto en Alemania: invitamos a fabricantes de softwa
 
 ## Contacto
 partners@softwareinabox.eu · +34 601 398 868
+
+## Preguntas frecuentes propias del mercado
+
+**¿Sustituye Dental Data a la ePA?**
+No. La ePA es la historia del paciente y desde el 1 de octubre de 2025 su uso es obligatorio en las consultas. Dental Data no guarda historias: calcula indicadores en cada consulta y comparte solo el resultado. Complementa la ePA y el FDZ con datos clínicos de resultado.
+
+**¿Qué ocurre con las radiografías?**
+La ley de protección radiológica obliga a conservarlas 10 años, y en menores hasta que cumplan 28. Con Dental Data no salen de la consulta: el algoritmo de IA viaja a la consulta y solo devuelve lo aprendido.
+
+**¿Quién supervisa la IA?**
+Según el KI-MIG, la Bundesnetzagentur es la autoridad central del Reglamento de IA; para los productos sanitarios con IA es competente el BfArM.
+
+**¿Qué cambia con el GeDIG?**
+El GeDIG, aprobado por el Gobierno el 15 de julio de 2026 y en tramitación parlamentaria, adapta el EHDS y sitúa en el BfArM el punto de acceso coordinador, con puntos sectoriales. Dental Data puede ser una fuente sectorial dental con catálogo HealthDCAT-AP.

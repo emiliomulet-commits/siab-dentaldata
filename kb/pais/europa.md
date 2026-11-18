@@ -15,3 +15,13 @@ Cruzando integración pública de los datos dentales y presión privada para com
 
 ## Lo que se ofrece a un partner
 Un producto único (conector sobre Microsoft Azure con datos en la UE y estándares abiertos europeos en las fronteras), un estudio de cinco mercados, una alianza España–Países Bajos y experiencia en tres espacios de datos financiados por la SEDIA. Contacto: partners@softwareinabox.eu.
+
+## Preguntas frecuentes propias del mercado
+
+**¿En qué países está disponible Dental Data?**
+Hay versiones para España, Países Bajos, Bélgica (neerlandés y francés), Francia, Alemania, Italia, Portugal y Dinamarca, cada una con su mercado y su normativa. Desde otros países, la versión europea es la puerta de entrada.
+
+**¿Es la tecnología la misma en todos los países?**
+Sí: conector junto al software de la clínica, Azure dentro del nodo y estándares abiertos europeos en la frontera. En Francia se ofrece además la instalación del nodo en un proveedor soberano certificado.
+
+---
