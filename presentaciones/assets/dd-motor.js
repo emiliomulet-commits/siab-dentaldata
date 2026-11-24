@@ -220,6 +220,20 @@ if(vb){ vb.hidden = !(WEB && !VOZ && audio);
     if(vozActiva && !audio.paused){ audio.muted = !audio.muted; rotular(); } else conSonido().catch(() => {}); };
   if(audio){ audio.addEventListener("play", rotular); audio.addEventListener("pause", rotular); audio.addEventListener("ended", rotular); }
   rotular(); }
+/* el navegador bloquea el sonido si la presentación arranca sola al hacer scroll:
+   el primer clic o tecla del usuario dentro del bloque (escenas, pausa, flechas…) activa la locución
+   en el punto en que va la animación; si el usuario ya ha quitado el audio con el botón, se respeta */
+if(SONIDO && audio){
+  const desbloquear = e => {
+    if(vb && e.target && vb.contains(e.target)) return;
+    if(vozActiva || audio.muted) return;
+    vozActiva = true; audio.muted = false;
+    try { audio.currentTime = Math.min(tl.time(), audio.duration || tl.time()); } catch(_){}
+    audio.play().then(() => { tl.play(); rotular(); }).catch(() => { vozActiva = false; rotular(); });
+  };
+  addEventListener("pointerdown", desbloquear, true);
+  addEventListener("keydown", desbloquear, true);
+}
 /* la página puede pedir el sonido tras un clic del usuario (p. ej. el enlace de la cabecera) */
 addEventListener("message", e => { if(e.source === window.parent && e.data && e.data.dd === "sonido" && WEB && !VOZ) conSonido().catch(() => tl.play(0)); });
 const ini = $("#inicio span");
