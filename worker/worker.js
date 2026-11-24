@@ -32,6 +32,17 @@ const IDIOMAS = {
   pt: 'Responde SEMPRE em português europeu (sem brasileirismos; a base está sobretudo em espanhol: traduz fielmente). Diz «Espaço Europeu de Dados de Saúde (EEDS)» e «médico dentista».',
   da: 'Svar ALTID på dansk (vidensbasen er mest på spansk: oversæt nøjagtigt). Skriv "Det europæiske sundhedsdataområde (EHDS)".'
 };
+/* Mensajes de error del chat en el idioma de la página */
+const ERR = {
+  es: { limite: 'Ha alcanzado el límite diario de preguntas. Vuelva mañana o escriba a partners@softwareinabox.eu.', nodisp: 'El asistente no está disponible en este momento. Inténtelo más tarde.', corte: 'El asistente se interrumpió. Inténtelo de nuevo.', vacia: 'No se recibió respuesta. Inténtelo de nuevo.', conexion: 'Se perdió la conexión. Inténtelo de nuevo.' },
+  en: { limite: 'Daily question limit reached. Please come back tomorrow or write to partners@softwareinabox.eu.', nodisp: 'The assistant is not available right now. Please try again later.', corte: 'The assistant was interrupted. Please try again.', vacia: 'No answer received. Please try again.', conexion: 'Connection lost. Please try again.' },
+  nl: { limite: 'U hebt het dagelijkse maximum aantal vragen bereikt. Kom morgen terug of schrijf naar partners@softwareinabox.eu.', nodisp: 'De assistent is op dit moment niet beschikbaar. Probeer het later opnieuw.', corte: 'De assistent werd onderbroken. Probeer het opnieuw.', vacia: 'Geen antwoord ontvangen. Probeer het opnieuw.', conexion: 'Verbinding verbroken. Probeer het opnieuw.' },
+  fr: { limite: 'Vous avez atteint la limite quotidienne de questions. Revenez demain ou écrivez à partners@softwareinabox.eu.', nodisp: 'L’assistant n’est pas disponible pour le moment. Réessayez plus tard.', corte: 'L’assistant a été interrompu. Veuillez réessayer.', vacia: 'Aucune réponse reçue. Veuillez réessayer.', conexion: 'Connexion perdue. Veuillez réessayer.' },
+  de: { limite: 'Sie haben das tägliche Fragenlimit erreicht. Kommen Sie morgen wieder oder schreiben Sie an partners@softwareinabox.eu.', nodisp: 'Der Assistent ist gerade nicht verfügbar. Bitte versuchen Sie es später erneut.', corte: 'Der Assistent wurde unterbrochen. Bitte versuchen Sie es erneut.', vacia: 'Keine Antwort erhalten. Bitte versuchen Sie es erneut.', conexion: 'Verbindung unterbrochen. Bitte versuchen Sie es erneut.' },
+  it: { limite: 'Ha raggiunto il limite giornaliero di domande. Torni domani o scriva a partners@softwareinabox.eu.', nodisp: 'L’assistente non è disponibile in questo momento. Riprovi più tardi.', corte: 'L’assistente si è interrotto. Riprovi.', vacia: 'Nessuna risposta ricevuta. Riprovi.', conexion: 'Connessione persa. Riprovi.' },
+  pt: { limite: 'Atingiu o limite diário de perguntas. Volte amanhã ou escreva para partners@softwareinabox.eu.', nodisp: 'O assistente não está disponível neste momento. Tente mais tarde.', corte: 'O assistente foi interrompido. Tente novamente.', vacia: 'Não foi recebida resposta. Tente novamente.', conexion: 'Ligação perdida. Tente novamente.' },
+  da: { limite: 'Du har nået det daglige antal spørgsmål. Kom tilbage i morgen eller skriv til partners@softwareinabox.eu.', nodisp: 'Assistenten er ikke tilgængelig lige nu. Prøv igen senere.', corte: 'Assistenten blev afbrudt. Prøv igen.', vacia: 'Intet svar modtaget. Prøv igen.', conexion: 'Forbindelsen blev afbrudt. Prøv igen.' }
+};
 function kbDe(pais) { return KB_COMUN.concat(KB_PAIS[pais] || KB_PAIS.eu); }
 
 const KB_CACHE = new Map();                 // caché en memoria del isolate, por mercado
@@ -177,13 +188,12 @@ export default {
 
     const ip = request.headers.get('CF-Connecting-IP') || 'anon';
     if (!(await dentroDeLimite(env, ip))) {
-      return json({ error: idioma === 'en'
-        ? 'Daily question limit reached. Please come back tomorrow or write to partners@softwareinabox.eu.'
-        : 'Ha alcanzado el límite diario de preguntas. Vuelva mañana o escriba a partners@softwareinabox.eu.' }, 429, origin);
+      return json({ error: ERR[idioma].limite }, 429, origin);
     }
 
     const kb = await cargarKB(pais);
-    const reglaIdioma = IDIOMAS[idioma] + ` La página desde la que te escriben es la de ${PAISES[pais]}: usa las cifras, leyes, organismos y ofertas de ese mercado; si preguntan por otro país, responde solo con lo que diga la base sobre él y, si existe, enlaza su página (https://dentaldata.softwareinabox.eu/es/, /nl/, /nl-be/, /fr-be/, /fr/, /de/, /da/, /it/, /pt/ o /en/).`;
+    const reglaIdioma = IDIOMAS[idioma] + (idioma === 'es' ? '' : ' No dejes ninguna palabra en español sin traducir (por ejemplo, «espacio de datos» se traduce siempre).')
+      + (idioma === 'nl' ? ' Zeg "federatieve dataruimte" (nooit "federale ruimte").' : '') + ` La página desde la que te escriben es la de ${PAISES[pais]}: usa las cifras, leyes, organismos y ofertas de ese mercado; si preguntan por otro país, responde solo con lo que diga la base sobre él y, si existe, enlaza su página (https://dentaldata.softwareinabox.eu/es/, /nl/, /nl-be/, /fr-be/, /fr/, /de/, /da/, /it/, /pt/ o /en/).`;
     const instrucciones = `Eres el asistente de la web de Dental Data (dentaldata.softwareinabox.eu), el espacio de datos de salud dental federado de Software in a Box, preparado para el Espacio Europeo de Datos de Salud (EEDS) y desplegado sobre Microsoft Azure. ${reglaIdioma}
 Hablas con dentistas, directivos de cadenas dentales, aseguradoras, proveedores de software y partners tecnológicos. Tono profesional, cercano y claro, sin jerga innecesaria. Máximo 5 frases por respuesta; usa **negritas** para lo esencial.
 Fundamenta cada respuesta EXCLUSIVAMENTE en la base de conocimiento adjunta. Si algo no está en ella, dilo con honestidad y sugiere escribir a partners@softwareinabox.eu o usar el formulario (#contacto). Nunca inventes cifras, fechas, precios, clientes, socios ni características. No des diagnóstico ni consejo clínico ni asesoramiento jurídico personalizado. No hables en nombre de Microsoft ni afirmes acuerdos con Microsoft que no estén en la base. No pidas ni almacenes datos personales y, si el usuario los escribe, no los repitas. Si preguntan por temas ajenos a Dental Data, salud dental, datos de salud o Software in a Box, indica amablemente que solo puedes hablar de Dental Data. Cuando encaje, invita a contactar: al piloto en España, al programa de partners en Países Bajos, a una alianza institucional en Bélgica, a acuerdos con fabricantes de software y MVZ en Alemania, a proyectos institucionales en Dinamarca y, en el resto, a escribir a partners@softwareinabox.eu.
@@ -195,7 +205,7 @@ Al final de tu respuesta añade, cada una en su línea:
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': (env.ANTHROPIC_API_KEY || env.DENTAL_DATA), 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({
-        model: env.MODEL || 'claude-haiku-5-5', max_tokens: 900, stream: true,
+        model: env.MODEL || 'claude-haiku-5-5', max_tokens: 3000, stream: true,
         system: [
           { type: 'text', text: instrucciones },
           { type: 'text', text: 'BASE DE CONOCIMIENTO DENTAL DATA:\n' + kb, cache_control: { type: 'ephemeral' } }
@@ -207,8 +217,7 @@ Al final de tu respuesta añade, cada una en su línea:
       let detalle = 'HTTP ' + resp.status;
       try { const j = await resp.json(); detalle = (j.error && j.error.message) || detalle; } catch {}
       console.log('anthropic_error', resp.status, detalle);
-      return json({ error: (idioma === 'en' ? 'The assistant is not available right now. ' : 'El asistente no está disponible en este momento. ')
-        + (idioma === 'en' ? 'Please try again later.' : 'Inténtelo más tarde.') }, 502, origin);
+      return json({ error: ERR[idioma].nodisp }, 502, origin);
     }
 
     const inicio = Date.now(), pregunta = limpios[limpios.length - 1].content;
@@ -228,13 +237,13 @@ Al final de tu respuesta añade, cada una en su línea:
             if (!linea.startsWith('data:')) continue;
             let j; try { j = JSON.parse(linea.slice(5)); } catch { continue; }
             if (j.type === 'content_block_delta' && j.delta && j.delta.text) { hubo = true; texto += j.delta.text; await emitir({ t: j.delta.text }); }
-            else if (j.type === 'error') { fallo = 'interrumpida'; await emitir({ error: idioma === 'en' ? 'The assistant was interrupted. Please try again.' : 'El asistente se interrumpió. Inténtelo de nuevo.' }); }
+            else if (j.type === 'error') { fallo = 'interrumpida'; await emitir({ error: ERR[idioma].corte }); }
           }
         }
-        await emitir(hubo ? { fin: true } : { error: idioma === 'en' ? 'No answer received.' : 'No se recibió respuesta.' });
+        await emitir(hubo ? { fin: true } : { error: ERR[idioma].vacia });
       } catch (e) {
         fallo = 'conexión perdida';
-        await emitir({ error: idioma === 'en' ? 'Connection lost.' : 'Se perdió la conexión.' });
+        await emitir({ error: ERR[idioma].conexion });
       } finally {
         await w.close();
         await guardar(env, { rid: cuerpo.rid, sid: cuerpo.sid, idioma, pais, pagina: cuerpo.pagina, tipo: 'ia', pregunta,

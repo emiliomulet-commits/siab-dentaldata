@@ -1,1 +1,44 @@
-<!DOCTYPE html><meta charset="utf-8"><title>404</title><meta http-equiv="refresh" content="0;url=/nl/"><a href="/nl/">Dental Data</a>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · Dental Data</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<style>body{margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;background:linear-gradient(160deg,#0B2545,#14335C);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}main{max-width:640px}h1{font-family:Montserrat,sans-serif;font-size:clamp(28px,4vw,40px);line-height:1.15;margin:28px 0 8px}p{color:#C9D3E0;font-size:18px}a.c{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding:16px 22px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;text-decoration:none;font-weight:700;font-size:17px}a.c:hover,a.c.yo{border-color:#C9A227}a.c.yo{background:rgba(201,162,39,.16)}a.c span{color:#C9A227}small{display:block;margin-top:30px;color:#AAB7C8}small a{color:#fff}</style></head>
+<body><main>
+<img src="/assets/brand/dentaldata-logo-horizontal-white.svg" alt="Dental Data" width="260" height="60" style="display:block;height:auto">
+<h1 id="t">This page does not exist</h1>
+<p id="d">The address may be mistyped or the page may have moved. Choose your country to continue.</p>
+<nav aria-label="Countries">
+<a class="c" href="/en/" data-l="en">🇪🇺 Europe · English <span>→</span></a>
+<a class="c" href="/es/" data-l="es">🇪🇸 España · Español <span>→</span></a>
+<a class="c" href="/nl/" data-l="nl">🇳🇱 Nederland · Nederlands <span>→</span></a>
+<a class="c" href="/nl-be/" data-l="nl-be">🇧🇪 België · Nederlands <span>→</span></a>
+<a class="c" href="/fr-be/" data-l="fr-be">🇧🇪 Belgique · Français <span>→</span></a>
+<a class="c" href="/de/" data-l="de">🇩🇪 Deutschland · Deutsch <span>→</span></a>
+<a class="c" href="/da/" data-l="da">🇩🇰 Danmark · Dansk <span>→</span></a>
+<a class="c" href="/fr/" data-l="fr">🇫🇷 France · Français <span>→</span></a>
+<a class="c" href="/it/" data-l="it">🇮🇹 Italia · Italiano <span>→</span></a>
+<a class="c" href="/pt/" data-l="pt">🇵🇹 Portugal · Português <span>→</span></a>
+</nav>
+<small>A <a href="https://www.softwareinabox.eu/">Software in a Box</a> initiative · Madrid · Brussels</small>
+</main>
+<script>
+/* Texto en el idioma de la ruta pedida (/es/…, /nl/…) y su país destacado el primero */
+(function(){
+  var T={es:["Esta página no existe","Puede que la dirección esté mal escrita o que la página se haya movido. Elige tu país para continuar."],
+    nl:["Deze pagina bestaat niet","Het adres is misschien verkeerd getypt of de pagina is verplaatst. Kies uw land om verder te gaan."],
+    "nl-be":["Deze pagina bestaat niet","Het adres is misschien verkeerd getypt of de pagina is verplaatst. Kies uw land om verder te gaan."],
+    fr:["Cette page n’existe pas","L’adresse est peut-être mal saisie ou la page a été déplacée. Choisissez votre pays pour continuer."],
+    "fr-be":["Cette page n’existe pas","L’adresse est peut-être mal saisie ou la page a été déplacée. Choisissez votre pays pour continuer."],
+    de:["Diese Seite gibt es nicht","Die Adresse ist möglicherweise falsch geschrieben oder die Seite wurde verschoben. Wählen Sie Ihr Land, um fortzufahren."],
+    it:["Questa pagina non esiste","L’indirizzo potrebbe essere errato o la pagina è stata spostata. Scegli il tuo paese per continuare."],
+    pt:["Esta página não existe","O endereço pode estar mal escrito ou a página foi movida. Escolha o seu país para continuar."],
+    da:["Siden findes ikke","Adressen er måske skrevet forkert, eller siden er flyttet. Vælg dit land for at fortsætte."]};
+  var m=location.pathname.match(/^\/(?:presentaciones\/)?(nl-be|fr-be|es|nl|fr|de|it|pt|da|en)(?:\/|$)/), l=m?m[1]:"";
+  if(!l && /^\/presentaciones\/p\d/.test(location.pathname)) l="es";
+  if(T[l]){ document.documentElement.lang=l; document.getElementById("t").textContent=T[l][0]; document.getElementById("d").textContent=T[l][1]; document.title=T[l][0]+" · Dental Data"; }
+  var a=l&&document.querySelector('a.c[data-l="'+l+'"]'); if(a){ a.classList.add("yo"); a.parentNode.insertBefore(a,a.parentNode.firstChild); }
+})();
+</script>
+</body></html>
