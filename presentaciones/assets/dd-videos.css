@@ -79,6 +79,7 @@
 .dd-arq-v iframe{display:block;width:100%;height:100%;border:0;background:#0B2545}
 .dd-arq-pie{justify-content:center;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;padding:22px 28px 30px}
 .dd-arq-pie a{color:#EDBC6C;font-weight:600;text-decoration:none}.dd-arq-pie a:hover{text-decoration:underline}
+@media(max-width:560px){.dd-arq-v{width:calc(100% - 20px);aspect-ratio:16/11;border-radius:10px}.dd-arq{padding-top:40px}}
 .dd-arq-pie small{color:#7F93AA;font-size:13px;flex-basis:100%;text-align:center}
 /* enlace de la cabecera «sobre Microsoft Azure» */
 .brand .sub.dd-azure-link{cursor:pointer;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}

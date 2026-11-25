@@ -71,7 +71,8 @@ iconos();
 
 /* escala del escenario */
 const stage = $("#stage");
-function escala(){ const k = Math.min(innerWidth / 1600, innerHeight / 900); stage.style.transform = `scale(${k})`; }
+function escala(){ const m = $("#marco"), w = (m && m.clientWidth) || innerWidth, h = (m && m.clientHeight) || innerHeight;
+  const k = Math.min(w / 1600, h / 900); stage.style.transform = `scale(${k})`; }
 addEventListener("resize", escala); escala();
 
 /* ---------- construcción de la línea de tiempo */
